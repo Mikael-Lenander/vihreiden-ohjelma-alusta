@@ -1,0 +1,12 @@
+[
+  {
+    "@id": "http://localhost:9883/ohjelmat/p0",
+    "https://atomicdata.dev/properties/parent": "http://localhost:9883/ohjelmat",
+    "https://atomicdata.dev/properties/isA": [
+      "http://localhost:9883/o/Program"
+    ],
+    "http://localhost:9883/o/title": "Tietopoliittinen ohjelma",
+    "http://localhost:9883/o/elements": [],
+    "http://localhost:9883/o/approvedOn": "2021-05-16"
+  }
+]

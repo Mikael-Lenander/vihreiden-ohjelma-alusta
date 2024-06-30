@@ -12,7 +12,8 @@ cargo build
 ./target/debug/atomic-server reset || true
 
 # Import bootstrap data
-./target/debug/atomic-server import --file vihreat/data/ontology.json --force
+./target/debug/atomic-server import --file vihreat/json/ontology.json --force
+./target/debug/atomic-server import --file vihreat/json/tietopoliittinen-ohjelma.json --force
 
 # Export
 ./target/debug/atomic-server export -p vihreat/debug_export.json
