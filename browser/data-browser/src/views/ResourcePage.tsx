@@ -15,6 +15,7 @@ import DrivePage from './DrivePage';
 import RedirectPage from './RedirectPage';
 import InvitePage from './InvitePage';
 import { DocumentPage } from './DocumentPage';
+import { ProgramPage } from './ProgramPage';
 import ErrorPage, { ErrorBoundary } from './ErrorPage';
 import { ClassPage } from './ClassPage';
 import { FilePage } from './File/FilePage';
@@ -122,7 +123,10 @@ function selectComponent(klass: string) {
       return TablePage;
     case urls.classes.ontology:
       return OntologyPage;
+    case "http://localhost:9883/o/Program":
+      return ProgramPage;
     default:
+      console.log("Default: " + klass);
       return ResourcePageDefault;
   }
 }

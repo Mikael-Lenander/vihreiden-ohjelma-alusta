@@ -184,13 +184,13 @@ export const GlobalStyle = createGlobalStyle`
     height: 10px;
     padding: 3px;
     background-color: ${p =>
-      p.theme.colors.bg}; /* color of the tracking area */
+    p.theme.colors.bg}; /* color of the tracking area */
   }
   &::-webkit-scrollbar-thumb {
     width: 8px;
     margin: auto;
     background-color: ${p =>
-      p.theme.colors.bg2}; /* color of the tracking area */
+    p.theme.colors.bg2}; /* color of the tracking area */
     border-radius: ${p => p.theme.radius};
 
     &:hover {
@@ -320,4 +320,26 @@ export const GlobalStyle = createGlobalStyle`
     0%   {left:0;}
     100% {left:110%;}
   }
+
+div.vihreat-ohjelma {
+  margin: auto;
+  max-width: 40em;
+}
+
+div.vihreat-ohjelma p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+div.vihreat-ohjelma h1 {
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+}
+
+div.vihreat-ohjelma h2 {
+  color: #006845;
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+}
 `;
