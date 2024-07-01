@@ -1,0 +1,91 @@
+[
+  {
+    "@id": "http://localhost:9883/o",
+    "https://atomicdata.dev/properties/parent": "http://localhost:9883",
+    "https://atomicdata.dev/properties/shortname": "ontology",
+    "https://atomicdata.dev/properties/description": "Vihreiden ohjelma-alustan ontologia.",
+    "https://atomicdata.dev/properties/isA": [
+      "https://atomicdata.dev/class/ontology"
+    ],
+    "https://atomicdata.dev/properties/classes": [
+      "http://localhost:9883/o/Program",
+      "http://localhost:9883/o/Paragraph"
+    ],
+    "https://atomicdata.dev/properties/properties": [
+      "http://localhost:9883/o/title",
+      "http://localhost:9883/o/elements",
+      "http://localhost:9883/o/approvedOn",
+      "http://localhost:9883/o/text"
+    ],
+    "https://atomicdata.dev/properties/instances": []
+  },
+  {
+    "@id": "http://localhost:9883/o/Program",
+    "https://atomicdata.dev/properties/parent": "http://localhost:9883/o",
+    "https://atomicdata.dev/properties/shortname": "program",
+    "https://atomicdata.dev/properties/description": "Ohjelma.",
+    "https://atomicdata.dev/properties/isA": [
+      "https://atomicdata.dev/classes/Class"
+    ],
+    "https://atomicdata.dev/properties/requires": [
+      "http://localhost:9883/o/title",
+      "http://localhost:9883/o/elements"
+    ],
+    "https://atomicdata.dev/properties/recommends": [
+      "http://localhost:9883/o/approvedOn"
+    ]
+  },
+  {
+    "@id": "http://localhost:9883/o/Paragraph",
+    "https://atomicdata.dev/properties/parent": "http://localhost:9883/o",
+    "https://atomicdata.dev/properties/shortname": "paragraph",
+    "https://atomicdata.dev/properties/description": "Tekstikappale, joka esiintyy osana ohjelmaa.",
+    "https://atomicdata.dev/properties/isA": [
+      "https://atomicdata.dev/classes/Class"
+    ],
+    "https://atomicdata.dev/properties/requires": [
+      "https://atomicdata.dev/properties/parent",
+      "http://localhost:9883/o/text"
+    ]
+  },
+  {
+    "@id": "http://localhost:9883/o/title",
+    "https://atomicdata.dev/properties/parent": "http://localhost:9883/o",
+    "https://atomicdata.dev/properties/shortname": "title",
+    "https://atomicdata.dev/properties/description": "Ohjelman otsikko.",
+    "https://atomicdata.dev/properties/datatype": "https://atomicdata.dev/datatypes/string",
+    "https://atomicdata.dev/properties/isA": [
+      "https://atomicdata.dev/classes/Property"
+    ]
+  },
+  {
+    "@id": "http://localhost:9883/o/elements",
+    "https://atomicdata.dev/properties/parent": "http://localhost:9883/o",
+    "https://atomicdata.dev/properties/shortname": "elements",
+    "https://atomicdata.dev/properties/description": "Ohjelman sis\u00e4lt\u00f6.\n\nSis\u00e4lt\u00f6 ilmaistaan listana, jossa listan jokainen alkio on ohjelmatekstin pieni osa, esimerkiksi tekstikappale, otsikko, kuva tai luetelmakohta (n\u00e4m\u00e4 j\u00e4lkimm\u00e4iset ovat meill\u00e4 _linjauksia_). Nyrkkis\u00e4\u00e4nt\u00f6n\u00e4 voi pit\u00e4\u00e4, ett\u00e4 osat ovat sellaisia, ett\u00e4 niiden v\u00e4liin voi tulla Markdownissa tyhj\u00e4 rivi -- siis esimerkiksi kappaletta ei tule jakaa osiin t\u00e4ll\u00e4 tavalla.",
+    "https://atomicdata.dev/properties/datatype": "https://atomicdata.dev/datatypes/resourceArray",
+    "https://atomicdata.dev/properties/isA": [
+      "https://atomicdata.dev/classes/Property"
+    ]
+  },
+  {
+    "@id": "http://localhost:9883/o/approvedOn",
+    "https://atomicdata.dev/properties/parent": "http://localhost:9883/o",
+    "https://atomicdata.dev/properties/shortname": "approvedon",
+    "https://atomicdata.dev/properties/description": "P\u00e4iv\u00e4m\u00e4\u00e4r\u00e4, jona ohjelma hyv\u00e4ksyttiin.",
+    "https://atomicdata.dev/properties/datatype": "https://atomicdata.dev/datatypes/date",
+    "https://atomicdata.dev/properties/isA": [
+      "https://atomicdata.dev/classes/Property"
+    ]
+  },
+  {
+    "@id": "http://localhost:9883/o/text",
+    "https://atomicdata.dev/properties/parent": "http://localhost:9883/o",
+    "https://atomicdata.dev/properties/shortname": "text",
+    "https://atomicdata.dev/properties/description": "Tekstisis\u00e4lt\u00f6 (markdown-muodossa).",
+    "https://atomicdata.dev/properties/datatype": "https://atomicdata.dev/datatypes/markdown",
+    "https://atomicdata.dev/properties/isA": [
+      "https://atomicdata.dev/classes/Property"
+    ]
+  }
+]
