@@ -7,6 +7,7 @@ import {
   urls,
   type OptionalClass,
 } from '@tomic/react';
+import { vihreat } from './vihreat';
 
 import { ContainerNarrow } from '../components/Containers';
 import Collection from '../views/CollectionPage';
@@ -123,10 +124,10 @@ function selectComponent(klass: string) {
       return TablePage;
     case urls.classes.ontology:
       return OntologyPage;
-    case "http://localhost:9883/o/Program":
+    case vihreat.classes.program:
       return ProgramPage;
     default:
-      console.log("Default: " + klass);
+      console.log('Default: ' + klass);
       return ResourcePageDefault;
   }
 }
