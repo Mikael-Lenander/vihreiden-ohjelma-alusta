@@ -30,9 +30,22 @@ def _build_elements(markdown_path: str, parent_name: str) -> list[dict]:
 
 def _build_element(line: str, parent_name: str, num: int) -> dict:
     name = f"{parent_name}e{num}"
-    return {
-        "@id": url.local(f"ohjelmat/{name}"),
-        url.atomic("properties/parent"): url.local(f"ohjelmat/{parent_name}"),
-        url.atomic("properties/isA"): [url.local("o/Paragraph")],
-        url.local("o/text"): line,
-    }
+    if line.startswith("#"):
+        return {
+            "@id": url.local(f"ohjelmat/{name}"),
+            url.atomic("properties/isA"): [url.local("o/Title")],
+            url.local("o/text"): line.lstrip("# "),
+            url.local("o/titleLevel"): len(line) - len(line.lstrip("#")),
+        }
+    elif line.startswith("* "):
+        return {
+            "@id": url.local(f"ohjelmat/{name}"),
+            url.atomic("properties/isA"): [url.local("o/ActionItem")],
+            url.local("o/text"): line[1:].strip(),
+        }
+    else:
+        return {
+            "@id": url.local(f"ohjelmat/{name}"),
+            url.atomic("properties/isA"): [url.local("o/Paragraph")],
+            url.local("o/text"): line,
+        }

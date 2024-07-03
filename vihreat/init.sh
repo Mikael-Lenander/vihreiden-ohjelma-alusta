@@ -4,6 +4,11 @@ set -e
 cd $(dirname $(realpath $0))
 cd ..
 
+# (Re)generate the JSONs
+pushd vihreat
+python3 generate.py
+popd
+
 # Make sure the server is up to date
 cargo build
 
@@ -16,4 +21,4 @@ cargo build
 ./target/debug/atomic-server import --file vihreat/json/tietopoliittinen-ohjelma.json --force
 
 # Export
-./target/debug/atomic-server export -p vihreat/debug_export.json
+./target/debug/atomic-server export -p vihreat/json/debug_export.json
