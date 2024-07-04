@@ -1,11 +1,16 @@
 import * as React from 'react';
-import { core, useArray, useDate, useNumber, useString, useResource, useMarkdown } from '@tomic/react';
+import { core, useArray, useDate, useNumber, useStore, useString, useResource } from '@tomic/react';
 import { vihreat } from './vihreat';
 
-import { ResourcePageProps } from './ResourcePage';
+import { ResourcePageProps } from '../views/ResourcePage';
 import Markdown from '../components/datatypes/Markdown';
 
+function organizeElements(subjects: string[]) {
+
+}
+
 export function ProgramPage({ resource }: ResourcePageProps): JSX.Element {
+  const store = useStore();
   const [elements] = useArray(resource, vihreat.properties.elements);
   const [title] = useString(resource, vihreat.properties.title);
   const approvedOn = useDate(resource, vihreat.properties.approvedOn);
