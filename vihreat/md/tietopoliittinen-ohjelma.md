@@ -12,7 +12,7 @@ Tässä tietopoliittisessa ohjelmassa hahmotellaan vihreän ihmislähtöisen dig
 
 Laajempi taustoitus tässä ohjelmassa esitettyihin tavoitteisiin on julkaistu ajatuspaja Vision kautta: [https://ajatuspajavisio.fi/julkaisut/tietopolitiikka-taustaselvitys/](https://ajatuspajavisio.fi/julkaisut/tietopolitiikka-taustaselvitys/)
 
-## TIETOPOLITIIKAN AIKA
+## Tietopolitiikan aika
 
 Haluamme vakiinnuttaa **tietopolitiikan uudeksi politiikkalohkoksi**, jolla ohjataan digitalisoituvaa yhteiskuntaa ihmislähtöiseksi ja kestäväksi.
 
@@ -20,7 +20,7 @@ Vastaavalla tavalla kuin ympäristöpolitiikka muodostui omaksi politiikkalohkok
 
 Tietopolitiikan sisällöt ovat poliittisessa keskustelussa vasta hahmottumassa ja osin samoista asioista puhutaan eri käsitteillä, kuten datatalous, teknologiapolitiikka ja digitalisaatio. Tietopolitiikkaan tulee luoda yhteistä kieltä ja sen sisältöjä tulee jäsentää parlamentaarisesti, hallinnonalojen ja yhteiskunnallisten toimijoiden yhteistyönä. Uusi politiikkalohko syntyy systeemisenä muutoksena eri toimijoiden vuorovaikutuksesta. Sisältöjen jäsentämisen ohella on kyettävä uudistamaan rakenteita sellaisiksi, että ne mahdollistavat hyvän tietopolitiikan toteuttamisen. Tietopolitiikka on tulevaisuuteen suuntautuvaa ja liittyy kaikkiin yhteiskunnan aloihin.
 
-**Tietopolitiikkaan keskittyvä ministeriö ja valiokunta**
+### Tietopolitiikkaan keskittyvä ministeriö ja valiokunta
 
 Tietopolitiikka tarvitsee vastuuministerin ja oman ministeriön. Perustettavan ministeriön tulee olla uudenlainen verkostomainen toimija, joka tukee ja johtaa tietopolitiikan suunnittelua ja toimeenpanoa yhdessä kaikkien hallinnonalojen kanssa. Ministeriö on mahdollista toteuttaa kohtuullisin kustannuksin siirtämällä sen käyttöön virkajärjestelyin digitalisaation ja tietoasioiden parissa nykyisissä ministeriöissä ja niiden alaisissa laitoksissa toimivia henkilöitä. Näillä virkahenkilöillä voidaan tietoisesti säilyttää linkitys aiempiin ministeriöihin ja hallinnonaloihin, jolloin eri toimialojen ymmärrys säilyy ja tiedonkulku on sujuvaa.
 
@@ -32,7 +32,7 @@ Eduskuntaan tulee muodostaa tietopolitiikkaan keskittyvä tietoasiainvaliokunta,
 *   Nimitetään hallitukseen tietopolitiikasta vastaava ministeri, jonka tehtävänä on ohjata tietopolitiikkaa.
 *   Muodostetaan eduskuntaan tietopolitiikkaan erikoistunut lausuntovaliokunta, esimerkiksi yhdistetty tulevaisuus- ja tietoasiainvaliokunta, jonka vastuulla on tukea muita valiokuntia tarkastelemalla lakialoitteita tietopoliitiikan näkökulmasta.
 
-**Tietoa koskeva lainsäädäntö ajan tasalle**
+### Tietoa koskeva lainsäädäntö ajan tasalle
 
 Tietoa koskevalla lainsäädännöllä suojataan ja edistetään tiedon avoimuutta ja julkisuutta, tiedollisia oikeuksia, yksityisyyttä ja luotettavan, todistusvoimaisen tiedon saatavuutta, eheyttä ja säilymistä.
 
@@ -54,7 +54,7 @@ Reiluun muutokseen kuuluu avoin, monimuotoinen, eettinen, perusoikeuksia kunnioi
 
 Digitaalinen verkkoympäristö tarjoaa ennennäkemättömät mahdollisuudet tiedon monipuoliseen yhdistämiseen, hyödyntämiseen, ja jakamiseen. Samassa verkkoympäristössä leviää kuitenkin harhaanjohtavaa sisältöä ja eriytyneet informaatiokuplat kaventavat ihmisten näkemystä maailmasta. Seurauksena on yhteiskunnallisen keskustelun rapautumista ja ennakkoasenteiden kiristymistä toisella tavoin ajattelevia kohtaan. Myös tahattomasti väärä, vanhentunut tai vinoutunut, esimerkiksi sukupuolittunut, tieto heikentää toiminnan ja päätöksenteon tietopohjaa. Tekoälyn käytössä vinoutuneet tietoaineistot ovat erityisen suuri riski.
 
-**Tiedon avoimuus ja hyödyntäminen**
+### Tiedon avoimuus ja hyödyntäminen
 
 Julkishallinnossa avoin data parantaa läpinäkyvyyttä, tehostaa hallintoa ja edistää palvelukehitystä sekä poliittisen päätöksenteon läpinäkyvyyttä ja demokratiaa. Avoimuuden hyödyt säteilevät laajasti yhteiskuntaan, eivät niinkään suorina kustannushyötyinä datan tuottajille. Siksi datan avaaminen tulee sisällyttää ja resurssoida julkishallinnon organisaatioiden perustehtäviin. Huomiota tulee kiinnittää erityisesti yleisen hyödyn kannalta arvokkaisiin tietoaineistoihin. Avaamisessa tulee lisäksi panostaa avoimiin rajapintoihin, jotka on otettava yhdeksi julkishallinnon tietojärjestelmien perusvaatimuksista.
 
@@ -68,7 +68,7 @@ Avoimuus on myös tutkimuksen ja tieteen perusarvo. Tieteellisen tiedon ja menet
 *   Saatetaan julkisesti rahoitetut uudet tutkimusjulkaisut avoimesti saataville. Myös tutkimusaineistojen ja -menetelmien on oltava niin avoimia kuin mahdollista.
 *   Laaditaan julkishallinnon tietovarannoille sitovat laatukriteerit sekä varmistetaan tietovarantojen ja rajapintojen käyttöönotto ja ylläpito riittävällä koulutuksella ja resursseilla.
 
-**Valetiedon vastatoimet**
+### Valetiedon vastatoimet
 
 Valheellisella tai virheellisellä tiedolla on pahimmillaan vakavia vaikutuksia yhteiskuntarauhalle, ihmisten terveydelle ja taloudelle. Esimerkiksi ns. deepfake- eli syväväärennösvideoiden tekeminen uskottaviksi tulee teknologian kehittyessä yhä helpommaksi. Tällä voi olla perustavanlaatuisia vaikutuksia tiedonvälitykseen ja kansalaismielipiteiden muodostukseen. Eri tahot käyttävät aktiivisesti hyväkseen teknisiä välineitä informaation muokkaamiseen haluamakseen.
 
@@ -80,7 +80,7 @@ Väärän ja harhaanjohtavan tiedon syntymistä tulee aktiivisesti estää, kosk
 *   Vahvistetaan Ylen ja muiden journalististen medioiden roolia toiminnassa valetietoa vastaan.
 *   Vahvistetaan lasten ja nuorten medialukutaitoja mediakasvatuksella.Tuetaan vanhempia ja huoltajia opastamaan lapsille turvallista medioiden käyttöä ja mediakriittisyyttä.
 
-**Tieto- ja digiosaamisen kehittäminen**
+### Tieto- ja digiosaamisen kehittäminen
 
 Suomen menestyminen riippuu kansalaisten, yritysten, yhteisöjen ja julkishallinnon kyvystä tuottaa ja hyödyntää tietoa toiminnan jatkuvaan kehittämiseen. Teknologian hyödyntäminen globaalien haasteiden ratkaisemiseen on myös mahdollisuus Suomelle ja esimerkiksi kiertotalouden ja puhtaan teknologian ratkaisujen osaamista kannattaa kehittää. Osaajien saatavuus on kilpailutekijä yrityksille, mutta myös julkishallinnossa tarvitaan tekijöitä digitaalisten palvelujen kehittämiseen ja toiminnan uudistamiseen. Sijoittamalla koulutukseen ja tutkimukseen sekä lisäämällä opiskelu-, työ- ja osaamisperustaista maahanmuuttoa taataan, että osaajia on riittävästi saatavilla kaikille sektoreille. Purkamalla tieto- ja viestintäteknologia-alojen sukupuolittuneisuutta vahvistetaan palkkatasa-arvoa ja monipuolistetaan alan asiantuntijuutta.
 
@@ -102,7 +102,7 @@ Ihmisen rooli suhteessa hallintoon ja muihin palveluntuottajiin muuttuu osana di
 
 Ihmisellä on oikeus saada tarvitsemansa palvelut sekä yksityiseltä että julkiselta sektorilta luovuttamatta sellaisia henkilötietojaan, jotka eivät ole välttämättömiä palvelun tarjoamiseksi. Ilman henkilötietojen luovuttamista saatu palvelu ei myöskään saa olla laadun tai hinnan osalta huonompaa. Palvelun käyttäjän on voitava tarkistaa minne tieto päätyy ja mitkä tahot sitä ovat käyttäneet.
 
-**Ihmislähtöisiä kokonaispalveluja kaikkiin elämäntapahtumiin**
+### Ihmislähtöisiä kokonaispalveluja kaikkiin elämäntapahtumiin
 
 Ihmislähtöinen julkisten palvelujen digitalisaatio ottaa huomioon ihmisten yksilöllisen arjen ja helpottaa sitä samalla, kun asioiden hoitamista automatisoidaan. Ihmisen elämässä merkittäviin tapahtumiin liittyvät palvelut tulee tarjota kootusti ja ihmislähtöisesti niin, että asioiden selvittäminen ja hoitaminen tehdään kansalaiselle helpoksi. Myös organisaatioiden asiointia julkishallinnon kanssa tulee järjestää niiden elinkaareen ja toimintaan liittyvien tapahtumien ympärille. Viranomaispalvelujen digitalisoituessa on tärkeää, että palveluketjut muuttuvat nykyistä saumattomammiksi. Vain näin toteutuvat pitkään tavoitellut, byrokratian vähentämiseen tähtäävät yhden luukun ja ‘kysy tietoja vain kerran’ -periaatteet.
 
@@ -114,7 +114,7 @@ Organisaatiorajat ylittävien elämäntapahtumiin liittyvien palvelukokonaisuuks
 *   Laajennetaan Digi arkeen -neuvottelukunnan roolia valtakunnalliseksi toimielimeksi tukemaan ja arvioimaan julkishallinnon digitalisaation ihmislähtöisyyttä. Neuvottelukunta kehittää ihmislähtöisen suunnittelun kriteerejä yhteistyössä tutkijoiden ja muiden asiantuntijoiden kanssa.
 *   Tuetaan viranomaisten moniammatillista yhteistyötä mahdollistamalla henkilökohtainen eri viranomaistahojen yhteisesti tuottama palvelusuunnitelma sellaisille ihmisille, jotka tarvitsevat eri toimijoiden tukea omassa elämäntilanteessaan.
 
-**Julkishallinnon tietojärjestelmien kehitysnormit ja avoimuus**
+### Julkishallinnon tietojärjestelmien kehitysnormit ja avoimuus
 
 Teknologiaostojen sijaan digitalisaatiohankkeet tulisi nähdä palvelu- ja kehityshankkeina, jotka luonnostaan tarkentuvat matkan varrella. Digihankkeiden hankintaosaamisen tasoa tulee parantaa ja hankintalakia sekä -malleja kehittää joustavammiksi. Palamaisten kertaostojen sijaan tulee suosia hankintamalleja, jotka tarjoavat tarkennusmahdollisuuksia ja skaalautuvuutta kehitystyön edetessä. Samalla tulee välttää toimittajaloukkuja, mutta mahdollistaa pitkäaikaisten kumppanuuksien rakentaminen hyviksi todettujen toimittajien kanssa.
 
@@ -126,7 +126,7 @@ Tekoälyn ja robotiikan avulla julkinen sektori voi samanaikaisesti parantaa tuo
 *   Hyödynnetään automaattista päätöksentekoa ja vauhditetaan sääntöpohjaisen automaation, kuten veroehdotusten kaltaisten toiminnallisuuksien käyttöönottoa julkishallinnossa.
 *   Säädetään julkisessa päätöksenteossa käytettävien algoritmien, lähdekoodin ja datan avoimuudesta ja kuulumisesta julkisuuslain piiriin.
 
-#### DIGITAALINEN TASA-ARVO JA YHDENVERTAISUUS
+## DIGITAALINEN TASA-ARVO JA YHDENVERTAISUUS
 
 Ohjaamme **yhteiskunnan digitalisoitumista vähentämään eriarvoisuutta.**
 
@@ -134,7 +134,7 @@ Parhaimmillaan digitalisoitumisen myötä työ, koulutus ja monenlainen vapaa-aj
 
 Kirjastoja on kehitettävä digitaalisen tiedon ja kulttuurin peruspalveluna sekä turvallisina ja helposti saavutettavina digi- ja tietotukiympäristöinä. Immateriaalioikeuspolitiikan lähtökohtana tulee olla luovuuteen kannustaminen, teosten käytön edistäminen ja globaali oikeudenmukaisuus.
 
-**Välineet, taidot ja digituki kaikille**
+### Välineet, taidot ja digituki kaikille
 
 Kansalaisten digitaidot ja niiden tuki on perusedellytys sille, että digitaalisia palveluja voidaan hakea ja käyttää. Tuki digitaitojen oppimiselle sekä toimivat laitteet ja yhteydet ovat välttämättömiä, jotta digitalisaatio kohtelisi kaikkia yhdenvertaisesti. Digipalvelujen on oltava kuitenkin kaikkien saatavilla myös ilman oman digilaitteen tai verkkoyhteyden hankintaa. Politiikan keinoin on tasoitettava tietä niille, joita ei ole tähän asti riittävästi huomioitu digitaalisten palveluiden ja toimintatapojen suunnittelussa.
 
@@ -144,7 +144,7 @@ Kansalaisten digitaidot ja niiden tuki on perusedellytys sille, että digitaalis
 *   Järjestetään eri tasoista opastusta ja tukea digitalisaation hyödyntämiseen eri väestöryhmille.
 *   Määritellään kirjastojen, oppilaitosten ja koulujen tehtäviin digitalisaation hyödyntämisen tuki ja osoitetaan tälle riittävät resurssit.
 
-**Digitaalisten palvelujen saavutettavuus**
+### Digitaalisten palvelujen saavutettavuus
 
 Digitaalinen saavutettavuus tulee rinnastaa fyysiseen esteettömyyteen asioinnissa, palveluissa ja yhteiskunnan toiminnoissa. Keskeisten yksityisten ja erityisesti julkisten digipalvelujen saavutettavuutta ja ymmärrettävyyttä on parannettava. Palvelujen vaihteleva taso tai kansalaisten puutteelliset digitaidot eivät saa estää ketään osallistumasta demokraattiseen päätöksentekoon ja yhteiskunnan kehittämiseen. Saavutettavuusdirektiivi ja sitä seuraava kansallinen lainsäädäntö määrittelevät vähimmäistason. Saavutettavuuden toteutumista tulee myös valvoa aktiivisesti ja laiminlyönneistä sanktioida. Julkisen sektorin automaatio mahdollistaa rutiinityön ulkoistamisen koneelle. Säästyneitä resursseja tulee kohdentaa henkilökohtaisiin palveluihin niitä tarvitseville, palvelujen kehittämiseen sekä kansalaisten kohtaamiseen ja heidän yksilöllisten tarpeidensa ymmärtämiseen.
 
@@ -154,7 +154,7 @@ Digitaalinen saavutettavuus tulee rinnastaa fyysiseen esteettömyyteen asioinnis
 *   Turvataan riittävä rahoitus saavutettavuuden tutkimukselle, valvonnalle, ylläpidolle ja kehittämiselle.
 *   Osoitetaan rahoitusta positiivisen erityiskohtelun periaatteella fyysisiin ja henkilökohtaisiin palveluihin niitä tarvitseville.
 
-**Digitaalisen kulttuurin ja sivistyksen edellytykset kuntoon**
+### Digitaalisen kulttuurin ja sivistyksen edellytykset kuntoon
 
 Kirjastojen, arkistojen ja museoiden toimintaedellytykset on turvattava yhteistä kulttuuria ylläpitävinä, jakavina ja säilyttävinä tieto- ja muistiorganisaatioina myös digitaalisessa ympäristössä. Globalisoituvassa mediaympäristössä on erityisen tärkeää ylläpitää ja parantaa kotimaisen tiedon ja kulttuurin tuotantoa ja saatavuutta kaikille asuinpaikasta ja tulotasosta riippumatta.
 
@@ -180,7 +180,7 @@ Ihmisiä ja yhteisöjä tulee suojata uhkauksilta, painostukselta, väkivallalta
 
 Kaikkea toimivan digitaalisen ympäristön normistoa ei voi määritellä lailla. Yleisten tapojen ja periaatteiden on oltava yhteismitallisia niin fyysisesti kuin verkossakin. Uusissa ja muuttuvissa tilanteissa, joihin ei vielä ole tarkkoja muodollisia sääntöjä, tulisi ihmisten ja organisaatioiden nojautua yleiseen kohtuullisuuden harkintaan sekä kehittää eräänlaista digitaalisen ympäristön yleisiä toiminnan normeja.
 
-**Puututaan digitaaliseen häirintään ja vainoon**
+### Puututaan digitaaliseen häirintään ja vainoon
 
 Verkossa tapahtuva häirintä, vihapuhe, uhkailu ja maalittaminen ovat sananvapauden nimissä tapahtuvaa oikeuksien väärinkäyttöä, jolla pyritään vaientamaan ihmisiä. Vaientaminen sulkee eri näkökulmia julkisen keskustelun ulkopuolelle ja siten uhkaa yhteiskuntarauhaa, oikeusvaltion toimintaa ja avointa keskustelua.
 
@@ -196,7 +196,7 @@ Digitaaliseen häirintään ja vainoon on mahdollista puuttua teknologian avulla
 *   Tuodaan lainsäädäntöön joukkoistetut rikokset, esimerkiksi ”osallistuminen joukkovainoamiseen”. Joukkoistettujen rikosten on oltava kaikissa tapauksissa virallisen syytteen alaisia.  
     Puretaan kapeita sukupuolinormeja, jotta nuorten naisten ja vähemmistöjen täysi osallistuminen digitaalisissa tiloissa mahdollistuu.
 
-**Kyberturvallisuus on toimivan yhteiskunnan edellytys**
+### Kyberturvallisuus on toimivan yhteiskunnan edellytys
 
 Yhteiskunnalle kriittisiä palveluja tuottavien organisaatioiden varautuminen kyberhyökkäyksiin ja luonnonkatastrofeihin on usein puutteellista. Kyberturvallisuuden tulee olla sisäänrakennettuna kaikilla yhteiskunnan kriittisillä toimialoilla.
 
@@ -213,7 +213,7 @@ Tietojärjestelmien lisäksi myös tietoaineistojen tulee olla kunnossa. Koronap
 *   Vähennetään EU-maiden riippuvuutta muualla tuotetuista ohjelmistoista, palveluista ja laitteistoista tukemalla eurooppalaisten yritysten kehitystä ja toimintaedellytyksiä.
 *   Määritellään tiedollisen huoltovarmuuden vastuutahot, jotta mahdollisessa kriisitilanteessa on käytettävissä täsmälliset luettelot kriittisistä tietoaineistoista ja että niiden tiedot ovat ajan tasalla.
 
-**Verkkorikollisuutta torjutaan oikeasuhtaisin keinoin**
+### Verkkorikollisuutta torjutaan oikeasuhtaisin keinoin
 
 Terrorismin ja muun verkkoa hyödyntävän rikollisuuden torjuntaa ei tule tehdä yksityisyydensuojan tai sananvapauden kustannuksella. Viranomaisten mahdollisuutta ohittaa salaus ja lukea viestejä viestintäsovelluksissa tulee vastustaa. Rikoksentorjunnan keinona salausteknologioiden heikentäminen ei ole oikeasuhtainen, koska se heikentäisi kaikkien tietoturvaa ja luottamuksellisen tiedon suojaa samalla, kun rikollinen toiminta voisi helposti siirtyä viranomaisvalvonnan ulkopuolisille alustoille. Rikolliset ja vihamieliset valtiot voisivat hyödyntää viranomaisille tarkoitettuja salauksen takaportteja. Kansainvälisiä alustoja koskiessaan käytäntö voisi olla myös kohtalokas esimerkiksi journalistien ja toisinajattelijoiden turvallisuudelle monissa maissa.
 
@@ -237,7 +237,7 @@ Digitalisoituvassa maailmassa voimme toteuttaa toimivat etätyöolosuhteet ja mu
 
 Hyvän elämän edellytykset koko maassa voidaan turvata etätyöllä ja -opiskelulla sekä tarjoamalla digitaaliset julkiset palvelut helposti myös haja-asutusalueille. Pitämällä Suomen digitaalinen infrastruktuuri toimivana voimme mahdollistaa järjestötoiminnan ja opiskelun kaikkialla sekä tehdä Suomesta houkuttelevan etämaahanmuuttoalueen esimerkiksi kansainvälisten yritysten työntekijöille.
 
-**Etätekemiseen kannustava aluepolitiikka**
+### Etätekemiseen kannustava aluepolitiikka
 
 Digitalisaatio on jollain tapaa osa lähes kaikkea työtä. Huonot verkkoyhteydet eivät saa rajoittaa etätekemisen mahdollisuuksia. Laajakaistayhteyksien saatavuudessa on Suomessa edelleen puutteita etenkin harvaan asutuilla alueilla. Mobiiliverkkojen toimivuus ei ole kaikkialla tyydyttävä, jolloin ihmiset eivät kykene käyttämään luotettavaa internet-yhteyttä vaativia sähköisiä palveluja. Lakisääteinen laajakaistayhteyden yleispalveluvelvoite määrää teleoperaattorit tarjoamaan jokaiseen asuinkiinteistöön tai yrityksen toimitilaan vähintään 2 Mbit/s:n kohtuuhintaisen tietoliikenneyhteyden. Nykyisille sähköisille palveluille yhteys on kuitenkin liian hidas, joten yleispalveluvelvoitteen nopeusrajaa tulee asteittain nostaa merkittävästi.
 
@@ -249,7 +249,7 @@ Lisäksi tärkeää on parantaa nopeampien valokuituyhteyksien saatavuutta. Asuk
 *   Jatketaan ja laajennetaan laajakaistarakentamisen tukiohjelmia, sekä tuetaan kustannustehokasta laajakaistarakentamista esimerkiksi sähköverkon rakentamisen ja tiehankkeiden yhteydessä.
 *   Luodaan puitteet paikkariippumattomalle työnteolle koko julkishallinnossa mm. rakentamalla koko maan kattava yhteisten työpisteiden verkosto.
 
-**Digitaaliset oikeudet työelämässä ja opiskelussa**
+### Digitaaliset oikeudet työelämässä ja opiskelussa
 
 Työelämän digitalisoituessa tulee työntekijöistä huolehtia digitalisaation ja etätyöskentelyn muutosten mukaisesti. Työtehtäviä tulee voida hoitaa mahdollisimman laajasti etätyönä. Työntekijöille on taattava oikeus saada ohjausta ja tukea myös etäolosuhteissa.
 
@@ -264,7 +264,7 @@ Perusopetuksen järjestäminen on tiukasti laissa säädetty ja lähtökohtaises
 *   Tuetaan opettajien mahdollisuuksia ja valmiuksia laadukkaan etäopetuksen tarjoamiseen.
 *   Parannetaan mahdollisuuksia tehdä toisen asteen opintoja etänä muualle hyödyntäen oman kunnan tarjoamia opiskelutiloja.
 
-**Digitaalinen kansalaisyhteiskunta**
+### Digitaalinen kansalaisyhteiskunta
 
 Kansalaisyhteiskunnan tärkeä rooli on turvattava myös digitalisoituvassa maailmassa. Suomessa etäosallistumisen tietyissä rajoissa mahdollistava yhdistyslaki on monessa mielessä edistyksellinen. Yhdistyslakia tulee edelleen kehittää niin, että se sallii kokonaan digitaaliset yhdistykset ja yhdistysten perustamisprosessin ja yhdistyksen sisäisen päätöksenteon etänä. Yhdistysten rekisteröinti, tietojen muuttaminen ja ilmoitukset sekä jäsenäänestykset tulee voida tehdä kokonaan digitaalisesti. Kun tämä uudistus tehdään kotimaisia yhdistyksiä varten, samalla kannattaa tähdätä myös houkuttelevaksi kotipaikaksi kansainvälisille järjestöille.
 
@@ -276,7 +276,7 @@ Suomen jäykkä rahankeräyslaki on kansalaistoiminnan este. Rahankeräyslakia t
 *   Tarjotaan julkisena palveluna yhdistyksille ja muuhun ei-kaupalliseen toimintaan etä-äänestämisen ja sähköisen allekirjoittamisen järjestelmät.
 *   Sallitaan yhdistyslaissa kokonaan digitaaliset yhdistykset ja niille sähköinen päätöksenteko sekä poistetaan hallituksen jäsenten asuinpaikan rajoitukset ja mahdollistetaan yhdistyksen rekisteröinti englanninkielisillä säännöillä.
 
-**Luotettavat vaalit**
+### Luotettavat vaalit
 
 Vaalit ovat yhteiskunnan kriittistä infrastruktuuria, ja niiden turvallisuus on taattava. Monenlaisten luotettavuuteen, läpinäkyvyyteen ja vaalisalaisuuteen liittyvien ongelmien vuoksi nettiäänestys ei sovi valtakunnallisiin vaaleihin pääasialliseksi äänestystavaksi. Se on vaihtoehto korkeintaan rajattuihin tilanteisiin, ja joidenkin erityisryhmien äänestämiseen. Nettiäänestystä tarvitaan vain tilanteissa, joissa äänioikeutta ei voida toteuttaa esimerkiksi postitse tai avustajien avulla. Nettiäänestys voisi kokeiluluontoisesti sopia myös kunnallisiin neuvoa-antaviin kansanäänestyksiin.
 
@@ -296,7 +296,7 @@ Digitaalinen identiteetti on palvelussa oleva joukko käyttäjää kuvaavia tiet
 
 Toimivan sähköisen tunnistamisen ja hyvin tehty henkilötunnuksen uudistus luovat edellytykset turvalliselle ja joustavalle tiedon käsittelylle. Näiden lisäksi tulee kehittää henkilödatan hallintaa omadata-periaatteilla, niin että ihmiset voivat paremmin hallita omia tietojaan ja niiden käyttöä. Jokaisella tulee olla mahdollisuus esiintyä tietoverkoissa anonyymisti tai kuvitteellisella henkilöllisyydellä suojatakseen omaa yksityisyyttään ja ilmaisun vapauttaan.
 
-**Sähköinen tunnistaminen on merkittävä digitaalisen yhteiskunnan perusta**
+### Sähköinen tunnistaminen on merkittävä digitaalisen yhteiskunnan perusta
 
 Sähköisen tunnistamisen kehittämiseltä on puuttunut vastaavien ministeriöiden ja virastojen, sekä pankkien, teleoperaattorien ja muiden sähköisen tunnistamisen kannalta keskeisten toimijoiden yhteinen visio. Suomessa ei ole yleiskäyttöistä tapaa digitaalisesti varmistaa henkilön tai yrityksen tietojen oikeellisuutta, ei mahdollisuutta valtuuttaa henkilöä edustamaan toista ihmistä tai organisaatiota, eikä organisaatioilla ole varmistettua sähköistä identiteettiä. Näiden puutteiden takia monet muuten helposti automatisoitavat prosessit ovat suurelta osin manuaalisia.
 
@@ -314,7 +314,7 @@ Henkilötunnuksen uudistaminen kannattaa tehdä niin, että nykymallisesta henki
 *   Toteutetaan henkilötunnuksen kokonaisuudistus joustavasti luomalla anonyymien henkilötunnisteiden järjestelmä, jonka rinnalla nykymuotoinen henkilötunnus säilytetään siirtymäajan yli yhtenä tarvittaessa välitettävänä tietona.
 *   Helpotetaan organisaatioiden perustamisvaiheen sähköistä asiointia luomalla organisaatioille digitaalinen identiteetti jo ennen niiden rekisteröintiä.
 
-**Oikeus omaan tietoon**
+### Oikeus omaan tietoon
 
 Tiedollinen itsemääräämisoikeus eli mahdollisuus hyödyntää itse omaa dataansa ja hallita sen keräämistä ja käyttöä on digitaalisen ajan ihmisoikeus. Vastaavalla tavalla, kuin ihmisillä on oikeuksia heitä koskevaan tietoon, tulee organisaatioilla olla oikeus ja mahdollisuus hallita omia tietojaan. Pienten yritysten tiedot voivat olla myös henkilöitä koskevia. Julkisuuslaissa säädettyjen tiedollisten oikeuksien on oltava voimassa myös digitaalisessa muodossa olevien tietojen osalta. Erityisesti julkishallinnon rekistereissä olevaa dataa tulee luovuttaa ihmisten tai organisaatioiden pyynnöstä heille itselleen tai heidän osoittamalleen taholle julkishallinnon peruspalveluna.
 
@@ -337,7 +337,7 @@ EU-sääntelyssä ja kansainvälisissä sopimuksissa Suomen tulee ennen kaikkea 
 
 Alustatalouteen tulee kehittää uudenlaisia datapohjaisia sääntelymekanismeja, joissa alustoja säännellään alustojen keinoilla, mutta yhteiskunnan ehdoin. Alustat hyödyntävät jatkuvasti kertyvää dataa ja algoritmeja ohjaamaan alustalla tapahtuvaa toimintaa omien tavoitteiden mukaisesti. Samaa datapohjaista lähestymistä voidaan hyödyntää myös yhteiskunnallisten tavoitteiden toteuttamiseen ja seurantaan mahdollistamalla viranomaisille pääsy sääntelyn kannalta keskeiseen dataan alustoilla.
 
-**Alustat ja työ**
+### Alustat ja työ
 
 Alustatyöhön liittyvä keskeinen kysymys on alustojen ja niiden kautta työtä tekevien valtasuhteiden epätasapaino. Edelläkävijänä Suomen tulee toteuttaa alustojen kautta työtä tekeviä koskevat työelämän turvan parannukset ja mahdollistaa datapohjainen järjestäytyminen.
 
@@ -352,7 +352,7 @@ Alustoihin kohdistuvien vaatimusten on oltavia yhdenmukaisia alustayhtiön kotim
 *   Varmistetaan tarpeellisten tietojen saaminen rajapintojen kautta automaattisesti alustalta viranomaisten ja eläke- ja vakuutusyhtiöiden käyttöön, riippumatta toimiiko alustaa käyttävä tekijä yrityksen, toiminimen tai itseään työllistävän työntekijän roolissa.
 *   Velvoitetaan alustat sopimusmallien läpinäkyvyyteen ja selkeyteen, jotta alustatyön osapuolilla on yhtäläinen ymmärrys toimeksiantoon liittyvästä velvoitteista ja oikeuksista. Säilytetään sopimusvapaus, esimerkiksi neuvottelumahdollisuus palkkioiden suuruudesta, työajoista ja erilaisista muista ehdoista.
 
-**Alustat, kilpailu ja kuluttajansuoja**
+### Alustat, kilpailu ja kuluttajansuoja
 
 Alustoja voidaan säädellä sekä kilpailuoikeudellisesta että kuluttajien oikeuksien näkökulmasta. Kilpailua voidaan lisätä velvoittamalla alustapalvelut noudattamaan yhteentoimivuutta, kuten pankkialalla on EU:ssa jo tehty. Yhteentoimivuussäännösten pitää mahdollistaa kilpailevien ja täydentävien palvelujen rakentamisen alustojen päälle, alustan helpon vaihtamisen ja useiden alustojen samanaikaisen käyttämisen. Kuluttajien oikeuksia vahvistetaan avoimuus- ja läpinäkyvyysvaatimuksilla. Säännösten on oltava riittävän tiukkoja, jotta ne aidosti muuttavat alustojen toimintatapoja. Alustasääntelyn osana ei kuitenkaan pidä ottaa käyttöön massavalvonnaksi katsottavia tietoliikenteen valvontavelvollisuuksia.
 
@@ -361,7 +361,7 @@ Alustoja voidaan säädellä sekä kilpailuoikeudellisesta että kuluttajien oik
 *   Edellytetään markkina-asemaltaan merkittäviltä alustoilta keskinäistä yhteentoimivuutta.
 *   Luodaan kuluttajien oikeuksia vahvistavat avoimuus- ja läpinäkyvyyssäännökset alustoille.
 
-**Reaaliaikainen talous ja sosiaaliturvan uudistaminen**  
+### Reaaliaikainen talous ja sosiaaliturvan uudistaminen
 
 Alustatalous ja työelämän murros haastavat kehittämään sosiaaliturvajärjestelmää joustavammaksi. Mahdollisimman reaaliaikainen ja automaattinen palkkojen, maksujen, verojen ja tukien yhteensovittaminen tukisi sosiaaliturvan käytännön toteutusta. Vihreät on perustulopuolue, jonka mallissa perustulo maksettaisiin automaattisesti ilman byrokratiaa. Perustulo tulee ymmärtää paitsi sosiaaliturvan modernisointina, myös digitalisaatiota hyödyntävänä harppauksena kohti reaaliaikaista talousjärjestelmää. Myös palkanmaksun velvoitteita voidaan merkittävästi helpottaa verotilimallilla. Työnantaja maksaa bruttopalkan kansalaisen verotilille, siitä lasketaan automaattisesti verot, eläkemaksut ja muut sivukulut, ja loput siirretään välittömästi palkansaajan omalle tilille.
 
@@ -391,7 +391,7 @@ Suomessa ja Euroopassa tulee tukea tekoälyä kehittävän ja hyödyntävän eko
 *   Edistetään laadukkaiden yhteiskäyttöisten tietovarantojen tuottamista, avaamista ja ylläpitoa.
 *   Edistetään lainsäädännön ja innovaatiopolitiikan keinoin toimivaa kilpailua sekä ehkäistään erityisesti suljettujen datamonopolien syntymistä.
 
-**Erilaiset riskit eri tasoisella automaatiolla**  
+### Erilaiset riskit eri tasoisella automaatiolla
 
 Kaikkea automaatiota ja tekoälyä ei voi niputtaa yhteen. Sääntelyä kehitettäessä on tärkeää huomioida järjestelmien autonomian aste. Lisäksi on huomioitava, ovatko järjestelmät ennalta määriteltyjä, niin sanottuja sääntöpohjaisia järjestelmiä, vai koneoppimiseen pohjautuvia järjestelmiä, jotka voivat käytön ja uuden datan myötä automaattisesti muuttaa toimintamallejaan.
 
@@ -403,7 +403,7 @@ Suurimpia riski- ja epävarmuustekijöitä liittyy järjestelmiin, jotka oppivat
 *   Luodaan ja ylläpidetään korkeimman riskiluokan päätösalgoritmeista rekisteri, jossa avataan, miten tekoälyjärjestelmä toimii, mitä tietoa se käyttää päättelyyn, kuka järjestelmän on kehittänyt ja kuka sitä tai sitä kouluttavaa opetusaineistoa ylläpitää.
 *   Käynnistetään valmistelutyö, jonka tuloksena voidaan ennakoivasti ottaa kantaa koneoppivien järjestelmien hyödyntämiseen julkishallinnon päätöksenteossa.
 
-**Syrjimättömyys ja oikeusturva automaattisessa päätöksenteossa**
+### Syrjimättömyys ja oikeusturva automaattisessa päätöksenteossa
 
 Perus- ja ihmisoikeuksien sekä laissa määritellyn syrjintäkiellon on pädettävä riippumatta siitä, onko järjestelmissä tekoälyä vai ei. Erilaisten sensorien, algoritmien ja rekisterien autoritaarinen, kontrolloiva ja manipuloiva käyttö on siksi tuomittavaa. Ihmisten massavalvonta, esimerkiksi julkisilla paikoilla ja biometrisen tunnistamisen avulla on kiellettävä. Tämä mahdollistaa tekoälyn sääntelyn kehittämisen ennen ihmisten yksityisyydensuojaa ja oikeusturvaa vaarantavien sovellusten kehittämistä. Automatisoiduissa prosesseissa olevat syrjivät käytännöt leviävät helposti koskemaan laajoja joukkoja. Toisaalta syrjintää on ilman algoritmejakin, ja koneoppimista voidaan myös hyödyntää piilosyrjinnän tunnistamiseen.
 
@@ -424,7 +424,7 @@ Digitalisaation tarjoamat mahdollisuudet ympäristö- ja ilmastokriisin ratkaisu
 
 Tutkittua tietoa digitalisaation kokonaisympäristövaikutuksista on vielä vähän. Saatavilla olevat tutkimukset ovat hajanaisia, heikosti vertailukelpoista ja hajonta tutkimustuloksissa on suurta. On kuitenkin selvää, että digitalisaation sekä myönteiset että kielteiset ympäristövaikutukset ovat suuruusluokaltaan niin merkittäviä, että ne on syytä ottaa vakavasti.
 
-**Digitalisaation fyysinen ulottuvuus**
+### Digitalisaation fyysinen ulottuvuus
 
 Pariisin ilmastosopimus edellyttää päästöjen nopeaa vähentämistä, mutta ICT-alan päästöt ja energiankulutus ovat merkittävässä kasvussa. Sektorin negatiiviset ympäristövaikutukset tulevat pääosin datakeskuksista ja datan käytöstä sekä elektroniikan valmistuksesta ja käytöstä. Datan kysyntä on kasvanut eksponentiaalisesti, mutta tähän mennessä datakeskusten energiatehokkuuden kehitys on pitänyt sähkönkulutuksen nousun aisoissa. Elektroniikan resurssikierto ja kierrätys ovat vielä suurelta osin ratkaisemattomia kysymyksiä.
 
@@ -442,7 +442,7 @@ Dataintensiivisten kuluttajapalvelujen jatkuvasti kasvava käyttö on keskeisin 
 *   Parannetaan kuluttajien tietoisuutta elektroniikan ja digitaalisten palvelujen ympäristövaikutuksista. Edellytetään, että yritykset tarjoavat riittävää tuoteinformaatiota elektroniikan ja digitaalisten palvelujen ympäristövaikutuksista.
 *   Otetaan käyttöön kunnianhimoinen yritysvastuulaki sekä Suomen että EU:n tasolla. Varmistetaan läpinäkyvyys ja työntekijöiden oikeudet tuotantoketjun kaikissa vaiheissa.
 
-**Digitalisaatio ympäristökriisin ratkaisemisessa**
+### Digitalisaatio ympäristökriisin ratkaisemisessa
 
 Digitalisaation avulla voidaan säästää energiaa ja resursseja tuotantoketjujen eri vaiheissa ja luoda mahdollisuuksia muiden sektorien energiankäytön vähentämiseen. Lisäksi digitalisaation avulla voidaan suoraan edistää ympäristönsuojelua esimerkiksi tuottamalla parempaa ympäristön tilannekuvaa. Valtion tulee edesauttaa yritysten siirtymistä kohti kestäviä liiketoimintamalleja digitalisaation tuomien välineiden avulla. Kehittyneen digitaalisen arvoketjujen mallintamiseen avulla voidaan tarjota kuluttajille parempaa tietoa tuotteiden ja palvelujen ympäristövaikutuksista. Omassa toiminnassaan julkishallinnon tulee avoimesti mallintaa omien hankintaketjujensa ympäristövaikutukset.
 
