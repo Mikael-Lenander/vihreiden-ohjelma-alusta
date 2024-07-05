@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import { Resource } from '@tomic/lib';
 import { core, useArray, useDate, useNumber, useResource, useString } from '@tomic/react';
 import { ontology } from './ontology';
+
+import Markdown from 'react-markdown';
+
 import './App.css'
 
 interface ViewProgramProps {
@@ -43,7 +44,7 @@ function Metadata({ approvedOn, title }: MetadataProps): JSX.Element {
       { year: 'numeric', month: 'long', day: 'numeric' }
     );
     return (
-      <div id="vo-program-meta">
+      <div className="vo-program-meta">
         <h1>{title}</h1>
         <p>Hyväksytty {approvedOnStr}</p>
       </div>
@@ -96,7 +97,7 @@ function Paragraph({ subject }: ElementProps): JSX.Element {
   const resource = useResource(subject);
   const [text] = useString(resource, ontology.properties.text);
   if (text != undefined) {
-    return <p>{text}</p>;
+    return <Markdown>{text}</Markdown>;
   } else {
     return <p><strong>Failed to get element text!</strong></p>;
   }
