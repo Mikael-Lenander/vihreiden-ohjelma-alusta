@@ -16,7 +16,7 @@
 
 .vo-program-body h1 {
   color: #006845;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .vo-program-body h2 {

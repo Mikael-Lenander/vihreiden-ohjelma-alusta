@@ -1,13 +1,13 @@
 set -e
 
-# cd into repository root
-cd $(dirname $(realpath $0))
-cd ..
+here=$(dirname $(realpath $0))
 
 # (Re)generate the JSONs
-pushd vihreat
+cd $here
 python3 generate.py
-popd
+
+# cd into repository root
+cd ..
 
 # Make sure the server is up to date
 cargo build
@@ -17,8 +17,8 @@ cargo build
 ./target/debug/atomic-server reset || true
 
 # Import bootstrap data
-./target/debug/atomic-server import --file vihreat/json/ontology.json --force
-./target/debug/atomic-server import --file vihreat/json/tietopoliittinen-ohjelma.json --force
+./target/debug/atomic-server import --file $here/json/ontology.json --force
+./target/debug/atomic-server import --file $here/json/tietopoliittinen-ohjelma.json --force
 
 # Export
-./target/debug/atomic-server export -p vihreat/json/debug_export.json
+./target/debug/atomic-server export -p $here/json/debug_export.json
