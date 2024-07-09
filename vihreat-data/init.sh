@@ -22,3 +22,6 @@ cargo build
 
 # Export
 ./target/debug/atomic-server export -p $here/json/debug_export.json
+
+# Typescript types
+$here/generate-types.sh

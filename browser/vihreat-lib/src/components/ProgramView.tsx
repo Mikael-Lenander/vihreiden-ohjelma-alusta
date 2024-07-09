@@ -1,23 +1,27 @@
-import { core, useArray, useDate, useNumber, useResource, useString } from '@tomic/react';
-import { ontology } from './ontology';
-
+import {
+  core,
+  useArray,
+  useDate,
+  useNumber,
+  useResource,
+  useString,
+  Resource,
+} from '@tomic/react';
+import { Program, ontology } from '../ontologies/ontology';
 import Markdown from 'react-markdown';
 
-import './App.css'
-
-interface ViewProgramProps {
-  subject: string;
+interface ProgramViewProps {
+  resource: Resource<Program>;
 }
 
-export function ViewProgram({ subject }: ViewProgramProps): JSX.Element {
-  const resource = useResource(subject);
+export function ProgramView({ resource }: ProgramViewProps): JSX.Element {
   const [title] = useString(resource, ontology.properties.title);
-  const approvedOn = useDate(resource, ontology.properties.approvedOn);
+  const approvedOn = useDate(resource, ontology.properties.approvedon);
   const [elements] = useArray(resource, ontology.properties.elements);
 
-  if ((title != undefined) && (elements != undefined)) {
+  if (title !== undefined && elements !== undefined) {
     return (
-      <div className="vo-program-container">
+      <div className='vo-program'>
         <Metadata title={title} approvedOn={approvedOn} />
         <Body elements={elements} />
       </div>
@@ -26,7 +30,6 @@ export function ViewProgram({ subject }: ViewProgramProps): JSX.Element {
     return (
       <>
         <p>Failed to load resource; is the server running?</p>
-        <p>Resource URL: <strong>{subject}</strong></p>
       </>
     );
   }
@@ -39,19 +42,19 @@ interface MetadataProps {
 
 function Metadata({ approvedOn, title }: MetadataProps): JSX.Element {
   if (approvedOn) {
-    const approvedOnStr = approvedOn.toLocaleString(
-      'fi-FI',
-      { year: 'numeric', month: 'long', day: 'numeric' }
-    );
+    const approvedOnStr = approvedOn.toLocaleString('fi-FI', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
+
     return (
-      <div className="vo-program-meta">
+      <div className='vo-program-meta'>
         <h1>{title}</h1>
         <p>Hyväksytty {approvedOnStr}</p>
       </div>
     );
-
-  }
-  else {
+  } else {
     return (
       <>
         <h1>{title}</h1>
@@ -66,7 +69,7 @@ interface BodyProps {
 
 function Body({ elements }: BodyProps): JSX.Element {
   return (
-    <div className="vo-program-body">
+    <div className='vo-program-body'>
       {elements.map(subject => (
         <Element subject={subject} key={subject} />
       ))}
@@ -81,12 +84,13 @@ interface ElementProps {
 function Element({ subject }: ElementProps): JSX.Element {
   const resource = useResource(subject);
   const [klass] = useString(resource, core.properties.isA);
+
   switch (klass!) {
     case ontology.classes.paragraph:
       return <Paragraph subject={subject} />;
     case ontology.classes.title:
       return <Title subject={subject} />;
-    case ontology.classes.actionItem:
+    case ontology.classes.actionitem:
       return <ActionItem subject={subject} />;
     default:
       return <Unknown subject={subject} />;
@@ -96,17 +100,23 @@ function Element({ subject }: ElementProps): JSX.Element {
 function Paragraph({ subject }: ElementProps): JSX.Element {
   const resource = useResource(subject);
   const [text] = useString(resource, ontology.properties.text);
-  if (text != undefined) {
+
+  if (text !== undefined) {
     return <Markdown>{text}</Markdown>;
   } else {
-    return <p><strong>Failed to get element text!</strong></p>;
+    return (
+      <p>
+        <strong>Failed to get element text!</strong>
+      </p>
+    );
   }
 }
 
 function Title({ subject }: ElementProps): JSX.Element {
   const resource = useResource(subject);
   const [text] = useString(resource, ontology.properties.text);
-  const [level] = useNumber(resource, ontology.properties.titleLevel);
+  const [level] = useNumber(resource, ontology.properties.titlelevel);
+
   switch (level) {
     case 1:
     default:
@@ -127,11 +137,14 @@ function Title({ subject }: ElementProps): JSX.Element {
 function ActionItem({ subject }: ElementProps): JSX.Element {
   const resource = useResource(subject);
   const [text] = useString(resource, ontology.properties.text);
-  return <ul><li>{text}</li></ul>;
+
+  return (
+    <ul>
+      <li>{text}</li>
+    </ul>
+  );
 }
 
 function Unknown({ subject }: ElementProps): JSX.Element {
-  return <></>;
+  return <p>{subject}</p>;
 }
-
-export default ViewProgram;
