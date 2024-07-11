@@ -3,7 +3,7 @@
  * For more info on how to use ontologies: https://github.com/atomicdata-dev/atomic-server/blob/develop/browser/cli/readme.md
  * -------------------------------- */
 
-import { BaseProps } from '@tomic/lib';
+import type { BaseProps } from '@tomic/lib';
 
 export const ontology = {
   classes: {
