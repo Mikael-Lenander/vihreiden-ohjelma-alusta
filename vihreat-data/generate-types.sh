@@ -1,8 +1,8 @@
 # Generates typescript types for the ontology
 set -e
 
-current_dir=$(pwd)
+here=$(dirname $(realpath $0))
 
-cd $current_dir/browser/vihreat-lib
-npx ad-generate ontologies
+cd $here/../browser/vihreat-lib
+pnpm run generate-ontologies
 pnpm run build
