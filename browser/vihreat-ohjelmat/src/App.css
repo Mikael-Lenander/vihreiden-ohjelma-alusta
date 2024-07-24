@@ -20,6 +20,14 @@ h1.vo-program-subtitle {
   text-align: center;
 }
 
+.vo-program-dev-banner {
+  font-size: medium;
+  font-weight: bold;
+  padding: 0.1em;
+  margin: 0.25em;
+  background-color: lightgray;
+}
+
 .vo-program-status-banner {
   font-size: medium;
   font-weight: bold;
