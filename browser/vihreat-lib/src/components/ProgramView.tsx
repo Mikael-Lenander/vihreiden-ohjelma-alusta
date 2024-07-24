@@ -19,6 +19,7 @@ export function ProgramView({ resource }: ProgramViewProps): JSX.Element {
   if (title !== undefined && elements !== undefined) {
     return (
       <div className='vo-container'>
+        <DevBanner />
         <Title title={title} subtitle={subtitle} />
         <div className='vo-program-content'>
           <FrontMatter status={status} />
@@ -33,4 +34,12 @@ export function ProgramView({ resource }: ProgramViewProps): JSX.Element {
       </>
     );
   }
+}
+
+function DevBanner(): JSX.Element {
+  return (
+    <p className='vo-program-dev-banner'>
+      ⚠ Sivusto on kehitysvaiheessa eikä sen sisältö välttämättä vastaa Vihreiden virallisia ohjelmia.
+    </p>
+    );
 }
