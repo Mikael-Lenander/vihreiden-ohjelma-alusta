@@ -1,25 +1,33 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
+import { Collection } from '@tomic/lib';
+import { useMemberFromCollection, useString } from '@tomic/react';
+import { Program, ontology as vihreat, useStatusInfo } from 'vihreat-lib';
 
 interface ProgramBadgeProps {
-  id: string;
-  title: string;
-  subtitle: string;
-  status: string;
-};
+  index: number;
+  collection: Collection;
+}
 
-export function ProgramBadge({ id, title, subtitle, status }: ProgramBadgeProps): JSX.Element {
+export function ProgramBadge({
+  index,
+  collection,
+}: ProgramBadgeProps): JSX.Element {
+  const program = useMemberFromCollection<Program>(collection, index);
+  const [title] = useString(program, vihreat.properties.title);
+  const [subtitle] = useString(program, vihreat.properties.subtitle);
+  const id = program.subject.split('/').pop();
+  const status = useStatusInfo(program);
+
   return (
     <>
-      <NavLink
-        key={id}
-        to={`/ohjelmat/${id}`}
-        className={linkStyling}
-      >
-        <p className={`vo-programbadge vo-programbadge-${status}`}>
+      <NavLink to={`/ohjelmat/${id}`} className={linkStyling}>
+        <p className={`vo-programbadge vo-programbadge-${status.color}`}>
           <p className='vo-programbadge-subtitle'>{subtitle}</p>
-          <p className='vo-programbadge-title' title={title}>{title}</p>
+          <p className='vo-programbadge-title' title={title}>
+            {title}
+          </p>
         </p>
-      </NavLink >
+      </NavLink>
     </>
   );
 }
