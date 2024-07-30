@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { useCollection } from '@tomic/react';
 import { ProgramBadge } from './ProgramBadge';
@@ -10,6 +11,8 @@ export default function SideBar() {
     value: vihreat.classes.program,
   });
   const numPrograms = collection.totalMembers;
+  const [searchText, setSearchText] = useState('');
+  const searchQuery = searchText.toLowerCase();
 
   return (
     <div className='sidebar-container'>
@@ -17,12 +20,25 @@ export default function SideBar() {
         <NavLink to='/' end>
           <h1>Ohjelmat</h1>
         </NavLink>
+        <search>
+          <input
+            type='text'
+            placeholder='Hae ohjelmia...'
+            value={searchText}
+            onChange={e => setSearchText(e.target.value)}
+          />
+        </search>
         <>
           {numPrograms === 0 ? (
             <p>Ladataan ohjelmia...</p>
           ) : (
             range(0, collection.totalMembers).map(index => (
-              <ProgramBadge key={index} collection={collection} index={index} />
+              <ProgramBadge
+                key={index}
+                collection={collection}
+                index={index}
+                searchQuery={searchQuery}
+              />
             ))
           )}
         </>
