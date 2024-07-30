@@ -19,29 +19,25 @@ export function FrontMatter({ status }: WithStatusProps): JSX.Element {
 function Banner({ status }: WithStatusProps): JSX.Element {
   if (status.isGreen) {
     return <></>;
-  }
-  else if (status.isGray) {
+  } else if (status.isGray) {
     return (
       <p className='vo-program-status-banner vo-program-status-banner-draft'>
         ⚠ Tämä on ohjelmaluonnos. Se ei ole eikä ole koskaan ollut voimassa.
       </p>
     );
-  }
-  else if (status.isYellow) {
+  } else if (status.isYellow) {
     return (
       <p className='vo-program-status-banner vo-program-status-banner-stale'>
         ⚠ Tämä ohjelma voi sisältää vanhentunutta asiasisältöä.
       </p>
     );
-  }
-  else if (status.isRed) {
+  } else if (status.isRed) {
     return (
       <p className='vo-program-status-banner vo-program-status-banner-retired'>
         ⚠ Tämä ohjelma ei ole enää voimassa.
       </p>
     );
-  }
-  else {
+  } else {
     return (
       <p className='vo-program-status-banner vo-program-status-banner-retired'>
         ⚠ Tämän ohjelman voimassaolotietoja ei voitu selvittää.
@@ -57,8 +53,7 @@ function ApprovedLine({ status }: WithStatusProps): JSX.Element {
         Hyväksyttiin {dateToString(status.approvedOn)}
       </p>
     );
-  }
-  else {
+  } else {
     return <></>;
   }
 }
@@ -70,8 +65,7 @@ function UpdatedLine({ status }: WithStatusProps): JSX.Element {
         Päivitetty viimeksi {dateToString(status.updatedOn)}
       </p>
     );
-  }
-  else {
+  } else {
     return <></>;
   }
 }
@@ -97,15 +91,13 @@ function RetiredLine({ status }: WithStatusProps): JSX.Element {
         Voimassaolo päättyi {dateToString(status.retiredOn)}
       </p>
     );
-  }
-  else if (status.retiredOn) {
+  } else if (status.retiredOn) {
     return (
       <p className='vo-program-status-info'>
         Voimassaolo päättyy {dateToString(status.retiredOn)}
       </p>
     );
-  }
-  else {
+  } else {
     return <></>;
   }
 }
@@ -117,8 +109,7 @@ function dateToString(date?: Date): string {
       month: 'numeric',
       day: 'numeric',
     });
-  }
-  else {
+  } else {
     return '??.??.????';
   }
 }

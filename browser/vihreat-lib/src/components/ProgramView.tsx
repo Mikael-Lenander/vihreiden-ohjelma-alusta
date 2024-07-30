@@ -1,5 +1,4 @@
-import Markdown from 'react-markdown';
-import { useArray, useDate, useString, Resource } from '@tomic/react';
+import { useArray, useString, Resource } from '@tomic/react';
 import { Program, ontology } from '../ontologies/ontology';
 import { Body } from './program/Body';
 import { FrontMatter } from './program/FrontMatter';
@@ -24,12 +23,15 @@ export function ProgramView({ resource }: ProgramViewProps): JSX.Element {
           <FrontMatter status={status} />
           <Body elements={elements} />
         </div>
-      </div >
+      </div>
     );
   } else {
     return (
       <>
-        <p>Failed to load resource {resource.subject}. Is the server running?</p>;
+        <p>
+          Failed to load resource {resource.subject}. Is the server running?
+        </p>
+        ;
       </>
     );
   }
