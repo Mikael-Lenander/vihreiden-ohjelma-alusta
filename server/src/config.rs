@@ -130,7 +130,7 @@ pub enum Command {
     ShowConfig,
     /// Danger! Removes all data from the store.
     #[clap(name = "reset")]
-    Reset,
+    Reset(ResetOpts),
 }
 
 #[derive(Parser, Clone, Debug)]
@@ -161,6 +161,13 @@ pub struct ImportOpts {
 /// Start atomic-server, oi mate
 #[derive(Parser, Clone, Debug)]
 pub struct ServerOpts {}
+
+#[derive(Parser, Clone, Debug)]
+pub struct ResetOpts {
+    /// Skip confirmation prompt when removing data. This is useful for unsupervised scripts.
+    #[clap(long)]
+    pub force: bool,
+}
 
 /// Configuration for the server.
 /// These values are set when the server initializes, and do not change while running.

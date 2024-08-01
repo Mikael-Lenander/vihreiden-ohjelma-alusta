@@ -91,8 +91,8 @@ async fn main_wrapped() -> errors::AtomicServerResult<()> {
             println!("{:#?}", config);
             Ok(())
         }
-        Some(config::Command::Reset) => {
-            if dialoguer::Confirm::with_theme(&dialoguer::theme::ColorfulTheme::default())
+        Some(config::Command::Reset(reset_opts)) => {
+            if reset_opts.force || dialoguer::Confirm::with_theme(&dialoguer::theme::ColorfulTheme::default())
             .with_prompt(
                 format!("Warning!! Do you really want to remove all data from your atomic-server? This will delete {:?}", &config.store_path),
             )
