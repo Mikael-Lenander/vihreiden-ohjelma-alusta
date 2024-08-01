@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 cd browser/vihreat-lib
 pnpm run build
 cd ../vihreat-ohjelmat
