@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 set -e
 
 here=$(dirname $(realpath $0))
