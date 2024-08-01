@@ -12,9 +12,14 @@ python3 generate.py
 cd $root
 cargo build
 
-# Wipe out existing database (the user will need to confirm with "y").
+# Wipe out existing database.
+# The user will need to confirm with "y" (unless --force is specified).
 # Fails if database does not exist in the first place, so we suppress failures here.
-./server.sh reset || true
+if [ "$1" = "--force" ]; then
+    ./server.sh reset --force || true
+else
+    ./server.sh reset || true
+fi
 
 # Import bootstrap data
 ./server.sh import --file $data/json/ontology.json --force
