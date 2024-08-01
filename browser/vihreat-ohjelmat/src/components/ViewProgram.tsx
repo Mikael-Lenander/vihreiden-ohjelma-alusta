@@ -4,7 +4,7 @@ import { ProgramView, Program } from 'vihreat-lib';
 
 export function ViewProgram(): JSX.Element {
   const { id } = useParams();
-  const subject = `http://localhost:9883/ohjelmat/${id}`;
+  const subject = `http://${window.location.hostname}:9883/ohjelmat/${id}`;
 
   const resource = useResource<Program>(subject);
 
