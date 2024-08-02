@@ -56,7 +56,7 @@ impl Handler<Subscribe> for CommitMonitor {
     fn handle(&mut self, msg: Subscribe, _ctx: &mut Context<Self>) {
         // check if the agent has the rights to subscribe to this resource
         if !msg.subject.starts_with(&self.store.get_self_url().unwrap()) {
-            tracing::warn!("can't subscribe to external resource");
+            tracing::warn!("can't subscribe to external resource: {} {}", msg.subject, self.store.get_self_url().unwrap());
             return;
         }
         match self.store.get_resource(&msg.subject) {

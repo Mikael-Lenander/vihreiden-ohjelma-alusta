@@ -3,6 +3,7 @@ _local_base_url = "http://localhost:9883"
 
 
 def set_local_base_url(url: str):
+    global _local_base_url
     _local_base_url = url
 
 

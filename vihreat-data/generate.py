@@ -1,4 +1,10 @@
+import os
 import generate_ld
+
+
+base_url = os.environ.get("VO_BASE_URL")
+if base_url:
+    generate_ld.url.set_local_base_url(base_url)
 
 
 generate_ld.io.write(generate_ld.ontology.build(), "ontology")
