@@ -10,6 +10,7 @@ export function FrontMatter({ status }: WithStatusProps): JSX.Element {
       <Banner status={status} />
       <ApprovedLine status={status} />
       <UpdatedLine status={status} />
+      <StaleLine status={status} />
       <RetiredLine status={status} />
     </div>
   );
@@ -74,6 +75,20 @@ function UpdatedLine({ status }: WithStatusProps): JSX.Element {
     return <></>;
   }
 }
+
+function StaleLine({ status }: WithStatusProps): JSX.Element {
+  if (status.hasGoneStale && !status.hasBeenRetired) {
+    return (
+      <p className='vo-program-status-info'>
+        Vanhenemisvaroitus annettu {dateToString(status.staleOn)}
+      </p>
+    );
+  }
+  else {
+    return <></>;
+  }
+}
+
 
 function RetiredLine({ status }: WithStatusProps): JSX.Element {
   if (status.hasBeenRetired) {
