@@ -21,11 +21,16 @@ h1.vo-program-subtitle {
 }
 
 .vo-program-dev-banner {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
   font-size: medium;
   font-weight: bold;
-  padding: 0.1em;
-  margin: 0.25em;
-  background-color: lightgray;
+  padding: 0.3em;
+  margin: 0;
+  background-color: khaki;
+  box-shadow: 0 -0.3em 0.6em goldenrod;
 }
 
 .vo-program-status-banner {
