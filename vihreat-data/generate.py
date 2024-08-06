@@ -1,4 +1,9 @@
+import os
 import generate_ld
+
+
+if "ATOMIC_SERVER_URL" in os.environ:
+    generate_ld.url.set_local_base_url(os.environ["ATOMIC_SERVER_URL"])
 
 
 generate_ld.io.write(generate_ld.ontology.build(), "ontology")
