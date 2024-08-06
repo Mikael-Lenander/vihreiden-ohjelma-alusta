@@ -60,3 +60,7 @@ pnpm start
 ```
 
 Sivu pyörii osoitteessa http://localhost:5173/. Atomic Serverin tulee olla myös käynnissä.
+
+## Devipalvelimen ajaminen
+
+Kloonaa repo ja aja sen kansiossa `./ci.py x.y.z.w`, missä `x.y.z.w` on palvelimen julkinen IP.
