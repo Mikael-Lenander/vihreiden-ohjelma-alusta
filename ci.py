@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 import atexit
+import os
 import subprocess
+import sys
 import time
 
 
 class Server:
-    def __init__(self):
+    def __init__(self, addr):
+        os.environ["ATOMIC_SERVER_URL"] = f"http://{addr}:9883"
+        self.addr = addr
         self.atomic = None
         self.node = None
 
@@ -14,6 +18,15 @@ class Server:
 
     def init(self):
         print("Initializing...")
+        subprocess.run(
+            [
+                "sed",
+                "-i",
+                f"s/localhost/{self.addr}/g",
+                "./browser/vihreat-lib/atomic.config.json",
+            ],
+            check=True,
+        )
         subprocess.run(["./init.sh", "--force"], check=True)
 
     def start(self):
@@ -50,5 +63,6 @@ class Server:
 
 
 if __name__ == "__main__":
-    server = Server()
+    addr = sys.argv[1]
+    server = Server(addr)
     server.run()
