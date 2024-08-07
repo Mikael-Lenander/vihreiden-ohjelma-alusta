@@ -77,12 +77,10 @@ function StaleLine({ status }: WithStatusProps): JSX.Element {
         Vanhenemisvaroitus annettu {dateToString(status.staleOn)}
       </p>
     );
-  }
-  else {
+  } else {
     return <></>;
   }
 }
-
 
 function RetiredLine({ status }: WithStatusProps): JSX.Element {
   if (status.hasBeenRetired) {

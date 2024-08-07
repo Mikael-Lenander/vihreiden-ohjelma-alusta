@@ -17,14 +17,14 @@ interface StatusInfoProps {
 }
 
 export class StatusInfo {
-  color: StatusColor;
-  now: Date;
-  approvedOn?: Date;
-  updatedOn?: Date;
-  retiredOn?: Date;
-  staleOn?: Date;
+  public color: StatusColor;
+  public now: Date;
+  public approvedOn?: Date;
+  public updatedOn?: Date;
+  public retiredOn?: Date;
+  public staleOn?: Date;
 
-  constructor(
+  public constructor(
     now: Date,
     { approvedOn, updatedOn, retiredOn, staleOn }: StatusInfoProps,
   ) {
@@ -47,36 +47,36 @@ export class StatusInfo {
     }
   }
 
-  get hasBeenApproved(): boolean {
+  public get hasBeenApproved(): boolean {
     return Boolean(this.approvedOn && this.approvedOn <= this.now);
   }
 
-  get hasBeenUpdated(): boolean {
+  public get hasBeenUpdated(): boolean {
     return Boolean(this.updatedOn && this.updatedOn <= this.now);
   }
 
-  get hasGoneStale(): boolean {
+  public get hasGoneStale(): boolean {
     return Boolean(this.staleOn && this.staleOn <= this.now);
   }
 
-  get hasBeenRetired(): boolean {
+  public get hasBeenRetired(): boolean {
     return Boolean(this.retiredOn && this.retiredOn <= this.now);
   }
 
-  get isGray(): boolean {
-    return this.color == StatusColor.Gray;
+  public get isGray(): boolean {
+    return this.color === StatusColor.Gray;
   }
 
-  get isGreen(): boolean {
-    return this.color == StatusColor.Green;
+  public get isGreen(): boolean {
+    return this.color === StatusColor.Green;
   }
 
-  get isYellow(): boolean {
-    return this.color == StatusColor.Yellow;
+  public get isYellow(): boolean {
+    return this.color === StatusColor.Yellow;
   }
 
-  get isRed(): boolean {
-    return this.color == StatusColor.Red;
+  public get isRed(): boolean {
+    return this.color === StatusColor.Red;
   }
 }
 
