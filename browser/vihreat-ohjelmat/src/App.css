@@ -110,6 +110,7 @@ h1.vo-program-subtitle {
   width: 15rem;
   padding: 0 0.5rem;
   border-right: 2px solid gray;
+  overflow-y: scroll;
 }
 
 .content {
