@@ -8,6 +8,7 @@ def build() -> list[dict]:
         _build_Title(),
         _build_Paragraph(),
         _build_ActionItem(),
+        _build_ActionList(),
         _build_title(),
         _build_subtitle(),
         _build_elements(),
@@ -36,6 +37,7 @@ def _build_ontology() -> dict:
             url.local("o/Title"),
             url.local("o/Paragraph"),
             url.local("o/ActionItem"),
+            url.local("o/ActionList"),
         ],
         url.atomic("properties/properties"): [
             url.local("o/title"),
@@ -133,6 +135,23 @@ def _build_ActionItem() -> dict:
         ],
     }
 
+def _build_ActionList() -> dict:
+    return {
+        "@id": url.local("o/ActionList"),
+        url.atomic("properties/parent"): url.local("o"),
+        url.atomic("properties/shortname"): "actionlist",
+        url.atomic("properties/description"): _markdown(
+            """
+            Lista tehtävistä konkteettisista linjauksista.
+
+            Sisältönä toimenpiteitä, eli palluroita, eli pompuloita.
+            """
+        ),
+        url.atomic("properties/isA"): [url.atomic("classes/Class")],
+        url.atomic("properties/requires"): [
+            url.local("o/elements"),
+        ],
+    }
 
 def _build_title() -> dict:
     return {
@@ -177,7 +196,7 @@ def _build_elements() -> dict:
         url.atomic("properties/shortname"): "elements",
         url.atomic("properties/description"): _markdown(
             """
-            Ohjelman sisältö.
+            Ohjelman tai toimenpidelistan sisältö.
 
             Sisältö ilmaistaan listana, jossa listan jokainen alkio on
             ohjelmatekstin pieni osa, esimerkiksi tekstikappale, otsikko, kuva
