@@ -1,4 +1,4 @@
-import { core, useNumber, useResource, useString } from '@tomic/react';
+import { core, useArray, useNumber, useResource, useString } from '@tomic/react';
 import { ontology } from '../../ontologies/ontology';
 import Markdown from 'react-markdown';
 
@@ -29,8 +29,8 @@ function Element({ subject }: ElementProps): JSX.Element {
       return <Paragraph subject={subject} />;
     case ontology.classes.title:
       return <Title subject={subject} />;
-    case ontology.classes.actionitem:
-      return <ActionItem subject={subject} />;
+    case ontology.classes.actionlist:
+      return <ActionList subject={subject} />;
     default:
       return <Loading subject={subject} />;
   }
@@ -72,15 +72,25 @@ function Title({ subject }: ElementProps): JSX.Element {
       return <h6>{text}</h6>;
   }
 }
+function ActionList({ subject }: ElementProps): JSX.Element {
+  const resource = useResource(subject);
+  const [elements] = useArray(resource, ontology.properties.elements);
+
+  return (
+    <ul>
+      {elements.map(subject => (
+        <ActionItem subject={subject} />
+      ))}
+    </ul>
+  );
+}
 
 function ActionItem({ subject }: ElementProps): JSX.Element {
   const resource = useResource(subject);
   const [text] = useString(resource, ontology.properties.text);
 
   return (
-    <ul>
       <li>{text}</li>
-    </ul>
   );
 }
 

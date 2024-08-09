@@ -11,6 +11,7 @@ export const ontology = {
     title: 'http://localhost:9883/o/Title',
     paragraph: 'http://localhost:9883/o/Paragraph',
     actionitem: 'http://localhost:9883/o/ActionItem',
+    actionlist: 'http://localhost:9883/o/ActionList',
   },
   properties: {
     title: 'http://localhost:9883/o/title',
@@ -29,6 +30,7 @@ export type Program = typeof ontology.classes.program;
 export type Title = typeof ontology.classes.title;
 export type Paragraph = typeof ontology.classes.paragraph;
 export type Actionitem = typeof ontology.classes.actionitem;
+export type Actionlist = typeof ontology.classes.actionlist;
 
 declare module '@tomic/lib' {
   interface Classes {
@@ -57,6 +59,10 @@ declare module '@tomic/lib' {
     };
     [ontology.classes.actionitem]: {
       requires: BaseProps | typeof ontology.properties.text;
+      recommends: never;
+    };
+    [ontology.classes.actionlist]: {
+      requires: BaseProps | typeof ontology.properties.elements;
       recommends: never;
     };
   }
