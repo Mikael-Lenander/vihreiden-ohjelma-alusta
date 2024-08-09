@@ -4,6 +4,7 @@ import { useCollection } from '@tomic/react';
 import { ProgramBadge } from './ProgramBadge';
 import { ontology as vihreat } from 'vihreat-lib';
 import { core } from '@tomic/lib';
+import barsImg from "../assets/bars-solid.svg";
 
 export default function SideBar() {
   const { collection } = useCollection({
@@ -13,12 +14,17 @@ export default function SideBar() {
   const numPrograms = collection.totalMembers;
   const [searchText, setSearchText] = useState('');
   const searchQuery = searchText.toLowerCase();
+  const [collapsed, setCollapsed] = useState(false);
 
   return (
     <div className='sidebar-container'>
-      <div className='sidebar'>
+      <button onClick={() => setCollapsed(!collapsed)} id="sidebar-collapse-button">
+        <img src={barsImg}/>
+      </button>
+
+      {!collapsed && (<div className='sidebar'>
         <NavLink to='/' end>
-          <h1>Ohjelmat</h1>
+          <h1 id="sidebar-title">Ohjelmat</h1>
         </NavLink>
         <search>
           <input
@@ -28,8 +34,8 @@ export default function SideBar() {
             onChange={e => setSearchText(e.target.value)}
           />
         </search>
-        <>
-          {numPrograms === 0 ? (
+        <div id="program-list">
+          { numPrograms === 0 ? (
             <p>Ladataan ohjelmia...</p>
           ) : (
             range(0, collection.totalMembers).map(index => (
@@ -41,8 +47,8 @@ export default function SideBar() {
               />
             ))
           )}
-        </>
-      </div>
+        </div>
+      </div>)}
       <div className='content'>
         <Outlet />
       </div>
