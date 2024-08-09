@@ -12,7 +12,7 @@ h1.vo-program-subtitle {
 }
 
 .vo-program-content {
-  width: 75ch;
+  width: min(75ch, 75vw);
   margin: 0 auto;
 }
 
@@ -107,9 +107,24 @@ h1.vo-program-subtitle {
 }
 
 .sidebar {
-  width: 15rem;
+  width: max(15rem, 20vw);
   padding: 0 0.5rem;
   border-right: 2px solid gray;
+}
+
+#sidebar-collapse-button {
+  position: fixed;
+  top: 35px;
+  left: 10px;
+  width: 20px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+#sidebar-title {
+  color: #006845;
+  padding-left: 28px;
 }
 
 .content {
