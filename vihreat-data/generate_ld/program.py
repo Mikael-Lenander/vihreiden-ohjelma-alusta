@@ -20,8 +20,11 @@ def _build_main(
     j = {
         "@id": url.local(f"ohjelmat/{name}"),
         url.atomic("properties/parent"): url.local(),
-        url.atomic("properties/isA"): [url.local("o/Program")],
-        url.local("o/title"): title,
+        url.atomic("properties/isA"): [
+            url.local("o/Program"),
+            url.local("o/ProgramElement"),
+        ],
+        url.atomic("properties/name"): title,
         url.local("o/elements"): [e["@id"] for e in elements],
     }
     if subtitle:
@@ -52,19 +55,28 @@ def _build_element(line: str, parent_name: str, num: int) -> dict:
     if line.startswith("#"):
         return {
             "@id": url.local(f"ohjelmat/{name}"),
-            url.atomic("properties/isA"): [url.local("o/Title")],
-            url.local("o/text"): line.lstrip("# "),
-            url.local("o/titleLevel"): len(line) - len(line.lstrip("#")),
+            url.atomic("properties/isA"): [
+                url.local("o/Heading"),
+                url.local("o/ProgramElement"),
+            ],
+            url.atomic("properties/name"): line.lstrip("# "),
+            url.local("o/headingLevel"): len(line) - len(line.lstrip("#")),
         }
     elif line.startswith("* "):
         return {
             "@id": url.local(f"ohjelmat/{name}"),
-            url.atomic("properties/isA"): [url.local("o/ActionItem")],
-            url.local("o/text"): line[1:].strip(),
+            url.atomic("properties/isA"): [
+                url.local("o/ActionItem"),
+                url.local("o/ProgramElement"),
+            ],
+            url.atomic("properties/name"): line[1:].strip(),
         }
     else:
         return {
             "@id": url.local(f"ohjelmat/{name}"),
-            url.atomic("properties/isA"): [url.local("o/Paragraph")],
-            url.local("o/text"): line,
+            url.atomic("properties/isA"): [
+                url.local("o/Paragraph"),
+                url.local("o/ProgramElement"),
+            ],
+            url.atomic("properties/description"): line,
         }

@@ -1,4 +1,4 @@
-import { useArray, useString, Resource } from '@tomic/react';
+import { useArray, useString, Resource, core } from '@tomic/react';
 import { Program, ontology } from '../ontologies/ontology';
 import { Body } from './program/Body';
 import { FrontMatter } from './program/FrontMatter';
@@ -10,7 +10,7 @@ interface ProgramViewProps {
 }
 
 export function ProgramView({ resource }: ProgramViewProps): JSX.Element {
-  const [title] = useString(resource, ontology.properties.title);
+  const [title] = useString(resource, core.properties.name);
   const [subtitle] = useString(resource, ontology.properties.subtitle);
   const [elements] = useArray(resource, ontology.properties.elements);
   const status = useStatusInfo(resource);
