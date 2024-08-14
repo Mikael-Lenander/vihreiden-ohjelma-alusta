@@ -8,7 +8,8 @@ def build() -> list[dict]:
         _build_Title(),
         _build_Paragraph(),
         _build_ActionItem(),
-        _build_title(),
+        _build_ProgramElement(),
+        _build_Heading(),
         _build_subtitle(),
         _build_elements(),
         _build_approvedOn(),
@@ -16,7 +17,7 @@ def build() -> list[dict]:
         _build_retiredOn(),
         _build_staleOn(),
         _build_text(),
-        _build_titleLevel(),
+        _build_headingLevel(),
     ]
 
 
@@ -33,12 +34,13 @@ def _build_ontology() -> dict:
         url.atomic("properties/isA"): [url.atomic("class/ontology")],
         url.atomic("properties/classes"): [
             url.local("o/Program"),
+            url.local("o/ProgramElement"),
+            url.local("o/Heading"),
             url.local("o/Title"),
             url.local("o/Paragraph"),
             url.local("o/ActionItem"),
         ],
         url.atomic("properties/properties"): [
-            url.local("o/title"),
             url.local("o/subtitle"),
             url.local("o/elements"),
             url.local("o/approvedOn"),
@@ -46,7 +48,7 @@ def _build_ontology() -> dict:
             url.local("o/retiredOn"),
             url.local("o/staleOn"),
             url.local("o/text"),
-            url.local("o/titleLevel"),
+            url.local("o/headingLevel"),
         ],
         url.atomic("properties/instances"): [],
     }
@@ -60,7 +62,7 @@ def _build_Program() -> dict:
         url.atomic("properties/description"): "Ohjelma.",
         url.atomic("properties/isA"): [url.atomic("classes/Class")],
         url.atomic("properties/requires"): [
-            url.local("o/title"),
+            url.atomic("properties/name"),
             url.local("o/elements"),
         ],
         url.atomic("properties/recommends"): [
@@ -73,23 +75,23 @@ def _build_Program() -> dict:
     }
 
 
-def _build_Title() -> dict:
+def _build_Heading() -> dict:
     return {
-        "@id": url.local("o/Title"),
+        "@id": url.local("o/Heading"),
         url.atomic("properties/parent"): url.local("o"),
-        url.atomic("properties/shortname"): "title",
+        url.atomic("properties/shortname"): "heading",
         url.atomic("properties/description"): _markdown(
             """
             Otsikko (ohjelman solu).
 
-            Ylimmän tason otsikon `titleLevel` on 1, sitä alemman väliotsikon
+            Ylimmän tason otsikon `headingLevel` on 1, sitä alemman väliotsikon
             2, ja niin edelleen.
             """
         ),
         url.atomic("properties/isA"): [url.atomic("classes/Class")],
         url.atomic("properties/requires"): [
-            url.local("o/text"),
-            url.local("o/titleLevel"),
+            url.atomic("properties/name"),
+            url.local("o/headingLevel"),
         ],
     }
 
@@ -110,7 +112,7 @@ def _build_Paragraph() -> dict:
         ),
         url.atomic("properties/isA"): [url.atomic("classes/Class")],
         url.atomic("properties/requires"): [
-            url.local("o/text"),
+            url.atomic("properties/description"),
         ],
     }
 
@@ -129,14 +131,29 @@ def _build_ActionItem() -> dict:
         ),
         url.atomic("properties/isA"): [url.atomic("classes/Class")],
         url.atomic("properties/requires"): [
-            url.local("o/text"),
+            url.atomic("properties/name"),
         ],
     }
 
 
-def _build_title() -> dict:
+def _build_ProgramElement() -> dict:
     return {
-        "@id": url.local("o/title"),
+        "@id": url.local("o/ProgramElement"),
+        url.atomic("properties/parent"): url.local("o"),
+        url.atomic("properties/shortname"): "programelement",
+        url.atomic("properties/description"): _markdown(
+            """
+            Tällä luokalla merkitään kaikki ohjelmiin liittyvät resurssit. Tätä
+            tietoa käytetään hyväksi ohjelmahaussa.
+            """
+        ),
+        url.atomic("properties/isA"): [url.atomic("classes/Class")],
+    }
+
+
+def _build_Title() -> dict:
+    return {
+        "@id": url.local("o/Title"),
         url.atomic("properties/parent"): url.local("o"),
         url.atomic("properties/shortname"): "title",
         url.atomic("properties/description"): _markdown(
@@ -147,9 +164,10 @@ def _build_title() -> dict:
             _Ihmislähtöinen ja kestävä digitalisaatio_.
             Lisäksi ohjelmalla voi olla alaotsikko `subtitle`, esimerkiksi
             _Tietopoliittinen ohjelma_.
-            """),
-        url.atomic("properties/datatype"): url.atomic("datatypes/string"),
-        url.atomic("properties/isA"): [url.atomic("classes/Property")],
+            """
+        ),
+        url.atomic("properties/isA"): [url.atomic("classes/Class")],
+        url.atomic("properties/requires"): [url.atomic("properties/name")],
     }
 
 
@@ -165,8 +183,8 @@ def _build_subtitle() -> dict:
             Esimerkiksi _Tietopoliittinen ohjelma_.
             """
         ),
-        url.atomic("properties/datatype"): url.atomic("datatypes/string"),
         url.atomic("properties/isA"): [url.atomic("classes/Property")],
+        url.atomic("properties/datatype"): url.atomic("datatypes/string"),
     }
 
 
@@ -188,6 +206,7 @@ def _build_elements() -> dict:
         """
         ),
         url.atomic("properties/datatype"): url.atomic("datatypes/resourceArray"),
+        url.atomic("properties/classtype"): url.local("o/ProgramElement"),
         url.atomic("properties/isA"): [url.atomic("classes/Property")],
     }
 
@@ -267,11 +286,11 @@ def _build_text() -> dict:
     }
 
 
-def _build_titleLevel() -> dict:
+def _build_headingLevel() -> dict:
     return {
-        "@id": url.local("o/titleLevel"),
+        "@id": url.local("o/headingLevel"),
         url.atomic("properties/parent"): url.local("o"),
-        url.atomic("properties/shortname"): "titlelevel",
+        url.atomic("properties/shortname"): "headinglevel",
         url.atomic("properties/description"): _markdown(
             """
             Otsikon taso.

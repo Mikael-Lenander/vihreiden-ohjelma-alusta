@@ -5,9 +5,10 @@ import './index.css';
 import { PrimeReactProvider } from 'primereact/api';
 import { Store, StoreContext } from '@tomic/react';
 import 'primereact/resources/themes/saga-green/theme.css';
+import { SERVER_URL } from './config';
 
 const store = new Store({
-  serverUrl: 'http://localhost:9883',
+  serverUrl: SERVER_URL,
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
