@@ -1,2 +1,2 @@
 #!/bin/bash
-./target/debug/atomic-server $@
+./target/debug/atomic-server --rebuild-indexes $@

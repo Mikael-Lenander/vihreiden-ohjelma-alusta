@@ -22,10 +22,10 @@ else
 fi
 
 # Import bootstrap data
-./server.sh import --file $data/json/ontology.json --force
+./server.sh import --file $data/json/ontology.json
 for file in $data/json/p*.json
 do 
-    ./server.sh import --file $file --force
+    ./server.sh import --file $file
 done
 
 # Export
