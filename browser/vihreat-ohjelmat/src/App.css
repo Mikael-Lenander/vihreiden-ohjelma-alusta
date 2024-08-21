@@ -11,6 +11,122 @@ h1.vo-program-subtitle {
   font-size: 1.5em;
 }
 
+h1#vo-frontpage-title {
+  color: #006845;
+  text-align: center;
+}
+
+#vo-back-button {
+  position: fixed;
+  top: 0.5em;
+  left: 1em;
+  padding: 0 0.5em;
+  color: #006845;
+  background-color: #f8f8f8;
+  border-radius: 10pt;
+}
+
+#vo-search-container {
+  width: 75ch;
+  margin: auto;
+}
+
+#vo-frontpage-search-hint {
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
+#vo-search-bar {
+  width: 100%;
+  font-size: large;
+}
+
+.vo-search-hint {
+  margin-bottom: 0.2em;
+  text-align: center;
+  font-weight: 500;
+}
+
+.vo-search-loading-msg {
+  text-align: center;
+  font-size: large;
+  animation: text-pulse 1s infinite;
+}
+
+.vo-search-summary-msg {
+  margin-top: 0;
+  text-align: center;
+  font-size: small;
+  color: #666;
+}
+
+.vo-search-results-program {
+  background-color: #f8fff8;
+}
+
+.vo-search-results-program-head {
+  background-color: #c8ffc8;
+  width: 100%;
+}
+
+table.vo-search-results-program-head tr td {
+  padding: 0 0.25em;
+}
+
+table.vo-search-results-program-head tr td:nth-child(1) {
+  text-align: left;
+}
+
+table.vo-search-results-program-head tr td:nth-child(2) {
+  text-align: right;
+}
+
+table.vo-search-results-program-head tr:nth-child(1) td {
+  font-size: small;
+  text-transform: uppercase;
+}
+
+.vo-search-results-element {
+  padding-bottom: 0.25em;
+}
+
+.vo-search-results-element :nth-child(1) {
+  margin-bottom: 0.25em;
+  font-size: small;
+  font-weight: 500;
+}
+
+.vo-search-results-element :nth-child(2) {
+  margin-top: 0.25em;
+  margin-left: 0.5em;
+  padding-top: 0;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-left: 0.20em #ddd solid;
+}
+
+.vo-browse {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3em;
+}
+
+.vo-browse-hint {
+  margin-top: 2em;
+  margin-bottom: 0.2em;
+  text-align: center;
+  font-weight: 500;
+  font-size: larger;
+}
+
+.vo-browse-loading-msg {
+  text-align: center;
+  font-size: large;
+  animation: text-pulse 1s infinite;
+}
+
 .vo-program-content {
   width: 75ch;
   margin: 0 auto;
@@ -79,22 +195,10 @@ h1.vo-program-subtitle {
   margin-bottom: 0.2rem;
 }
 
-@keyframes pulse {
-
-  0%,
-  100% {
-    background-color: #fff;
-  }
-
-  50% {
-    background-color: #f8f8f8;
-  }
-}
-
 .vo-cell-loading {
   text-align: center;
   color: #666;
-  animation: pulse 1s infinite;
+  animation: cell-pulse 1s infinite;
   padding: 0.2em;
   margin: 0.5em 0;
 }
@@ -118,86 +222,26 @@ h1.vo-program-subtitle {
   overflow-y: auto;
 }
 
-.selected-program {
-  color: #006845;
+@keyframes cell-pulse {
+
+  0%,
+  100% {
+    background-color: #fff;
+  }
+
+  50% {
+    background-color: #f8f8f8;
+  }
 }
 
-.vo-programbadge {
-  font-weight: normal;
-  border: 1px solid;
-  border-left: 0.4em solid;
-  margin: 0.4em 0;
-}
+@keyframes text-pulse {
 
-.vo-programbadge-gray {
-  border-color: #eee;
-  border-left-color: #ccc;
-}
+  0%,
+  100% {
+    color: #000;
+  }
 
-.vo-programbadge-green {
-  border-color: #cfc;
-  border-left-color: #8f8;
-}
-
-.vo-programbadge-yellow {
-  border-color: #ffb;
-  border-left-color: #ee0;
-}
-
-.vo-programbadge-red {
-  border-color: #fee;
-  border-left-color: #f88;
-}
-
-.vo-programbadge p {
-  padding: 0 0.4em;
-  margin: 0;
-}
-
-.vo-programbadge:hover {
-  box-shadow: 0 0 0.2em 0.1em #9bfffb;
-  font-weight: bold;
-}
-
-.vo-selected-program-link .vo-programbadge {
-  box-shadow: 0 0 0.3em 0.1em black;
-  font-weight: bold;
-}
-
-.vo-selected-program-link .vo-programbadge-green {
-  box-shadow: 0 0 0.3em 0.1em forestgreen;
-}
-
-.vo-selected-program-link .vo-programbadge-yellow {
-  box-shadow: 0 0 0.3em 0.1em goldenrod;
-}
-
-.vo-selected-program-link .vo-programbadge-red {
-  box-shadow: 0 0 0.3em 0.1em firebrick;
-}
-
-.vo-programbadge-title {
-  font-size: small;
-  color: black;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.vo-programbadge-subtitle {
-  font-size: small;
-  background-color: #eee;
-  color: black;
-}
-
-.vo-programbadge-green .vo-programbadge-subtitle {
-  background-color: #cfc;
-}
-
-.vo-programbadge-yellow .vo-programbadge-subtitle {
-  background-color: #ffb;
-}
-
-.vo-programbadge-red .vo-programbadge-subtitle {
-  background-color: #fcc;
+  50% {
+    color: #888;
+  }
 }
