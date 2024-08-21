@@ -100,7 +100,7 @@ function RetiredLine({ status }: WithStatusProps): JSX.Element {
   }
 }
 
-function dateToString(date?: Date): string {
+export function dateToString(date?: Date): string {
   if (date) {
     return date.toLocaleString('fi-FI', {
       year: 'numeric',

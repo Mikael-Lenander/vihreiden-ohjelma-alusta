@@ -4,7 +4,7 @@ import { useCollection, useServerSearch, core } from '@tomic/react';
 import {
   ProgramBadgeResourceItem,
   ProgramBadgeCollectionItem,
-} from './ProgramBadge';
+} from './ProgramCard';
 import { ontology as vihreat } from 'vihreat-lib';
 import { SERVER_URL } from '../config';
 

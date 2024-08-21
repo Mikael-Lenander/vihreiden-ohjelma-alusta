@@ -6,10 +6,10 @@ import '../App.css';
 function App() {
   return (
     <>
-      <DevBanner />
       <BrowserRouter>
         <AppRoutes />
       </BrowserRouter>
+      <DevBanner />
     </>
   );
 }

@@ -1,0 +1,105 @@
+.vo-programbadge {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 5pt;
+  height: 100pt;
+  width: 300pt;
+
+  font-weight: 400;
+}
+
+.vo-programbadge:hover {
+  box-shadow: 0 0 0.4em 0.2em #aaa;
+}
+
+.vo-programbadge p {
+  margin: 0;
+  padding: 0 0.5em;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.vo-programbadge-title {
+  font-size: normal;
+  font-weight: 500;
+  color: #006845;
+}
+
+.vo-programbadge-subtitle {
+  font-size: smaller;
+  color: #444;
+}
+
+.vo-programbadge-date {
+  margin: 0;
+  text-align: center;
+  font-size: smaller;
+  color: #888;
+}
+
+.vo-programbadge-warning {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin: 0;
+
+  text-align: center;
+  font-size: small;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  padding: 0.2em;
+}
+
+.vo-programbadge-green {
+  background: linear-gradient(hsl(90, 100%, 90%), hsl(90, 100%, 95%));
+}
+
+.vo-programbadge-red {
+  background: linear-gradient(hsl(0, 100%, 90%), hsl(0, 100%, 95%));
+}
+
+.vo-programbadge-red .vo-programbadge-title {
+  color: hsl(0, 100%, 30%);
+}
+
+.vo-programbadge-red .vo-programbadge-warning {
+  display: block;
+  color: white;
+  background-color: hsla(0, 100%, 50%, 0.75);
+}
+
+.vo-programbadge-yellow {
+  background: linear-gradient(hsl(60, 100%, 90%), hsl(60, 100%, 95%));
+}
+
+.vo-programbadge-yellow .vo-programbadge-title {
+  color: hsl(60, 100%, 30%);
+}
+
+.vo-programbadge-yellow .vo-programbadge-warning {
+  display: block;
+  color: white;
+  background-color: hsla(40, 100%, 40%, 0.75);
+}
+
+.vo-programbadge-gray {
+  background: linear-gradient(#ddd, #eee);
+}
+
+.vo-programbadge-gray .vo-programbadge-title {
+  color: #555;
+}
+
+.vo-programbadge-gray .vo-programbadge-warning {
+  display: block;
+  color: white;
+  background-color: hsla(0, 0%, 50%, 0.75);
+}
