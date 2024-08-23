@@ -11,31 +11,21 @@ export function Search(): JSX.Element {
     <>
       <div id='vo-search-container'>
         <SearchHint />
-        <SearchBar value={searchText} setValue={setSearchText} />
-        {searchText ? <SearchResults searchText={searchText} /> : <Idle />}
+        <search>
+          <input
+            id='vo-search-bar'
+            type='text'
+            placeholder='Kirjoita hakutermi, esim. ydinvoima, perustulo, biokaasu, ...'
+            value={searchText}
+            onChange={e => setSearchText(e.target.value)}
+          />
+        </search>
+        {searchText ? <Result searchText={searchText} /> : <Idle />}
       </div>
     </>
   );
 }
 export default Search;
-
-interface SearchBarProps {
-  value: string;
-  setValue: (string) => void;
-}
-function SearchBar({ value, setValue }: SearchBarProps): JSX.Element {
-  return (
-    <search>
-      <input
-        id='vo-search-bar'
-        type='search'
-        placeholder='Kirjoita hakutermi, esim. ydinvoima, perustulo, biokaasu, ...'
-        value={value}
-        onChange={e => setValue(e.target.value)}
-      />
-    </search>
-  );
-}
 
 function SearchHint(): JSX.Element {
   return <p className='vo-search-hint'>Hae ohjelmateksteistä:</p>;
@@ -45,109 +35,94 @@ function Idle(): JSX.Element {
   return <></>;
 }
 
-interface SearchResultsProps {
+function Loading(): JSX.Element {
+  return <p className='vo-search-loading-msg'>Haetaan tuloksia...</p>;
+}
+
+interface ResultProps {
   searchText: string;
 }
-function SearchResults({ searchText }: SearchResultsProps): JSX.Element {
+function Result({ searchText }: ResultProps): JSX.Element {
   const query = useServerSearch(searchText, {
-    debounce: 1000,
+    debounce: 200,
     include: true,
     limit: 100000,
     filters: {
       [core.properties.isA]: vihreat.classes.programelement,
     },
   });
-
   if (query.loading) {
     return <Loading />;
-  } else if (query.results.length == 0) {
-    return <NoResultsFound />;
   } else {
     return (
-      <div id='vo-search-results-container'>
-        {
-          groupByProgram(query.results).map((e) => {
-            return <FoundProgram program={e.program} hits={e.hits} />;
-          })
-        }
-      </div>
+      <>
+        <Count searchText={searchText} count={query.results.length} />
+        <Results searchText={searchText} results={query.results} />
+      </>
     );
   }
 }
 
-function Loading(): JSX.Element {
-  return <p className='vo-search-loading-msg'>Haetaan tuloksia...</p>;
+interface CountProps {
+  searchText: string;
+  count: number;
+}
+function Count({ count }: CountProps): JSX.Element {
+  if (count <= 0) {
+    return <p className='vo-search-summary-msg'>Ei löytynyt osumia.</p>;
+  } else if (count == 1) {
+    return <p className='vo-search-summary-msg'>Löytyi yksi osuma.</p>;
+  } else {
+    return <p className='vo-search-summary-msg'>Löytyi {count} osumaa.</p>;
+  }
 }
 
-function NoResultsFound(): JSX.Element {
-  return <p className='vo-search-no-results-msg'>Ei tuloksia.</p>;
+interface ResultsProps {
+  searchText: string;
+  results: string[];
+}
+function Results({ searchText, results }: ResultsProps): JSX.Element {
+  return (
+    <>
+      {groupByProgram(results).map((e) => <FoundProgram program={e.program} elements={e.elements} />)}
+    </>
+  );
 }
 
 interface FoundProgramProps {
   program: string;
-  hits: string[];
+  elements: string[];
 }
-function FoundProgram({ program, hits }: FoundProgramProps): JSX.Element {
+function FoundProgram({ program, elements }: FoundProgramProps): JSX.Element {
   const resource = useResource(program);
   const id = program.split('/').pop();
   const klass = useProgramClass(resource);
   const [title] = useString(resource, core.properties.name);
   const [subtitle] = useString(resource, vihreat.properties.subtitle);
-  const [expand, setExpand] = useState(false);
 
+  console.log(id);
   return (
     <>
       <div className='vo-search-results-program'>
-        <Title
-          programId={id!}
-          title={title}
-          subtitle={subtitle}
-          hits={hits.length}
-          expand={expand}
-          onToggleExpand={() => setExpand(!expand)}
-        />
-        {expand ? <FoundProgramHits hits={hits} /> : <></>}
+        <table className='vo-search-results-program-head'>
+          <tr>
+            <td>{subtitle}</td>
+            <td>{elements.length} osumaa</td>
+          </tr>
+          <tr>
+            <td>
+              <NavLink to={`/ohjelmat/${id}`}>
+                {title}
+              </NavLink>
+            </td>
+            <td><a>&#9660;</a></td>
+          </tr>
+        </table>
+        {
+          elements.map((subject) => (<FoundElement subject={subject} />))
+        }
       </div>
     </>
-  );
-}
-
-interface FoundProgramHitsProps {
-  hits: string[];
-}
-function FoundProgramHits({ hits }: FoundProgramHitsProps): JSX.Element {
-  return <>{hits.map((subject) => (<FoundElement subject={subject} />))}</>;
-}
-
-interface TitleProps {
-  programId: string;
-  title?: string;
-  subtitle?: string;
-  hits: number;
-  expand: boolean;
-  onToggleExpand: () => void;
-}
-function Title({ programId, title, subtitle, hits, expand, onToggleExpand }: TitleProps): JSX.Element {
-
-  return (
-    <div className='vo-search-results-program-head'>
-      <NavLink to={`/ohjelmat/${programId}`} className='vo-search-results-program-head-link'>
-        <span className='vo-search-results-program-head-subtitle'>
-          {subtitle}
-        </span>
-        <span className='vo-search-results-program-head-title'>
-          {title}
-        </span>
-      </NavLink>
-      <div>
-        <span className='vo-search-results-program-head-hits'>
-          {hits} osuma{hits == 1 ? '' : 'a'}
-        </span>
-        <a className='vo-search-toggle-expand' onClick={onToggleExpand}>
-          {expand ? '\u2014' : '+'}
-        </a>
-      </div>
-    </div>
   );
 }
 
@@ -178,22 +153,22 @@ interface SearchResultsElementHeadProps {
 }
 
 export function SearchResultElementHead({ programId, elementId, elementClass }: SearchResultsElementHeadProps): JSX.Element {
-  let desc = "Tuntematon";
+  let inessiivi = "tuntemattomassa alkiossa";
   switch (elementClass) {
     case vihreat.classes.paragraph:
-      desc = "Tekstikappale";
+      inessiivi = "tekstikappaleessa";
       break;
     case vihreat.classes.heading:
-      desc = "Otsikko";
+      inessiivi = "otsikossa";
       break;
     case vihreat.classes.actionitem:
-      desc = "Linjaus";
+      inessiivi = "linjauksessa";
       break;
   }
   return (
-    <NavLink to={`/ohjelmat/p${programId}#e${elementId}`} className='vo-search-results-element-head'>
-      {desc} {elementId}
-    </NavLink>
+    <p>
+      Osuma <NavLink to={`/ohjelmat/p${programId}#e${elementId}`}>{inessiivi} #{elementId}</NavLink>
+    </p>
   );
 }
 
@@ -206,29 +181,13 @@ interface SearchResultsElementBodyProps {
 export function SearchResultElementBody({ text, name, elementClass }: SearchResultsElementBodyProps): JSX.Element {
   switch (elementClass) {
     case vihreat.classes.paragraph:
-      return (
-        <div className='vo-search-results-element-body'>
-          <Markdown>{text}</Markdown>
-        </div>
-      );
+      return <Markdown>{text}</Markdown>;
     case vihreat.classes.heading:
-      return (
-        <div className='vo-search-results-element-body'>
-          <h3>{name}</h3>
-        </div>
-      );
+      return <h3>{name}</h3>;
     case vihreat.classes.actionitem:
-      return (
-        <div className='vo-search-results-element-body'>
-          <p><ul><li>{name}</li></ul></p>
-        </div>
-      );
+      return <p><ul><li>{name}</li></ul></p>;
     default:
-      return (
-        <div className='vo-search-results-element-body'>
-          <p>{name}{text}</p>
-        </div>
-      );
+      return <p>{name}{text}</p>;
   }
 }
 
@@ -295,5 +254,5 @@ function groupByProgram(src: string[]): FoundProgramProps[] {
   });
   programs.sort();
   programs.reverse();
-  return programs.map((p) => ({ program: p, hits: byProgram[p] }));
+  return programs.map((p) => ({ program: p, elements: byProgram[p] }));
 }
