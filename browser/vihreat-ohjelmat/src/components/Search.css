@@ -1,0 +1,133 @@
+#vo-search-container {
+  width: 75ch;
+  margin: auto;
+}
+
+#vo-frontpage-search-hint {
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
+#vo-search-bar {
+  width: 100%;
+  font-size: large;
+}
+
+.vo-search-hint {
+  margin-bottom: 0.2em;
+  text-align: center;
+  font-weight: 500;
+}
+
+.vo-search-loading-msg {
+  text-align: center;
+  font-size: large;
+  animation: text-pulse 1s infinite;
+}
+
+.vo-search-summary-msg {
+  margin-top: 0;
+  text-align: center;
+  font-size: small;
+  color: #666;
+}
+
+#vo-search-results-container {
+  margin-top: 1em;
+}
+
+.vo-search-results-program {
+  margin-bottom: 1em;
+}
+
+.vo-search-results-program-head {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: end;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 0.75em;
+}
+
+.vo-search-results-program-head-link {
+  display: flex;
+  flex-flow: column wrap;
+  max-width: 85%;
+}
+
+.vo-search-results-program-head-title {
+  margin-right: 1.0em;
+  text-align: left;
+  font-size: large;
+  font-weight: bold;
+  color: hsl(160, 100%, 20%);
+}
+
+.vo-search-results-program-head-title:hover {
+  color: hsl(160, 100%, 30%);
+}
+
+.vo-search-results-program-head-subtitle {
+  font-size: small;
+  font-weight: normal;
+  color: #444;
+}
+
+.vo-search-results-program-head-subtitle:hover {
+  color: #666;
+}
+
+.vo-search-results-program-head-hits {
+  margin-top: 0;
+  margin-right: 1.0em;
+  font-size: x-small;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.vo-search-toggle-expand {
+  text-align: right;
+  font-size: large;
+  color: #006845;
+}
+
+.vo-search-toggle-expand:hover {
+  color: hsl(160, 100%, 30%);
+  cursor: pointer;
+}
+
+.vo-search-results-element {
+  padding-bottom: 1.0em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.vo-search-results-element-head {
+  font-size: normal;
+  color: hsl(160, 100%, 10%);
+}
+
+.vo-search-results-element-head:hover {
+  color: hsl(160, 100%, 20%);
+}
+
+.vo-search-results-element-body {
+  font-size: smaller;
+}
+
+.vo-search-results-element-body p {
+  margin-top: 0.1em;
+}
+
+@keyframes text-pulse {
+
+  0%,
+  100% {
+    color: #000;
+  }
+
+  50% {
+    color: #888;
+  }
+}
