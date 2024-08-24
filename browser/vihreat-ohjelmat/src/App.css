@@ -3,6 +3,7 @@ h1.vo-program-title {
   line-height: 1.1;
   color: #006845;
   text-align: center;
+  text-wrap: balance;
   margin-bottom: 0;
 }
 
@@ -22,8 +23,17 @@ h1#vo-frontpage-title {
   left: 1em;
   padding: 0 0.5em;
   color: #006845;
-  background-color: #f8f8f8;
-  border-radius: 10pt;
+  font-size: large;
+}
+
+@media (max-width: 120ch) {
+  #vo-back-button {
+    position: static;
+    display: block;
+    margin: 0 auto;
+    width: 75ch;
+    text-align: center;
+  }
 }
 
 .vo-browse {
@@ -46,6 +56,16 @@ h1#vo-frontpage-title {
   text-align: center;
   font-size: large;
   animation: text-pulse 1s infinite;
+}
+
+.vo-program-container {
+  margin-top: 2.5em;
+}
+
+@media (max-width: 120ch) {
+  .vo-program-container {
+    margin-top: 0;
+  }
 }
 
 .vo-program-content {

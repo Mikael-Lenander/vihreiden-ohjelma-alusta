@@ -32,7 +32,7 @@ export default ViewProgram;
 function BackButton(): JSX.Element {
   return (
     <NavLink to='/' id='vo-back-button'>
-      <span>&#x2190; ohjelmien etusivulle</span>
+      <span>&#x21E0; etusivulle</span>
     </NavLink>
   );
 }
