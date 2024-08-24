@@ -18,7 +18,7 @@ export function ProgramView({ resource, highlight }: ProgramViewProps): JSX.Elem
 
   if (title !== undefined && elements !== undefined) {
     return (
-      <div className='vo-container'>
+      <div className='vo-program-container'>
         <Title title={title} subtitle={subtitle} />
         <div className='vo-program-content'>
           <FrontMatter status={status} />
