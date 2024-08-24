@@ -1,21 +1,71 @@
+import { useRef, ref, useEffect } from 'react';
 import { core, useNumber, useResource, useString } from '@tomic/react';
 import { ontology } from '../../ontologies/ontology';
 import { useProgramClass } from '../../hooks';
 import Markdown from 'react-markdown';
 
+
 interface BodyProps {
   elements: string[];
+  highlight?: string;
 }
 
-export function Body({ elements }: BodyProps): JSX.Element {
+export function Body({ elements, highlight }: BodyProps): JSX.Element {
+  const highlightRef = useRef(null);
+
+  useEffect(() => {
+    if (highlightRef.current) {
+      highlightRef.current.scrollIntoView({
+        behavior: 'instant',
+        block: 'start',
+        inline: 'nearest'
+      });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [highlightRef]);
+
   return (
     <div className='vo-program-body'>
       {elements.map(subject => (
-        <Element subject={subject} key={subject} />
+        <HighlightableElement
+          subject={subject}
+          key={subject}
+          highlight={highlight && subject.endsWith('e' + highlight) ? highlightRef : undefined}
+        />
       ))}
     </div>
   );
 }
+
+interface HighlightableElementProps {
+  subject: string;
+  highlight: ref;
+}
+
+function HighlightableElement({ subject, highlight }: HighlightableElementProps): JSX.Element {
+  const elementId = subject.split('/').pop()?.split('e').pop();
+  if (highlight) {
+    return (
+      <a href={`?h=${elementId}`} className='vo-program-element-a'>
+        <div ref={highlight} className='vo-program-element vo-program-element-highlight'>
+          <p className='vo-program-element-link'>&#x1F517;</p>
+          <Element subject={subject} />
+        </div>
+      </a>
+    );
+  } else {
+    return (
+      <a href={`?h=${elementId}`} className='vo-program-element-a'>
+        <div className='vo-program-element'>
+          <p className='vo-program-element-link'>&#x1F517;</p>
+          <Element subject={subject} />
+        </div>
+      </a>
+    );
+  }
+}
+
 
 interface ElementProps {
   subject: string;

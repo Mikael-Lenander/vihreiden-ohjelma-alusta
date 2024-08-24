@@ -164,7 +164,7 @@ export function FoundElement({ subject }: FoundElementProps) {
   return (
     <>
       <div className='vo-search-results-element'>
-        <SearchResultElementHead programId={programId} elementId={elementId} elementClass={elementClass} />
+        <SearchResultElementHead programId={programId!} elementId={elementId!} elementClass={elementClass} />
         <SearchResultElementBody text={text} name={name} elementClass={elementClass} />
       </div>
     </>
@@ -172,8 +172,8 @@ export function FoundElement({ subject }: FoundElementProps) {
 }
 
 interface SearchResultsElementHeadProps {
-  programId: string;
-  elementId: string;
+  programId: number;
+  elementId: number;
   elementClass?: string;
 }
 
@@ -191,8 +191,8 @@ export function SearchResultElementHead({ programId, elementId, elementClass }: 
       break;
   }
   return (
-    <NavLink to={`/ohjelmat/p${programId}#e${elementId}`} className='vo-search-results-element-head'>
-      {desc} {elementId}
+    <NavLink to={`/ohjelmat/p${programId}?h=${elementId}`} className='vo-search-results-element-head'>
+      #{elementId}
     </NavLink>
   );
 }
@@ -245,29 +245,29 @@ function parentProgramSubject(subject: string) {
   return subject;
 }
 
-function getProgramId(subject: string): string {
+function getProgramId(subject: string): number | undefined {
   subject = parentProgramSubject(subject);
   for (let i = subject.length - 1; i >= 0; i--) {
     if (subject[i] == 'p') {
-      return subject.substring(i + 1, subject.length);
+      return parseInt(subject.substring(i + 1, subject.length));
     }
     if (subject[i] == '/') {
-      return '';
+      return undefined;
     }
   }
-  return '';
+  return undefined;
 }
 
-function getProgramElementId(subject: string): string {
+function getProgramElementId(subject: string): number | undefined {
   for (let i = subject.length - 1; i >= 0; i--) {
     if (subject[i] == 'e') {
-      return subject.substring(i + 1, subject.length);
+      return parseInt(subject.substring(i + 1, subject.length));
     }
     if (subject[i] == '/') {
-      return '';
+      return undefined;
     }
   }
-  return '';
+  return undefined;
 }
 
 function isInteger(id: string): boolean {
@@ -282,18 +282,24 @@ function isInteger(id: string): boolean {
 function groupByProgram(src: string[]): FoundProgramProps[] {
   let programs: string[] = [];
   let byProgram = {};
-  src.forEach((element) => {
-    const programSubject = parentProgramSubject(element);
+  src.forEach((elementSubject) => {
+    const programSubject = parentProgramSubject(elementSubject);
+    const elementId = getProgramElementId(elementSubject);
     const programId = getProgramId(programSubject);
-    if (isInteger(programId)) {
+    if (programId) {
       if (!(programSubject in byProgram)) {
         byProgram[programSubject] = [];
         programs.push(programSubject);
       }
-      byProgram[programSubject].push(element);
+      byProgram[programSubject].push({ subject: elementSubject, id: elementId });
     }
   });
+
   programs.sort();
   programs.reverse();
-  return programs.map((p) => ({ program: p, hits: byProgram[p] }));
+  for (const p in byProgram) {
+    byProgram[p].sort((a, b) => a.id - b.id);
+  }
+
+  return programs.map((p) => ({ program: p, hits: byProgram[p].map((e) => e.subject) }));
 }

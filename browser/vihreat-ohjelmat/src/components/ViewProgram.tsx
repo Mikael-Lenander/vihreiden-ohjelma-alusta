@@ -1,12 +1,15 @@
-import { useParams, NavLink } from 'react-router-dom';
+import { useParams, useSearchParams, NavLink } from 'react-router-dom';
 import { useResource } from '@tomic/react';
 import { ProgramView, Program } from 'vihreat-lib';
 
 export function ViewProgram(): JSX.Element {
-  const { id } = useParams();
-  const subject = `http://${window.location.hostname}:9883/ohjelmat/${id}`;
+  const { pid } = useParams();
+  const subject = `http://${window.location.hostname}:9883/ohjelmat/${pid}`;
 
   const resource = useResource<Program>(subject);
+
+  const [searchParams] = useSearchParams();
+  const highlight = searchParams.get('h');
 
   if (resource === undefined) {
     return (
@@ -19,7 +22,7 @@ export function ViewProgram(): JSX.Element {
     return (
       <>
         <BackButton />
-        <ProgramView resource={resource} />;
+        <ProgramView resource={resource} highlight={highlight} />;
       </>
     );
   }
