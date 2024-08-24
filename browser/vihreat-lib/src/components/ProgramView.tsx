@@ -7,9 +7,10 @@ import { Title } from './program/Title';
 
 interface ProgramViewProps {
   resource: Resource<Program>;
+  highlight?: string;
 }
 
-export function ProgramView({ resource }: ProgramViewProps): JSX.Element {
+export function ProgramView({ resource, highlight }: ProgramViewProps): JSX.Element {
   const [title] = useString(resource, core.properties.name);
   const [subtitle] = useString(resource, ontology.properties.subtitle);
   const [elements] = useArray(resource, ontology.properties.elements);
@@ -21,7 +22,7 @@ export function ProgramView({ resource }: ProgramViewProps): JSX.Element {
         <Title title={title} subtitle={subtitle} />
         <div className='vo-program-content'>
           <FrontMatter status={status} />
-          <Body elements={elements} />
+          <Body elements={elements} highlight={highlight} />
         </div>
       </div>
     );

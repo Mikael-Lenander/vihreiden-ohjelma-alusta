@@ -26,40 +26,6 @@ h1#vo-frontpage-title {
   border-radius: 10pt;
 }
 
-#vo-search-container {
-  width: 75ch;
-  margin: auto;
-}
-
-#vo-frontpage-search-hint {
-  text-align: center;
-  margin-bottom: 0.2em;
-}
-
-#vo-search-bar {
-  width: 100%;
-  font-size: large;
-}
-
-.vo-search-hint {
-  margin-bottom: 0.2em;
-  text-align: center;
-  font-weight: 500;
-}
-
-.vo-search-loading-msg {
-  text-align: center;
-  font-size: large;
-  animation: text-pulse 1s infinite;
-}
-
-.vo-search-summary-msg {
-  margin-top: 0;
-  text-align: center;
-  font-size: small;
-  color: #666;
-}
-
 .vo-browse {
   display: flex;
   flex-direction: row;
@@ -130,6 +96,51 @@ h1#vo-frontpage-title {
 
 .vo-program-body {
   text-align: left;
+}
+
+.vo-program-element {
+  position: relative;
+}
+
+.vo-program-element-a {
+  font: inherit;
+  color: inherit;
+}
+
+.vo-program-element-a:hover {
+  font: inherit;
+  color: inherit;
+}
+
+.vo-program-element:hover {
+  cursor: pointer;
+  background-color: hsl(60, 100%, 85%);
+  box-shadow: 0 0 0.5em 0.5em hsl(60, 100%, 85%);
+}
+
+.vo-program-element-highlight {
+  background-color: hsl(60, 100%, 75%);
+  box-shadow: 0 0 0.5em 0.5em hsl(60, 100%, 75%);
+}
+
+.vo-program-element-link {
+  position: absolute;
+  height: 100%;
+  width: 2em;
+  left: -2em;
+  margin: 0;
+  visibility: hidden;
+  background-color: hsl(60, 100%, 85%);
+  box-shadow: 0 0 0.5em 0.5em hsl(60, 100%, 85%);
+  z-index: -1;
+}
+
+.vo-program-element-link:hover {
+  visibility: visible;
+}
+
+.vo-program-element:hover .vo-program-element-link {
+  visibility: visible;
 }
 
 .vo-program-body h1 {

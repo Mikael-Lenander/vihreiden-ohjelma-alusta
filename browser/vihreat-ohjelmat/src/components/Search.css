@@ -104,7 +104,7 @@
 }
 
 .vo-search-results-element-head {
-  font-size: normal;
+  font-size: smaller;
   color: hsl(160, 100%, 10%);
 }
 
@@ -114,10 +114,18 @@
 
 .vo-search-results-element-body {
   font-size: smaller;
+  background-color: hsl(120, 100%, 99%);
 }
 
-.vo-search-results-element-body p {
+.vo-search-results-element-body p,
+h1,
+h2,
+h3,
+h4,
+ul,
+ol {
   margin-top: 0.1em;
+  margin-bottom: 0.1em;
 }
 
 @keyframes text-pulse {
