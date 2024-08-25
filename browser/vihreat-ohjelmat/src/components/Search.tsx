@@ -178,16 +178,16 @@ export function FoundElement({ subject, totalElements }: FoundElementProps) {
   return (
     <>
       <div className='vo-search-results-element'>
+        <SearchResultElementBody
+          text={text}
+          name={name}
+          elementClass={elementClass}
+        />
         <SearchResultElementHead
           programId={programId!}
           elementId={elementId!}
           elementClass={elementClass}
           totalElements={totalElements}
-        />
-        <SearchResultElementBody
-          text={text}
-          name={name}
-          elementClass={elementClass}
         />
       </div>
     </>
@@ -201,23 +201,13 @@ interface SearchResultsElementHeadProps {
   totalElements: number;
 }
 
-export function SearchResultElementHead({ programId, elementId, elementClass, totalElements }: SearchResultsElementHeadProps): JSX.Element {
-  let desc = "tuntemattomassa alkiossa";
-  switch (elementClass) {
-    case vihreat.classes.paragraph:
-      desc = "leipätekstissä";
-      break;
-    case vihreat.classes.heading:
-      desc = "väliotsikossa";
-      break;
-    case vihreat.classes.actionitem:
-      desc = "linjauksessa";
-      break;
-  }
+export function SearchResultElementHead({ programId, elementId }: SearchResultsElementHeadProps): JSX.Element {
   return (
-    <NavLink to={`/ohjelmat/p${programId}?h=${elementId}`} className='vo-search-results-element-head'>
-      Osuma {desc} (tekstikohta {elementId}/{totalElements})
-    </NavLink>
+    <>
+      <NavLink to={`/ohjelmat/p${programId}?h=${elementId}`} className='vo-search-results-element-head'>
+        Siirry tekstikohtaan &#x2192;
+      </NavLink>
+    </>
   );
 }
 
