@@ -125,6 +125,7 @@ h1#vo-frontpage-title {
 
 .vo-program-element {
   position: relative;
+  padding-left: 0.2em;
 }
 
 .vo-program-element-a {
@@ -139,8 +140,7 @@ h1#vo-frontpage-title {
 
 .vo-program-element:hover {
   cursor: pointer;
-  background-color: hsl(60, 100%, 85%);
-  box-shadow: 0 0 0.5em 0.5em hsl(60, 100%, 85%);
+  box-shadow: -5px 0 2px 0 hsl(240, 100%, 80%, 50%);
 }
 
 .vo-program-element-highlight {
@@ -155,8 +155,6 @@ h1#vo-frontpage-title {
   left: -2em;
   margin: 0;
   visibility: hidden;
-  background-color: hsl(60, 100%, 85%);
-  box-shadow: 0 0 0.5em 0.5em hsl(60, 100%, 85%);
   z-index: -1;
 }
 
