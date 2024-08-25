@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useResource, useServerSearch, useString, core } from '@tomic/react';
+import { useArray, useResource, useServerSearch, useString, core } from '@tomic/react';
 import { ontology as vihreat, useProgramClass } from 'vihreat-lib';
 import Markdown from 'react-markdown';
 import './Search.css';
@@ -93,6 +93,7 @@ function FoundProgram({ program, hits }: FoundProgramProps): JSX.Element {
   const klass = useProgramClass(resource);
   const [title] = useString(resource, core.properties.name);
   const [subtitle] = useString(resource, vihreat.properties.subtitle);
+  const [elements] = useArray(resource, vihreat.properties.elements);
   const [expand, setExpand] = useState(false);
 
   return (
@@ -106,7 +107,7 @@ function FoundProgram({ program, hits }: FoundProgramProps): JSX.Element {
           expand={expand}
           onToggleExpand={() => setExpand(!expand)}
         />
-        {expand ? <FoundProgramHits hits={hits} /> : <></>}
+        {expand ? <FoundProgramHits hits={hits} programLength={elements.length} /> : <></>}
       </div>
     </>
   );
@@ -114,9 +115,21 @@ function FoundProgram({ program, hits }: FoundProgramProps): JSX.Element {
 
 interface FoundProgramHitsProps {
   hits: string[];
+  programLength: number;
 }
-function FoundProgramHits({ hits }: FoundProgramHitsProps): JSX.Element {
-  return <>{hits.map((subject) => (<FoundElement subject={subject} />))}</>;
+function FoundProgramHits({ hits, programLength }: FoundProgramHitsProps): JSX.Element {
+  return (
+    <>
+      {
+        hits.map((subject) => (
+          <FoundElement
+            subject={subject}
+            totalElements={programLength}
+          />
+        ))
+      }
+    </>
+  );
 }
 
 interface TitleProps {
@@ -153,8 +166,9 @@ function Title({ programId, title, subtitle, hits, expand, onToggleExpand }: Tit
 
 interface FoundElementProps {
   subject: string;
+  totalElements: number;
 }
-export function FoundElement({ subject }: FoundElementProps) {
+export function FoundElement({ subject, totalElements }: FoundElementProps) {
   const resource = useResource(subject);
   const programId = getProgramId(subject);
   const elementId = getProgramElementId(subject);
@@ -164,8 +178,17 @@ export function FoundElement({ subject }: FoundElementProps) {
   return (
     <>
       <div className='vo-search-results-element'>
-        <SearchResultElementHead programId={programId!} elementId={elementId!} elementClass={elementClass} />
-        <SearchResultElementBody text={text} name={name} elementClass={elementClass} />
+        <SearchResultElementHead
+          programId={programId!}
+          elementId={elementId!}
+          elementClass={elementClass}
+          totalElements={totalElements}
+        />
+        <SearchResultElementBody
+          text={text}
+          name={name}
+          elementClass={elementClass}
+        />
       </div>
     </>
   );
@@ -175,24 +198,25 @@ interface SearchResultsElementHeadProps {
   programId: number;
   elementId: number;
   elementClass?: string;
+  totalElements: number;
 }
 
-export function SearchResultElementHead({ programId, elementId, elementClass }: SearchResultsElementHeadProps): JSX.Element {
-  let desc = "Tuntematon";
+export function SearchResultElementHead({ programId, elementId, elementClass, totalElements }: SearchResultsElementHeadProps): JSX.Element {
+  let desc = "tuntemattomassa alkiossa";
   switch (elementClass) {
     case vihreat.classes.paragraph:
-      desc = "Tekstikappale";
+      desc = "leipätekstissä";
       break;
     case vihreat.classes.heading:
-      desc = "Otsikko";
+      desc = "väliotsikossa";
       break;
     case vihreat.classes.actionitem:
-      desc = "Linjaus";
+      desc = "linjauksessa";
       break;
   }
   return (
     <NavLink to={`/ohjelmat/p${programId}?h=${elementId}`} className='vo-search-results-element-head'>
-      #{elementId}
+      Osuma {desc} (tekstikohta {elementId}/{totalElements})
     </NavLink>
   );
 }
