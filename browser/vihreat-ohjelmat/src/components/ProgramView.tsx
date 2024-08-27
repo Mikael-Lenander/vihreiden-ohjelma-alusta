@@ -10,7 +10,10 @@ interface ProgramViewProps {
   highlight?: string;
 }
 
-export function ProgramView({ resource, highlight }: ProgramViewProps): JSX.Element {
+export default function ProgramView({
+  resource,
+  highlight,
+}: ProgramViewProps): JSX.Element {
   const [title] = useString(resource, core.properties.name);
   const [subtitle] = useString(resource, ontology.properties.subtitle);
   const [elements] = useArray(resource, ontology.properties.elements);

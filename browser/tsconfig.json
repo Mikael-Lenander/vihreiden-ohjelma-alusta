@@ -2,8 +2,7 @@
   "compilerOptions": {
     "paths": {
       "@tomic/lib/*": ["./lib/src/*"],
-      "@tomic/react/*": ["./react/src/*"],
-      "vihreat-lib/*": ["./vihreat-lib/src/*"]
+      "@tomic/react/*": ["./react/src/*"]
     }
   },
   "files": [],
@@ -13,9 +12,6 @@
     },
     {
       "path": "react"
-    },
-    {
-      "path": "vihreat-lib"
     }
   ]
 }

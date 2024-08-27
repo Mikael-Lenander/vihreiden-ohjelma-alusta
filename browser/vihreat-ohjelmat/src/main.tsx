@@ -6,6 +6,9 @@ import { PrimeReactProvider } from 'primereact/api';
 import { Store, StoreContext } from '@tomic/react';
 import 'primereact/resources/themes/saga-green/theme.css';
 import { SERVER_URL } from './config';
+import { initOntologies } from './ontologies';
+
+initOntologies();
 
 const store = new Store({
   serverUrl: SERVER_URL,

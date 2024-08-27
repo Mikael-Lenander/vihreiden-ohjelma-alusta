@@ -15,7 +15,6 @@ import DrivePage from './DrivePage';
 import RedirectPage from './RedirectPage';
 import InvitePage from './InvitePage';
 import { DocumentPage } from './DocumentPage';
-import { ProgramView as ProgramPage, ontology as vihreat } from 'vihreat-lib';
 import ErrorPage, { ErrorBoundary } from './ErrorPage';
 import { ClassPage } from './ClassPage';
 import { FilePage } from './File/FilePage';

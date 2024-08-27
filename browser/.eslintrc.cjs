@@ -36,7 +36,6 @@ module.exports = {
       'react/tsconfig.json',
       'data-browser/tsconfig.json',
       'e2e/tsconfig.json',
-      'vihreat-lib/tsconfig.json',
       'vihreat-ohjelmat/tsconfig.json',
     ],
   },

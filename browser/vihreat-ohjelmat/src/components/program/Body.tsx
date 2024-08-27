@@ -1,9 +1,8 @@
-import { useRef, ref, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { core, useNumber, useResource, useString } from '@tomic/react';
 import { ontology } from '../../ontologies/ontology';
 import { useProgramClass } from '../../hooks';
 import Markdown from 'react-markdown';
-
 
 interface BodyProps {
   elements: string[];
@@ -11,14 +10,14 @@ interface BodyProps {
 }
 
 export function Body({ elements, highlight }: BodyProps): JSX.Element {
-  const highlightRef = useRef(null);
+  const highlightRef = useRef<any>(null);
 
   useEffect(() => {
     if (highlightRef.current) {
       highlightRef.current.scrollIntoView({
         behavior: 'instant',
         block: 'start',
-        inline: 'nearest'
+        inline: 'nearest',
       });
     } else {
       window.scrollTo(0, 0);
@@ -31,7 +30,11 @@ export function Body({ elements, highlight }: BodyProps): JSX.Element {
         <HighlightableElement
           subject={subject}
           key={subject}
-          highlight={highlight && subject.endsWith('e' + highlight) ? highlightRef : undefined}
+          highlight={
+            highlight && subject.endsWith('e' + highlight)
+              ? highlightRef
+              : undefined
+          }
         />
       ))}
     </div>
@@ -40,15 +43,22 @@ export function Body({ elements, highlight }: BodyProps): JSX.Element {
 
 interface HighlightableElementProps {
   subject: string;
-  highlight: ref;
+  highlight: any;
 }
 
-function HighlightableElement({ subject, highlight }: HighlightableElementProps): JSX.Element {
+function HighlightableElement({
+  subject,
+  highlight,
+}: HighlightableElementProps): JSX.Element {
   const elementId = subject.split('/').pop()?.split('e').pop();
+
   if (highlight) {
     return (
       <a href={`?h=${elementId}`} className='vo-program-element-a'>
-        <div ref={highlight} className='vo-program-element vo-program-element-highlight'>
+        <div
+          ref={highlight}
+          className='vo-program-element vo-program-element-highlight'
+        >
           <p className='vo-program-element-link'>&#x1F517;</p>
           <Element subject={subject} />
         </div>
@@ -65,7 +75,6 @@ function HighlightableElement({ subject, highlight }: HighlightableElementProps)
     );
   }
 }
-
 
 interface ElementProps {
   subject: string;

@@ -1,12 +1,20 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useArray, useResource, useServerSearch, useString, core } from '@tomic/react';
-import { ontology as vihreat, useProgramClass } from 'vihreat-lib';
+import {
+  useArray,
+  useResource,
+  useServerSearch,
+  useString,
+  core,
+} from '@tomic/react';
+import { ontology } from '../ontologies/ontology';
+import { useProgramClass } from '../hooks';
 import Markdown from 'react-markdown';
 import './Search.css';
 
 export function Search(): JSX.Element {
   const [searchText, setSearchText] = useState('');
+
   return (
     <>
       <div id='vo-search-container'>
@@ -23,6 +31,7 @@ interface SearchBarProps {
   value: string;
   setValue: (string) => void;
 }
+
 function SearchBar({ value, setValue }: SearchBarProps): JSX.Element {
   return (
     <search>
@@ -48,28 +57,29 @@ function Idle(): JSX.Element {
 interface SearchResultsProps {
   searchText: string;
 }
+
 function SearchResults({ searchText }: SearchResultsProps): JSX.Element {
   const query = useServerSearch(searchText, {
     debounce: 1000,
     include: true,
     limit: 100000,
     filters: {
-      [core.properties.isA]: vihreat.classes.programelement,
+      [core.properties.isA]: ontology.classes.programelement,
     },
   });
 
   if (query.loading) {
     return <Loading />;
-  } else if (query.results.length == 0) {
+  } else if (query.results.length === 0) {
     return <NoResultsFound />;
   } else {
     return (
       <div id='vo-search-results-container'>
-        {
-          groupByProgram(query.results).map((e) => {
-            return <FoundProgram program={e.program} hits={e.hits} />;
-          })
-        }
+        {groupByProgram(query.results).map(e => {
+          return (
+            <FoundProgram key={e.program} program={e.program} hits={e.hits} />
+          );
+        })}
       </div>
     );
   }
@@ -87,13 +97,13 @@ interface FoundProgramProps {
   program: string;
   hits: string[];
 }
+
 function FoundProgram({ program, hits }: FoundProgramProps): JSX.Element {
   const resource = useResource(program);
   const id = program.split('/').pop();
-  const klass = useProgramClass(resource);
   const [title] = useString(resource, core.properties.name);
-  const [subtitle] = useString(resource, vihreat.properties.subtitle);
-  const [elements] = useArray(resource, vihreat.properties.elements);
+  const [subtitle] = useString(resource, ontology.properties.subtitle);
+  const [elements] = useArray(resource, ontology.properties.elements);
   const [expand, setExpand] = useState(false);
 
   return (
@@ -107,7 +117,11 @@ function FoundProgram({ program, hits }: FoundProgramProps): JSX.Element {
           expand={expand}
           onToggleExpand={() => setExpand(!expand)}
         />
-        {expand ? <FoundProgramHits hits={hits} programLength={elements.length} /> : <></>}
+        {expand ? (
+          <FoundProgramHits hits={hits} programLength={elements.length} />
+        ) : (
+          <></>
+        )}
       </div>
     </>
   );
@@ -117,17 +131,20 @@ interface FoundProgramHitsProps {
   hits: string[];
   programLength: number;
 }
-function FoundProgramHits({ hits, programLength }: FoundProgramHitsProps): JSX.Element {
+
+function FoundProgramHits({
+  hits,
+  programLength,
+}: FoundProgramHitsProps): JSX.Element {
   return (
     <>
-      {
-        hits.map((subject) => (
-          <FoundElement
-            subject={subject}
-            totalElements={programLength}
-          />
-        ))
-      }
+      {hits.map(subject => (
+        <FoundElement
+          key={subject}
+          subject={subject}
+          totalElements={programLength}
+        />
+      ))}
     </>
   );
 }
@@ -140,25 +157,33 @@ interface TitleProps {
   expand: boolean;
   onToggleExpand: () => void;
 }
-function Title({ programId, title, subtitle, hits, expand, onToggleExpand }: TitleProps): JSX.Element {
 
+function Title({
+  programId,
+  title,
+  subtitle,
+  hits,
+  expand,
+  onToggleExpand,
+}: TitleProps): JSX.Element {
   return (
     <div className='vo-search-results-program-head'>
-      <NavLink to={`/ohjelmat/${programId}`} className='vo-search-results-program-head-link'>
+      <NavLink
+        to={`/ohjelmat/${programId}`}
+        className='vo-search-results-program-head-link'
+      >
         <span className='vo-search-results-program-head-subtitle'>
           {subtitle}
         </span>
-        <span className='vo-search-results-program-head-title'>
-          {title}
-        </span>
+        <span className='vo-search-results-program-head-title'>{title}</span>
       </NavLink>
       <div>
         <span className='vo-search-results-program-head-hits'>
-          {hits} osuma{hits == 1 ? '' : 'a'}
+          {hits} osuma{hits === 1 ? '' : 'a'}
         </span>
-        <a className='vo-search-toggle-expand' onClick={onToggleExpand}>
+        <button className='vo-search-toggle-expand' onClick={onToggleExpand}>
           {expand ? '\u2014' : '+'}
-        </a>
+        </button>
       </div>
     </div>
   );
@@ -168,6 +193,7 @@ interface FoundElementProps {
   subject: string;
   totalElements: number;
 }
+
 export function FoundElement({ subject, totalElements }: FoundElementProps) {
   const resource = useResource(subject);
   const programId = getProgramId(subject);
@@ -175,6 +201,7 @@ export function FoundElement({ subject, totalElements }: FoundElementProps) {
   const elementClass = useProgramClass(resource);
   const [text] = useString(resource, core.properties.description);
   const [name] = useString(resource, core.properties.name);
+
   return (
     <>
       <div className='vo-search-results-element'>
@@ -201,10 +228,16 @@ interface SearchResultsElementHeadProps {
   totalElements: number;
 }
 
-export function SearchResultElementHead({ programId, elementId }: SearchResultsElementHeadProps): JSX.Element {
+export function SearchResultElementHead({
+  programId,
+  elementId,
+}: SearchResultsElementHeadProps): JSX.Element {
   return (
     <>
-      <NavLink to={`/ohjelmat/p${programId}?h=${elementId}`} className='vo-search-results-element-head'>
+      <NavLink
+        to={`/ohjelmat/p${programId}?h=${elementId}`}
+        className='vo-search-results-element-head'
+      >
         Siirry tekstikohtaan &#x2192;
       </NavLink>
     </>
@@ -217,103 +250,120 @@ interface SearchResultsElementBodyProps {
   elementClass?: string;
 }
 
-export function SearchResultElementBody({ text, name, elementClass }: SearchResultsElementBodyProps): JSX.Element {
+export function SearchResultElementBody({
+  text,
+  name,
+  elementClass,
+}: SearchResultsElementBodyProps): JSX.Element {
   switch (elementClass) {
-    case vihreat.classes.paragraph:
+    case ontology.classes.paragraph:
       return (
         <div className='vo-search-results-element-body'>
           <Markdown>{text}</Markdown>
         </div>
       );
-    case vihreat.classes.heading:
+    case ontology.classes.heading:
       return (
         <div className='vo-search-results-element-body'>
           <h3>{name}</h3>
         </div>
       );
-    case vihreat.classes.actionitem:
+    case ontology.classes.actionitem:
       return (
         <div className='vo-search-results-element-body'>
-          <p><ul><li>{name}</li></ul></p>
+          <p>
+            <ul>
+              <li>{name}</li>
+            </ul>
+          </p>
         </div>
       );
     default:
       return (
         <div className='vo-search-results-element-body'>
-          <p>{name}{text}</p>
+          <p>
+            {name}
+            {text}
+          </p>
         </div>
       );
   }
 }
 
-
 function parentProgramSubject(subject: string) {
   for (let i = subject.length - 1; i >= 0; i--) {
-    if (subject[i] == 'e') {
+    if (subject[i] === 'e') {
       return subject.substring(0, i);
     }
-    if (subject[i] == '/') {
+
+    if (subject[i] === '/') {
       return subject;
     }
   }
+
   return subject;
 }
 
 function getProgramId(subject: string): number | undefined {
   subject = parentProgramSubject(subject);
+
   for (let i = subject.length - 1; i >= 0; i--) {
-    if (subject[i] == 'p') {
+    if (subject[i] === 'p') {
       return parseInt(subject.substring(i + 1, subject.length));
     }
-    if (subject[i] == '/') {
+
+    if (subject[i] === '/') {
       return undefined;
     }
   }
+
   return undefined;
 }
 
 function getProgramElementId(subject: string): number | undefined {
   for (let i = subject.length - 1; i >= 0; i--) {
-    if (subject[i] == 'e') {
+    if (subject[i] === 'e') {
       return parseInt(subject.substring(i + 1, subject.length));
     }
-    if (subject[i] == '/') {
+
+    if (subject[i] === '/') {
       return undefined;
     }
   }
+
   return undefined;
 }
 
-function isInteger(id: string): boolean {
-  for (let i = 0; i < id.length; ++i) {
-    if (!'0123456789'.includes(id[i])) {
-      return false;
-    }
-  }
-  return true;
-}
-
 function groupByProgram(src: string[]): FoundProgramProps[] {
-  let programs: string[] = [];
-  let byProgram = {};
-  src.forEach((elementSubject) => {
+  const programs: string[] = [];
+  const byProgram = {};
+  src.forEach(elementSubject => {
     const programSubject = parentProgramSubject(elementSubject);
     const elementId = getProgramElementId(elementSubject);
     const programId = getProgramId(programSubject);
+
     if (programId) {
       if (!(programSubject in byProgram)) {
         byProgram[programSubject] = [];
         programs.push(programSubject);
       }
-      byProgram[programSubject].push({ subject: elementSubject, id: elementId });
+
+      byProgram[programSubject].push({
+        subject: elementSubject,
+        id: elementId,
+      });
     }
   });
 
   programs.sort();
   programs.reverse();
+
   for (const p in byProgram) {
     byProgram[p].sort((a, b) => a.id - b.id);
   }
 
-  return programs.map((p) => ({ program: p, hits: byProgram[p].map((e) => e.subject) }));
+  return programs.map(p => ({
+    program: p,
+    hits: byProgram[p].map(e => e.subject),
+  }));
 }

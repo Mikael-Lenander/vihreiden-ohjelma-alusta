@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import { StatusInfo } from 'vihreat-lib';
-import { dateToString } from 'vihreat-lib/src/components/program/FrontMatter';
+import { StatusInfo } from './program/Status';
+import { dateToString } from '../utils';
 import './ProgramCard.css';
 
 interface ProgramCardProps {
@@ -9,7 +9,13 @@ interface ProgramCardProps {
   subtitle?: string;
   status: StatusInfo;
 }
-export function ProgramCard({ linkPath, title, subtitle, status }: ProgramCardProps): JSX.Element {
+
+export function ProgramCard({
+  linkPath,
+  title,
+  subtitle,
+  status,
+}: ProgramCardProps): JSX.Element {
   return (
     <NavLink to={linkPath}>
       <div className={`vo-programbadge vo-programbadge-${status.color}`}>
@@ -27,12 +33,11 @@ export function ProgramCard({ linkPath, title, subtitle, status }: ProgramCardPr
 interface DateInfoProps {
   status: StatusInfo;
 }
+
 function DateInfo({ status }: DateInfoProps): JSX.Element {
   if (status.isGreen || status.isYellow) {
     return (
-      <p className='vo-programbadge-date'>
-        {dateToString(status.approvedOn)}
-      </p>
+      <p className='vo-programbadge-date'>{dateToString(status.approvedOn)}</p>
     );
   } else if (status.isRed) {
     return (
@@ -48,8 +53,10 @@ function DateInfo({ status }: DateInfoProps): JSX.Element {
 interface WarningsProps {
   status: StatusInfo;
 }
+
 function Warnings({ status }: WarningsProps): JSX.Element {
-  let warning = "";
+  let warning = '';
+
   if (status.isGreen) {
     return <></>;
   } else if (status.isGray) {
@@ -61,5 +68,6 @@ function Warnings({ status }: WarningsProps): JSX.Element {
   } else {
     warning = 'voimassaolotietoja ei voitu selvittää';
   }
+
   return <p className='vo-programbadge-warning'>{warning}</p>;
 }

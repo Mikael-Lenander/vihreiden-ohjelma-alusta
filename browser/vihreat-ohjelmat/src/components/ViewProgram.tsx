@@ -1,6 +1,7 @@
 import { useParams, useSearchParams, NavLink } from 'react-router-dom';
 import { useResource } from '@tomic/react';
-import { ProgramView, Program } from 'vihreat-lib';
+import ProgramView from './ProgramView';
+import { Program } from '../ontologies/ontology';
 
 export function ViewProgram(): JSX.Element {
   const { pid } = useParams();
@@ -9,7 +10,7 @@ export function ViewProgram(): JSX.Element {
   const resource = useResource<Program>(subject);
 
   const [searchParams] = useSearchParams();
-  const highlight = searchParams.get('h');
+  const highlight = searchParams.get('h') || undefined;
 
   if (resource === undefined) {
     return (

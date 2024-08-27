@@ -1,4 +1,5 @@
 import { StatusInfo } from './Status';
+import { dateToString } from '../../utils';
 
 interface WithStatusProps {
   status: StatusInfo;
@@ -97,17 +98,5 @@ function RetiredLine({ status }: WithStatusProps): JSX.Element {
     );
   } else {
     return <></>;
-  }
-}
-
-export function dateToString(date?: Date): string {
-  if (date) {
-    return date.toLocaleString('fi-FI', {
-      year: 'numeric',
-      month: 'numeric',
-      day: 'numeric',
-    });
-  } else {
-    return '??.??.????';
   }
 }
