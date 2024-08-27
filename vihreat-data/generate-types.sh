@@ -7,7 +7,7 @@ here=$(dirname $(realpath $0))
 source $here/with-atomic-server-in-background.sh
 
 # Regenerate the .ts files describing our ontology
-cd $here/../browser/vihreat-lib
+cd $here/../browser/vihreat-ohjelmat
 pnpm install
 pnpm run generate-ontologies
 
