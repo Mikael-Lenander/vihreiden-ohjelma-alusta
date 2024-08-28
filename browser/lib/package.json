@@ -1,0 +1,48 @@
+{
+  "version": "0.38.0",
+  "author": "Joep Meindertsma",
+  "dependencies": {
+    "@noble/ed25519": "1.6.0",
+    "@noble/hashes": "^0.5.7",
+    "base64-arraybuffer": "^1.0.2",
+    "cross-fetch": "^3.1.4",
+    "fast-json-stable-stringify": "^2.1.0",
+    "ulid": "^2.3.0"
+  },
+  "description": "",
+  "devDependencies": {
+    "@tomic/cli": "workspace:*",
+    "@types/fast-json-stable-stringify": "^2.1.0",
+    "tslib": "^2.4.1",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "vite-plugin-dts": "^3.9.0",
+    "vitest": "^0.34.6",
+    "whatwg-fetch": "^3.6.2"
+  },
+  "files": ["dist"],
+  "gitHead": "2172c73d8df4e5f273e6386676abc91b6c5b2707",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "main-dev": "src/index.ts",
+  "name": "@tomic/lib",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "pnpm exec vite build",
+    "generate-ontologies": "ad-generate ontologies",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "lint-fix": "eslint ./src --ext .js,.jsx,.ts,.tsx --fix",
+    "prepublishOnly": "pnpm run build && pnpm run lint-fix",
+    "start": "pnpm watch",
+    "coverage": "vitest run --coverage",
+    "test": "vitest run",
+    "tsc": "tsc --build",
+    "typecheck": "pnpm exec tsc --noEmit",
+    "watch": "pnpm exec vite build --watch"
+  },
+  "source": "src/index.ts",
+  "type": "module",
+  "types": "dist/src/index.d.ts"
+}
