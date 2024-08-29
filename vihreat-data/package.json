@@ -1,0 +1,12 @@
+{
+  "name": "vihreat-ohjelmat-ontologies",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "generate-ontologies": "pnpm exec ad-generate ontologies"
+  },
+  "dependencies": {
+    "@tomic/cli": "^0.39.0"
+  }
+}

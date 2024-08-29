@@ -5,7 +5,7 @@ here=$(dirname $(realpath $0))
 
 echo "Starting atomic-server in the background..."
 cd $here/..
-./target/debug/atomic-server &
+/atomic-server-bin &
 server_pid=$!
 echo "Server started with pid $server_pid"
 
