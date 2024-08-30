@@ -1,0 +1,24 @@
+version: "3.3"
+
+services:
+  ohjelmat:
+    image: "vihreat-ohjelmat-app-prod"
+    container_name: "vihreat-ohjelmat"
+    build:
+      dockerfile: "./vihreat-ohjelmat/prod.Dockerfile"
+    ports:
+      - "80:80"
+
+  atomic:
+    image: "joepmeneer/atomic-server:master"
+    container_name: "atomic"
+    ports:
+      - "9883:9883"
+      - "9884:9884"
+    volumes:
+      - "atomic-storage:/atomic-storage"
+    platform: "linux/amd64"
+    env_file: "prod.env"
+  
+volumes:
+  atomic-storage:

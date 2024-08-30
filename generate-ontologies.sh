@@ -1,6 +1,8 @@
 #!/bin/bash
 
-docker build . -f atomic-ontologies.Dockerfile --platform linux/amd64 -t atomic-ontology-generator 
+docker build . -f vihreat-data/atomic-ontologies.Dockerfile \
+    --platform linux/amd64 \
+    -t atomic-ontology-generator 
 docker run \
     --platform linux/amd64 \
     -v "./atomic-storage:/atomic-storage" \

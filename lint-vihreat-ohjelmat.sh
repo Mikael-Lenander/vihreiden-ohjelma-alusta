@@ -1,7 +1,7 @@
 #!/bin/bash
 
 docker build . \
-    -f vihreat-ohjelmat-lint.Dockerfile \
+    -f ./vihreat-ohjelmat/lint.Dockerfile \
     --platform linux/amd64 \
     -t vihreat-ohjelmat-lint 
 docker run \
