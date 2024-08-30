@@ -2,65 +2,37 @@ Tämä ohjelmisto pohjautuu avoimen lähdekoodin projektiin [Atomic Server](http
 
 ## Kehitysympäristön pystytys
 
-1. Asenna [cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html).
-2. Asenna [Node.js](https://nodejs.org/en/download/package-manager) ja [pnpm](https://pnpm.io/installation).
-3. Kloonaa tämä repositorio.
-4. Lisää ohjelmadataa tietokantaan komennolla:
-   ```sh
-   ./init.sh
-   ```
-5. Käynnistä atomic server ajamalla projektin juuressa
-   ```sh
-   ./server.sh
-   ```
-6. Avaa toinen ikkuna ja käynnistä ohjelmien lukuapplikaatio:
-   ```sh
-   ./start.sh
-   ```
-   Sivu pyörii osoitteessa http://localhost:5176.
-
-Vaihtoehtoisesti voit käynnistää data-browserin ("admin-näkymä"):
-```sh
-./start-admin.sh
-```
-Tällöin sivu pyörii osoitteessa http://localhost:5173.
-Voit luoda itsellesi käyttäjätunnuksen seuraamalla [näitä ohjeita](https://docs.atomicdata.dev/atomicserver/gui).
+1. Asenna [Docker](https://www.docker.com/) ja [docker-compose](https://docs.docker.com/compose/install/).
+2. Jos et ole aiemmin ajanut lainkaan ympäristöä, aja `bash start-dev.sh --init`. Tämä pakottaa `atomic-server`in tuomaan sisään `vihreat-data`-kansion sisältämän ohjelmadatan hakemistoon `atomic-storage`, joka liitetään konttiin ja säilyy ajokertojen yli. Jos haluat pakottaa Dockerin rakentamaan kuvat uudestaan, anna skriptille parametri `--build`.
+3. Jos olet jo saanut alustettua `atomic-server`in, aja vain `bash start-dev.sh`.
+4. Kehitysympäristö ajaa `vihreat-ohjelmat`-sovellusta kehitystilassa, eli koodiin tehdyt muutokset heijastuvat välittömästi [paikalliseen sovellukseen](http://localhost:5176/).
+5. Kun olet valmis ja haluat puhdistaa ympäristön kokonaan, aja `bash stop-dev.sh --clean`. Muuten voit vain antaa `CTRL-C` ympäristölle ja ajaa `bash stop-dev.sh`.
 
 ## Kehittäminen
 
-Ohjelma-alusta on toteutettu laajentamalla Atomic Serverin selainpakettia `browser`.  Laajennuskoodi sijaitsee pääosin uusissa paketeissa `browser/vihreat-ohjelmat` ja `browser/vihreat-lib` sekä kansiossa `browser/data-browser/vihreat`.  Lisäksi kansio `vihreat-data` sisältää työkaluja datan generointiin.
+Ohjelma-alusta on toteutettu Vite-sovelluksena kansiossa `vihreat-ohjelmat`. 
 
 ### `vihreat-data`
 
-Sisältää ontologian (datamallin) määrittelyn sekä työkalun `generate-ld`, jolla ontologia ja muu testidata generoidaan Atomic Serverin ymmärtämään JSON-AD -muotoon. Skripti `vihreat-data/init.sh` alustaa tietokannan ontologialla ja testisisällöllä (olemassa oleva tietokanta tuhoutuu!)
+Sisältää ontologian (datamallin) määrittelyn sekä työkalun `generate-ld`, jolla ontologia ja muu testidata generoidaan Atomic Serverin ymmärtämään JSON-AD -muotoon
 
-### `browser/vihreat-ohjelmat`
+Skripti `initialize-server.sh` alustaa tietokannan ontologialla ja testisisällöllä (olemassa oleva tietokanta tuhoutuu!)
+
+Skripti `generate-ontologies.sh` luo Typescript-tyypit ontologioiden pohjalta ja vie ne suoraan koodiin.
+
+### `vihreat-ohjelmat`
 
 Sisältää ohjelma-alustan asiakassivun. Sivulla voi kuka tahansa (tulevaisuudessa) hakea ja tarkastella ohjelmia. Käynnistä sivu ajamalla:
 
 ```sh
-cd browser/vihreat-ohjelmat
-pnpm start
+bash start-dev.sh
 ```
 
-Sivu pyörii osoitteessa http://localhost:5175/. Atomic Serverin tulee olla myös käynnissä.
+Sivu pyörii osoitteessa http://localhost:5176/. 
 
-### `browser/vihreat-lib`
+Sivuston koodin voi ajaa yhdenmukaistuksen (lint) läpi skriptillä `lint-vihreat-ohjelmat.sh`.
 
-Sisältää ohjelma-alustan [ontologian TypeScript-tyypit](https://docs.atomicdata.dev/js-cli) ja yhteisiä React-komponentteja. Asiakas- ja admin-sivuille yhteinen koodi löytyy täältä (esim. ohjelmanäkymä). Jos teet muutoksia pakettiin, aja paketin juuressa `pnpm run build` päivittääksesi muutokset.
+## Tuotantopalvelimen ajaminen
 
-### `browser/data-browser/vihreat`
-
-Sisältää täydennyksiä Atomic Serverin admin-sivuun/tekstieditoriin (Atomic Browser). Atomic Server tarjoaa kohtuullisen hyvän tekstieditorin,
-mutta sitä jatkokehitetään ohjelma-alustan tarpeisiin. Pyritään eristämään kaikki ohjelma-alustaan liittyvä Atomic Browser-koodi tähän pakettiin, jotta tulee mahdollisimman vähän merge-konflikteja Atomic Serverin kanssa. Käynnistä sivu ajamalla:
-
-```sh
-cd browser/data-browser
-pnpm start
-```
-
-Sivu pyörii osoitteessa http://localhost:5173/. Atomic Serverin tulee olla myös käynnissä.
-
-## Devipalvelimen ajaminen
-
-Kloonaa repo ja aja sen kansiossa `./ci.py x.y.z.w`, missä `x.y.z.w` on palvelimen julkinen IP.
+1. Päivitä `prod.env` vastaamaan ympäristöä.
+2. Aja `bash start-prod.sh`.
