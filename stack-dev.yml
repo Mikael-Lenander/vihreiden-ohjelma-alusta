@@ -12,16 +12,15 @@ services:
       - "./vihreat-ohjelmat:/vihreat-ohjelmat"
     depends_on:
       - atomic
+
   atomic:
     image: "joepmeneer/atomic-server:master"
+    command: --rebuild-indexes
     container_name: "atomic"
     ports:
       - "9883:9883"
       - "9884:9884"
     volumes:
-      - "atomic-storage:/atomic-storage"
+      - "./atomic-storage:/atomic-storage"
     platform: "linux/amd64"
     env_file: "dev.env"
-volumes:
-  atomic-storage:
-  vihreat-ohjelmat:
