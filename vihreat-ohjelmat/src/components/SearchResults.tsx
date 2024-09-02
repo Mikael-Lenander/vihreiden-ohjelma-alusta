@@ -1,25 +1,25 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { useResource, useServerSearch, useString, core } from '@tomic/react';
-import { ontology } from '../ontologies/ontology';
-import { useProgramClass } from '../hooks';
-import Markdown from 'react-markdown';
-import './Search.css';
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { useResource, useServerSearch, useString, core } from "@tomic/react";
+import { ontology } from "../ontologies/ontology";
+import { useProgramClass } from "../hooks";
+import Markdown from "react-markdown";
+import "./Search.css";
 
 export function Search(): JSX.Element {
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState("");
 
   return (
     <>
-      <div id='vo-search-container'>
+      <div id="vo-search-container">
         <SearchHint />
         <search>
           <input
-            id='vo-search-bar'
-            type='text'
-            placeholder='Kirjoita hakutermi, esim. ydinvoima, perustulo, biokaasu, ...'
+            id="vo-search-bar"
+            type="text"
+            placeholder="Kirjoita hakutermi, esim. ydinvoima, perustulo, biokaasu, ..."
             value={searchText}
-            onChange={e => setSearchText(e.target.value)}
+            onChange={(e) => setSearchText(e.target.value)}
           />
         </search>
         {searchText ? <Result searchText={searchText} /> : <Idle />}
@@ -30,7 +30,7 @@ export function Search(): JSX.Element {
 export default Search;
 
 function SearchHint(): JSX.Element {
-  return <p className='vo-search-hint'>Hae ohjelmateksteistä:</p>;
+  return <p className="vo-search-hint">Hae ohjelmateksteistä:</p>;
 }
 
 function Idle(): JSX.Element {
@@ -38,7 +38,7 @@ function Idle(): JSX.Element {
 }
 
 function Loading(): JSX.Element {
-  return <p className='vo-search-loading-msg'>Haetaan tuloksia...</p>;
+  return <p className="vo-search-loading-msg">Haetaan tuloksia...</p>;
 }
 
 interface ResultProps {
@@ -74,11 +74,11 @@ interface CountProps {
 
 function Count({ count }: CountProps): JSX.Element {
   if (count <= 0) {
-    return <p className='vo-search-summary-msg'>Ei löytynyt osumia.</p>;
+    return <p className="vo-search-summary-msg">Ei löytynyt osumia.</p>;
   } else if (count === 1) {
-    return <p className='vo-search-summary-msg'>Löytyi yksi osuma.</p>;
+    return <p className="vo-search-summary-msg">Löytyi yksi osuma.</p>;
   } else {
-    return <p className='vo-search-summary-msg'>Löytyi {count} osumaa.</p>;
+    return <p className="vo-search-summary-msg">Löytyi {count} osumaa.</p>;
   }
 }
 
@@ -89,7 +89,7 @@ interface ResultsProps {
 function Results({ results }: ResultsProps): JSX.Element {
   return (
     <>
-      {groupByProgram(results).map(e => (
+      {groupByProgram(results).map((e) => (
         <FoundProgram
           key={e.program}
           program={e.program}
@@ -107,14 +107,14 @@ interface FoundProgramProps {
 
 function FoundProgram({ program, elements }: FoundProgramProps): JSX.Element {
   const resource = useResource(program);
-  const id = program.split('/').pop();
+  const id = program.split("/").pop();
   const [title] = useString(resource, core.properties.name);
   const [subtitle] = useString(resource, ontology.properties.subtitle);
 
   return (
     <>
-      <div className='vo-search-results-program'>
-        <table className='vo-search-results-program-head'>
+      <div className="vo-search-results-program">
+        <table className="vo-search-results-program-head">
           <tr>
             haista vittu
             <td>{subtitle}</td>
@@ -129,7 +129,7 @@ function FoundProgram({ program, elements }: FoundProgramProps): JSX.Element {
             </td>
           </tr>
         </table>
-        {elements.map(subject => (
+        {elements.map((subject) => (
           <FoundElement key={subject} subject={subject} />
         ))}
       </div>
@@ -151,7 +151,7 @@ export function FoundElement({ subject }: FoundElementProps) {
 
   return (
     <>
-      <div className='vo-search-results-element'>
+      <div className="vo-search-results-element">
         <SearchResultElementHead
           programId={programId}
           elementId={elementId}
@@ -178,23 +178,23 @@ export function SearchResultElementHead({
   elementId,
   elementClass,
 }: SearchResultsElementHeadProps): JSX.Element {
-  let inessiivi = 'tuntemattomassa alkiossa';
+  let inessiivi = "tuntemattomassa alkiossa";
 
   switch (elementClass) {
     case ontology.classes.paragraph:
-      inessiivi = 'tekstikappaleessa';
+      inessiivi = "tekstikappaleessa";
       break;
     case ontology.classes.heading:
-      inessiivi = 'otsikossa';
+      inessiivi = "otsikossa";
       break;
     case ontology.classes.actionitem:
-      inessiivi = 'linjauksessa';
+      inessiivi = "linjauksessa";
       break;
   }
 
   return (
     <p>
-      Osuma{' '}
+      Osuma{" "}
       <NavLink to={`/ohjelmat/p${programId}#e${elementId}`}>
         {inessiivi} #{elementId}
       </NavLink>
@@ -238,11 +238,11 @@ export function SearchResultElementBody({
 
 function parentProgramSubject(subject: string) {
   for (let i = subject.length - 1; i >= 0; i--) {
-    if (subject[i] === 'e') {
+    if (subject[i] === "e") {
       return subject.substring(0, i);
     }
 
-    if (subject[i] === '/') {
+    if (subject[i] === "/") {
       return subject;
     }
   }
@@ -254,35 +254,35 @@ function getProgramId(subject: string): string {
   subject = parentProgramSubject(subject);
 
   for (let i = subject.length - 1; i >= 0; i--) {
-    if (subject[i] === 'p') {
+    if (subject[i] === "p") {
       return subject.substring(i + 1, subject.length);
     }
 
-    if (subject[i] === '/') {
-      return '';
+    if (subject[i] === "/") {
+      return "";
     }
   }
 
-  return '';
+  return "";
 }
 
 function getProgramElementId(subject: string): string {
   for (let i = subject.length - 1; i >= 0; i--) {
-    if (subject[i] === 'e') {
+    if (subject[i] === "e") {
       return subject.substring(i + 1, subject.length);
     }
 
-    if (subject[i] === '/') {
-      return '';
+    if (subject[i] === "/") {
+      return "";
     }
   }
 
-  return '';
+  return "";
 }
 
 function isInteger(id: string): boolean {
   for (let i = 0; i < id.length; ++i) {
-    if (!'0123456789'.includes(id[i])) {
+    if (!"0123456789".includes(id[i])) {
       return false;
     }
   }
@@ -293,7 +293,7 @@ function isInteger(id: string): boolean {
 function groupByProgram(src: string[]): FoundProgramProps[] {
   const programs: string[] = [];
   const byProgram = {};
-  src.forEach(element => {
+  src.forEach((element) => {
     const programSubject = parentProgramSubject(element);
     const programId = getProgramId(programSubject);
 
@@ -309,5 +309,5 @@ function groupByProgram(src: string[]): FoundProgramProps[] {
   programs.sort();
   programs.reverse();
 
-  return programs.map(p => ({ program: p, elements: byProgram[p] }));
+  return programs.map((p) => ({ program: p, elements: byProgram[p] }));
 }

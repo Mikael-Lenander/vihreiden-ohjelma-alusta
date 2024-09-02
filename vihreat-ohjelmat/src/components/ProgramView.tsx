@@ -1,9 +1,9 @@
-import { useArray, useString, Resource, core } from '@tomic/react';
-import { Program, ontology } from '../ontologies/ontology';
-import { Body } from './program/Body';
-import { FrontMatter } from './program/FrontMatter';
-import { useStatusInfo } from './program/Status';
-import { Title } from './program/Title';
+import { useArray, useString, Resource, core } from "@tomic/react";
+import { Program, ontology } from "../ontologies/ontology";
+import { Body } from "./program/Body";
+import { FrontMatter } from "./program/FrontMatter";
+import { useStatusInfo } from "./program/Status";
+import { Title } from "./program/Title";
 
 interface ProgramViewProps {
   resource: Resource<Program>;
@@ -21,9 +21,9 @@ export default function ProgramView({
 
   if (title !== undefined && elements !== undefined) {
     return (
-      <div className='vo-program-container'>
+      <div className="vo-program-container">
         <Title title={title} subtitle={subtitle} />
-        <div className='vo-program-content'>
+        <div className="vo-program-content">
           <FrontMatter status={status} />
           <Body elements={elements} highlight={highlight} />
         </div>

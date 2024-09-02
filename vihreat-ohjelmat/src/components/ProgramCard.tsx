@@ -1,7 +1,7 @@
-import { NavLink } from 'react-router-dom';
-import { StatusInfo } from './program/Status';
-import { dateToString } from '../utils';
-import './ProgramCard.css';
+import { NavLink } from "react-router-dom";
+import { StatusInfo } from "./program/Status";
+import { dateToString } from "../utils";
+import "./ProgramCard.css";
 
 interface ProgramCardProps {
   linkPath: string;
@@ -20,8 +20,8 @@ export function ProgramCard({
     <NavLink to={linkPath}>
       <div className={`vo-programbadge vo-programbadge-${status.color}`}>
         <div>
-          <p className='vo-programbadge-title'>{title}</p>
-          <p className='vo-programbadge-subtitle'>{subtitle}</p>
+          <p className="vo-programbadge-title">{title}</p>
+          <p className="vo-programbadge-subtitle">{subtitle}</p>
           <DateInfo status={status} />
           <Warnings status={status} />
         </div>
@@ -37,11 +37,11 @@ interface DateInfoProps {
 function DateInfo({ status }: DateInfoProps): JSX.Element {
   if (status.isGreen || status.isYellow) {
     return (
-      <p className='vo-programbadge-date'>{dateToString(status.approvedOn)}</p>
+      <p className="vo-programbadge-date">{dateToString(status.approvedOn)}</p>
     );
   } else if (status.isRed) {
     return (
-      <p className='vo-programbadge-date'>
+      <p className="vo-programbadge-date">
         Voimassaolo päättynyt {dateToString(status.retiredOn)}
       </p>
     );
@@ -55,19 +55,19 @@ interface WarningsProps {
 }
 
 function Warnings({ status }: WarningsProps): JSX.Element {
-  let warning = '';
+  let warning = "";
 
   if (status.isGreen) {
     return <></>;
   } else if (status.isGray) {
-    warning = 'ohjelmaluonnos';
+    warning = "ohjelmaluonnos";
   } else if (status.isYellow) {
-    warning = 'saattaa sisältää vanhentunutta sisältöä';
+    warning = "saattaa sisältää vanhentunutta sisältöä";
   } else if (status.isRed) {
-    warning = 'ohjelma ei ole voimassa';
+    warning = "ohjelma ei ole voimassa";
   } else {
-    warning = 'voimassaolotietoja ei voitu selvittää';
+    warning = "voimassaolotietoja ei voitu selvittää";
   }
 
-  return <p className='vo-programbadge-warning'>{warning}</p>;
+  return <p className="vo-programbadge-warning">{warning}</p>;
 }

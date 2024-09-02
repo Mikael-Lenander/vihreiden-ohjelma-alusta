@@ -1,13 +1,13 @@
-import { Collection } from '@tomic/lib';
+import { Collection } from "@tomic/lib";
 import {
   useCollection,
   useMemberFromCollection,
   useString,
   core,
-} from '@tomic/react';
-import { useStatusInfo } from './program/Status';
-import { ontology, Program } from '../ontologies/ontology';
-import { ProgramCard } from './ProgramCard';
+} from "@tomic/react";
+import { useStatusInfo } from "./program/Status";
+import { ontology, Program } from "../ontologies/ontology";
+import { ProgramCard } from "./ProgramCard";
 
 export function Browse(): JSX.Element {
   const { collection } = useCollection({
@@ -21,8 +21,8 @@ export function Browse(): JSX.Element {
     return (
       <>
         <BrowseHint />
-        <div className='vo-browse'>
-          {[...Array(collection.totalMembers).keys()].map(index => (
+        <div className="vo-browse">
+          {[...Array(collection.totalMembers).keys()].map((index) => (
             <ProgramFromCollection
               key={index}
               index={index}
@@ -37,11 +37,11 @@ export function Browse(): JSX.Element {
 export default Browse;
 
 function BrowseHint(): JSX.Element {
-  return <p className='vo-browse-hint'>Kaikki ohjelmat</p>;
+  return <p className="vo-browse-hint">Kaikki ohjelmat</p>;
 }
 
 function Loading(): JSX.Element {
-  return <p className='vo-browse-loading-msg'>Haetaan ohjelmia...</p>;
+  return <p className="vo-browse-loading-msg">Haetaan ohjelmia...</p>;
 }
 
 interface ProgramFromCollectionProps {
@@ -54,7 +54,7 @@ function ProgramFromCollection({
   collection,
 }: ProgramFromCollectionProps): JSX.Element {
   const resource = useMemberFromCollection<Program>(collection, index);
-  const linkPath = `/ohjelmat/${resource.subject.split('/').pop()}`;
+  const linkPath = `/ohjelmat/${resource.subject.split("/").pop()}`;
   const [title] = useString(resource, core.properties.name);
   const [subtitle] = useString(resource, ontology.properties.subtitle);
   const status = useStatusInfo(resource);

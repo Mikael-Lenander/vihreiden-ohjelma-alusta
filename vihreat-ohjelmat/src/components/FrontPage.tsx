@@ -1,5 +1,5 @@
-import Browse from './Browse';
-import Search from './Search';
+import Browse from "./Browse";
+import Search from "./Search";
 
 export function FrontPage(): JSX.Element {
   return (
@@ -13,5 +13,5 @@ export function FrontPage(): JSX.Element {
 export default FrontPage;
 
 function Title(): JSX.Element {
-  return <h1 id='vo-frontpage-title'>Vihreät ohjelmat</h1>;
+  return <h1 id="vo-frontpage-title">Vihreät ohjelmat</h1>;
 }

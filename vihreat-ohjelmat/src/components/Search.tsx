@@ -1,23 +1,23 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import {
   useArray,
   useResource,
   useServerSearch,
   useString,
   core,
-} from '@tomic/react';
-import { ontology } from '../ontologies/ontology';
-import { useProgramClass } from '../hooks';
-import Markdown from 'react-markdown';
-import './Search.css';
+} from "@tomic/react";
+import { ontology } from "../ontologies/ontology";
+import { useProgramClass } from "../hooks";
+import Markdown from "react-markdown";
+import "./Search.css";
 
 export function Search(): JSX.Element {
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState("");
 
   return (
     <>
-      <div id='vo-search-container'>
+      <div id="vo-search-container">
         <SearchHint />
         <SearchBar value={searchText} setValue={setSearchText} />
         {searchText ? <SearchResults searchText={searchText} /> : <Idle />}
@@ -36,18 +36,18 @@ function SearchBar({ value, setValue }: SearchBarProps): JSX.Element {
   return (
     <search>
       <input
-        id='vo-search-bar'
-        type='search'
-        placeholder='Kirjoita hakutermi, esim. ydinvoima, perustulo, biokaasu, ...'
+        id="vo-search-bar"
+        type="search"
+        placeholder="Kirjoita hakutermi, esim. ydinvoima, perustulo, biokaasu, ..."
         value={value}
-        onChange={e => setValue(e.target.value)}
+        onChange={(e) => setValue(e.target.value)}
       />
     </search>
   );
 }
 
 function SearchHint(): JSX.Element {
-  return <p className='vo-search-hint'>Hae ohjelmateksteistä:</p>;
+  return <p className="vo-search-hint">Hae ohjelmateksteistä:</p>;
 }
 
 function Idle(): JSX.Element {
@@ -74,8 +74,8 @@ function SearchResults({ searchText }: SearchResultsProps): JSX.Element {
     return <NoResultsFound />;
   } else {
     return (
-      <div id='vo-search-results-container'>
-        {groupByProgram(query.results).map(e => {
+      <div id="vo-search-results-container">
+        {groupByProgram(query.results).map((e) => {
           return (
             <FoundProgram key={e.program} program={e.program} hits={e.hits} />
           );
@@ -86,11 +86,11 @@ function SearchResults({ searchText }: SearchResultsProps): JSX.Element {
 }
 
 function Loading(): JSX.Element {
-  return <p className='vo-search-loading-msg'>Haetaan tuloksia...</p>;
+  return <p className="vo-search-loading-msg">Haetaan tuloksia...</p>;
 }
 
 function NoResultsFound(): JSX.Element {
-  return <p className='vo-search-no-results-msg'>Ei tuloksia.</p>;
+  return <p className="vo-search-no-results-msg">Ei tuloksia.</p>;
 }
 
 interface FoundProgramProps {
@@ -100,7 +100,7 @@ interface FoundProgramProps {
 
 function FoundProgram({ program, hits }: FoundProgramProps): JSX.Element {
   const resource = useResource(program);
-  const id = program.split('/').pop();
+  const id = program.split("/").pop();
   const [title] = useString(resource, core.properties.name);
   const [subtitle] = useString(resource, ontology.properties.subtitle);
   const [elements] = useArray(resource, ontology.properties.elements);
@@ -108,7 +108,7 @@ function FoundProgram({ program, hits }: FoundProgramProps): JSX.Element {
 
   return (
     <>
-      <div className='vo-search-results-program'>
+      <div className="vo-search-results-program">
         <Title
           programId={id!}
           title={title}
@@ -138,7 +138,7 @@ function FoundProgramHits({
 }: FoundProgramHitsProps): JSX.Element {
   return (
     <>
-      {hits.map(subject => (
+      {hits.map((subject) => (
         <FoundElement
           key={subject}
           subject={subject}
@@ -167,22 +167,22 @@ function Title({
   onToggleExpand,
 }: TitleProps): JSX.Element {
   return (
-    <div className='vo-search-results-program-head'>
+    <div className="vo-search-results-program-head">
       <NavLink
         to={`/ohjelmat/${programId}`}
-        className='vo-search-results-program-head-link'
+        className="vo-search-results-program-head-link"
       >
-        <span className='vo-search-results-program-head-subtitle'>
+        <span className="vo-search-results-program-head-subtitle">
           {subtitle}
         </span>
-        <span className='vo-search-results-program-head-title'>{title}</span>
+        <span className="vo-search-results-program-head-title">{title}</span>
       </NavLink>
       <div>
-        <span className='vo-search-results-program-head-hits'>
-          {hits} osuma{hits === 1 ? '' : 'a'}
+        <span className="vo-search-results-program-head-hits">
+          {hits} osuma{hits === 1 ? "" : "a"}
         </span>
-        <button className='vo-search-toggle-expand' onClick={onToggleExpand}>
-          {expand ? '\u2014' : '+'}
+        <button className="vo-search-toggle-expand" onClick={onToggleExpand}>
+          {expand ? "\u2014" : "+"}
         </button>
       </div>
     </div>
@@ -204,7 +204,7 @@ export function FoundElement({ subject, totalElements }: FoundElementProps) {
 
   return (
     <>
-      <div className='vo-search-results-element'>
+      <div className="vo-search-results-element">
         <SearchResultElementBody
           text={text}
           name={name}
@@ -236,7 +236,7 @@ export function SearchResultElementHead({
     <>
       <NavLink
         to={`/ohjelmat/p${programId}?h=${elementId}`}
-        className='vo-search-results-element-head'
+        className="vo-search-results-element-head"
       >
         Siirry tekstikohtaan &#x2192;
       </NavLink>
@@ -258,19 +258,19 @@ export function SearchResultElementBody({
   switch (elementClass) {
     case ontology.classes.paragraph:
       return (
-        <div className='vo-search-results-element-body'>
+        <div className="vo-search-results-element-body">
           <Markdown>{text}</Markdown>
         </div>
       );
     case ontology.classes.heading:
       return (
-        <div className='vo-search-results-element-body'>
+        <div className="vo-search-results-element-body">
           <h3>{name}</h3>
         </div>
       );
     case ontology.classes.actionitem:
       return (
-        <div className='vo-search-results-element-body'>
+        <div className="vo-search-results-element-body">
           <p>
             <ul>
               <li>{name}</li>
@@ -280,7 +280,7 @@ export function SearchResultElementBody({
       );
     default:
       return (
-        <div className='vo-search-results-element-body'>
+        <div className="vo-search-results-element-body">
           <p>
             {name}
             {text}
@@ -292,11 +292,11 @@ export function SearchResultElementBody({
 
 function parentProgramSubject(subject: string) {
   for (let i = subject.length - 1; i >= 0; i--) {
-    if (subject[i] === 'e') {
+    if (subject[i] === "e") {
       return subject.substring(0, i);
     }
 
-    if (subject[i] === '/') {
+    if (subject[i] === "/") {
       return subject;
     }
   }
@@ -308,11 +308,11 @@ function getProgramId(subject: string): number | undefined {
   subject = parentProgramSubject(subject);
 
   for (let i = subject.length - 1; i >= 0; i--) {
-    if (subject[i] === 'p') {
+    if (subject[i] === "p") {
       return parseInt(subject.substring(i + 1, subject.length));
     }
 
-    if (subject[i] === '/') {
+    if (subject[i] === "/") {
       return undefined;
     }
   }
@@ -322,11 +322,11 @@ function getProgramId(subject: string): number | undefined {
 
 function getProgramElementId(subject: string): number | undefined {
   for (let i = subject.length - 1; i >= 0; i--) {
-    if (subject[i] === 'e') {
+    if (subject[i] === "e") {
       return parseInt(subject.substring(i + 1, subject.length));
     }
 
-    if (subject[i] === '/') {
+    if (subject[i] === "/") {
       return undefined;
     }
   }
@@ -337,7 +337,7 @@ function getProgramElementId(subject: string): number | undefined {
 function groupByProgram(src: string[]): FoundProgramProps[] {
   const programs: string[] = [];
   const byProgram = {};
-  src.forEach(elementSubject => {
+  src.forEach((elementSubject) => {
     const programSubject = parentProgramSubject(elementSubject);
     const elementId = getProgramElementId(elementSubject);
     const programId = getProgramId(programSubject);
@@ -362,8 +362,8 @@ function groupByProgram(src: string[]): FoundProgramProps[] {
     byProgram[p].sort((a, b) => a.id - b.id);
   }
 
-  return programs.map(p => ({
+  return programs.map((p) => ({
     program: p,
-    hits: byProgram[p].map(e => e.subject),
+    hits: byProgram[p].map((e) => e.subject),
   }));
 }
