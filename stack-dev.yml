@@ -12,6 +12,7 @@ services:
       - "./vihreat-ohjelmat:/vihreat-ohjelmat"
     depends_on:
       - atomic
+    env_file: "dev.env"
 
   atomic:
     image: "joepmeneer/atomic-server:master"
