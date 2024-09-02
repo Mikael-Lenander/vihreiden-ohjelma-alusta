@@ -15,4 +15,4 @@ RUN pnpm install
 
 VOLUME /vihreat-ohjelmat
 
-ENTRYPOINT [ "sh", "/app/vihreat-data/generate-types.sh" ]
+ENTRYPOINT ["/bin/sh", "generate-ontologies.sh"]
