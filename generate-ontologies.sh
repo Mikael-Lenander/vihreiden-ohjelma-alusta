@@ -10,3 +10,4 @@ docker run \
     --env-file dev.env \
     -p "9883:9883" \
     atomic-ontology-generator 
+bash lint-vihreat-ohjelmat.sh
