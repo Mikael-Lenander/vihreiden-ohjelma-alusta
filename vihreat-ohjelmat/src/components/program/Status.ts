@@ -1,12 +1,12 @@
-import { useDate, Resource } from "@tomic/react";
-import { ontology } from "../../ontologies/ontology";
+import { useDate, Resource } from '@tomic/react';
+import { ontology } from '../../ontologies/ontology';
 
 // "Traffic light" color
 export enum StatusColor {
-  Gray = "gray",
-  Green = "green",
-  Yellow = "yellow",
-  Red = "red",
+  Gray = 'gray',
+  Green = 'green',
+  Yellow = 'yellow',
+  Red = 'red',
 }
 
 interface StatusInfoProps {

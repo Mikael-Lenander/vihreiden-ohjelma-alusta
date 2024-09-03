@@ -1,7 +1,7 @@
-import { useParams, useSearchParams, NavLink } from "react-router-dom";
-import { useResource } from "@tomic/react";
-import ProgramView from "./ProgramView";
-import { Program } from "../ontologies/ontology";
+import { useParams, useSearchParams, NavLink } from 'react-router-dom';
+import { useResource } from '@tomic/react';
+import ProgramView from './ProgramView';
+import { Program } from '../ontologies/ontology';
 
 export function ViewProgram(): JSX.Element {
   const { pid } = useParams();
@@ -10,7 +10,7 @@ export function ViewProgram(): JSX.Element {
   const resource = useResource<Program>(subject);
 
   const [searchParams] = useSearchParams();
-  const highlight = searchParams.get("h") || undefined;
+  const highlight = searchParams.get('h') || undefined;
 
   if (resource === undefined) {
     return (
@@ -32,7 +32,7 @@ export default ViewProgram;
 
 function BackButton(): JSX.Element {
   return (
-    <NavLink to="/" id="vo-back-button">
+    <NavLink to='/' id='vo-back-button'>
       <span>&#x21E0; etusivulle</span>
     </NavLink>
   );
