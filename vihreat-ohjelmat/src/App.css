@@ -36,7 +36,6 @@ h1#vo-frontpage-title {
     position: static;
     display: block;
     margin: 0 auto;
-    width: 75ch;
     text-align: center;
   }
 }
@@ -75,6 +74,7 @@ h1#vo-frontpage-title {
 
 .vo-program-content {
   width: 75ch;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -190,20 +190,6 @@ h1#vo-frontpage-title {
   animation: cell-pulse 1s infinite;
   padding: 0.2em;
   margin: 0.5em 0;
-}
-
-.sidebar-container {
-  display: flex;
-  justify-content: stretch;
-  height: 100vh;
-  width: 100vw;
-}
-
-.sidebar {
-  width: 15rem;
-  padding: 0 0.5rem;
-  border-right: 2px solid gray;
-  overflow-y: scroll;
 }
 
 .content {
