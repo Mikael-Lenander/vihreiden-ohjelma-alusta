@@ -1,5 +1,5 @@
 from generate_ld import url
-
+from typing import List
 
 def build(markdown_path: str, **kwargs) -> list[dict]:
     elements = _build_elements(markdown_path, kwargs["name"])
@@ -39,6 +39,20 @@ def _build_main(
         j[url.local("o/staleOn")] = stale_on
     return j
 
+def _get_types(element: dict) -> List[str]:
+    this_types = []
+    for t in element[url.atomic("properties/isA")]:
+        this_types += [url.decode(t).replace("o/", "")]
+    return this_types
+
+def _get_length(es: List[dict]) -> int:
+    i = 0
+    for e in es:
+        if url.local("o/elements") in e:
+            i += _get_length(e[url.local("o/elements")]) + 1
+        else:
+            i += 1
+    return i
 
 def _build_elements(markdown_path: str, parent_name: str) -> list[dict]:
     elements = []
@@ -46,8 +60,26 @@ def _build_elements(markdown_path: str, parent_name: str) -> list[dict]:
         for line in f:
             line = line.strip()
             if line:
-                elements.append(_build_element(line, parent_name, len(elements)))
+                this_element = _build_element(line, parent_name, _get_length(elements))
+                if 'ActionItem' in _get_types(this_element):
+                    if 'ActionList' in _get_types(elements[-1]):
+                        elements[-1][url.local("o/elements")] += [this_element]
+                    else:
+                        elements += [_build_actionlist_element(line, parent_name, _get_length(elements))]
+                else:
+                    elements += [this_element]
     return elements
+
+def _build_actionlist_element(line: str, parent_name: str, num: int) -> dict:
+    name = f"{parent_name}e{num}"
+    return {
+        "@id": url.local(f"ohjelmat/{name}"),
+        url.atomic("properties/isA"): [
+            url.local("o/ActionList"),
+            url.local("o/ProgramElement"),
+        ],
+        url.local("o/elements"): [_build_element(line, parent_name, num+1)],
+    }
 
 
 def _build_element(line: str, parent_name: str, num: int) -> dict:
@@ -69,7 +101,7 @@ def _build_element(line: str, parent_name: str, num: int) -> dict:
                 url.local("o/ActionItem"),
                 url.local("o/ProgramElement"),
             ],
-            url.atomic("properties/name"): line[1:].strip(),
+            url.atomic("properties/description"): line[1:].strip(),
         }
     else:
         return {

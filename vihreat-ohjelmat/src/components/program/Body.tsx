@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import { core, useNumber, useResource, useString } from '@tomic/react';
+import { core, useNumber, useResource, useString, useArray } from '@tomic/react';
 import { ontology } from '../../ontologies/ontology';
 import { useProgramClass } from '../../hooks';
 import Markdown from 'react-markdown';
@@ -30,11 +30,8 @@ export function Body({ elements, highlight }: BodyProps): JSX.Element {
         <HighlightableElement
           subject={subject}
           key={subject}
-          highlight={
-            highlight && subject.endsWith('e' + highlight)
-              ? highlightRef
-              : undefined
-          }
+          highlight={highlight}
+          highlightRef={highlightRef}
         />
       ))}
     </div>
@@ -43,20 +40,22 @@ export function Body({ elements, highlight }: BodyProps): JSX.Element {
 
 interface HighlightableElementProps {
   subject: string;
-  highlight: any;
+  highlight?: string;
+  highlightRef: any;
 }
 
 function HighlightableElement({
   subject,
   highlight,
+  highlightRef
 }: HighlightableElementProps): JSX.Element {
   const elementId = subject.split('/').pop()?.split('e').pop();
-
-  if (highlight) {
+  
+  if (highlight == elementId) {
     return (
       <a href={`?h=${elementId}`} className='vo-program-element-a'>
         <div
-          ref={highlight}
+          ref={highlightRef}
           className='vo-program-element vo-program-element-highlight'
         >
           <p className='vo-program-element-link'>&#x1F517;</p>
@@ -65,14 +64,20 @@ function HighlightableElement({
       </a>
     );
   } else {
-    return (
-      <a href={`?h=${elementId}`} className='vo-program-element-a'>
-        <div className='vo-program-element'>
-          <p className='vo-program-element-link'>&#x1F517;</p>
-          <Element subject={subject} />
-        </div>
-      </a>
-    );
+    const resource = useResource(subject);
+    const klass = useProgramClass(resource);
+    if (klass == ontology.classes.actionlist) {
+      return <ActionList subject={subject} highlight={highlight} highlightRef={highlightRef} />;
+    } else {
+      return (
+        <a href={`?h=${elementId}`} className='vo-program-element-a'>
+          <div className='vo-program-element'>
+            <p className='vo-program-element-link'>&#x1F517;</p>
+              <Element subject={subject} key={subject} />
+          </div>
+        </a>
+      );
+    }
   }
 }
 
@@ -133,14 +138,30 @@ function Heading({ subject }: ElementProps): JSX.Element {
   }
 }
 
-function ActionItem({ subject }: ElementProps): JSX.Element {
+function ActionList({ subject, highlight, highlightRef }: HighlightableElementProps): JSX.Element {
   const resource = useResource(subject);
-  const [text] = useString(resource, core.properties.name);
+  const [elements] = useArray(resource, ontology.properties.elements);
 
   return (
     <ul>
-      <li>{text}</li>
+      {elements.map(subject => (
+        <HighlightableElement
+          subject={subject}
+          key={subject}
+          highlight={highlight}
+          highlightRef={highlightRef}
+        />
+      ))}
     </ul>
+  );
+}
+
+function ActionItem({ subject }: ElementProps): JSX.Element {
+  const resource = useResource(subject);
+  const [text] = useString(resource, core.properties.description);
+
+  return (
+      <li key={subject}>{text}</li>
   );
 }
 
