@@ -144,8 +144,15 @@ h1#vo-frontpage-title {
 }
 
 .vo-program-element-highlight {
-  background-color: hsl(60, 100%, 75%);
-  box-shadow: 0 0 0.5em 0.5em hsl(60, 100%, 75%);
+  border-left: 4px solid hsl(60, 100%, 75%);
+}
+
+.vo-program-element-highlight p, h1, h2, h3, h4, h5, h6 {
+  padding-left: 5px;
+}
+
+.vo-program-element-highlight li {
+  padding-left: 4px;
 }
 
 .vo-program-element-link {
