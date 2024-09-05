@@ -8,8 +8,11 @@ trace-*.json
 artifact
 server/assets_tmp
 __pycache__
-atomic-storage
 **/.pnpm-store/*
+
+# Temporary volumes
+atomic-storage
+json-ad
 
 # Local Netlify folder
 .netlify

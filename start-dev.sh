@@ -1,11 +1,13 @@
 #!/bin/bash
 if [[ "$*" == *"--init"* ]]
 then
-    bash initialize-server.sh
+    bash generate-json-ad.sh
+    bash init-server-data.sh
+    bash generate-ontologies.sh
 fi
 if [[ "$*" == *"--build"* ]]
 then
-    docker-compose -f stack-dev.yml up --force-recreate
+    docker compose -f stack-dev.yml up --force-recreate
 else
-    docker-compose -f stack-dev.yml up
+    docker compose -f stack-dev.yml up
 fi

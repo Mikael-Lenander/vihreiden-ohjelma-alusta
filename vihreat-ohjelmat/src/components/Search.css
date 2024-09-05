@@ -1,5 +1,6 @@
 #vo-search-container {
   width: 75ch;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -9,8 +10,11 @@
 }
 
 #vo-search-bar {
-  width: 100%;
+  width: 75ch;
+  max-width: 90%;
   font-size: large;
+  display: block;
+  margin: auto;
 }
 
 .vo-search-hint {

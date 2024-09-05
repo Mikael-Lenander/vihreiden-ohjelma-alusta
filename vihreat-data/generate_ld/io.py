@@ -1,7 +1,8 @@
+import os
 import json
 
 
-_base_dir = "json"
+_base_dir = os.environ["JSON_AD_DIR"]
 
 
 def write(R, name):

@@ -1,5 +1,7 @@
 {
   "outputFolder": "./src/ontologies",
   "moduleAlias": "@tomic/lib",
-  "ontologies": ["http://localhost:9883/o"]
+  "ontologies": [
+    "ATOMIC_SERVER_URL/o"
+  ]
 }
