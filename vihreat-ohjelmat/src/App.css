@@ -45,7 +45,6 @@ h1#vo-frontpage-title {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 3em;
 }
 
 .vo-browse-hint {
@@ -54,6 +53,19 @@ h1#vo-frontpage-title {
   text-align: center;
   font-weight: 500;
   font-size: larger;
+}
+
+.vo-browse-retired-hint {
+  display: block;
+  margin: auto;
+  margin-top: 1em;
+  color: gray;
+  border: none;
+  background-color: transparent;
+}
+
+.vo-browse-retired-hint:hover {
+  color: #333;
 }
 
 .vo-browse-loading-msg {
@@ -80,6 +92,10 @@ h1#vo-frontpage-title {
 
 .vo-program-frontmatter {
   text-align: center;
+}
+
+.vo-program-dev-banner-spacer {
+  min-height: 4em;
 }
 
 .vo-program-dev-banner {

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useCollection, useResource, useString, core } from '@tomic/react';
 import { StatusInfo, useStatusInfo } from './program/Status';
 import { ontology } from '../ontologies/ontology';
@@ -9,7 +9,9 @@ export class Program {
   public subtitle?: string;
   public status: StatusInfo;
 
-  public constructor(subject: string) { this.subject = subject; }
+  public constructor(subject: string) {
+    this.subject = subject;
+  }
 
   public get id(): string | undefined {
     return this.subject.split('/').pop();
@@ -30,28 +32,41 @@ export class Programs {
   }
 
   public get active(): Program[] {
-    return this.all.filter((p) => p.status.isGreen || p.status.isYellow);
+    return this.all.filter(p => p.status.isGreen || p.status.isYellow);
+  }
+
+  public get retired(): Program[] {
+    return this.all.filter(p => p.status.isRed);
   }
 }
 
 export function useProgram(subject?: string): Program {
-  const program = new Program(subject || "");
+  const program = new Program(subject || '');
   const resource = useResource(subject);
   [program.title] = useString(resource, core.properties.name);
   [program.subtitle] = useString(resource, ontology.properties.subtitle);
   program.status = useStatusInfo(resource);
+
   return program;
 }
 
 export function useProgramList(subjects: string[]): Program[] {
+  // TODO: terrible hack because of react hook order constraints
   const programs: Program[] = [];
-  for (var i = 0; i < 64; ++i) {
-    if (i < subjects.length) {
-      programs.push(useProgram(subjects[i]));
-    } else {
-      useProgram(undefined);
+
+  for (let i = 0; i < 128; ++i) {
+    const isInRange = i < subjects.length;
+    // ESLint thinks this violates rules of hooks because it occurs in a loop,
+    // but it actually does not, because the loop is of constant size...
+    //
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const program = useProgram(isInRange ? subjects[i] : undefined);
+
+    if (isInRange) {
+      programs.push(program);
     }
   }
+
   return programs;
 }
 
@@ -60,6 +75,7 @@ export function usePrograms(): Programs {
   const programs = new Programs();
   programs.ready = subjects !== undefined;
   programs.all = useProgramList(subjects ?? []);
+
   return programs;
 }
 

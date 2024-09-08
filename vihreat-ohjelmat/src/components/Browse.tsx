@@ -1,39 +1,73 @@
-import { Collection } from '@tomic/lib';
-import {
-  useResource,
-  useString,
-  core,
-} from '@tomic/react';
-import { useStatusInfo } from './program/Status';
+import { useState } from 'react';
 import { usePrograms, Program } from './usePrograms';
-import { ontology } from '../ontologies/ontology';
 import { ProgramCard } from './ProgramCard';
 
 export function Browse(): JSX.Element {
   const programs = usePrograms();
+  const [expandRetired, setExpandRetired] = useState(false);
 
   if (!programs.ready) {
     return <Loading />;
   } else {
     return (
       <>
-        <BrowseHint />
+        <AllProgramsHead />
         <div className='vo-browse'>
           {programs.active.map(p => (
-            <Card
-              key={p.subject}
-              program={p}
-            />
+            <Card key={p.subject} program={p} />
           ))}
         </div>
+        <RetiredProgramsHead
+          expand={expandRetired}
+          setExpand={setExpandRetired}
+        />
+        {expandRetired ? (
+          <div className='vo-browse' id='vo-browse-retired'>
+            {programs.retired.map(p => (
+              <Card key={p.subject} program={p} />
+            ))}
+          </div>
+        ) : (
+          <></>
+        )}
       </>
     );
   }
 }
 export default Browse;
 
-function BrowseHint(): JSX.Element {
-  return <p className='vo-browse-hint'>Kaikki ohjelmat</p>;
+function AllProgramsHead(): JSX.Element {
+  return <p className='vo-browse-hint'>Voimassa olevat ohjelmat</p>;
+}
+
+interface RetiredProgramsHeadProps {
+  expand: boolean;
+  setExpand: (boolean) => void;
+}
+
+function RetiredProgramsHead({
+  expand,
+  setExpand,
+}: RetiredProgramsHeadProps): JSX.Element {
+  if (expand) {
+    return (
+      <button
+        className='vo-browse-retired-hint'
+        onClick={() => setExpand(false)}
+      >
+        &#x2191;&#x2191; piilota vanhentuneet ohjelmat &#x2191;&#x2191;
+      </button>
+    );
+  } else {
+    return (
+      <button
+        className='vo-browse-retired-hint'
+        onClick={() => setExpand(true)}
+      >
+        &#x2193;&#x2193; näytä vanhentuneet ohjelmat &#x2193;&#x2193;
+      </button>
+    );
+  }
 }
 
 function Loading(): JSX.Element {
