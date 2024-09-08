@@ -1,4 +1,5 @@
 #!/bin/bash
+rm -rf json-ad
 mkdir -p json-ad
 
 docker build . \
