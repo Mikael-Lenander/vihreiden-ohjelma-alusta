@@ -37,12 +37,14 @@ interface DateInfoProps {
 function DateInfo({ status }: DateInfoProps): JSX.Element {
   if (status.isGreen || status.isYellow) {
     return (
-      <p className='vo-programbadge-date'>{dateToString(status.approvedOn)}</p>
+      <p className='vo-programbadge-date'>
+        {dateToString(status.approvedOn)}
+      </p>
     );
   } else if (status.isRed) {
     return (
       <p className='vo-programbadge-date'>
-        Voimassaolo päättynyt {dateToString(status.retiredOn)}
+        {dateToString(status.approvedOn)} &mdash; {dateToString(status.retiredOn)}
       </p>
     );
   } else {

@@ -1,32 +1,28 @@
 import { Collection } from '@tomic/lib';
 import {
-  useCollection,
-  useMemberFromCollection,
+  useResource,
   useString,
   core,
 } from '@tomic/react';
 import { useStatusInfo } from './program/Status';
-import { ontology, Program } from '../ontologies/ontology';
+import { usePrograms, Program } from './usePrograms';
+import { ontology } from '../ontologies/ontology';
 import { ProgramCard } from './ProgramCard';
 
 export function Browse(): JSX.Element {
-  const { collection } = useCollection({
-    property: core.properties.isA,
-    value: ontology.classes.program,
-  });
+  const programs = usePrograms();
 
-  if (collection.totalMembers === 0) {
+  if (!programs.ready) {
     return <Loading />;
   } else {
     return (
       <>
         <BrowseHint />
         <div className='vo-browse'>
-          {[...Array(collection.totalMembers).keys()].map(index => (
-            <ProgramFromCollection
-              key={index}
-              index={index}
-              collection={collection}
+          {programs.active.map(p => (
+            <Card
+              key={p.subject}
+              program={p}
             />
           ))}
         </div>
@@ -44,27 +40,17 @@ function Loading(): JSX.Element {
   return <p className='vo-browse-loading-msg'>Haetaan ohjelmia...</p>;
 }
 
-interface ProgramFromCollectionProps {
-  index: number;
-  collection: Collection;
+interface CardProps {
+  program: Program;
 }
 
-function ProgramFromCollection({
-  index,
-  collection,
-}: ProgramFromCollectionProps): JSX.Element {
-  const resource = useMemberFromCollection<Program>(collection, index);
-  const linkPath = `/ohjelmat/${resource.subject.split('/').pop()}`;
-  const [title] = useString(resource, core.properties.name);
-  const [subtitle] = useString(resource, ontology.properties.subtitle);
-  const status = useStatusInfo(resource);
-
+function Card({ program }: CardProps): JSX.Element {
   return (
     <ProgramCard
-      linkPath={linkPath}
-      title={title}
-      subtitle={subtitle}
-      status={status}
+      linkPath={program.linkPath}
+      title={program.title}
+      subtitle={program.subtitle}
+      status={program.status}
     />
   );
 }
