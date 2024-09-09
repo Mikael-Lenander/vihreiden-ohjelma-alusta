@@ -47,12 +47,20 @@ h1#vo-frontpage-title {
   justify-content: center;
 }
 
-.vo-browse-hint {
+.vo-browse-all-hint {
   margin-top: 2em;
   margin-bottom: 0.2em;
   text-align: center;
   font-weight: 500;
-  font-size: larger;
+  font-size: x-large;
+}
+
+.vo-browse-sector-hint {
+  margin-bottom: 0.2em;
+  text-align: center;
+  font-weight: 500;
+  font-size: normal;
+  color: #555;
 }
 
 .vo-browse-retired-hint {

@@ -20,6 +20,20 @@ export class Program {
   public get linkPath(): string {
     return `/ohjelmat/${this.id}`;
   }
+
+  public get isActive(): boolean {
+    return this.status.isGreen || this.status.isYellow;
+  }
+
+  public get isRetired(): boolean {
+    return this.status.isRed;
+  }
+
+  public get isHeadline(): boolean {
+    // TODO: instead of hardcoding, use tags or similar
+    return ((this.title ?? "").startsWith("Vihreiden poliittinen ohjelma")) ||
+      ((this.subtitle ?? "").startsWith("Vihreiden periaateohjelma 2020-2028"));
+  }
 }
 
 export class Programs {
@@ -31,12 +45,16 @@ export class Programs {
     this.all = [];
   }
 
-  public get active(): Program[] {
-    return this.all.filter(p => p.status.isGreen || p.status.isYellow);
+  public get headlinePrograms(): Program[] {
+    return this.all.filter(p => p.isActive && p.isHeadline);
   }
 
-  public get retired(): Program[] {
-    return this.all.filter(p => p.status.isRed);
+  public get sectorPrograms(): Program[] {
+    return this.all.filter(p => p.isActive && !p.isHeadline);
+  }
+
+  public get retiredPrograms(): Program[] {
+    return this.all.filter(p => p.isRetired);
   }
 }
 

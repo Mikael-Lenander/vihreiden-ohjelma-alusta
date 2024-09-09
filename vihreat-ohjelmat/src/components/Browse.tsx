@@ -11,9 +11,15 @@ export function Browse(): JSX.Element {
   } else {
     return (
       <>
-        <AllProgramsHead />
+        <HeadlineProgramsHead />
         <div className='vo-browse'>
-          {programs.active.map(p => (
+          {programs.headlinePrograms.map(p => (
+            <Card key={p.subject} program={p} />
+          ))}
+        </div>
+        <SectorProgramsHead />
+        <div className='vo-browse'>
+          {programs.sectorPrograms.map(p => (
             <Card key={p.subject} program={p} />
           ))}
         </div>
@@ -23,7 +29,7 @@ export function Browse(): JSX.Element {
         />
         {expandRetired ? (
           <div className='vo-browse' id='vo-browse-retired'>
-            {programs.retired.map(p => (
+            {programs.retiredPrograms.map(p => (
               <Card key={p.subject} program={p} />
             ))}
           </div>
@@ -36,8 +42,12 @@ export function Browse(): JSX.Element {
 }
 export default Browse;
 
-function AllProgramsHead(): JSX.Element {
-  return <p className='vo-browse-hint'>Voimassa olevat ohjelmat</p>;
+function HeadlineProgramsHead(): JSX.Element {
+  return <p className='vo-browse-all-hint'>Voimassa olevat ohjelmat</p>;
+}
+
+function SectorProgramsHead(): JSX.Element {
+  return <p className='vo-browse-sector-hint'>Sektoriohjelmat</p>;
 }
 
 interface RetiredProgramsHeadProps {
