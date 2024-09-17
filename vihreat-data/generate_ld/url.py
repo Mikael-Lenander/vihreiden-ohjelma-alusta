@@ -17,3 +17,11 @@ def local(tail: str = "") -> str:
         return f"{_local_base_url}/{tail}"
     else:
         return _local_base_url
+
+def decode(s: str) -> str:
+    if _atomic_base_url in s:
+        return s.replace(f"{_atomic_base_url}/", "")
+    elif _local_base_url in s:
+        return s.replace(f"{_local_base_url}/", "")
+    else:
+        raise UrlException(f"No base URL found in {s}")
