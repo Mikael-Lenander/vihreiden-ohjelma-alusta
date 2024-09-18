@@ -32,17 +32,17 @@ export class Program {
 
   public get isHeadline(): boolean {
     return (
-      this.category == 'poliittinen ohjelma' ||
-      this.category == 'periaateohjelma'
+      this.category === 'poliittinen ohjelma' ||
+      this.category === 'periaateohjelma'
     );
   }
 
   public get isThematic(): boolean {
-    return this.category == 'teemaohjelma';
+    return this.category === 'teemaohjelma';
   }
 
   public get isOpener(): boolean {
-    return this.category == 'avaus';
+    return this.category === 'avaus';
   }
 }
 
