@@ -70,7 +70,7 @@ generate_program(
 generate_program(
     "md/oikeuspoliittinen-ohjelma.md",
     "p5",
-    "Oikeuspo­liit­tinen ohjelma",
+    "Oikeuspoliittinen ohjelma",
     approved_on="2024-02-18",
 )
 
@@ -89,7 +89,7 @@ generate_program(
 generate_program(
     "md/ulko-ja-turvallisuuspoliittinen-ohjelma.md",
     "p7",
-    "Ulko- ja turvalli­suus­po­liit­tinen ohjelma",
+    "Ulko- ja turvallisuuspoliittinen ohjelma",
     approved_on="2023-09-24",
 )
 
@@ -123,7 +123,7 @@ generate_program(
     "md/vihreiden-maahanmuuttopoliittinen-ohjelma.md",
     "p11",
     "Visio liikenteen tulevaisuudesta",
-    subtitle="liikennepoliittinen ohjelma",
+    subtitle="Liikennepoliittinen ohjelma",
     approved_on="2022-09-25",
 )
 
@@ -140,7 +140,7 @@ generate_program(
 generate_program(
     "md/vihreiden-poliittinen-ohjelma-2023-2027.md",
     "p13",
-    "Vihreiden poliittinen ohjelma 2023–2027",
+    "Vihreiden poliittinen ohjelma 2023-2027",
     approved_on="2022-05-22",
 )
 
@@ -148,7 +148,7 @@ generate_program(
 generate_program(
     "md/vihreiden-vesiensuojeluohjelma.md",
     "p14",
-    "Vihreiden vesiensuo­je­luoh­jelma",
+    "Vihreiden vesiensuojeluohjelma",
     approved_on="2022-04-24",
 )
 
@@ -236,7 +236,7 @@ generate_program(
 generate_program(
     "md/periaateohjelma-2020-2028.md",
     "p24",
-    "Vihreät muuttavat maailmaa, jotta elämä maapallolla voi kukoistaa",
+    "Vihreät muuttavat maailmaa, jotta elämä maapallolla voi kukoistaa",
     subtitle="Vihreiden periaateohjelma 2020-2028",
     approved_on="2020-09-20",
 )
@@ -281,7 +281,7 @@ generate_program(
     "md/pelastetaan-maailman-paras-koulutus.md",
     "p29",
     "Pelastetaan maailman paras koulutus",
-    subtitle="koulutuspoliittinen ohjelma",
+    subtitle="Koulutuspoliittinen ohjelma",
     approved_on="2018-11-17",
 )
 
