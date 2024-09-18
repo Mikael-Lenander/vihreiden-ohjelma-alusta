@@ -108,7 +108,7 @@ export function useProgramsSubjects(): string[] | undefined {
   const [subjects, setSubjects] = useState<string[] | undefined>(undefined);
   useEffect(() => {
     collection.getAllMembers().then(setSubjects);
-  }, [collection]);
+  }, []);
 
   return subjects;
 }
