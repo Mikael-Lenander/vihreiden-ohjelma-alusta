@@ -25,6 +25,7 @@ generate_program(
     "p0",
     "Ihmislähtöinen ja kestävä digitalisaatio",
     subtitle="Tietopoliittinen ohjelma",
+    category="teemaohjelma",
     approved_on="2021-05-16",
     updated_on="2024-02-18",
 )
@@ -35,6 +36,7 @@ generate_program(
     "p1",
     "Kohti kestävämpää ja reilumpaa maataloutta",
     subtitle="Maatalouspoliittinen ohjelma",
+    category="teemaohjelma",
     approved_on="2018-09-09",
     updated_on="2022-11-27",
 )
@@ -45,6 +47,7 @@ generate_program(
     "p2",
     "Talouden avulla tavoitteisiin",
     subtitle="Elinkeinopoliittinen ohjelma",
+    category="teemaohjelma",
     approved_on="2023-02-12",
 )
 
@@ -54,6 +57,7 @@ generate_program(
     "p3",
     "Huomisen kestävät ja viihtyisät kaupungit",
     subtitle="Vihreiden ohjelma suurille kaupungeille",
+    category="teemaohjelma",
     approved_on="2024-05-19",
 )
 
@@ -63,6 +67,7 @@ generate_program(
     "p4",
     "Ei enää toivottomia velkavuoria",
     subtitle="Vihreät ratkaisut yksityishenkilöiden ylivelkaantumiseen",
+    category="teemaohjelma",
     approved_on="2024-05-19",
 )
 
@@ -71,6 +76,7 @@ generate_program(
     "md/oikeuspoliittinen-ohjelma.md",
     "p5",
     "Oikeuspoliittinen ohjelma",
+    category="teemaohjelma",
     approved_on="2024-02-18",
 )
 
@@ -81,6 +87,7 @@ generate_program(
     "md/tasa-arvo-ja-yhdenvertaisuusohjelma.md",
     "p6",
     "Tasa-arvo- ja yhdenvertaisuusohjelma",
+    category="teemaohjelma",
     approved_on="2023-11-26",
 )
 
@@ -90,6 +97,7 @@ generate_program(
     "md/ulko-ja-turvallisuuspoliittinen-ohjelma.md",
     "p7",
     "Ulko- ja turvallisuuspoliittinen ohjelma",
+    category="teemaohjelma",
     approved_on="2023-09-24",
 )
 
@@ -99,6 +107,7 @@ generate_program(
     "md/tiedepoliittinen-ohjelma.md",
     "p8",
     "Tiedepoliittinen ohjelma",
+    category="teemaohjelma",
     approved_on="2023-05-14",
 )
 
@@ -107,6 +116,7 @@ generate_program(
     "md/vihreiden-energiavisio-2035.md",
     "p9",
     "Vihreiden energiavisio 2035",
+    category="avaus",
     approved_on="2023-02-27",
 )
 
@@ -115,6 +125,7 @@ generate_program(
     "md/vihreiden-maahanmuuttopoliittinen-ohjelma.md",
     "p10",
     "Maahanmuuttopoliittinen ohjelma",
+    category="teemaohjelma",
     approved_on="2022-11-27",
 )
 
@@ -124,6 +135,7 @@ generate_program(
     "p11",
     "Visio liikenteen tulevaisuudesta",
     subtitle="Liikennepoliittinen ohjelma",
+    category="teemaohjelma",
     approved_on="2022-09-25",
 )
 
@@ -133,6 +145,7 @@ generate_program(
     "p12",
     "Vihreässä Suomessa ihmisillä on toivoa ympäri maata",
     subtitle="Vihreä maaseutu- ja aluepoliittinen ohjelma",
+    category="teemaohjelma",
     approved_on="2022-09-25",
 )
 
@@ -141,6 +154,7 @@ generate_program(
     "md/vihreiden-poliittinen-ohjelma-2023-2027.md",
     "p13",
     "Vihreiden poliittinen ohjelma 2023-2027",
+    category="poliittinen ohjelma",
     approved_on="2022-05-22",
 )
 
@@ -149,6 +163,7 @@ generate_program(
     "md/vihreiden-vesiensuojeluohjelma.md",
     "p14",
     "Vihreiden vesiensuojeluohjelma",
+    category="teemaohjelma",
     approved_on="2022-04-24",
 )
 
@@ -159,6 +174,7 @@ generate_program(
     "p15",
     "Kaikkien sosiaaliturva",
     subtitle="Vihreiden sosiaaliturvaohjelma",
+    category="teemaohjelma",
     approved_on="2022-02-20",
 )
 
@@ -168,6 +184,7 @@ generate_program(
     "md/vihrea-kulttuurimanifesti-ja-kulttuuripoliittinen-ohjelma.md",
     "p16",
     "Kulttuuripoliittinen ohjelma",
+    category="teemaohjelma",
     approved_on="2022-02-20",
 )
 
@@ -175,7 +192,8 @@ generate_program(
 generate_program(
     "md/aluevaaliohjelma-2021.md",
     "p17",
-    "Vihreiden aluevaaliohjelma",
+    "Vihreiden aluevaaliohjelma 2021",
+    category="avaus",
     approved_on="2021-11-21",
 )
 
@@ -184,6 +202,7 @@ generate_program(
     "md/vihrea-eurooppa-ohjelma.md",
     "p18",
     "Vihreä Eurooppa-ohjelma",
+    category="teemaohjelma",
     approved_on="2021-10-03",
 )
 
@@ -192,7 +211,8 @@ generate_program(
     "md/vihreiden-tyollisyyspoliittiset-linjaukset-2021.md",
     "p19",
     "Koulutusta, kannustavuutta ja turvaa",
-    subtitle="Vihreiden työllisyyspoliittiset linjaukset 2021",
+    subtitle="Vihreiden työllisyyspoliittiset linjaukset",
+    category="teemaohjelma",
     approved_on="2021-05-16",
     updated_on="2024-02-18",
 )
@@ -203,6 +223,7 @@ generate_program(
     "md/lapsi-ja-nuorisopoliittinen-ohjelma.md",
     "p20",
     "Lapsi- ja nuorisopoliittinen ohjelma",
+    category="teemaohjelma",
     approved_on="2021-02-21",
     updated_on="2022-02-20",
 )
@@ -213,6 +234,7 @@ generate_program(
     "md/metsapoliittinen-ohjelma.md",
     "p21",
     "Metsäpoliittinen ohjelma",
+    category="teemaohjelma",
     approved_on="2020-11-29",
 )
 
@@ -220,7 +242,8 @@ generate_program(
 generate_program(
     "md/kunta-ja-kaupunkivisio.md",
     "p22",
-    "Kunta- ja kaupunkivisio",
+    "Kunta- ja kaupunkivisio 2020",
+    category="avaus",
     approved_on="2020-09-27",
 )
 
@@ -229,6 +252,7 @@ generate_program(
     "md/ikaantymispoliittinen-ohjelma.md",
     "p23",
     "Ikääntymispoliittinen ohjelma",
+    category="teemaohjelma",
     approved_on="2020-09-27",
 )
 
@@ -238,6 +262,7 @@ generate_program(
     "p24",
     "Vihreät muuttavat maailmaa, jotta elämä maapallolla voi kukoistaa",
     subtitle="Vihreiden periaateohjelma 2020-2028",
+    category="periaateohjelma",
     approved_on="2020-09-20",
 )
 
@@ -247,6 +272,7 @@ generate_program(
     "p25",
     "Miten päästöjä ja köyhyyttä vähennetään samaan aikaan?",
     subtitle="Reilun vihreän muutoksen ohjelma",
+    category="teemaohjelma",
     approved_on="2020-02-23",
 )
 
@@ -256,6 +282,7 @@ generate_program(
     "p26",
     "Rakennetaan uutta, luodaan toivoa, suojellaan arvokkainta",
     subtitle="Eurovaaliohjelma 2024",
+    category="avaus",
     approved_on="2024-02-18",
 )
 
@@ -265,6 +292,7 @@ generate_program(
     "p27",
     "Suojele elämää",
     subtitle="Eduskuntavaaliohjelma 2023",
+    category="avaus",
     approved_on="2023-01-01",
 )
 
@@ -273,6 +301,7 @@ generate_program(
     "md/vihreiden-lukeva-suomi-teesit.md",
     "p28",
     "Vihreiden Lukeva Suomi -teesit",
+    category="avaus",
     approved_on="2017-12-03",
 )
 
@@ -282,6 +311,7 @@ generate_program(
     "p29",
     "Pelastetaan maailman paras koulutus",
     subtitle="Koulutuspoliittinen ohjelma",
+    category="teemaohjelma",
     approved_on="2018-11-17",
 )
 
@@ -291,6 +321,7 @@ generate_program(
     "p30",
     "Luonto vastuullamme",
     subtitle="Vihreiden luonnonsuojeluohjelma",
+    category="teemaohjelma",
     approved_on="2018-03-04",
 )
 
@@ -299,6 +330,7 @@ generate_program(
     "md/kulttuuripoliittinen-ohjelma.md",
     "p31",
     "Kulttuuripoliittinen ohjelma",
+    category="teemaohjelma",
     approved_on="2018-05-27",
     retired_on="2022-02-20",
 )

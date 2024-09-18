@@ -17,9 +17,15 @@ export function Browse(): JSX.Element {
             <Card key={p.subject} program={p} />
           ))}
         </div>
-        <SectorProgramsHead />
+        <ThematicProgramsHead />
         <div className='vo-browse'>
-          {programs.sectorPrograms.map(p => (
+          {programs.thematicPrograms.map(p => (
+            <Card key={p.subject} program={p} />
+          ))}
+        </div>
+        <OpenersHead />
+        <div className='vo-browse'>
+          {programs.openers.map(p => (
             <Card key={p.subject} program={p} />
           ))}
         </div>
@@ -46,8 +52,12 @@ function HeadlineProgramsHead(): JSX.Element {
   return <p className='vo-browse-all-hint'>Voimassa olevat ohjelmat</p>;
 }
 
-function SectorProgramsHead(): JSX.Element {
-  return <p className='vo-browse-sector-hint'>Sektoriohjelmat</p>;
+function ThematicProgramsHead(): JSX.Element {
+  return <p className='vo-browse-sector-hint'>Teemaohjelmat</p>;
+}
+
+function OpenersHead(): JSX.Element {
+  return <p className='vo-browse-sector-hint'>Avaukset</p>;
 }
 
 interface RetiredProgramsHeadProps {

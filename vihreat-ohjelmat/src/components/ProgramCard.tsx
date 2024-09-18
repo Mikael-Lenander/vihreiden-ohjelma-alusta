@@ -17,7 +17,8 @@ export function ProgramCard({
   status,
 }: ProgramCardProps): JSX.Element {
   const species = subtitle || title;
-  const title_ = (title === species) ? "" : title;
+  const title_ = title === species ? '' : title;
+
   return (
     <NavLink to={linkPath}>
       <div className={`vo-programbadge vo-programbadge-${status.color}`}>

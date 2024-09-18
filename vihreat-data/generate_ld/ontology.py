@@ -11,6 +11,7 @@ def build() -> list[dict]:
         _build_ProgramElement(),
         _build_Heading(),
         _build_subtitle(),
+        _build_category(),
         _build_elements(),
         _build_approvedOn(),
         _build_updatedOn(),
@@ -42,6 +43,7 @@ def _build_ontology() -> dict:
         ],
         url.atomic("properties/properties"): [
             url.local("o/subtitle"),
+            url.local("o/category"),
             url.local("o/elements"),
             url.local("o/approvedOn"),
             url.local("o/updatedOn"),
@@ -67,6 +69,7 @@ def _build_Program() -> dict:
         ],
         url.atomic("properties/recommends"): [
             url.local("o/subtitle"),
+            url.local("o/category"),
             url.local("o/approvedOn"),
             url.local("o/updatedOn"),
             url.local("o/retiredOn"),
@@ -181,6 +184,27 @@ def _build_subtitle() -> dict:
             Ohjelman alaotsikko.
 
             Esimerkiksi _Tietopoliittinen ohjelma_.
+            """
+        ),
+        url.atomic("properties/isA"): [url.atomic("classes/Property")],
+        url.atomic("properties/datatype"): url.atomic("datatypes/string"),
+    }
+
+
+def _build_category() -> dict:
+    return {
+        "@id": url.local("o/category"),
+        url.atomic("properties/parent"): url.local("o"),
+        url.atomic("properties/shortname"): "category",
+        url.atomic("properties/description"): _markdown(
+            """
+            Ohjelman kategoria.
+
+            Tämän pitää olla yksi seuraavista:
+            * _poliittinen ohjelma_
+            * _periaateohjelma_
+            * _teemaohjelma_
+            * _avaus_
             """
         ),
         url.atomic("properties/isA"): [url.atomic("classes/Property")],

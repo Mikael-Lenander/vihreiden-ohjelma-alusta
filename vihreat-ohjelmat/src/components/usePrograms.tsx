@@ -7,6 +7,7 @@ export class Program {
   public subject: string;
   public title?: string;
   public subtitle?: string;
+  public category?: string;
   public status: StatusInfo;
 
   public constructor(subject: string) {
@@ -30,9 +31,18 @@ export class Program {
   }
 
   public get isHeadline(): boolean {
-    // TODO: instead of hardcoding, use tags or similar
-    return ((this.title ?? "").startsWith("Vihreiden poliittinen ohjelma")) ||
-      ((this.subtitle ?? "").startsWith("Vihreiden periaateohjelma 2020-2028"));
+    return (
+      this.category == 'poliittinen ohjelma' ||
+      this.category == 'periaateohjelma'
+    );
+  }
+
+  public get isThematic(): boolean {
+    return this.category == 'teemaohjelma';
+  }
+
+  public get isOpener(): boolean {
+    return this.category == 'avaus';
   }
 }
 
@@ -49,8 +59,12 @@ export class Programs {
     return this.all.filter(p => p.isActive && p.isHeadline);
   }
 
-  public get sectorPrograms(): Program[] {
-    return this.all.filter(p => p.isActive && !p.isHeadline);
+  public get thematicPrograms(): Program[] {
+    return this.all.filter(p => p.isActive && p.isThematic);
+  }
+
+  public get openers(): Program[] {
+    return this.all.filter(p => p.isActive && p.isOpener);
   }
 
   public get retiredPrograms(): Program[] {
@@ -63,6 +77,7 @@ export function useProgram(subject?: string): Program {
   const resource = useResource(subject);
   [program.title] = useString(resource, core.properties.name);
   [program.subtitle] = useString(resource, ontology.properties.subtitle);
+  [program.category] = useString(resource, ontology.properties.category);
   program.status = useStatusInfo(resource);
 
   return program;

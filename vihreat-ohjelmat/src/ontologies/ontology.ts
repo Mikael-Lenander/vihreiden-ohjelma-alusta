@@ -16,6 +16,7 @@ export const ontology = {
   },
   properties: {
     subtitle: 'http://localhost:9883/o/subtitle',
+    category: 'http://localhost:9883/o/category',
     elements: 'http://localhost:9883/o/elements',
     approvedon: 'http://localhost:9883/o/approvedOn',
     updatedon: 'http://localhost:9883/o/updatedOn',
@@ -42,6 +43,7 @@ declare module '@tomic/lib' {
         | typeof ontology.properties.elements;
       recommends:
         | typeof ontology.properties.subtitle
+        | typeof ontology.properties.category
         | typeof ontology.properties.approvedon
         | typeof ontology.properties.updatedon
         | typeof ontology.properties.retiredon
@@ -74,6 +76,7 @@ declare module '@tomic/lib' {
 
   interface PropTypeMapping {
     [ontology.properties.subtitle]: string;
+    [ontology.properties.category]: string;
     [ontology.properties.elements]: string[];
     [ontology.properties.approvedon]: string;
     [ontology.properties.updatedon]: string;
@@ -85,6 +88,7 @@ declare module '@tomic/lib' {
 
   interface PropSubjectToNameMapping {
     [ontology.properties.subtitle]: 'subtitle';
+    [ontology.properties.category]: 'category';
     [ontology.properties.elements]: 'elements';
     [ontology.properties.approvedon]: 'approvedon';
     [ontology.properties.updatedon]: 'updatedon';

@@ -12,6 +12,7 @@ def _build_main(
     name: str,
     title: str,
     subtitle: str | None = None,
+    category: str | None = None,
     approved_on: str | None = None,
     updated_on: str | None = None,
     stale_on: str | None = None,
@@ -29,6 +30,8 @@ def _build_main(
     }
     if subtitle:
         j[url.local("o/subtitle")] = subtitle
+    if category:
+        j[url.local("o/category")] = category
     if approved_on:
         j[url.local("o/approvedOn")] = approved_on
     if updated_on:
