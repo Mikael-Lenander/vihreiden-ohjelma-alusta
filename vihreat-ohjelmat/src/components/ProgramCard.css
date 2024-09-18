@@ -24,14 +24,15 @@
   text-align: center;
 }
 
-.vo-programbadge-title {
+.vo-programbadge-species {
   font-size: normal;
   font-weight: 500;
   color: #006845;
 }
 
-.vo-programbadge-subtitle {
+.vo-programbadge-title {
   font-size: smaller;
+  font-style: italic;
   color: #444;
 }
 
@@ -66,7 +67,7 @@
   background: linear-gradient(hsl(0, 100%, 90%), hsl(0, 100%, 95%));
 }
 
-.vo-programbadge-red .vo-programbadge-title {
+.vo-programbadge-red .vo-programbadge-species {
   color: hsl(0, 100%, 30%);
 }
 
@@ -80,7 +81,7 @@
   background: linear-gradient(hsl(60, 100%, 90%), hsl(60, 100%, 95%));
 }
 
-.vo-programbadge-yellow .vo-programbadge-title {
+.vo-programbadge-yellow .vo-programbadge-species {
   color: hsl(60, 100%, 30%);
 }
 
@@ -94,7 +95,7 @@
   background: linear-gradient(#ddd, #eee);
 }
 
-.vo-programbadge-gray .vo-programbadge-title {
+.vo-programbadge-gray .vo-programbadge-species {
   color: #555;
 }
 

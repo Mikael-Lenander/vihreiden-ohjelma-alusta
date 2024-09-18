@@ -16,12 +16,14 @@ export function ProgramCard({
   subtitle,
   status,
 }: ProgramCardProps): JSX.Element {
+  const species = subtitle || title;
+  const title_ = (title === species) ? "" : title;
   return (
     <NavLink to={linkPath}>
       <div className={`vo-programbadge vo-programbadge-${status.color}`}>
         <div>
-          <p className='vo-programbadge-title'>{title}</p>
-          <p className='vo-programbadge-subtitle'>{subtitle}</p>
+          <p className='vo-programbadge-species'>{species}</p>
+          <p className='vo-programbadge-title'>{title_}</p>
           <DateInfo status={status} />
           <Warnings status={status} />
         </div>
