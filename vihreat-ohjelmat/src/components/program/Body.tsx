@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useRef, useEffect } from 'react';
 import { core, useNumber, useResource, useString } from '@tomic/react';
 import { ontology } from '../../ontologies/ontology';
@@ -54,7 +55,7 @@ function HighlightableElement({
 
   if (highlight) {
     return (
-      <a href={`?h=${elementId}`} className='vo-program-element-a'>
+      <Link to={`?h=${elementId}`} className='vo-program-element-a'>
         <div
           ref={highlight}
           className='vo-program-element vo-program-element-highlight'
@@ -62,16 +63,16 @@ function HighlightableElement({
           <p className='vo-program-element-link'>&#x1F517;</p>
           <Element subject={subject} />
         </div>
-      </a>
+      </Link>
     );
   } else {
     return (
-      <a href={`?h=${elementId}`} className='vo-program-element-a'>
+      <Link to={`?h=${elementId}`} className='vo-program-element-a'>
         <div className='vo-program-element'>
           <p className='vo-program-element-link'>&#x1F517;</p>
           <Element subject={subject} />
         </div>
-      </a>
+      </Link>
     );
   }
 }
