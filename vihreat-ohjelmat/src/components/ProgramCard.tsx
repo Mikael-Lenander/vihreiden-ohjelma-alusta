@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { StatusInfo } from './program/Status';
 import { dateToString } from '../utils';
 import './ProgramCard.css';
@@ -20,7 +20,7 @@ export function ProgramCard({
   const title_ = title === species ? '' : title;
 
   return (
-    <NavLink to={linkPath}>
+    <Link to={linkPath}>
       <div className={`vo-programbadge vo-programbadge-${status.color}`}>
         <div>
           <p className='vo-programbadge-species'>{species}</p>
@@ -29,7 +29,7 @@ export function ProgramCard({
           <Warnings status={status} />
         </div>
       </div>
-    </NavLink>
+    </Link>
   );
 }
 

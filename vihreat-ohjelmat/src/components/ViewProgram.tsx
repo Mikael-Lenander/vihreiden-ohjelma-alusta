@@ -1,4 +1,4 @@
-import { useParams, useSearchParams, NavLink } from 'react-router-dom';
+import { useParams, useSearchParams, Link } from 'react-router-dom';
 import { useResource } from '@tomic/react';
 import ProgramView from './ProgramView';
 import { Program } from '../ontologies/ontology';
@@ -32,8 +32,8 @@ export default ViewProgram;
 
 function BackButton(): JSX.Element {
   return (
-    <NavLink to='/' id='vo-back-button'>
+    <Link to='/' id='vo-back-button'>
       <span>&#x21E0; etusivulle</span>
-    </NavLink>
+    </Link>
   );
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
   useArray,
   useResource,
@@ -168,7 +168,7 @@ function Title({
 }: TitleProps): JSX.Element {
   return (
     <div className='vo-search-results-program-head'>
-      <NavLink
+      <Link
         to={`/ohjelmat/${programId}`}
         className='vo-search-results-program-head-link'
       >
@@ -176,7 +176,7 @@ function Title({
           {subtitle}
         </span>
         <span className='vo-search-results-program-head-title'>{title}</span>
-      </NavLink>
+      </Link>
       <div>
         <span className='vo-search-results-program-head-hits'>
           {hits} osuma{hits === 1 ? '' : 'a'}
@@ -234,12 +234,12 @@ export function SearchResultElementHead({
 }: SearchResultsElementHeadProps): JSX.Element {
   return (
     <>
-      <NavLink
+      <Link
         to={`/ohjelmat/p${programId}?h=${elementId}`}
         className='vo-search-results-element-head'
       >
         Siirry tekstikohtaan &#x2192;
-      </NavLink>
+      </Link>
     </>
   );
 }

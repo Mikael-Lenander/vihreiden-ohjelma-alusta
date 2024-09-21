@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useResource, useServerSearch, useString, core } from '@tomic/react';
 import { ontology } from '../ontologies/ontology';
 import { useProgramClass } from '../hooks';
@@ -122,7 +122,7 @@ function FoundProgram({ program, elements }: FoundProgramProps): JSX.Element {
           </tr>
           <tr>
             <td>
-              <NavLink to={`/ohjelmat/${id}`}>{title}</NavLink>
+              <Link to={`/ohjelmat/${id}`}>{title}</Link>
             </td>
             <td>
               <a>&#9660;</a>
@@ -195,9 +195,9 @@ export function SearchResultElementHead({
   return (
     <p>
       Osuma{' '}
-      <NavLink to={`/ohjelmat/p${programId}#e${elementId}`}>
+      <Link to={`/ohjelmat/p${programId}#e${elementId}`}>
         {inessiivi} #{elementId}
-      </NavLink>
+      </Link>
     </p>
   );
 }
