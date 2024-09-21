@@ -1,0 +1,8 @@
+# Vihreiden tiedepoliittinen ohjelma *Hyväksytty puoluevaltuuston kokouksessa 14.5.2023*
+# *Tarkastusvuosi, jonka aikana puoluevaltuuston kokouksessa linjataan, onko tarvetta uudelle ohjelmalle, ohjelman hienovaraisemmalle päivitykselle tai ohjelman linjaamiselle vanhentuneeksi: 20xx*
+id: p8
+species: Tiedepoliittinen ohjelma
+categories:
+  - teemaohjelma
+approved:
+  date: 2023-05-14
