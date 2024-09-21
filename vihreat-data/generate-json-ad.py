@@ -3,6 +3,9 @@ import yaml
 import generate_ld
 
 
+_USED_IDS = set()
+
+
 def generate_ontology():
     ontology = generate_ld.ontology.build()
     generate_ld.io.write(ontology, "ontology")
@@ -28,6 +31,9 @@ def iterate_programs(root = "."):
 
 def generate_program(md_path, meta):
     id = meta["id"]
+    assert id not in _USED_IDS
+    _USED_IDS.add(id)
+
     species = meta["species"]
     categories = meta["categories"]
     title = meta.get("title", None)
