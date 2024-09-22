@@ -17,7 +17,9 @@ export function useProgramCatalog(): ProgramCatalog | undefined {
   useEffect(() => {
     const programs = new ProgramCatalog();
     collection.getAllMembers().then(subjects => {
-      programs.load(store, subjects, () => { setResult(programs); });
+      programs.load(store, subjects, () => {
+        setResult(programs);
+      });
     });
   }, []);
 

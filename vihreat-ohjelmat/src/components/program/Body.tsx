@@ -1,16 +1,16 @@
-import { Link } from 'react-router-dom';
 import { useRef, useEffect } from 'react';
-import { core, useNumber, useResource, useString } from '@tomic/react';
-import { ontology } from '../../ontologies/ontology';
-import { useProgramClass } from '../../hooks';
 import Markdown from 'react-markdown';
+import { Link } from 'react-router-dom';
+import { ElementInfo } from '../../model/ElementInfo';
+import { ProgramContent } from '../../model/ProgramContent';
+import { ontology } from '../../ontologies/ontology';
 
 interface BodyProps {
-  elements: string[];
+  content: ProgramContent;
   highlight?: string;
 }
 
-export function Body({ elements, highlight }: BodyProps): JSX.Element {
+export function Body({ content, highlight }: BodyProps): JSX.Element {
   const highlightRef = useRef<any>(null);
 
   useEffect(() => {
@@ -27,12 +27,12 @@ export function Body({ elements, highlight }: BodyProps): JSX.Element {
 
   return (
     <div className='vo-program-body'>
-      {elements.map(subject => (
+      {content.elements.map(element => (
         <HighlightableElement
-          subject={subject}
-          key={subject}
+          element={element}
+          key={element.subject}
           highlight={
-            highlight && subject.endsWith('e' + highlight)
+            highlight && element.subject.endsWith('e' + highlight)
               ? highlightRef
               : undefined
           }
@@ -43,34 +43,32 @@ export function Body({ elements, highlight }: BodyProps): JSX.Element {
 }
 
 interface HighlightableElementProps {
-  subject: string;
+  element: ElementInfo;
   highlight: any;
 }
 
 function HighlightableElement({
-  subject,
+  element,
   highlight,
 }: HighlightableElementProps): JSX.Element {
-  const elementId = subject.split('/').pop()?.split('e').pop();
-
   if (highlight) {
     return (
-      <Link to={`?h=${elementId}`} className='vo-program-element-a'>
+      <Link to={`?h=${element.index}`} className='vo-program-element-a'>
         <div
           ref={highlight}
           className='vo-program-element vo-program-element-highlight'
         >
           <p className='vo-program-element-link'>&#x1F517;</p>
-          <Element subject={subject} />
+          <Element element={element} />
         </div>
       </Link>
     );
   } else {
     return (
-      <Link to={`?h=${elementId}`} className='vo-program-element-a'>
+      <Link to={`?h=${element.index}`} className='vo-program-element-a'>
         <div className='vo-program-element'>
           <p className='vo-program-element-link'>&#x1F517;</p>
-          <Element subject={subject} />
+          <Element element={element} />
         </div>
       </Link>
     );
@@ -78,31 +76,25 @@ function HighlightableElement({
 }
 
 interface ElementProps {
-  subject: string;
+  element: ElementInfo;
 }
 
-function Element({ subject }: ElementProps): JSX.Element {
-  const resource = useResource(subject);
-  const klass = useProgramClass(resource);
-
-  switch (klass!) {
+function Element({ element }: ElementProps): JSX.Element {
+  switch (element.elementClass!) {
     case ontology.classes.paragraph:
-      return <Paragraph subject={subject} />;
+      return <Paragraph element={element} />;
     case ontology.classes.heading:
-      return <Heading subject={subject} />;
+      return <Heading element={element} />;
     case ontology.classes.actionitem:
-      return <ActionItem subject={subject} />;
+      return <ActionItem element={element} />;
     default:
-      return <Loading subject={subject} />;
+      return <Loading element={element} />;
   }
 }
 
-function Paragraph({ subject }: ElementProps): JSX.Element {
-  const resource = useResource(subject);
-  const [text] = useString(resource, core.properties.description);
-
-  if (text !== undefined) {
-    return <Markdown>{text}</Markdown>;
+function Paragraph({ element }: ElementProps): JSX.Element {
+  if (element.description !== undefined) {
+    return <Markdown>{element.description}</Markdown>;
   } else {
     return (
       <p>
@@ -112,42 +104,35 @@ function Paragraph({ subject }: ElementProps): JSX.Element {
   }
 }
 
-function Heading({ subject }: ElementProps): JSX.Element {
-  const resource = useResource(subject);
-  const [text] = useString(resource, core.properties.name);
-  const [level] = useNumber(resource, ontology.properties.headinglevel);
-
-  switch (level) {
+function Heading({ element }: ElementProps): JSX.Element {
+  switch (element.level) {
     case 1:
     default:
-      return <h1>{text}</h1>;
+      return <h1>{element.name}</h1>;
     case 2:
-      return <h2>{text}</h2>;
+      return <h2>{element.name}</h2>;
     case 3:
-      return <h3>{text}</h3>;
+      return <h3>{element.name}</h3>;
     case 4:
-      return <h4>{text}</h4>;
+      return <h4>{element.name}</h4>;
     case 5:
-      return <h5>{text}</h5>;
+      return <h5>{element.name}</h5>;
     case 6:
-      return <h6>{text}</h6>;
+      return <h6>{element.name}</h6>;
   }
 }
 
-function ActionItem({ subject }: ElementProps): JSX.Element {
-  const resource = useResource(subject);
-  const [text] = useString(resource, core.properties.name);
-
+function ActionItem({ element }: ElementProps): JSX.Element {
   return (
     <ul>
-      <li>{text}</li>
+      <li>{element.name}</li>
     </ul>
   );
 }
 
-function Loading({ subject }: ElementProps): JSX.Element {
+function Loading({ element }: ElementProps): JSX.Element {
   return (
-    <p className='vo-cell-loading' title={subject}>
+    <p className='vo-cell-loading' title={element.subject}>
       sisältöä haetaan...
     </p>
   );

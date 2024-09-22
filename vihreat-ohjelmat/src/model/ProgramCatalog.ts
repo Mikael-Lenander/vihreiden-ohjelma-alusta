@@ -2,32 +2,14 @@ import { type Store, type Resource } from '@tomic/react';
 import { ProgramInfo } from './ProgramInfo';
 
 export class ProgramCatalog {
-  public ready: boolean;
+  // Info for all programs (completely unfiltered)
+  public all: ProgramInfo[];
+
   private loaders: ProgramInfoLoader[];
-  private all: ProgramInfo[];
 
   public constructor() {
-    this.ready = false;
     this.loaders = [];
     this.all = [];
-  }
-
-  private checkReady(onReady: () => void) {
-    if (this.loaders.every(ldr => ldr.resource !== undefined)) {
-      this.all = this.loaders.map(ldr => ldr.info!);
-      onReady();
-    }
-  }
-
-  public load(store: Store, subjects: string[], onReady: () => void) {
-    const check = () => {
-      this.checkReady(onReady);
-    };
-
-    this.loaders = subjects.map(subject => {
-      return new ProgramInfoLoader(store, subject, check);
-    });
-    check();
   }
 
   public get headlinePrograms(): ProgramInfo[] {
@@ -44,6 +26,24 @@ export class ProgramCatalog {
 
   public get retiredPrograms(): ProgramInfo[] {
     return this.all.filter(p => p.isRetired);
+  }
+
+  public load(store: Store, subjects: string[], onReady: () => void) {
+    const check = () => {
+      this.checkReady(onReady);
+    };
+
+    this.loaders = subjects.map(subject => {
+      return new ProgramInfoLoader(store, subject, check);
+    });
+    check();
+  }
+
+  private checkReady(onReady: () => void) {
+    if (this.loaders.every(ldr => ldr.resource !== undefined)) {
+      this.all = this.loaders.map(ldr => ldr.info!);
+      onReady();
+    }
   }
 }
 
