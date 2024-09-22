@@ -1,9 +1,9 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useCollection, useStore, core } from '@tomic/react';
 import { ProgramCatalog } from '../model/ProgramCatalog';
 import { ontology } from '../ontologies/ontology';
 
-export function useProgramCatalog(): ProgramCatalog {
+export function useProgramCatalog(): ProgramCatalog | undefined {
   const store = useStore();
 
   const { collection } = useCollection({
@@ -13,20 +13,13 @@ export function useProgramCatalog(): ProgramCatalog {
     sort_desc: true,
   });
 
-  const programs = useMemo(() => {
-    return new ProgramCatalog();
-  }, []);
-  const [ready, setReady] = useState(false);
-
-  const onReady = () => {
-    setReady(true);
-  };
-
+  const [result, setResult] = useState<ProgramCatalog | undefined>(undefined);
   useEffect(() => {
+    const programs = new ProgramCatalog();
     collection.getAllMembers().then(subjects => {
-      programs.load(store, subjects, onReady);
+      programs.load(store, subjects, () => { setResult(programs); });
     });
   }, []);
 
-  return programs;
+  return result;
 }

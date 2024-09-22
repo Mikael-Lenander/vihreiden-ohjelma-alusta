@@ -13,8 +13,7 @@ export class ProgramCatalog {
   }
 
   private checkReady(onReady: () => void) {
-    if (!this.ready && this.loaders.every(ldr => ldr.resource !== undefined)) {
-      this.ready = true;
+    if (this.loaders.every(ldr => ldr.resource !== undefined)) {
       this.all = this.loaders.map(ldr => ldr.info!);
       onReady();
     }
