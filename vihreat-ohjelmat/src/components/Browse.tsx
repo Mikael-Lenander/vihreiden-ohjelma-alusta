@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { usePrograms, Program } from './usePrograms';
+import { usePrograms, ProgramInfo } from './usePrograms';
 import { ProgramCard } from './ProgramCard';
 
 export function Browse(): JSX.Element {
   const programs = usePrograms();
   const [expandRetired, setExpandRetired] = useState(false);
 
-  if (!programs.ready) {
+  if (programs === undefined) {
     return <Loading />;
   } else {
     return (
@@ -95,7 +95,7 @@ function Loading(): JSX.Element {
 }
 
 interface CardProps {
-  program: Program;
+  program: ProgramInfo;
 }
 
 function Card({ program }: CardProps): JSX.Element {
@@ -103,7 +103,7 @@ function Card({ program }: CardProps): JSX.Element {
     <ProgramCard
       linkPath={program.linkPath}
       title={program.title}
-      subtitle={program.subtitle}
+      subtitle={program.species}
       status={program.status}
     />
   );

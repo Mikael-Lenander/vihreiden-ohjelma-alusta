@@ -1,17 +1,24 @@
 import { useEffect, useState } from 'react';
-import { useCollection, useResource, useString, core } from '@tomic/react';
-import { StatusInfo, useStatusInfo } from './program/Status';
+import { useCollection, useStore, core, Resource, Store } from '@tomic/react';
+import { StatusInfo, getStatusInfo } from './program/Status';
 import { ontology } from '../ontologies/ontology';
 
-export class Program {
+// Metadata-level info for a single program
+class ProgramInfo {
   public subject: string;
+  public resource: Resource;
+  public species: string;
+  public category: string;
   public title?: string;
-  public subtitle?: string;
-  public category?: string;
   public status: StatusInfo;
 
-  public constructor(subject: string) {
+  public constructor(store: Store, subject: string) {
     this.subject = subject;
+    this.resource = store.getResourceLoading(subject);
+    this.species = this.resource.get(ontology.properties.subtitle);
+    this.category = this.resource.get(ontology.properties.category);
+    this.title = this.resource.get(core.properties.name);
+    this.status = getStatusInfo(this.resource);
   }
 
   public get id(): string | undefined {
@@ -46,73 +53,38 @@ export class Program {
   }
 }
 
-export class Programs {
-  public ready: boolean;
-  public all: Program[];
+// Metadata for all programs in the database
+class ProgramCatalog {
+  private all: ProgramInfo[];
 
-  public constructor() {
-    this.ready = false;
+  public constructor(store: Store, subjects: string[]) {
     this.all = [];
+    subjects.forEach(subject => {
+      const program = new ProgramInfo(store, subject);
+      this.all.push(program);
+    });
   }
 
-  public get headlinePrograms(): Program[] {
+  public get headlinePrograms(): ProgramInfo[] {
     return this.all.filter(p => p.isActive && p.isHeadline);
   }
 
-  public get thematicPrograms(): Program[] {
+  public get thematicPrograms(): ProgramInfo[] {
     return this.all.filter(p => p.isActive && p.isThematic);
   }
 
-  public get openers(): Program[] {
+  public get openers(): ProgramInfo[] {
     return this.all.filter(p => p.isActive && p.isOpener);
   }
 
-  public get retiredPrograms(): Program[] {
+  public get retiredPrograms(): ProgramInfo[] {
     return this.all.filter(p => p.isRetired);
   }
 }
 
-export function useProgram(subject?: string): Program {
-  const program = new Program(subject || '');
-  const resource = useResource(subject);
-  [program.title] = useString(resource, core.properties.name);
-  [program.subtitle] = useString(resource, ontology.properties.subtitle);
-  [program.category] = useString(resource, ontology.properties.category);
-  program.status = useStatusInfo(resource);
+export function usePrograms(): ProgramCatalog | undefined {
+  const store = useStore();
 
-  return program;
-}
-
-export function useProgramList(subjects: string[]): Program[] {
-  // TODO: terrible hack because of react hook order constraints
-  const programs: Program[] = [];
-
-  for (let i = 0; i < 128; ++i) {
-    const isInRange = i < subjects.length;
-    // ESLint thinks this violates rules of hooks because it occurs in a loop,
-    // but it actually does not, because the loop is of constant size...
-    //
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const program = useProgram(isInRange ? subjects[i] : undefined);
-
-    if (isInRange) {
-      programs.push(program);
-    }
-  }
-
-  return programs;
-}
-
-export function usePrograms(): Programs {
-  const subjects = useProgramsSubjects();
-  const programs = new Programs();
-  programs.ready = subjects !== undefined;
-  programs.all = useProgramList(subjects ?? []);
-
-  return programs;
-}
-
-export function useProgramsSubjects(): string[] | undefined {
   const { collection } = useCollection({
     property: core.properties.isA,
     value: ontology.classes.program,
@@ -120,10 +92,13 @@ export function useProgramsSubjects(): string[] | undefined {
     sort_desc: true,
   });
 
-  const [subjects, setSubjects] = useState<string[] | undefined>(undefined);
+  const [result, setResult] = useState<ProgramCatalog | undefined>(undefined);
   useEffect(() => {
-    collection.getAllMembers().then(setSubjects);
+    collection.getAllMembers().then(subjects => {
+      const programs = new ProgramCatalog(store, subjects);
+      setResult(programs);
+    });
   }, []);
 
-  return subjects;
+  return result;
 }

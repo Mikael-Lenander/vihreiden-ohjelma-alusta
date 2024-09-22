@@ -1,4 +1,4 @@
-import { useDate, Resource } from '@tomic/react';
+import { useDate, valToDate, Resource } from '@tomic/react';
 import { ontology } from '../../ontologies/ontology';
 
 // "Traffic light" color
@@ -78,6 +78,23 @@ export class StatusInfo {
   public get isRed(): boolean {
     return this.color === StatusColor.Red;
   }
+}
+
+function asDate(val: string): Date | undefined {
+  try {
+    return valToDate(val);
+  } catch (e) {
+    return undefined;
+  }
+}
+
+export function getStatusInfo(resource: Resource): StatusInfo {
+  return new StatusInfo(new Date(), {
+    approvedOn: asDate(resource.get(ontology.properties.approvedon)),
+    updatedOn: asDate(resource.get(ontology.properties.updatedon)),
+    staleOn: asDate(resource.get(ontology.properties.staleon)),
+    retiredOn: asDate(resource.get(ontology.properties.retiredon)),
+  });
 }
 
 export function useStatusInfo(resource: Resource): StatusInfo {
