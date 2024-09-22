@@ -2,7 +2,7 @@ import { useArray, useString, Resource, core } from '@tomic/react';
 import { Program, ontology } from '../ontologies/ontology';
 import { Body } from './program/Body';
 import { FrontMatter } from './program/FrontMatter';
-import { useStatusInfo } from './program/Status';
+import { useStatusInfo } from '../model/StatusInfo';
 import { Title } from './program/Title';
 
 interface ProgramViewProps {

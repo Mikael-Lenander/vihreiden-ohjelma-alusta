@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { usePrograms, ProgramInfo } from './usePrograms';
 import { ProgramCard } from './ProgramCard';
+import { useProgramCatalog } from '../hooks/useProgramCatalog';
+import { ProgramInfo } from '../model/ProgramInfo';
 
 export function Browse(): JSX.Element {
-  const programs = usePrograms();
+  const programs = useProgramCatalog();
   const [expandRetired, setExpandRetired] = useState(false);
 
   if (programs === undefined) {

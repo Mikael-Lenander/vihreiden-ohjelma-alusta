@@ -1,4 +1,4 @@
-import { StatusInfo } from './Status';
+import { StatusInfo } from '../../model/StatusInfo';
 import { dateToString } from '../../utils';
 
 interface WithStatusProps {

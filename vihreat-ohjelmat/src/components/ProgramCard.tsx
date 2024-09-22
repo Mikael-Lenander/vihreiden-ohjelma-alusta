@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { StatusInfo } from './program/Status';
+import { StatusInfo } from '../model/StatusInfo';
 import { dateToString } from '../utils';
 import './ProgramCard.css';
 

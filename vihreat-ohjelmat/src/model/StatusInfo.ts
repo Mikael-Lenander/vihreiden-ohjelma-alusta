@@ -1,5 +1,5 @@
 import { useDate, valToDate, Resource } from '@tomic/react';
-import { ontology } from '../../ontologies/ontology';
+import { ontology } from '../ontologies/ontology';
 
 // "Traffic light" color
 export enum StatusColor {
