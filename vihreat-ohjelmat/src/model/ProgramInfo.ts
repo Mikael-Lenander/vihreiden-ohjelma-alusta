@@ -1,23 +1,25 @@
-import { core, Resource, Store } from '@tomic/react';
+import { core, Resource } from '@tomic/react';
 import { getStatusInfo, StatusInfo } from './StatusInfo';
 import { ontology } from '../ontologies/ontology';
 
 // Metadata-level info for a single program
 export class ProgramInfo {
-  public subject: string;
   public resource: Resource;
   public species: string;
   public category: string;
   public title?: string;
   public status: StatusInfo;
 
-  public constructor(store: Store, subject: string) {
-    this.subject = subject;
-    this.resource = store.getResourceLoading(subject);
+  public constructor(resource: Resource) {
+    this.resource = resource;
     this.species = this.resource.get(ontology.properties.subtitle);
     this.category = this.resource.get(ontology.properties.category);
     this.title = this.resource.get(core.properties.name);
     this.status = getStatusInfo(this.resource);
+  }
+
+  public get subject(): string {
+    return this.resource.subject;
   }
 
   public get id(): string | undefined {

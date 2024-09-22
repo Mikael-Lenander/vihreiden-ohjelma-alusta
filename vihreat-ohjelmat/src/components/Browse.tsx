@@ -7,7 +7,7 @@ export function Browse(): JSX.Element {
   const programs = useProgramCatalog();
   const [expandRetired, setExpandRetired] = useState(false);
 
-  if (programs === undefined) {
+  if (!programs.ready) {
     return <Loading />;
   } else {
     return (
