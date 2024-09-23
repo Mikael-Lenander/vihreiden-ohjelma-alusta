@@ -58,7 +58,7 @@ class ElementInfoLoader {
   }
 }
 
-enum TreeNodeType {
+export enum TreeNodeType {
   Root = 0,
   Heading,
   Paragraph,
@@ -66,7 +66,7 @@ enum TreeNodeType {
   ActionItem,
 }
 
-class TreeNode {
+export class TreeNode {
   public type: TreeNodeType;
   public element?: ElementInfo;
   public children: TreeNode[];

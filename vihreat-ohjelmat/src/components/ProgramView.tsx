@@ -9,12 +9,10 @@ import type { ProgramContent } from '../model/ProgramContent';
 
 interface ProgramViewProps {
   resource: Resource<Program>;
-  highlight?: string;
 }
 
 export default function ProgramView({
   resource,
-  highlight,
 }: ProgramViewProps): JSX.Element {
   const info = new ProgramInfo(resource);
   const content = useProgramContent(resource.subject);
@@ -24,7 +22,7 @@ export default function ProgramView({
       <Title title={info.title ?? ''} subtitle={info.species} />
       <div className='vo-program-content'>
         <FrontMatter status={info.status} />
-        <BodyOrLoading content={content} highlight={highlight} />
+        <BodyOrLoading content={content} />
       </div>
     </div>
   );

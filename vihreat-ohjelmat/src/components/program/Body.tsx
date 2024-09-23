@@ -1,16 +1,17 @@
-import { useRef, useEffect } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import Markdown from 'react-markdown';
 import { Link } from 'react-router-dom';
 import { ElementInfo } from '../../model/ElementInfo';
-import { ProgramContent } from '../../model/ProgramContent';
+import { ProgramContent, TreeNode } from '../../model/ProgramContent';
 import { ontology } from '../../ontologies/ontology';
+import { HighlightContext } from '../ViewProgram';
 
 interface BodyProps {
   content: ProgramContent;
   highlight?: string;
 }
 
-export function Body({ content, highlight }: BodyProps): JSX.Element {
+export function Body({ content }: BodyProps): JSX.Element {
   const highlightRef = useRef<any>(null);
 
   useEffect(() => {
@@ -27,37 +28,45 @@ export function Body({ content, highlight }: BodyProps): JSX.Element {
 
   return (
     <div className='vo-program-body'>
-      {content.elements.map(element => (
-        <HighlightableElement
-          element={element}
-          key={element.subject}
-          highlight={
-            highlight && element.subject.endsWith('e' + highlight)
-              ? highlightRef
-              : undefined
-          }
-        />
-      ))}
+      <RenderTreeNode node={content.tree} />
     </div>
   );
 }
 
-interface HighlightableElementProps {
-  element: ElementInfo;
-  highlight: any;
+interface RenderTreeNodeProps {
+  node: TreeNode;
 }
 
-function HighlightableElement({
-  element,
-  highlight,
-}: HighlightableElementProps): JSX.Element {
-  if (highlight) {
+function RenderTreeNode({ node }: RenderTreeNodeProps): JSX.Element {
+  if (node.isActionList) {
+    return (
+      <ul>
+        <RenderTreeNodeChildren children={node.children} />
+      </ul>
+    );
+  } else if (node.element) {
+    return (
+      <>
+        <InteractiveElement element={node.element} />
+        <RenderTreeNodeChildren children={node.children} />
+      </>
+    );
+  } else {
+    return <RenderTreeNodeChildren children={node.children} />;
+  }
+}
+
+interface ElementProps {
+  element: ElementInfo;
+}
+
+function InteractiveElement({ element }: ElementProps): JSX.Element {
+  const highlightState = useContext(HighlightContext);
+
+  if (highlightState.index === element.index) {
     return (
       <Link to={`?h=${element.index}`} className='vo-program-element-a'>
-        <div
-          ref={highlight}
-          className='vo-program-element vo-program-element-highlight'
-        >
+        <div className='vo-program-element vo-program-element-highlight'>
           <p className='vo-program-element-link'>&#x1F517;</p>
           <Element element={element} />
         </div>
@@ -75,12 +84,8 @@ function HighlightableElement({
   }
 }
 
-interface ElementProps {
-  element: ElementInfo;
-}
-
 function Element({ element }: ElementProps): JSX.Element {
-  switch (element.elementClass!) {
+  switch (element.elementClass) {
     case ontology.classes.paragraph:
       return <Paragraph element={element} />;
     case ontology.classes.heading:
@@ -88,8 +93,24 @@ function Element({ element }: ElementProps): JSX.Element {
     case ontology.classes.actionitem:
       return <ActionItem element={element} />;
     default:
-      return <Loading element={element} />;
+      return <></>;
   }
+}
+
+interface RenderTreeNodeChildrenProps {
+  children: TreeNode[];
+}
+
+function RenderTreeNodeChildren({
+  children,
+}: RenderTreeNodeChildrenProps): JSX.Element {
+  return (
+    <>
+      {children.map(node => (
+        <RenderTreeNode node={node} />
+      ))}
+    </>
+  );
 }
 
 function Paragraph({ element }: ElementProps): JSX.Element {
@@ -123,17 +144,5 @@ function Heading({ element }: ElementProps): JSX.Element {
 }
 
 function ActionItem({ element }: ElementProps): JSX.Element {
-  return (
-    <ul>
-      <li>{element.name}</li>
-    </ul>
-  );
-}
-
-function Loading({ element }: ElementProps): JSX.Element {
-  return (
-    <p className='vo-cell-loading' title={element.subject}>
-      sisältöä haetaan...
-    </p>
-  );
+  return <li>{element.name}</li>;
 }
