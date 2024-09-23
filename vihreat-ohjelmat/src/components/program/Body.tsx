@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef, MutableRefObject } from 'react';
 import Markdown from 'react-markdown';
 import { Link } from 'react-router-dom';
 import { ElementInfo } from '../../model/ElementInfo';
@@ -6,67 +6,92 @@ import { ProgramContent, TreeNode } from '../../model/ProgramContent';
 import { ontology } from '../../ontologies/ontology';
 import { HighlightContext } from '../ViewProgram';
 
+type NullableDiv = HTMLDivElement | null;
+type NullableDivRef = MutableRefObject<NullableDiv>;
+
 interface BodyProps {
   content: ProgramContent;
-  highlight?: string;
+}
+
+function scrollTo(element?: HTMLElement) {
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    });
+  }
 }
 
 export function Body({ content }: BodyProps): JSX.Element {
-  const highlightRef = useRef<any>(null);
+  const highlightRef = useRef<NullableDiv>(null);
 
   useEffect(() => {
     if (highlightRef.current) {
-      highlightRef.current.scrollIntoView({
-        behavior: 'instant',
-        block: 'start',
-        inline: 'nearest',
-      });
-    } else {
-      window.scrollTo(0, 0);
+      scrollTo(highlightRef.current);
     }
   }, [highlightRef]);
 
   return (
     <div className='vo-program-body'>
-      <RenderTreeNode node={content.tree} />
+      <RenderTreeNode
+        node={content.tree}
+        highlightRef={highlightRef}
+      />
     </div>
   );
 }
 
 interface RenderTreeNodeProps {
   node: TreeNode;
+  highlightRef: NullableDivRef;
 }
 
-function RenderTreeNode({ node }: RenderTreeNodeProps): JSX.Element {
+function RenderTreeNode({ node, highlightRef }: RenderTreeNodeProps): JSX.Element {
   if (node.isActionList) {
     return (
       <ul>
-        <RenderTreeNodeChildren children={node.children} />
+        <RenderTreeNodeChildren
+          children={node.children}
+          highlightRef={highlightRef}
+        />
       </ul>
     );
   } else if (node.element) {
     return (
       <>
-        <InteractiveElement element={node.element} />
-        <RenderTreeNodeChildren children={node.children} />
+        <InteractiveElement
+          element={node.element}
+          highlightRef={highlightRef}
+        />
+        <RenderTreeNodeChildren
+          children={node.children}
+          highlightRef={highlightRef}
+        />
       </>
     );
   } else {
-    return <RenderTreeNodeChildren children={node.children} />;
+    return (
+      <RenderTreeNodeChildren
+        children={node.children}
+        highlightRef={highlightRef}
+      />
+    );
   }
 }
 
 interface ElementProps {
   element: ElementInfo;
+  highlightRef?: NullableDivRef;
 }
 
-function InteractiveElement({ element }: ElementProps): JSX.Element {
+function InteractiveElement({ element, highlightRef }: ElementProps): JSX.Element {
   const highlightState = useContext(HighlightContext);
 
   if (highlightState.index === element.index) {
     return (
       <Link to={`?h=${element.index}`} className='vo-program-element-a'>
-        <div className='vo-program-element vo-program-element-highlight'>
+        <div ref={highlightRef} className='vo-program-element vo-program-element-highlight'>
           <p className='vo-program-element-link'>&#x1F517;</p>
           <Element element={element} />
         </div>
@@ -99,15 +124,20 @@ function Element({ element }: ElementProps): JSX.Element {
 
 interface RenderTreeNodeChildrenProps {
   children: TreeNode[];
+  highlightRef: NullableDivRef;
 }
 
 function RenderTreeNodeChildren({
   children,
+  highlightRef
 }: RenderTreeNodeChildrenProps): JSX.Element {
   return (
     <>
       {children.map(node => (
-        <RenderTreeNode node={node} />
+        <RenderTreeNode
+          node={node}
+          highlightRef={highlightRef}
+        />
       ))}
     </>
   );
