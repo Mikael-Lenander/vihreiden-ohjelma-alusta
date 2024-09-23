@@ -58,34 +58,42 @@ class ElementInfoLoader {
   }
 }
 
+enum TreeNodeType {
+  Root = 0,
+  Heading,
+  Paragraph,
+  ActionList,
+  ActionItem,
+}
+
 class TreeNode {
-  public type: string;
+  public type: TreeNodeType;
   public element?: ElementInfo;
   public children: TreeNode[];
 
-  public constructor(type: string, element?: ElementInfo) {
+  public constructor(type: TreeNodeType, element?: ElementInfo) {
     this.type = type;
     this.element = element;
     this.children = [];
   }
   public get isRoot() {
-    return this.type === 'root';
+    return this.type === TreeNodeType.Root;
   }
 
   public get isHeading() {
-    return this.type === 'heading';
+    return this.type === TreeNodeType.Heading;
   }
 
   public get isParagraph() {
-    return this.type === 'paragraph';
+    return this.type === TreeNodeType.Paragraph;
   }
 
   public get isActionList() {
-    return this.type === 'action_list';
+    return this.type === TreeNodeType.ActionList;
   }
 
   public get isActionItem() {
-    return this.type === 'action_item';
+    return this.type === TreeNodeType.ActionItem;
   }
 
   public canBeParentOf(element: ElementInfo): boolean {
@@ -110,7 +118,7 @@ class TreeBuilder {
   private stack: TreeNode[];
 
   public constructor() {
-    this.root = new TreeNode('root', undefined);
+    this.root = new TreeNode(TreeNodeType.Root);
     this.stack = [this.root];
   }
 
@@ -134,24 +142,24 @@ class TreeBuilder {
 
   private addHeading(e: ElementInfo) {
     this.ascend(e);
-    this.addChild('heading', e);
+    this.addChild(TreeNodeType.Heading, e);
     this.descend();
   }
 
   private addParagraph(e: ElementInfo) {
-    this.addChild('paragraph', e);
+    this.addChild(TreeNodeType.Paragraph, e);
   }
 
   private addActionItem(e: ElementInfo) {
     if (!this.current.isActionList) {
-      const node = this.addChild('action_list');
+      this.addChild(TreeNodeType.ActionList);
       this.descend();
     }
 
-    this.addChild('action_item', e);
+    this.addChild(TreeNodeType.ActionItem, e);
   }
 
-  private addChild(type: string, element?: ElementInfo): TreeNode {
+  private addChild(type: TreeNodeType, element?: ElementInfo): TreeNode {
     const node = new TreeNode(type, element);
     this.current.children.push(node);
 
