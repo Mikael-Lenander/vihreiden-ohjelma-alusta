@@ -67,11 +67,14 @@ export enum TreeNodeType {
 }
 
 export class TreeNode {
+  // Unique ID number within the tree. Can be used as the "key" prop.
+  public id: number;
   public type: TreeNodeType;
   public element?: ElementInfo;
   public children: TreeNode[];
 
-  public constructor(type: TreeNodeType, element?: ElementInfo) {
+  public constructor(id: number, type: TreeNodeType, element?: ElementInfo) {
+    this.id = id;
     this.type = type;
     this.element = element;
     this.children = [];
@@ -116,9 +119,11 @@ export class TreeNode {
 class TreeBuilder {
   public root: TreeNode;
   private stack: TreeNode[];
+  private nextId: number;
 
   public constructor() {
-    this.root = new TreeNode(TreeNodeType.Root);
+    this.nextId = 0;
+    this.root = new TreeNode(this.assignNewId(), TreeNodeType.Root);
     this.stack = [this.root];
   }
 
@@ -138,6 +143,17 @@ class TreeBuilder {
         this.addActionItem(e);
         break;
     }
+  }
+
+  private assignNewId(): number {
+    const id = this.nextId;
+    this.nextId += 1;
+
+    return id;
+  }
+
+  private createNode(type: TreeNodeType, element?: ElementInfo): TreeNode {
+    return new TreeNode(this.assignNewId(), type, element);
   }
 
   private addHeading(e: ElementInfo) {
@@ -160,7 +176,7 @@ class TreeBuilder {
   }
 
   private addChild(type: TreeNodeType, element?: ElementInfo): TreeNode {
-    const node = new TreeNode(type, element);
+    const node = this.createNode(type, element);
     this.current.children.push(node);
 
     return node;

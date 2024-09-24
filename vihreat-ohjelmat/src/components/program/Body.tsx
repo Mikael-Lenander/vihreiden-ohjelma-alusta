@@ -140,7 +140,7 @@ function RenderTreeNodeChildren({
   return (
     <>
       {children.map(node => (
-        <RenderTreeNode node={node} highlightRef={highlightRef} />
+        <RenderTreeNode key={node.id} node={node} highlightRef={highlightRef} />
       ))}
     </>
   );
