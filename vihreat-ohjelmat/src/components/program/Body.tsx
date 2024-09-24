@@ -34,10 +34,7 @@ export function Body({ content }: BodyProps): JSX.Element {
 
   return (
     <div className='vo-program-body'>
-      <RenderTreeNode
-        node={content.tree}
-        highlightRef={highlightRef}
-      />
+      <RenderTreeNode node={content.tree} highlightRef={highlightRef} />
     </div>
   );
 }
@@ -47,7 +44,10 @@ interface RenderTreeNodeProps {
   highlightRef: NullableDivRef;
 }
 
-function RenderTreeNode({ node, highlightRef }: RenderTreeNodeProps): JSX.Element {
+function RenderTreeNode({
+  node,
+  highlightRef,
+}: RenderTreeNodeProps): JSX.Element {
   if (node.isActionList) {
     return (
       <ul>
@@ -85,13 +85,19 @@ interface ElementProps {
   highlightRef?: NullableDivRef;
 }
 
-function InteractiveElement({ element, highlightRef }: ElementProps): JSX.Element {
+function InteractiveElement({
+  element,
+  highlightRef,
+}: ElementProps): JSX.Element {
   const highlightState = useContext(HighlightContext);
 
   if (highlightState.index === element.index) {
     return (
       <Link to={`?h=${element.index}`} className='vo-program-element-a'>
-        <div ref={highlightRef} className='vo-program-element vo-program-element-highlight'>
+        <div
+          ref={highlightRef}
+          className='vo-program-element vo-program-element-highlight'
+        >
           <p className='vo-program-element-link'>&#x1F517;</p>
           <Element element={element} />
         </div>
@@ -129,15 +135,12 @@ interface RenderTreeNodeChildrenProps {
 
 function RenderTreeNodeChildren({
   children,
-  highlightRef
+  highlightRef,
 }: RenderTreeNodeChildrenProps): JSX.Element {
   return (
     <>
       {children.map(node => (
-        <RenderTreeNode
-          node={node}
-          highlightRef={highlightRef}
-        />
+        <RenderTreeNode node={node} highlightRef={highlightRef} />
       ))}
     </>
   );

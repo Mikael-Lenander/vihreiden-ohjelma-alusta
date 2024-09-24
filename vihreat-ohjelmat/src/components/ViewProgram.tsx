@@ -1,4 +1,9 @@
-import { createContext, useEffect, useState, type MutableRefObject } from 'react';
+import {
+  createContext,
+  useEffect,
+  useState,
+  type MutableRefObject,
+} from 'react';
 import { useParams, useSearchParams, Link } from 'react-router-dom';
 import { useResource } from '@tomic/react';
 import ProgramView from './ProgramView';
@@ -23,7 +28,9 @@ function useProgramUrl() {
 
 function useHighlightState(): HighlightState {
   const [searchParams] = useSearchParams();
-  const [highlightString, setHighlightString] = useState<string | undefined>(undefined);
+  const [highlightString, setHighlightString] = useState<string | undefined>(
+    undefined,
+  );
   useEffect(() => {
     setHighlightString(searchParams.get('h') || undefined);
   }, [searchParams]);
