@@ -148,8 +148,32 @@ h1#vo-frontpage-title {
 }
 
 .vo-program-element {
+  all: unset;
+  display: block;
+  width: 100%;
   position: relative;
   padding-left: 0.2em;
+}
+
+.vo-program-element-buttons {
+  position: absolute;
+  right: -1em;
+  top: 50%;
+  transform: translate(100%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.vo-program-element-button {
+  all: unset;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0.2em;
+  color: darkgoldenrod;
+}
+
+.vo-program-element-button:hover {
+  background-color: #eee;
 }
 
 .vo-program-element-a {
@@ -162,8 +186,7 @@ h1#vo-frontpage-title {
   color: inherit;
 }
 
-.vo-program-element:hover {
-  cursor: pointer;
+.vo-program-element-focused {
   box-shadow: -5px 0 2px 0 hsl(240, 100%, 80%, 50%);
 }
 

@@ -17,7 +17,6 @@ export class HighlightState {
     this.index = undefined;
   }
 }
-
 export const HighlightContext = createContext(new HighlightState());
 
 function useProgramUrl() {

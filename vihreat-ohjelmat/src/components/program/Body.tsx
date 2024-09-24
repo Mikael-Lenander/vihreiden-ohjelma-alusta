@@ -1,10 +1,17 @@
-import { useContext, useEffect, useRef, MutableRefObject } from 'react';
+import {
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+  MutableRefObject,
+} from 'react';
 import Markdown from 'react-markdown';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ElementInfo } from '../../model/ElementInfo';
 import { ProgramContent, TreeNode } from '../../model/ProgramContent';
 import { ontology } from '../../ontologies/ontology';
 import { HighlightContext } from '../ViewProgram';
+import { FocusContext } from '../ProgramView';
 
 type NullableDiv = HTMLDivElement | null;
 type NullableDivRef = MutableRefObject<NullableDiv>;
@@ -17,8 +24,8 @@ function scrollTo(element?: HTMLElement) {
   if (element) {
     element.scrollIntoView({
       behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest',
+      block: 'center',
+      inline: 'center',
     });
   }
 }
@@ -89,30 +96,79 @@ function InteractiveElement({
   element,
   highlightRef,
 }: ElementProps): JSX.Element {
+  const navigate = useNavigate();
   const highlightState = useContext(HighlightContext);
+  const focusState = useContext(FocusContext);
+  const [isFocused, setIsFocused] = useState(false);
+  const focusUrl = `${window.location.origin}${location.pathname}?h=${element.index}`;
 
-  if (highlightState.index === element.index) {
-    return (
-      <Link to={`?h=${element.index}`} className='vo-program-element-a'>
-        <div
-          ref={highlightRef}
-          className='vo-program-element vo-program-element-highlight'
-        >
-          <p className='vo-program-element-link'>&#x1F517;</p>
-          <Element element={element} />
-        </div>
-      </Link>
-    );
-  } else {
-    return (
-      <Link to={`?h=${element.index}`} className='vo-program-element-a'>
-        <div className='vo-program-element'>
-          <p className='vo-program-element-link'>&#x1F517;</p>
-          <Element element={element} />
-        </div>
-      </Link>
-    );
+  const isHighlight = highlightState.index === element.index;
+
+  const ref = isHighlight ? highlightRef : null;
+  let className = 'vo-program-element';
+
+  if (isHighlight) {
+    className += ' vo-program-element-highlight';
   }
+
+  if (isFocused) {
+    className += ' vo-program-element-focused';
+  }
+
+  const focusThis = () => {
+    focusState.set(setIsFocused);
+  };
+
+  const highlightThis = () => {
+    navigate(`?h=${element.index}`, { replace: true });
+  };
+
+  const copyLinkToThis = () => {
+    navigator.clipboard.writeText(focusUrl);
+  };
+
+  return (
+    <div ref={ref} className={className} onMouseEnter={focusThis}>
+      <Element element={element} />
+      {isFocused ? (
+        <div className='vo-program-element-buttons'>
+          <ElementButton title='Korosta tämä teksti' onClick={highlightThis}>
+            &#x1F58D;
+          </ElementButton>
+          <ElementButton
+            title='Kopioi linkki tähän tekstiin'
+            onClick={copyLinkToThis}
+          >
+            &#x1F517;
+          </ElementButton>
+        </div>
+      ) : (
+        <></>
+      )}
+    </div>
+  );
+}
+
+interface ElementButtonProps {
+  children: React.ReactNode;
+  title: string;
+  onClick: () => void;
+}
+
+function ElementButton({
+  children,
+  title,
+  onClick,
+}: ElementButtonProps): JSX.Element {
+  return (
+    <button
+      className='vo-program-element-button'
+      title={title}
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
 }
 
 function Element({ element }: ElementProps): JSX.Element {
