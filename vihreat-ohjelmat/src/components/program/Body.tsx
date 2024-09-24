@@ -89,25 +89,20 @@ function RenderTreeNode({
 
 interface ElementProps {
   element: ElementInfo;
-  highlightRef?: NullableDivRef;
 }
 
-function InteractiveElement({
-  element,
-  highlightRef,
-}: ElementProps): JSX.Element {
+function InteractiveElement({ element }: ElementProps): JSX.Element {
   const navigate = useNavigate();
   const highlightState = useContext(HighlightContext);
   const focusState = useContext(FocusContext);
   const [isFocused, setIsFocused] = useState(false);
   const focusUrl = `${window.location.origin}${location.pathname}?h=${element.index}`;
+  const ref = useRef<HTMLDivElement | null>(null);
+  const isHighlighted = highlightState.index === element.index;
 
-  const isHighlight = highlightState.index === element.index;
-
-  const ref = isHighlight ? highlightRef : null;
   let className = 'vo-program-element';
 
-  if (isHighlight) {
+  if (isHighlighted) {
     className += ' vo-program-element-highlight';
   }
 
@@ -120,12 +115,19 @@ function InteractiveElement({
   };
 
   const highlightThis = () => {
+    scrollTo(ref.current || undefined);
     navigate(`?h=${element.index}`, { replace: true });
   };
 
   const copyLinkToThis = () => {
     navigator.clipboard.writeText(focusUrl);
   };
+
+  useEffect(() => {
+    if (isHighlighted) {
+      scrollTo(ref.current || undefined);
+    }
+  }, []);
 
   return (
     <div ref={ref} className={className} onMouseEnter={focusThis}>
