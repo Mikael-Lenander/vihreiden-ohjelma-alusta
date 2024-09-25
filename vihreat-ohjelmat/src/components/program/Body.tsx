@@ -94,11 +94,13 @@ interface ElementProps {
 function InteractiveElement({ element }: ElementProps): JSX.Element {
   const navigate = useNavigate();
   const highlightState = useContext(HighlightContext);
-  const focusState = useContext(FocusContext);
-  const [isFocused, setIsFocused] = useState(false);
   const focusUrl = `${window.location.origin}${location.pathname}?h=${element.index}`;
   const ref = useRef<HTMLDivElement | null>(null);
   const isHighlighted = highlightState.index === element.index;
+
+  const focusState = useContext(FocusContext);
+  const [isFocused, setIsFocused] = useState(false);
+  useEffect(() => { setIsFocused(false); }, [focusState]);
 
   let className = 'vo-program-element';
 
@@ -115,6 +117,7 @@ function InteractiveElement({ element }: ElementProps): JSX.Element {
   };
 
   const highlightThis = () => {
+    setIsFocused(false);
     scrollTo(ref.current || undefined);
     navigate(`?h=${element.index}`, { replace: true });
   };
