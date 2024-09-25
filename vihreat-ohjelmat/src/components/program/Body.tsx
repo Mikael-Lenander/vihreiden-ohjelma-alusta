@@ -31,58 +31,34 @@ function scrollTo(element?: HTMLElement) {
 }
 
 export function Body({ content }: BodyProps): JSX.Element {
-  const highlightRef = useRef<NullableDiv>(null);
-
-  useEffect(() => {
-    if (highlightRef.current) {
-      scrollTo(highlightRef.current);
-    }
-  }, [highlightRef]);
-
   return (
     <div className='vo-program-body'>
-      <RenderTreeNode node={content.tree} highlightRef={highlightRef} />
+      <RenderTreeNode node={content.tree} />
     </div>
   );
 }
 
 interface RenderTreeNodeProps {
   node: TreeNode;
-  highlightRef: NullableDivRef;
 }
 
-function RenderTreeNode({
-  node,
-  highlightRef,
-}: RenderTreeNodeProps): JSX.Element {
+function RenderTreeNode({ node }: RenderTreeNodeProps): JSX.Element {
   if (node.isActionList) {
     return (
       <ul>
-        <RenderTreeNodeChildren
-          children={node.children}
-          highlightRef={highlightRef}
-        />
+        <RenderTreeNodeChildren children={node.children} />
       </ul>
     );
   } else if (node.element) {
     return (
       <>
-        <InteractiveElement
-          element={node.element}
-          highlightRef={highlightRef}
-        />
-        <RenderTreeNodeChildren
-          children={node.children}
-          highlightRef={highlightRef}
-        />
+        <InteractiveElement element={node.element} />
+        <RenderTreeNodeChildren children={node.children} />
       </>
     );
   } else {
     return (
-      <RenderTreeNodeChildren
-        children={node.children}
-        highlightRef={highlightRef}
-      />
+      <RenderTreeNodeChildren children={node.children} />
     );
   }
 }
@@ -191,17 +167,13 @@ function Element({ element }: ElementProps): JSX.Element {
 
 interface RenderTreeNodeChildrenProps {
   children: TreeNode[];
-  highlightRef: NullableDivRef;
 }
 
-function RenderTreeNodeChildren({
-  children,
-  highlightRef,
-}: RenderTreeNodeChildrenProps): JSX.Element {
+function RenderTreeNodeChildren({ children }: RenderTreeNodeChildrenProps): JSX.Element {
   return (
     <>
       {children.map(node => (
-        <RenderTreeNode key={node.id} node={node} highlightRef={highlightRef} />
+        <RenderTreeNode key={node.id} node={node} />
       ))}
     </>
   );
