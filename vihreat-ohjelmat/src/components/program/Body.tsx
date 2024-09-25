@@ -110,6 +110,7 @@ function InteractiveElement({ element }: ElementProps): JSX.Element {
 
   return (
     <div ref={ref} className={className} onMouseEnter={focusThis}>
+      <div className='vo-program-element-aura' onMouseEnter={focusThis}></div>
       <Element element={element} />
       {isFocused ? (
         <div className='vo-program-element-buttons'>
