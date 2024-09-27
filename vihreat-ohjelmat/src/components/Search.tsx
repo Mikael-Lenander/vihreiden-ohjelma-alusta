@@ -1,16 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {
-  useArray,
-  useResource,
-  useServerSearch,
-  useString,
-  core,
-} from '@tomic/react';
 import { ontology } from '../ontologies/ontology';
-import { useProgramClass } from '../hooks';
+import { useSearch } from '../hooks/useSearch';
 import Markdown from 'react-markdown';
 import './Search.css';
+import type { SearchHitsInProgram, SearchHit } from '../model/SearchResults';
+import type { ProgramInfo } from '../model/ProgramInfo';
 
 export function Search(): JSX.Element {
   const [searchText, setSearchText] = useState('');
@@ -59,27 +54,18 @@ interface SearchResultsProps {
 }
 
 function SearchResults({ searchText }: SearchResultsProps): JSX.Element {
-  const query = useServerSearch(searchText, {
-    debounce: 1000,
-    include: true,
-    limit: 100000,
-    filters: {
-      [core.properties.isA]: ontology.classes.programelement,
-    },
-  });
+  const search = useSearch(searchText);
 
-  if (query.loading) {
+  if (search === undefined) {
     return <Loading />;
-  } else if (query.results.length === 0) {
+  } else if (search.active.length === 0) {
     return <NoResultsFound />;
   } else {
     return (
       <div id='vo-search-results-container'>
-        {groupByProgram(query.results).map(e => {
-          return (
-            <FoundProgram key={e.program} program={e.program} hits={e.hits} />
-          );
-        })}
+        {search.active.map(hits => (
+          <FoundProgram key={hits.program.id} hits={hits} />
+        ))}
       </div>
     );
   }
@@ -94,56 +80,38 @@ function NoResultsFound(): JSX.Element {
 }
 
 interface FoundProgramProps {
-  program: string;
-  hits: string[];
+  hits: SearchHitsInProgram;
 }
 
-function FoundProgram({ program, hits }: FoundProgramProps): JSX.Element {
-  const resource = useResource(program);
-  const id = program.split('/').pop();
-  const [title] = useString(resource, core.properties.name);
-  const [subtitle] = useString(resource, ontology.properties.subtitle);
-  const [elements] = useArray(resource, ontology.properties.elements);
+function FoundProgram({ hits }: FoundProgramProps): JSX.Element {
   const [expand, setExpand] = useState(false);
 
   return (
     <>
       <div className='vo-search-results-program'>
         <Title
-          programId={id!}
-          title={title}
-          subtitle={subtitle}
-          hits={hits.length}
+          programId={`p${hits.program.id}`}
+          title={hits.program.title}
+          subtitle={hits.program.species}
+          hits={hits.hits.length}
           expand={expand}
           onToggleExpand={() => setExpand(!expand)}
         />
-        {expand ? (
-          <FoundProgramHits hits={hits} programLength={elements.length} />
-        ) : (
-          <></>
-        )}
+        {expand ? <FoundProgramHits hits={hits} /> : <></>}
       </div>
     </>
   );
 }
 
 interface FoundProgramHitsProps {
-  hits: string[];
-  programLength: number;
+  hits: SearchHitsInProgram;
 }
 
-function FoundProgramHits({
-  hits,
-  programLength,
-}: FoundProgramHitsProps): JSX.Element {
+function FoundProgramHits({ hits }: FoundProgramHitsProps): JSX.Element {
   return (
     <>
-      {hits.map(subject => (
-        <FoundElement
-          key={subject}
-          subject={subject}
-          totalElements={programLength}
-        />
+      {hits.hits.map(hit => (
+        <FoundElement program={hits.program} hit={hit} />
       ))}
     </>
   );
@@ -190,31 +158,22 @@ function Title({
 }
 
 interface FoundElementProps {
-  subject: string;
-  totalElements: number;
+  program: ProgramInfo;
+  hit: SearchHit;
 }
 
-export function FoundElement({ subject, totalElements }: FoundElementProps) {
-  const resource = useResource(subject);
-  const programId = getProgramId(subject);
-  const elementId = getProgramElementId(subject);
-  const elementClass = useProgramClass(resource);
-  const [text] = useString(resource, core.properties.description);
-  const [name] = useString(resource, core.properties.name);
-
+export function FoundElement({ program, hit }: FoundElementProps) {
   return (
     <>
       <div className='vo-search-results-element'>
         <SearchResultElementBody
-          text={text}
-          name={name}
-          elementClass={elementClass}
+          text={hit.element.description}
+          name={hit.element.name}
+          elementClass={hit.element.elementClass}
         />
         <SearchResultElementHead
-          programId={programId!}
-          elementId={elementId!}
-          elementClass={elementClass}
-          totalElements={totalElements}
+          programId={program.index}
+          elementId={hit.element.index}
         />
       </div>
     </>
@@ -224,8 +183,6 @@ export function FoundElement({ subject, totalElements }: FoundElementProps) {
 interface SearchResultsElementHeadProps {
   programId: number;
   elementId: number;
-  elementClass?: string;
-  totalElements: number;
 }
 
 export function SearchResultElementHead({
@@ -288,82 +245,4 @@ export function SearchResultElementBody({
         </div>
       );
   }
-}
-
-function parentProgramSubject(subject: string) {
-  for (let i = subject.length - 1; i >= 0; i--) {
-    if (subject[i] === 'e') {
-      return subject.substring(0, i);
-    }
-
-    if (subject[i] === '/') {
-      return subject;
-    }
-  }
-
-  return subject;
-}
-
-function getProgramId(subject: string): number | undefined {
-  subject = parentProgramSubject(subject);
-
-  for (let i = subject.length - 1; i >= 0; i--) {
-    if (subject[i] === 'p') {
-      return parseInt(subject.substring(i + 1, subject.length));
-    }
-
-    if (subject[i] === '/') {
-      return undefined;
-    }
-  }
-
-  return undefined;
-}
-
-function getProgramElementId(subject: string): number | undefined {
-  for (let i = subject.length - 1; i >= 0; i--) {
-    if (subject[i] === 'e') {
-      return parseInt(subject.substring(i + 1, subject.length));
-    }
-
-    if (subject[i] === '/') {
-      return undefined;
-    }
-  }
-
-  return undefined;
-}
-
-function groupByProgram(src: string[]): FoundProgramProps[] {
-  const programs: string[] = [];
-  const byProgram = {};
-  src.forEach(elementSubject => {
-    const programSubject = parentProgramSubject(elementSubject);
-    const elementId = getProgramElementId(elementSubject);
-    const programId = getProgramId(programSubject);
-
-    if (programId) {
-      if (!(programSubject in byProgram)) {
-        byProgram[programSubject] = [];
-        programs.push(programSubject);
-      }
-
-      byProgram[programSubject].push({
-        subject: elementSubject,
-        id: elementId,
-      });
-    }
-  });
-
-  programs.sort();
-  programs.reverse();
-
-  for (const p in byProgram) {
-    byProgram[p].sort((a, b) => a.id - b.id);
-  }
-
-  return programs.map(p => ({
-    program: p,
-    hits: byProgram[p].map(e => e.subject),
-  }));
 }
