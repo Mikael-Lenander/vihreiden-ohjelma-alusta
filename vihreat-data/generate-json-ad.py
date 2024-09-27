@@ -13,6 +13,7 @@ def generate_ontology():
 
 def generate_programs():
     for md_path, meta_path in iterate_programs():
+        print(f"Generating program from {md_path}...")
         with open(meta_path, "r") as f:
             meta = yaml.safe_load(f)
         generate_program(md_path, meta)
