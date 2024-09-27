@@ -1,10 +1,4 @@
-import {
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-  MutableRefObject,
-} from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import Markdown from 'react-markdown';
 import { useNavigate } from 'react-router-dom';
 import { ElementInfo } from '../../model/ElementInfo';
@@ -12,9 +6,6 @@ import { ProgramContent, TreeNode } from '../../model/ProgramContent';
 import { ontology } from '../../ontologies/ontology';
 import { HighlightContext } from '../ViewProgram';
 import { FocusContext } from '../ProgramView';
-
-type NullableDiv = HTMLDivElement | null;
-type NullableDivRef = MutableRefObject<NullableDiv>;
 
 interface BodyProps {
   content: ProgramContent;
@@ -57,9 +48,7 @@ function RenderTreeNode({ node }: RenderTreeNodeProps): JSX.Element {
       </>
     );
   } else {
-    return (
-      <RenderTreeNodeChildren children={node.children} />
-    );
+    return <RenderTreeNodeChildren children={node.children} />;
   }
 }
 
@@ -76,7 +65,9 @@ function InteractiveElement({ element }: ElementProps): JSX.Element {
 
   const focusState = useContext(FocusContext);
   const [isFocused, setIsFocused] = useState(false);
-  useEffect(() => { setIsFocused(false); }, [focusState]);
+  useEffect(() => {
+    setIsFocused(false);
+  }, [focusState]);
 
   let className = 'vo-program-element';
 
@@ -170,7 +161,9 @@ interface RenderTreeNodeChildrenProps {
   children: TreeNode[];
 }
 
-function RenderTreeNodeChildren({ children }: RenderTreeNodeChildrenProps): JSX.Element {
+function RenderTreeNodeChildren({
+  children,
+}: RenderTreeNodeChildrenProps): JSX.Element {
   return (
     <>
       {children.map(node => (
