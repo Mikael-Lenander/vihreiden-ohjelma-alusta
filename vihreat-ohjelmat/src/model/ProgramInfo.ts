@@ -26,6 +26,10 @@ export class ProgramInfo {
     return this.subject.split('/').pop();
   }
 
+  public get index(): number {
+    return parseInt(this.id?.split('p')?.pop() ?? '-1');
+  }
+
   public get linkPath(): string {
     return `/ohjelmat/${this.id}`;
   }
