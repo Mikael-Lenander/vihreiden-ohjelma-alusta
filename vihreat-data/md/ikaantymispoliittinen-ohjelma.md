@@ -1,4 +1,4 @@
-## 1. Johdanto
+## Johdanto
 
 Väestön ikääntyminen on tämän vuosituhannen megatrendi. Keskimääräinen elinajanodote on kasvanut merkittävästi. Tähän on vaikuttanut yleinen elintason ja hygienian parantuminen sekä lääketieteen kehitys. Se, että elämme yhä vanhemmiksi ja vieläpä yhä parempikuntoisina, on yksi ihmiskunnan suurimpia saavutuksia.
 
@@ -26,7 +26,7 @@ Ilmastonmuutos ja ympäristöongelmat ovat ihmiskunnan suurin haaste. Tämä tul
 
 Sukupolvien välinen oikeudenmukaisuus edellyttää, ettei ilmastonmuutoksen ja sen torjunnan kustannuksia kasata nuorten ja tulevien sukupolvien taakaksi. Kestävä kehitys edellyttää reilua muutosta, jossa samanaikaisesti kun päästöjä ajetaan alas, vähennetään myös eriarvoisuutta ja pidetään huolta haavoittuvimmassa asemassa olevista ihmisistä.
 
-## 2. Perus- ja ihmisoikeudet
+## Perus- ja ihmisoikeudet
 
 Ihmisoikeussopimukset ja Suomen perustuslaki takaavat ikääntyville yhdenvertaiset perusoikeudet. Ikääntyvillä on samat oikeudet kuin muillakin, kuten oikeus äänestää, olla ehdokkaana vaaleissa, osallistua yhteiskunnalliseen päätöksentekoon ja muuhun toimintaan, käydä töissä, opiskella, muuttaa asuinpaikkaa tai korjata sukupuolensa. Syrjinnän kieltoon, jota yhdenvertaisuusvaltuutettu valvoo, sisältyy kielto syrjiä iän perusteella. Ihmisoikeuskeskus, eduskunnan oikeusasiamies ja oikeuskansleri ovat tahoja, joille kuuluu myös ikääntyneiden ihmis- ja perusoikeuksien toteutumisen valvonta.
 
@@ -45,7 +45,7 @@ Ikäihmisillä on oikeus turvalliseen elämään ja elinympäristöön. Lähisuh
 * Kuntien/maakuntien viranhaltijoiden tulee neuvoa ja opastaa ikääntyviä heidän oikeuksiensa toteuttamiseksi niin oikaisuvaatimusten kuin kanteluidenkin laatimisessa.
 * Ikääntyvien kaltoinkohtelua tulee valtion toimesta kartoittaa. Myös vanhoilla ihmisillä tulee olla mahdollisuus päästä turvakotiin.
 
-## 3.Aktiivinen ikääntyminen, osallisuus ja yhdenvertaisuus
+## Aktiivinen ikääntyminen, osallisuus ja yhdenvertaisuus
 
 Ikääntyvät ihmiset ovat täysivaltaisia yhteiskunnan jäseniä ja osallistuvat monin tavoin yhteiskunnalliseen toimintaan. He äänestävät vilkkaammin kuin nuoremmat ikäluokat ja osallistuvat aktiivisesti järjestötoimintaan. Tästä huolimatta vanhojen ihmisten ääni ei aina kuulu päätöksiä tehtäessä: esimerkiksi mielipidekyselyiden ikäryhmät päättyvät 75 ikävuoteen.
 
@@ -102,7 +102,7 @@ Ikääntyvät ovat moninainen joukko ihmisiä, johon kuuluu laaja kirjo myös mo
 * Otetaan ihmisten moninaisuus huomioon palvelu- ja hoitosuunnitelmissa tekemällä ikäihmisten tausta ja elämänhistoria näkyväksi, jolloin palveluita on helpompi räätälöidä yksilöllisesti tarkoituksenmukaisiksi.
 * Uskonnonvapaus koskee myös ikääntyviä ihmisiä. Kaikille on turvattava mahdollisuus osallistua uskonnollisiin tilaisuuksiin – tai olla osallistumatta niihin.
 
-## 4. Työ, työsyrjintä ja työssä jatkaminen
+## Työ, työsyrjintä ja työssä jatkaminen
 
 ### Työkyvyn ylläpitäminen
 
@@ -144,7 +144,7 @@ Yhteiskunnan tulee tukea ja järjestää mahdollisuuksia osallistua työelämä�
 * Rohkaistaan eläkkeellä olevia yrittäjyyteen ja lisätään neuvontaa yrittäjyydestä.
 * Tuetaan määräaikaisella kuntoutustuella (määräaikaiseläkkeellä) olevia työhönpaluussa erilaisilla osa-aikatyö ja työkokeilu –vaihtoehdoilla.
 
-## 5. Asuminen, liikkuminen ja ympäristö
+## Asuminen, liikkuminen ja ympäristö
 
 Hyvä ympäristö ikääntyvälle on yleensä hyvä ympäristö kaikille. Koska ikääntyminen aiheuttaa osalle ihmisiä liikkumisen vaikeuksia, ja toisaalta työelämästä pois jääminen tekee lähiympäristön aikaisempaa merkityksellisemmäksi, tulee erityisesti ikääntyvien ihmisten kodin ympäristöön kiinnittää erityistä huomiota.
 
@@ -360,7 +360,7 @@ Elämän loppuvaiheen hoito yksi vaikeimmista kysymyksistä niin vanhalle ihmise
 * Elämän loppuvaiheessa tarjotaan psykososiaalista tukea niin vanhalle ihmiselle kuin hänen läheisilleen. Suomeen on säädettävä saattohoitolaki.
 * Vihreillä on myönteinen kanta eutanasiaan. Eutanasian arvioinnissa ja toteuttamisessa on tärkeää, että kyse on kuolemaan johtavasta sairaudesta, sietämätöntä kärsimystä ei kyetä muuten helpottamaan ja eutanasiaa pyytävä henkilö on täysin oikeustoimikelpoinen. On huolehdittava siitä, ettei kukaan ulkopuolinen määrittele sitä, kenen elämä on elämisen arvoista.
 
-## 8. Sukupolvien ketjut
+## Sukupolvien ketjut
 
 Sukupolvipolitiikan ei tule olla eturyhmäpolitiikkaa. Yhteiskunnan kyky pysyä ja toimia yhdessä vaatii, että eri sukupolvet voivat katsoa samaan suuntaan ja muodostaa yhteisiä tavoitteita. On tärkeää, että vanhat ja nuoret ovat entistä enemmän tekemisissä keskenään ja vaikuttavat asioihin yhdessä.
 

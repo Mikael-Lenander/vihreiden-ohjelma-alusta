@@ -1,6 +1,6 @@
-## 1. Vihreiden näkemys maailmasta ja turvallisuudesta
+## Vihreiden näkemys maailmasta ja turvallisuudesta
 
-### 1.1 Ohjelman rakenne
+### Ohjelman rakenne
 
 Ohjelman aloittaa tämä Vihreiden näkemys maailmasta ja turvallisuudesta. Sen lisäksi ohjelma sisältää seitsemän osiota. Niistä neljä ensimmäistä liittyy ulkopolitiikkaan ja kolme jälkimmäistä turvallisuuspolitiikkaan kokonaisturvallisuuden kehikon avulla.
 
@@ -8,7 +8,7 @@ Seitsemän osiota on jaoteltu alakohdiksi, joissa kussakin on lyhyt esittely sek
 
 Eurooppa- ja EU-asiat on käsitelty vuonna 2021 hyväksytyssä [Vihreä Eurooppa -ohjelmassa](https://www.vihreat.fi/eurooppaohjelma/), mutta joitakin turvallisuuspolitiikkaan liittyviä kantoja on tarkistettu. Maahanmuuttoasiat on käsitelty loppuvuodesta 2022 hyväksytyssä [Maahanmuuttopoliittisessa ohjelmassa](https://www.vihreat.fi/maahanmuuttopoliittinen-ohjelma/). Lisäksi ihmisten henkilökohtaisen turvallisuuden ilmiöitä, kuten lähisuhdeväkivallan torjuntaa, käsitellään puolueen tasa-arvo- ja yhdenvertaisuusohjelmassa (valmistelussa).
 
-### 1.2 Vihreiden arvot ja peruslinjaukset
+### Vihreiden arvot ja peruslinjaukset
 
 Ilmastokriisi ja luontokato muodostavat YK:n, Naton ja useiden tutkijoiden mukaan välittömän ja suurimman turvallisuusuhan maailmalle. Ilmastokriisi horjuttaa koko yhteiskuntajärjestelmää, mikä muokkaa kansainvälisiä suhteita ja heikentää kokonaisturvallisuutta. Kuusi yhdeksästä planetaarisesta rajasta on ylitetty. Ympäristökriisin suorien vaikutusten lisäksi on tärkeää tunnistaa myös ketjuuntuvat ja kertautuvat riskit.
 
@@ -22,7 +22,7 @@ Maailmanlaajuisten ongelmien – ilmastonkriisin, luontokadon, köyhyyden, epät
 
 Vihreät haluaa vahvistaa demokratiaa ja siihen kuuluvaa avointa keskustelua, lehdistönvapautta sekä erityisesti naisten, nuorten ja eri vähemmistöryhmien osallisuutta kaikkialla maailmassa. Tutkimukset osoittavat, että ottamalla enemmän naisia mukaan poliittiseen päätöksentekoon saadaan konflikteja paremmin ratkaistuksi, naisten rakentama rauha on kestävämpi ja yhteiskunnalliset olot tasa-arvoisempia. Olemme sitoutuneet edistämään YK:n 1325 naiset, rauha ja turvallisuus- sekä 2250 nuoret, rauha ja turvallisuus -päätöslauselmia.
 
-### 1.3 Kokonaisturvallisuus ja vihreä turvallisuuskäsitys
+### Kokonaisturvallisuus ja vihreä turvallisuuskäsitys
 
 Kokonaisturvallisuus on suomalainen ja kansainvälisesti ainutlaatuinen tapa edistää itsenäisyyttä, yhteistyötä ja arjen turvallisuutta koko yhteiskunnassa. Vihreiden arvojen ytimessä on ihmisten välinen solidaarisuus ja “kaveria ei jätetä” -asenne myös kansallisessa turvallisuudessa.
 
@@ -36,7 +36,7 @@ Demokratiassa turvallisuuden perustehtävänä ei ole ainoastaan valtiojohdon ta
 
 Globalisoituneessa maailmassa maantieteellisesti ja kulttuurisesti kaukaiset ongelmat ovat nopeasti yhteisiä. Viranomaisrajat ylittävä johtaminen, ajankohtainen tilannekuva ja jatkuva oppiminen ovat välttämättömyys tehokkaalle toiminnalle nykyaikaisessa turvallisuusympäristössä.
 
-### 1.4 Feministinen ulkopolitiikka
+### Feministinen ulkopolitiikka
 
 Vihreä ulkopolitiikka on feminististä, mikä tarkoittaa, että naisten, tyttöjen ja vähemmistöjen oikeuksia edistetään läpileikkaavasti kaikessa ulko- ja turvallisuuspolitiikassa. Tämä edellyttää osallistavaa päätöksentekoa, sukupuoli- ja ihmisoikeusvaikutusten arviointia sekä resurssien ohjaamista tasa-arvoa ja yhdenvertaisuutta vahvistavaan toimintaan. Keskeistä on, että syrjintää ja väkivaltaa nostetaan johdonmukaisesti esiin kansainvälisillä areenoilla.
 
@@ -52,13 +52,13 @@ Linjaukset:
 * Tilataan ulkopuolisen toimijan selvitys siitä, miten tasa-arvo toteutuu Suomen ulkopolitiikassa.
 * Kartoitetaan koulutustarpeet ja kasvatetaan määrätietoisesti resursseja tasa-arvo- ja ihmisoikeustyöhön.
 
-## 2. Suomen kansainväliset suhteet
+## Suomen kansainväliset suhteet
 
 Ulko- ja turvallisuuspolitiikassa on paljon pelissä, ei sen vähempää kuin koko maailman tulevaisuus ja samalla Suomen tulevaisuus. Tulevaisuudesta voidaan maalata niin dystopioita kuin utopioita, ja Vihreiden tavoitteena on mahdollisimman hyvä tulevaisuus.
 
 Suomen kannattaa viedä osaamistaan ja auttaa sitä kautta muiden maiden kokonaisturvallisuuden edistämistä – paremmassa maailmassa Suomellakin menee paremmin.
 
-### 2.1 Vahvistamme sääntöpohjaista maailmaa
+### Vahvistamme sääntöpohjaista maailmaa
 
 Haluamme vahvistaa sääntöpohjaista maailmaa ja oikeusvaltioperiaatteeseen sitoutuneita valtioita. Näemme, että kansainvälisillä järjestöillä kuten YK ja Etyj on tärkeä tehtävä jatkossakin ja haluamme vahvistaa niiden asemaa. Samalla sääntöpohjainen järjestelmä sisältää nykymuodossaan paljon toimia ja toiveita, jotka eivät lainkaan siirry käytäntöön. YK on kansainvälisen yhteistyön tärkein näyttämö.
 
@@ -75,7 +75,7 @@ Linjaukset:
 * Vahvistetaan suomalaista osaamista YK:n, Etyjin ja EU:n tehtävissä.
 * Ylläpidetään Euroopan neuvoston ihmisoikeus- ja demokratiatyön toimintaedellytyksiä. Tehtäväkenttänä ovat mm. kuolemanrangaistuksen kitkeminen, perheväkivallan ehkäisy, sananvapauden varmistaminen, poliittisten vankien aseman parantaminen, kansalaisyhteiskunnan vahvistaminen, vapaiden vaalien toteutuminen sekä ihmisoikeuksien toteutuminen maahanmuuttopolitiikassa.
 
-### 2.2 Yhteinen Eurooppa – yhteinen vastuu
+### Yhteinen Eurooppa – yhteinen vastuu
 
 Eurooppa alueena on noussut keskeiseen asemaan 2020-luvun turvallisuustilanteessa. EU on Suomen ulkopolitiikan tärkein viitekehys sekä vaikuttamiskanava ja tavallaan jo osa sisäpolitiikkaa. Strateginen autonomia turvaa osaltaan Euroopan unionin itsenäisyyttä ja demokratiaa maailman muutoksissa.
 
@@ -93,7 +93,7 @@ Linjaukset:
 * Tuemme ja edistämme aktiivisesti EU:n ja Naton avoimien ovien politiikan toteutumista myös Balkanin alueella, mikäli valtiot ovat poliittisesti sekä taloudellisesti valmiita liittymään jäseneksi.
 * EU:n tulee vaatia jäsenmailtaan vahvaa sitoutumista demokratiaan ja sääntöperustaisuuteen sekä olla valmis nykyistä kovempiin sanktioihin.
 
-### 2.3 Ukrainaa on tuettava vahvasti
+### Ukrainaa on tuettava vahvasti
 
 Ukraina on joutunut Venäjän laittoman hyökkäyksen kohteeksi, jollaista vastaan jokaisella maalla on oikeus puolustautua. Ukrainalle annettava apu perustuu YK:n peruskirjan 51. artiklaan. Tilanne ei syntynyt äkillisesti, vaan sen juuret ulottuvat Neuvostoliiton romahtamiseen ja suoratkin sotatoimet alkoivat jo vuonna 2014. Siksi myös tie kestävään rauhaan on pitkä ja vaatii paikallisten olosuhteiden tunnistamista.
 
@@ -107,7 +107,7 @@ Linjaukset:
 * Ukrainan jälleenrakentamisessa on huomioitava ennen kaikkea maan omat tarpeet ja tuettava paikallisen osaamisen ja talouden kehittymistä. Vastuu taloudellisista tuhoista on hyökkääjämaa Venäjällä. Hyödynnetään Venäjään liittyviä jäädytettyjä varoja Ukrainan jälleenrakentamisessa juridisesti kestävällä tavalla.
 * Tunnistetaan sodassa seksuaalirikosten ja raiskausten uhreiksi joutuneiden erityinen tuen tarve sekä sodan aikana että Ukrainan jälleenrakennusvaiheessa.
 
-### 2.4 Hegemoninen Venäjä on epävakaa ja arvaamaton
+### Hegemoninen Venäjä on epävakaa ja arvaamaton
 
 Venäjä tavoittelee johtoasemaa eli hegemoniaa omalla lähialueellaan. Keskeinen keino tähän on epäjärjestyksen kasvattaminen, koska sekasorron kautta se voi nousta vahvemmaksi häviämällä muita vähemmän. On varauduttava kehitykseen, jossa Venäjä yrittää vakiinnuttaa kuvitteellisen imperiuminsa rajoja Ukrainan jälkeen Kaukasuksella, Keski-Aasiassa tai Valko-Venäjällä (Belarus). Suora sotilaallinen konflikti EU- ja Nato-maiden kanssa on epätodennäköinen, mutta sitä ei voida valitettavasti kokonaan sulkea pois.
 
@@ -130,7 +130,7 @@ Linjaukset:
 * Ulkopolitiikassaan Suomen on johdonmukaisesti osoitettava tukensa sellaisille venäläisille kansalaisyhteiskunnan toimijoille, jotka edistävät ihmisoikeuksia, demokratiaa, vähemmistöjen oikeuksia ja vapaata mediaa Venäjällä. Suomen on yhdessä EU:n kanssa tarjottava kannustimia venäläisille sitoutua demokratian ja rauhan edistämiseen kotimaassaan.
 * Kotimaisen Venäjä-osaamisen säilymistä on kehitettävä pitkäjänteisesti. Tämä edellyttää mm. venäjän kielen opetusmäärien lisäämistä, opiskelijoiden koulutuspolkujen tukemista ja tutkimuksen pitkäjänteisen rahoituksen varmistamista eri tieteenaloille. Panostetaan myös muun Itä-Euroopan ja Keski-Aasian kielten, kulttuurien ja yhteiskuntien tutkimukseen.
 
-### 2.5 Herkkä Arktis suojelun ja hyödyntämisen ristipaineissa
+### Herkkä Arktis suojelun ja hyödyntämisen ristipaineissa
 
 Arktisen alueen turvallisuuspoliittinen tilanne on heikentynyt jo vuosia ennen Venäjän hyökkäystä Ukrainaan. Alue on Itämeren ohella Vihreän ulkopolitiikan ytimessä, koska Arktiksen vaikutus Suomen turvallisuuteen on keskeinen. Lisäksi alueella korostuvat alkuperäiskansoihin, ympäristöön, ilmastokriisiin ja kansainväliseen sääntöpohjaiseen järjestelmään kohdistuvat haasteet. Arktisen alueen kysymyksissä korostuu alueen saamelaisväestön asema.
 
@@ -149,7 +149,7 @@ Linjaukset:
 * Kiinnitetään erityistä huomiota Pohjois-Suomen tiestön ja rautateiden kuntoon. Kysymys vaikuttaa sekä paikallisten asukkaiden arjen turvallisuuteen että koko kansalliseen huoltovarmuuteen tilanteessa, jossa meriyhteyksien käyttöä olisi rajoitettu.
 * Jäämeren rataa ei tule rakentaa, koska se vaarantaisi saamelaisten oikeudet sekä pohjoisen luonnon.
 
-### 2.6 Taloudellisesti ja poliittisesti kasvava Kiina asettaa haasteita
+### Taloudellisesti ja poliittisesti kasvava Kiina asettaa haasteita
 
 Suhtautuminen Kiinaan on pitkään ollut kaksijakoista. Maan massiivinen talouskasvu on tehnyt siitä houkuttelevan markkinan, minkä myötä Kiinasta on muodostunut merkittävä osa globaaleja tuotantoketjuja. Taloudellista yhteistyötä varjostavat massamarkkinatalouden ja kertakäyttökulttuurin lisäksi maan mittavat ihmisoikeusongelmat, joista näkyvimpiä ovat Hongkongin poliittiset puhdistukset alueen demokratialiikettä vastaan sekä Xinjiangin provinssin vähemmistökansoihin, kuten uiguureihin ja kazakkeihin kohdistuvat kansanmurhat ja uskonnolliset vainot. Kiina pyrkii hiljentämään sen toimintaan kohdistuvaa kritiikkiä hyödyntämällä muiden maiden taloudellista riippuvuutta itsestään.
 
@@ -168,7 +168,7 @@ Linjaukset:
 * Kiinan ihmisoikeusloukkaukset Xinjiangissa ovat tuomittavia ja vaativat toimia kansainväliseltä yhteisöltä ihmisoikeusloukkausten pysäyttämiseksi. Alueella toimivia tai sieltä materiaaleja ostavia yrityksiä tulee yritysvastuulainsäädännöllä velvoittaa varmistamaan, että niiden toiminta ei riko ihmisoikeuksia.
 * Kiinan erityishallintoalueille (Hongkong ja Macao) on aiemmin myönnetty kauppapoliittinen erityisasema perustuen niiden itsehallintoon. Tämän aseman jatkuminen tulee sitoa alueiden ihmisoikeustilanteen kehittymiseen.
 
-### 2.7 Yhdysvallat tienristeyksessä
+### Yhdysvallat tienristeyksessä
 
 Yhdysvallat on maailman suurin talous ja ylivoimaisesti merkittävin sotilasmahti. Se on myös Suomen merkittävä sotilaallinen liittolainen. Natossa Yhdysvaltojen sotilasvoima muodostaa koko liittokunnan peruskiven, mikä on vahvuus, mutta myös riski monien maiden puolustuksen ollessa täysin tai suurelta osin riippuvaista Yhdysvaltojen kehityksestä.
 
@@ -183,7 +183,7 @@ Linjaukset:
 * Eurooppalaisten liittolaisten on rohkeammin uskallettava tuoda esimerkiksi kansainvälisten järjestöjen kautta esiin yhdysvaltalaisten toimijoiden ihmisoikeusrikkomukset.
 * Seurataan tiiviisti Yhdysvaltojen sisäisen turvallisuuden kehitystä erityisesti sukupuoli- ja seksuaalivähemmistöjen osalta. Antigender-liikehdinnän ja monissa osavaltioissa toimeenpannun ihmisoikeusvastaisen lainsäädännön vuoksi Yhdysvalloissa on jo satoja tuhansia maansisäisiä pakolaisia.
 
-## 3. Rauhan rakentaminen ja turvaaminen
+## Rauhan rakentaminen ja turvaaminen
 
 Rauha on edellytys yhteiskunnan toimivuudelle ja kehittämiselle. Vain rauhan oloissa kykenemme ratkaisemaan ihmiskunnan vaikeita kysymyksiä kuten ilmastokriisin torjuntaa ja köyhyyden poistamista. Ilman rauhaa ei myöskään voi olla turvallisuutta. Maailmassa on kuitenkin jatkuvasti käynnissä kymmeniä sotia ja konflikteja, joista suurin osa on valtioiden sisäisiä.
 
@@ -191,7 +191,7 @@ Konfliktien syyt ovat moninaisia, mutta merkittävä osa aseellisista konfliktei
 
 Rauhan rakentamisessa ja turvaamisessa tarvitaan ihmisten ja yhteisöjen mahdollisuutta päättää itse omista asioistaan, avoimuutta sekä kansainvälistä sopimusjärjestelmää, jota myös valvotaan. Epävakautta lisäävät valtioiden kyvyttömyys huolehtia yhteiskunnan toiminnoista ja ihmisten hyvinvoinnista korruptio, demokratian avoimuuden puute sekä suuri määrä aseita alueella.
 
-### 3.1 Rauhanturvaoperaatiot ja siviilikriisinhallinta
+### Rauhanturvaoperaatiot ja siviilikriisinhallinta
 
 Toisinaan rauhan turvaaminen edellyttää ulkopuolisen, puolueettoman osapuolen läsnäoloa kriisialueella. Rauhanturvaoperaatiossa tuetaan konfliktin osapuolia säilyttämään saavutettu sovinto. Kyseeseen voi tulla esimerkiksi rauhanneuvotteluissa sovitun tulitauon valvominen ja turvavyöhykkeistä huolehtiminen. Suomi on maailmalla aktiivinen rauhanturvaaja ja operaatioihin osallistuu sekä sotilas- että siviilihenkilöitä.
 
@@ -208,7 +208,7 @@ Linjaukset:
 * Perustetaan Suomeen veteraanikeskus, joka huolehtii kotiutuneiden rauhanturvaajien tukemisesta. Varmistetaan veteraanien tuen rahoituksen pitkäjänteisyys. Tunnistetaan ulkomailla sotilasoperaatioissa palvelleiden kokemukset ja asema sotaveteraaneina.
 * Lisätään siviilikriisinhallintaa ja arvioidaan kriisinhallinnan vaikuttavuutta säännöllisesti antamalla toiminnan tavoitteista, niiden käytännön toteutumisesta ja toteutuksen vaikuttavuudesta vuosittainen selvitys eduskunnalle. Kaiken kriisinhallintatyön lähtökohtana on laaja turvallisuuskäsitys, jossa siviili- ja sotilaskriisinhallinnan yhteistyötä on tehostettava. Osallistutaan aktiivisesti EU:n siviilikriisinhallinnan kehittämiseen esimerkiksi osana EU:n strategista kompassia.
 
-### 3.2 Asevalvonta ja -riisunta
+### Asevalvonta ja -riisunta
 
 Maailmassa on vuosittain aseellisia konflikteja kymmenissä maissa, ja niiden uhriluku on korkea. Sota Ukrainassa on vaatinut kymmenien ellei satojen tuhansien ihmisten hengen. Maailman sotilasmenot ovat vuosittain kaksi biljoonaa euroa eli noin kaksi prosenttia maailman bruttokansantuotteesta.
 
@@ -228,7 +228,7 @@ Linjaukset:
 * Edistetään kansainvälistä sopimusjärjestelmää tukemalla ja vahvistamalla asevalvonta- ja varmistusjärjestelmiä.
 * Huolehditaan pienaseiden ja käsiaseiden leviämisen estämisestä konfliktien jälkeen tai konfliktialueiden ulkopuolelle. Vahvistetaan asekauppasopimuksen (Arms Trade Treaty; ATT) periaatteita. Edistetään monenkeskistä yhteistoimintaa ylimääräisten aseiden tuhoamiseksi tai deaktivoimiseksi. Estetään teknisellä tasolla pysyvästi deaktivoitujen aseiden uudelleen hyödyntäminen.
 
-### 3.3 Ydinaseet
+### Ydinaseet
 
 Maailmassa on noin 13 000 ydinkärkeä, joista 90 % Venäjän ja Yhdysvaltojen hallussa. Lisäksi ydinaseita on seitsemällä muulla valtiolla.
 
@@ -248,13 +248,13 @@ Linjaukset:
 * Edistetään aktiivisesti kaikkien osapuolten turvallisuushuolet huomioivaa tasapuolista ydinaseriisuntaa Natossa ja muilla kansainvälisillä foorumeilla.
 * Suomi edistää osaltaan pyrkimystä kokonaan ydinaseettomaan maailmaan.
 
-## 4. Naton myötä Suomella uusi turvallisuusasema
+## Naton myötä Suomella uusi turvallisuusasema
 
 Suomesta tuli Pohjois-Atlantin puolustusliitto Naton jäsen 4. huhtikuuta 2023. Suomen etu on vahva ja yhtenäinen, omia arvojaan – eli demokratiaa, ihmisoikeuksia, oikeusvaltiota ja yksilänvapauksia – kunnioittava Nato. Naton tarkoituksena on taata jäsenmaidensa vapaus ja turvallisuus poliittisin ja sotilaallisin keinoin. Puolustusliiton perustehtävät ovat yhteinen puolustus ja pelote, kriisinhallinta sekä turvallisuutta edistävä yhteistyö.
 
 Naton vaikuttavuus puolustusliittona perustuu yhteiseen pelotteeseen: hyökkäys yhtä jäsentä vastaan tulkitaan hyökkäykseksi kaikkia jäseniä vastaan. Yhteisillä komentorakenteilla, harjoittelulla, sotilaallisella läsnäololla ja muulla tiiviillä yhteistyöllä huolehditaan siitä, että pelotteeseen liittyy myös sitä vastaava suorituskyky.
 
-### 4.1 Sotilaallinen yhteistyö vahvistaa meitä
+### Sotilaallinen yhteistyö vahvistaa meitä
 
 Suomen keskeisin tehtävä Naton jäsenenä on oman alueen puolustaminen ja koskemattomuuden turvaaminen. Samalla puolustamme ja valvomme yli puolta Naton itärajasta. Suomen kykyä antaa ja vastaanottaa apua on pidettävä yllä ja kehitettävä jatkuvasti sekä hyödynnettävä puolustusliiton mahdollisuudet kustannustehokkuuteen puolustuksessa.
 
@@ -276,7 +276,7 @@ Linjaukset:
 * Suomen osallistumista Naton kriisinhallintaoperaatioihin on arvioitava sen mukaan, edistetäänkö niillä kestävää vakautta, rauhaa ja turvallisuutta, ja onko niillä onnistumisen edellytyksiä. Naton kriisinhallintaoperaatioita on kehitettävä kestävän rauhanrakentamisen näkökulmasta.
 * Edistetään Natolle komentokeskuksen perustamista Pohjoismaiden alueelle, jolloin tuetaan Naton kykyä toimia tällä alueella.
 
-### 4.2 Nato pohjautuu demokratialle
+### Nato pohjautuu demokratialle
 
 Demokratian puolustaminen on Naton itsensä määrittelemä ydintehtävä. Tämän on näyttävä myös Naton omassa toiminnassa ja Suomen toiminnassa Naton jäsenenä. Suomen tulee vahvistaa Naton profiilia demokratian puolustajana, ja Suomen toiminnan Natossa on oltava asianmukaisessa demokraattisessa ohjauksessa. Tämä edellyttää toimivaa työnjakoa tasavallan presidentin ja hallituksen kanssa sekä eduskunnan oikea-aikaista informointia ja aktiivista osallistumista. Suomessa on käytävä vilkasta ja avointa keskustelua Suomen toiminnasta Naton jäsenenä sekä Naton roolista vakautta ja turvallisuutta edistettäessä.
 
@@ -285,7 +285,7 @@ Linjaukset:
 * Eduskunta sisällytetään kaikkiin keskusteluihin Nato-politiikasta, sen tavoitteista, käytännön toiminnasta ja asetettujen tavoitteiden saavuttamisesta. Suomen Nato-politiikalle tavoitellaan laajaa parlamentaarista tukea.
 * Ylläpidetään aktiivista kansalaiskeskustelua Suomen Nato-politiikasta ja huolehditaan päätöksenteon riittävästä avoimuudesta.
 
-### 4.3 Naton tulevaisuus
+### Naton tulevaisuus
 
 Nato on ensisijaisesti euroatlanttisen alueen sotilaallisen turvallisuuden organisaatio. Teknologinen kehitys, talouden verkottuminen, ilmastokriisi ja geopoliittisten painopisteiden muutokset heijastuvat perustellusti Naton toimintaan ja strategiaan, vaikka lähtökohtaisesti Nato puolustaa sotilaallisesti Pohjois-Atlantin sopimuksen määrittämää aluetta.
 
@@ -303,13 +303,13 @@ Linjaukset:
 * Vahvistetaan sekä Euroopan kykyä kantaa vastuuta omasta puolustuksestaan että transatlanttisia kumppanuuksia.
 * Huolehditaan, että Nato edistää toiminnassaan Pariisin ilmastosopimuksen toteutumista.
 
-## 5. Globaali oikeudenmukaisuus ja kestävä kehitys
+## Globaali oikeudenmukaisuus ja kestävä kehitys
 
 Vauraus on jakautunut maailmassa hyvin epätasaisesti. Rikkaimmat ihmiset kuluttavat luonnonvaroja ja tuottavat ilmastolle haitallisia päästöjä moninkertaisesti suhteessa köyhempiin ihmisiin, jotka kuitenkin joutuvat kärsimään erilaisista ympäristöongelmista rikkaita enemmän. Ilmastokriisi on siis ihmisoikeuskysymys, sillä se vaarantaa miljoonien ihmisten perusoikeudet kuten oikeuden elämään, terveyteen, ravintoon, puhtaaseen veteen ja toimeentuloon. Rinnalla kulkeva toinen ongelma on luontokato.
 
 Vihreät kannattaa oikeudenmukaista vihreää siirtymää ja pyrkii feminismiä ja yhdenvertaisuutta edistävällä ulkopolitiikalla johdonmukaisesti vähentämään köyhyyttä ja eriarvoisuutta ja tukemaan ihmisoikeuksia ja kestävää kehitystä kaikkialla maailmassa.
 
-### 5.1 Johdonmukaista kehityspolitiikkaa ja Agenda 2030
+### Johdonmukaista kehityspolitiikkaa ja Agenda 2030
 
 Kestävän kehityksen tavoitteiden johdonmukainen edistäminen kaikilla politiikan sektoreilla luo parempaa elämää. Köyhyys, eriarvoisuus ja kärsimys vähenevät maailmassa vain aktiivisilla toimilla. Kehitysyhteistyön tulee lähteä paikallisten ihmisten tarpeista ja lähtökohdista, vahvistaa paikallista vaikutusvaltaa yhteisöjen omiin asioihin sekä purkaa globaalia eriarvoisuutta ylläpitäviä valtarakenteita. Onnistunut kehitysyhteistyö lisää yhteiskuntien vakautta sekä vähentää konflikteja.
 
@@ -329,7 +329,7 @@ Linjaukset:
 * Peräänkuulutetaan kunnianhimoista ja oikeudenmukaista jatkoa Agenda 2030:n tavoitteille 2030-lukua varten.
 * Tunnistetaan kolonialismin painolasti ja tarkastellaan kriittisesti omaa valta-asemaa kaikessa kehitysyhteistyössä ja laajemmin kehityspolitiikassa. Tehdään aktiivisesti töitä eriarvoisuutta ylläpitävien ja vahvistavien rakenteiden poistamiseksi.
 
-### 5.2 Kehitysyhteistyön rahoitus vaikuttavalle tasolle
+### Kehitysyhteistyön rahoitus vaikuttavalle tasolle
 
 Vaikuttava kehitysyhteistyö on mahdollista vain vakaalla ja riittävällä rahoituksella. Suomi on jäänyt esimerkiksi Ruotsista, Norjasta ja Tanskasta jälkeen kehitysyhteistyön rahoituksessa.
 
@@ -344,7 +344,7 @@ Linjaukset:
 * Vähintään 85 prosenttia kaikista kehitysyhteistyörahoituksella rahoitetuista toiminnoista täytyy myös tukea sukupuolten tasa-arvoa.
 * Vähintään 15 prosenttia kehitysyhteistyörahoituksesta tulee kohdentaa kansalaisjärjestöjen ja muun kansalaisyhteiskunnan toimintaan. Tunnistetaan kansalaisjärjestöjen merkittävä asema kehitysyhteistyössä.
 
-### 5.3 Aktiivista ilmasto- ja ympäristöulkopolitiikkaa
+### Aktiivista ilmasto- ja ympäristöulkopolitiikkaa
 
 Suomella sekä muilla vaurailla yhteiskunnilla on suurempi vastuu ilmastokriisin ratkaisemisesta. Suomen tulee toimia kansainvälisessä ilmasto- ja ympäristöpolitiikassa vahvana edelläkävijänä, joka edistää yhteistyötä ja peräänkuuluttaa kunnianhimoista ja oikeudenmukaista ilmasto- ja luontopolitiikkaa maailmanlaajuisesti.
 
@@ -362,7 +362,7 @@ Linjaukset:
 * Huolehditaan ajoissa, että ilmastosiirtolaisuutta ja ilmastonmuokkausta ohjaa asianmukainen kansainvälinen sopimuskehikko.
 * Varmistetaan, että sukupuolittuneet vaikutukset ja tasa-arvo huomioidaan ilmaston lämpenemisen torjunnassa sekä Agenda 2030 -tavoitteiden toimeenpanossa. Valtavirtaistetaan sukupuolinäkökulma kansalliseen ja kansainväliseen ilmasto- ja energiapolitiikkaan.
 
-### 5.4 Kestävää taloutta ja kansainvälistä oikeudenmukaisuutta tukevaa kauppapolitiikkaa
+### Kestävää taloutta ja kansainvälistä oikeudenmukaisuutta tukevaa kauppapolitiikkaa
 
 Kauppapolitiikan pelisääntöjen tulee olla kaikille yhdenvertaiset, ja länsimaiden tulee mahdollistaa kaikkien pääsy globaaleille markkinoille. Sääntelyä ja kauppapolitiikkaa voidaan käyttää ohjaamaan diktatuureja kohti ihmisoikeuksien kunnioittamista, kitkemään lapsityövoimaa, edistämään tasa-arvoa ja vähemmistöjen oikeuksia sekä edistämään demokratiakehitystä sekä ympäristön- ja eläinsuojelua.
 
@@ -380,13 +380,13 @@ Linjaukset:
 * Vaikutetaan Euroopan unioniin niin, että EU:n alueella tuotetuissa ja alueelle tuotavissa tuotteissa asetetaan ympäristön- sekä eläinsuojelun ja työolojen minimitaso.
 * Tuetaan kaupan esteiden raivaamista sekä edellytetään kansainvälisiltä kauppa- ja taloussopimuksilta tiukkoja ympäristö-, ihmisoikeus- ja työoloehtoja.
 
-## 6. Suomen alueellisen koskemattomuuden turvaaminen
+## Suomen alueellisen koskemattomuuden turvaaminen
 
 Kaiken turvallisuuden perustana on Suomen alueellisen koskemattomuuden turvaaminen. Vain sen kautta voidaan toteuttaa omia arvoja, omaa hallintoa ja lainsäädäntöä sekä kokonaisturvallisuuden muita osa-alueita. Tämä perusta mahdollistaa myös aktiivisen toiminnan globaalilla areenalla esimerkiksi rauhan rakentamisen ja kehitysyhteistyön tehtävissä.
 
 Puolustusvoimien asema alueellisen koskemattomuuden turvaamisessa on keskeinen. Tukena on muita viranomaisia ja valtionjohto sekä viime kädessä koko yhteiskunta. Rauhan aikana tehtäviä ovat virka-apu ja pelastustoiminta, sotilaallinen puolustus, alueen valvonta sekä kansainvälinen toiminta.
 
-### 6.1 Puolustuspolitiikan tavoitteet, puolustusbudjetti ja hankinnat
+### Puolustuspolitiikan tavoitteet, puolustusbudjetti ja hankinnat
 
 Arvostamme Puolustusvoimien työtä ja haluamme varmistaa maanpuolustuksen rahoituksen sekä toimintaedellytykset kaikissa tilanteissa ja pitkäjänteisesti. Naton vaatimus on, että kunkin jäsenmaan puolustusmäärärahat ovat vähintään kaksi prosenttia bruttokansantuotteesta.
 
@@ -401,7 +401,7 @@ Linjaukset:
 * Vihreät lähtökohtaisesti puolustaa Ahvenanmaan kansainvälistä asemaa demilitarisoituna alueena [poliittisen ohjelmansa](https://www.vihreat.fi/vihreiden-poliittinen-ohjelma-2023-2027/) mukaisesti. Ahvenanmaan statuksen muuttaminen edellyttäisi perusteellista kansainvälisen oikeuden ja Suomen rauhanajan puolustuskyvyn arviota.
 * Tuulivoiman ja aluevalvonnan yhteensovittaminen on mahdollistettava. Tuulivoiman lisärakentamisen estyminen Kaakkois- ja Itä-Suomessa on ongelma paitsi alueellisen yhdenvertaisuuden myös kansallisen huoltovarmuuden ja energiaomavaraisuuden näkökulmasta.
 
-### 6.2 Asevelvollisuus ja reservi ovat maanpuolustuksen perusta
+### Asevelvollisuus ja reservi ovat maanpuolustuksen perusta
 
 Suomen maanpuolustuksen perusta on koko itsenäisyyden ajan ollut yleinen juridisia miehiä koskeva asevelvollisuus ja laaja reservi. Suomen linjaa riittävästä maanpuolustuskyvyn ylläpidosta on arvostettu muualla Euroopassa, varsinkin Venäjän hyökättyä Ukrainaan. Ruotsi oli välillä supistanut maanpuolustustaan ja joutui sitten rakentamaan sitä uudestaan.
 
@@ -425,7 +425,7 @@ Linjaukset:
 * Huomioidaan palvelusta suorittavien moninaiset tarinat ja luodaan uusia mahdollisuuksia esimerkiksi ulkosuomalaisille nuorille oppia suomen kieltä ja kotoutua suomalaiseen yhteiskuntaan palveluksensa aikana.
 * Varmistetaan turvallinen palvelusaika jokaiselle ilman häirintää, simputusta tai mitään syrjinnän muotoja. Jokainen puolustusvoimien johtotehtävissä oleva on koulutettava tunnistamaan häirintä ja velvoitettava puuttumaan siihen. Tulosten varmistamiseksi seksuaalisen häirinnän vähentäminen tulee ottaa osaksi puolustusvoimien tulostavoitteita.
 
-### 6.3 Rajaturvallisuus
+### Rajaturvallisuus
 
 Rajaturvallisuus on tärkeä osa valtion turvallisuutta ja suvereniteettia ja sen tavoitteena on rauhallisten olojen säilyttäminen Suomen rajoilla. Suvereniteettia kuitenkin rajoittavat yleismaailmalliset ja jakamattomat ihmisoikeudet. Rajaturvallisuuden toteuttamisessa on taattava Suomea sitovien ihmisoikeusvelvoitteiden noudattaminen. EU-maissa, Suomi mukaan lukien, on kiristetty maahanmuuttopolitiikkaa kansalliseen turvallisuuteen vetoamalla. Rajojen turvallisuuden takaaminen ei voi tapahtua ihmis- ja perusoikeuksien kustannuksella, vaan niiden toteutumisen varmistaminen on myös rajapolitiikan peruskivi.
 
@@ -442,7 +442,7 @@ Linjaukset:
 * Varmistetaan, että kaikki rajapolitiikka takaa täysimittaisesti ja kaikissa olosuhteissa oikeuden hakea turvapaikkaa eikä aseta ihmisiä vaaraan.
 * Osallistuessaan Frontexin toimintaan ja kehittämiseen Suomen on aktiivisesti vaadittava Frontexia noudattamaan kansainvälisiä ihmisoikeusvelvoitteita.
 
-### 6.4 Sisäinen turvallisuus
+### Sisäinen turvallisuus
 
 Ihmisten hyvinvointi luo edellytykset sisäiselle turvallisuudelle. Sisäinen turvallisuus pohjautuu muun muassa luottamusyhteiskuntaan, korruption vähäisyyteen, tasa-arvon ja yhdenvertaisuuden toteutumiseen, koulutukseen ja varhaiskasvatukseen, syrjäytymisen ehkäisyyyn, kotoutumisen onnistumiseen ja köyhyyden torjuntaan. Näitä käsitellään vihreiden muissa ohjelmissa.
 
@@ -458,11 +458,11 @@ Linjaukset:
 * Ehkäistään aiempaa paremmin kunniaan liittyvää väkivaltaa ja sen uhkaa kontrollin välineenä.
 * Vahvistetaan poliisityötä tekevien henkisiä voimavaroja tarjoamalla kattavammin mahdollisuutta säännölliseen työnohjaukseen.
 
-## 7. Demokratia ja kansalaisoikeudet
+## Demokratia ja kansalaisoikeudet
 
 Demokratia, oikeusvaltioperiaate sekä perus- ja ihmisoikeuksien toteutuminen edistävät maan ja sen kansalaisten turvallisuutta. Ääriliikkeitä tulee torjua ja yhteiskuntarauhaa ylläpitää. Demokratia lähtee vapaista ja luotettavista vaaleista.
 
-### 7.1 Ääriliikkeet ja yhteiskuntarauha
+### Ääriliikkeet ja yhteiskuntarauha
 
 Toimiva sosiaalipolitiikka on paras keino turvata yhteiskunnan vakautta ja ehkäistä ääriliikkeiden syntymistä. Väkivaltaista radikalisoitumista, jengiytymistä sekä järjestäytynyttä rikollisuutta tulee torjua erityisesti ennaltaehkäisevällä työllä ja varhaisella puuttumisella. Ennaltaehkäisy on aina tehokkaampaa kuin seurausten korjaaminen. Se lisää ihmisten turvallisuutta ja turvallisuuden tunnetta sekä vähentää eri väestöryhmien välistä vastakkainasettelua ja yhteiskunnan polarisaatiota.
 
@@ -483,7 +483,7 @@ Linjaukset:
 * Ehkäistään vankiloissa tapahtuvaa radikalisoitumista ja vähennetään vapautuviin vankeihin liittyviä uhkia.
 * Tunnistetaan ja torjutaan väkivaltaisten ekstremististen ryhmien toimintaan rekrytointia.
 
-### 7.2 Avoin demokratia ja vapaat kansalaiset
+### Avoin demokratia ja vapaat kansalaiset
 
 Vapaat vaalit, itsenäinen media, perus- ja ihmisoikeuksien kunnioittaminen, luottamuksen arvoiset viranomaiset sekä riippumaton oikeusjärjestelmä ovat suomalaisen demokratian kulmakiviä. Yhteisen päätöksenteon perusedellytys on avoin julkinen keskustelu, jossa vastakkain kamppailevat ideat ja ajatukset, eivät henkilöt.
 
@@ -502,7 +502,7 @@ Linjaukset:
 * Aloitetaan kuluvan vaalikauden aikana parlamentaarinen yhteistyö vaalihäirinnän torjumiseksi, mikä turvaa kansalaisten kiinnostusta ja osallistumista yhteiskunnalliseen päätöksentekoon. Vaaliehdokkuuden on oltava turvallista jokaiselle taustasta riippumatta. Puolueiden ja ehdokkaiden vaalimateriaalin kohtaamaa vandalismia on ehkäistävä tehokkaasti.
 * Huolehditaan oikeusjärjestelmän riippumattomuudesta suhteessa vallanpitäjiin.
 
-### 7.3 Medialukutaito ja disinformaatio
+### Medialukutaito ja disinformaatio
 
 2000-luvun internet-aika on samanaikaisesti muuttunut sekä vapaan tiedonvälityksen haastajaksi että mahdollistajaksi. Kun kaikki mediasisältö ei enää ole journalistisesti tuotettua, tämä kasvattaa kansalaisten omaa vastuuta ja medialukutaidon vaatimuksia. Haasteet vain kasvavat, kun tekoäly mahdollistaa väärennetyt videot ja muun ammattimaisen disinformaation.
 
@@ -518,13 +518,13 @@ Linjaukset:
 * Turvataan faktapohjaisen tiedonvälityksen toimintaedellytykset ja estetään uutiserämaiden syntyminen.
 * Turvataan Yleisradion rahoitus- ja toimintaresurssit riippumattoman, monikielisen tiedonvälityksen takaamiseksi
 
-## 8. Arki ja elämä turvallisuuden peruskohteina
+## Arki ja elämä turvallisuuden peruskohteina
 
 Turvallisuusuhkien maailmassa uutena elementtinä mukaan ovat tulleet hybridioperaatiot. Niissä maan tai kansan arkea ja toimintakykyä koetellaan erilaisilla teknisiä, sosiaalisia, taloudellisia ja sotilaallisia keinoja yhdistävällä monialaisella vaikuttamisella.
 
 Nykyisessä monimutkaisessa maailmassa tarvitaan erityisesti kriiseihin varautumista ja kriisien kestämistä. Erilaista sietokykyä ja selviytymistaitoa kuvataan sanalla resilienssi.
 
-### 8.1 Varmistetaan toimiva arki kaikissa tilanteissa
+### Varmistetaan toimiva arki kaikissa tilanteissa
 
 Kansalaisten perustarpeisiin ja viranomaisten sekä yhteiskunnan toimintaan tarvitaan sähköä ja muuta energiaa, ruokaa ja vettä niin rauhan oloissa kuin kriisin ja sodan aikanakin. Suomessa kylmä talvi aiheuttaa lisähaasteita toimintakyvylle poikkeusoloissa. Hajautettu ja puhdas energiantuotanto, autoriippuvuuden vähentäminen ja ruoan pientuotanto lisäävät kokonaisturvallisuutta.
 
@@ -549,7 +549,7 @@ Linjaukset:
 * Huolehditaan kulttuuriomaisuuden suojelemisesta.
 * Huomioidaan poikkeusolojen väestönsuojelun suunnittelussa maatalous- ja kotieläimet.
 
-### 8.2 Huoltovarmuus, keskinäisriippuvuus ja talouselämän vakaus
+### Huoltovarmuus, keskinäisriippuvuus ja talouselämän vakaus
 
 Globalisoitunut maailma aiheuttaa uudenlaisia haasteita Suomen pienelle ja muusta Euroopasta maantieteellisesti kaukana olevalle taloudelle. Yhteiskunnan kriisinkestävyydelle välttämättömät perustoiminnot on turvattava kaikissa tilanteissa niin materiaalisten kuin aineettomienkin tarpeiden osalta. Samanaikaisesti kaikista kansainvälisistä keskinäisriippuvuuksista luopuminen ei ole käytännössä mahdollista tai turvallisuudelle välttämätöntä. Lisäksi talous- ja maksujärjestelmän vakauden takaaminen on välttämättömyys kansalaisten sujuvan arjen ja taloudellisen toimeliasuuden edellytyksien varmistamiselle. Myös tiedon huoltovarmuus on turvattava tulevien kriisien varalle.
 
@@ -566,7 +566,7 @@ Linjaukset:
 * Selvitetään monopolien aiheuttamat riskit maksuliikenteen toimivuudelle. Toteutetaan selvitys ja tarvittaessa vähennetään EU-tasolla sähköisen maksujärjestelmän riippuvuutta suurista yksittäisistä (amerikkalaisista) pankeista.
 * Turvataan tiedonvälitykselle kriittisten kaupallisten yritysten ja julkisen palvelun toimijan toimintaedellytykset kriisitilanteissa.
 
-### 8.3 Luonto haastaa ja tulee haastetuksi
+### Luonto haastaa ja tulee haastetuksi
 
 2000-luku on suuren ekologisen murroksen aikaa. Muuttuva ilmasto ja ympäristö haastavat yhteiskuntien perusrakenteita ja vakiintuneita elämäntapoja. Muutos aiheuttaa myös suoria riskejä niin elinkeinoille kuin ihmisten hengelle ja terveydelle. Samanaikaisesti ihmisen toiminta aiheuttaa yhä suurempia uhkia koko elonkirjolle. Kannamme huolta ihmisten hyvinvoinnin lisäksi myös luonnon asemasta yhteisellä planeetalla.
 
@@ -581,7 +581,7 @@ Linjaukset:
 * Varmistetaan vihreän siirtymän globaali kestävyys niin, että vihreä siirtymä Suomessa ei aiheuta ja kiihdytä luontokatoa muissa maissa kaivannaisteollisuuden ja biotalouden kasvavan roolin myötä.
 * Kehitetään eläinpelastustoimintaa ja saatavuutta koko maassa yhteistyössä viranomaisten, kuntien ja kolmannen sektorin kanssa.
 
-### 8.4 Henkinen kriisinkestävyys
+### Henkinen kriisinkestävyys
 
 Kriisitilanteissa kansakunnan henkinen kestävyys ja paineensietokyky vaikuttavat ratkaisevasti sekä kriisin aikaiseen selviytymiseen että myöhempään jälleenrakennukseen. Kriisinkestävyyttä ylläpitää ja parantaa luottamus sekä ihmisten välillä että ihmisten luottamus yhteiskunnallisiin instituutioihin. Luottamusta parantaa yhteiskunnallinen liikkuvuus sekä sosiaalinen ja taloudellinen tasa-arvo. Sen sijaan yhteiskunnan voimakas jakautuminen esimerkiksi luokka-aseman, asuinseudun, syntyperän tai uskonnon perusteella heikentää luottamusta ja siten yhteiskunnan voimavaroja kriisin keskellä.
 
@@ -598,7 +598,7 @@ Linjaukset:
 * Kehitetään tietoista puolustusta ulkomailta tulevaa informaatiovaikuttamista vastaan.
 * Vahvistetaan ikätasoisesti lasten ja nuorten luottamusta yhteiskunnallisiin instituutioihin niin varhaiskasvatuksessa, perusopetuksessa kuin 2. asteen oppilaitoksissa.
 
-### 8.5 Kyberturvallisuus
+### Kyberturvallisuus
 
 Kyberturvallisuudella tarkoitetaan digitaalisen ja verkottuneen yhteiskunnan turvallisuutta ja sen vaikutusta yhteiskunnan toimintoihin. Kyse on tavoitetilasta, jossa digitaalisesta toimintaympäristöstä riippuvaisiin toimintoihin kohdistuvat riskit ovat hallinnassa, myös häiriötilanteissa.
 
@@ -622,7 +622,7 @@ Linjaukset:
 * Hyvä kyberturvallisuus ja teknologinen kehitys ehkäisee ja poistaa monia riskejä ja vähentää rikollisuuden mahdollisuuksia. Tuetaan suomalaisen kyberturvallisuusosaamisen kehittämistä ja kyberturvallisuuden ratkaisutuotantoa.
 * Vahvistetaan huoltovarmuuskriittisten yritysten ja viranomaisten yhteistyötä kyberturvallisuuden saralla.
 
-### 8.6 Yksityisyys, tietoturvallisuus ja tiedustelu
+### Yksityisyys, tietoturvallisuus ja tiedustelu
 
 Kun digitaalisuus nyt ja tulevaisuudessa on läsnä lähes kaikessa, myös kyberturvallisuus on keskeinen edellytys toimivalle ja luotettavalle yhteiskunnalle. Terrorismia ja muuta verkkoa hyödyntävää rikollisuutta torjuttaessa käytettävien keinojen on oltava oikeasuhtaisia. Siihen on kiinnitettävä erityistä huomiota mm. arvioitaessa viranomaisten toimivaltuuksia, tiedonsaanti- ja luovutusoikeuksia sekä teknisen valvonnan ja biometriikan käyttöä lainvalvonta- ja rikoksentorjuntatarkoituksissa.
 

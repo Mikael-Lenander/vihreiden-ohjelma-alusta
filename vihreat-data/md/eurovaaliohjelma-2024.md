@@ -6,7 +6,7 @@ Vihreiden EU on vahva ihmisoikeuksien, kansainvälisen oikeuden ja rauhan sekä 
 
 Suomen täytyy olla aktiivinen vaikuttaja EU-pöydissä. Jäseninä olemme osa yhteisöä, jonka päätöksillä ja linjauksilla on aina vaikutusta myös maamme sisäiseen politiikkaan, yhteiskuntaan, elinkeinoelämään ja kansalaisten arkeen. Vihreät rakentaa EU:ta, joka vastaa niin globaaleihin kuin sisäisiin haasteisiin unionin tasolta aina yksilön tasolle. Epävarmoina aikoina yhteisön tuoman tuen ja turvan merkitys korostuu.
 
-## 1. EU:n on oltava ilmastokriisin ja luontokadon torjunnan veturi
+## EU:n on oltava ilmastokriisin ja luontokadon torjunnan veturi
 
 Vuosi 2023 oli mittaushistorian kuumin. Euroopassa se näkyi muun muassasietämättömänä kuumuutena, kuivuutena ja tulvina. Kunnianhimoiset ilmastotoimet on toteutettava ja luonnon monimuotoisuus suojeltava nyt.
 
@@ -42,7 +42,7 @@ EU on pitkään ollut ympäristötavoitteiden veturi, joka kirittää muuta maai
 * Lopetetaan saastuttaminen, joka uhkaa luonnon monimuotoisuutta ja heikentää esimerkiksi Itämeren tilaa. Tiukennetaan sääntelyä, jolla rajoitetaan ravinteiden valumista maataloudesta ja teollisuudesta Itämereen.
 * Kielletään turkistarhaus ja tuotantoeläinten häkkikasvatus EU-alueella. Maksetaan tuottajille korvausta siirtymiseksi muuhun elinkeinoon tai tuotantotapojen muuttamiseksi.
 
-## 2. EU on rauhan ja turvallisuuden projekti
+## EU on rauhan ja turvallisuuden projekti
 
 Venäjän hyökkäyssota Ukrainassa on heikentänyt Euroopan turvallisuustilannetta.  Kansanmurha Gazassa on kiristänyt geopoliittista ilmapiiriä. Tällaisina aikoina on tärkeää pitää kiinni sääntöperustaisesta kansainvälisestä järjestelmästä. Venäjä ja Kiina pyrkivät hävyttömästi käyttämään valtaa Euroopassa ja muualla omien rajojensa ulkopuolella. Tällaisina aikoina on tärkeää pitää kiinni sääntöperustaisesta kansainvälisestä järjestelmästä.
 
@@ -76,7 +76,7 @@ Suomen itärajasta on tullut Euroopan unionin jäsenyyden myötä osa EU:n itär
 * EU:n täytyy aktiivisesti vaikuttaa sen puolesta, että vuosikymmeniä jatkunut Israelin miehitys ja apartheid-politiikka koko Israel-Palestiinassa päättyy ja Gazaan saadaan välitön ja pysyvä tulitauko.
 * EU:n on kiireellisesti asetettava Israelille kauppapakotteita, edellytettävä jäsenmailta asekaupan jäädyttämistä, sekä edellytettävä Israelilta Kansainvälisen tuomioistuimen välipäätöksen välitöntä noudattamista kansanmurhaan johtavien toimien pysäyttämiseksi.
 
-## 3. Kestävä talous ja reilu työelämä lisäävät kaikkien hyvinvointia
+## Kestävä talous ja reilu työelämä lisäävät kaikkien hyvinvointia
 
 Talouden epävarmuus ja elinkustannusten nousu ovat lisänneet monen huolta omasta taloustilanteesta. Samalla Suomen talouskehitys uhkaa hidastua ja vihreän talouden investoinnit hyytyä. Tarvitsemme uudistuksia, joiden myötä taloudellinen toiminta mahtuu planeetan rajoihin ja sosiaalinen oikeudenmukaisuus toteutuu.
 
@@ -127,7 +127,7 @@ Tämän tulee koskea myös muualta EU:hun muuttaneita työntekijöitä koodareis
 * Helpotetaan muuttamista toiseen jäsenmaahan työn perässä. Taataan pääsy toisen maan palveluiden piiriin ensimmäisestä päivästä alkaen yhteensopivan sähköisen tunnistautumisen avulla.
 * Varmistetaan riittävällä sääntelyllä ja toimivalla oikeusturvalla, että siirtolaistyövoimaa ei käytetä hyväksi työmarkkinoilla.
 
-## 4. Osaaminen, koulutus ja tutkimus ovat avain tulevaisuuteen
+## Osaaminen, koulutus ja tutkimus ovat avain tulevaisuuteen
 
 Nuorilta vaaditaan yhä monipuolisempaa osaamista ja toisaalta edellytetään syvällistä perehtymistä yhteen tiettyyn alaan. Pitkään työelämässä olleiden taas pitää jatkuvasti uudistaa osaamistaan. EU:n tulee olla koulutuksessa mukana luomalla vähimmäisehtoja, jotta jokaisella EU-kansalaisella on mahdollisuus kouluttautua pienestä pitäen.
 
@@ -157,7 +157,7 @@ Panostamalla innovaatioihin ja tutkimukseen yhdessä EU-tasolla parannamme talou
 * Kohdistetaan tutkimus- ja innovaatiopanostuksia ilmaston- ja ympäristökriisin sekä muiden yhteiskuntiemme kohtaamien suurten haasteiden ratkaisuun kehittämällä ja kasvattamalla Horisontti Eurooppa -ohjelmaa.
 * Kaksinkertaistetaan EU-alueen tutkimus- ja innovaatiopanostukset. Kehitetään tutkimus- ja kehittämistyön rahoitusmahdollisuuksia eri rahoitusinstrumenttien kuten LIFE-ohjelman kautta.
 
-## 5. Ihmisoikeudet, demokratia ja oikeusvaltio ovat EU:n ydin
+## Ihmisoikeudet, demokratia ja oikeusvaltio ovat EU:n ydin
 
 Ihmisoikeudet, demokratia ja oikeusvaltio ovat EU:n perusperiaatteita. Ne ovat kuitenkin yhä pahemmin uhattuna osassa jäsenmaita. Lisäksi äärioikeisto pyrkii kaikkialla Euroopassa herättämään pelkoa ja vihaa maahanmuuttajia kohtaan sekä heikentämään naisten, sukupuoli- ja seksuaalivähemmistöjen ja rodullistettujen ihmisten oikeuksia. Me
 

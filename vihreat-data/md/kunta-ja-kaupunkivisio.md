@@ -1,10 +1,10 @@
-## 1. Johdanto
+## Johdanto
 
 Tämä Vihreiden kunta- ja kaupunkivisio kuvaa tulevaisuuden kaupungin ja kunnan ideaalia muutaman kymmenen vuoden aikajänteellä – välillä on suunnattava katsetta pidemmälle. On tietysti selvää, että kunnat ovat erilaisia ja samat asiat eivät toimi kaikkialla. Tämän kirjoittajat ovat pyrkineet muistamaan ja toivovat lukijankin muistavan.
 
 Aloitamme lapsista, sillä vision aikajänne on pitkä.
 
-## 2. Elinvoimainen ja asukkaidensa näköinen kunta ja kaupunki
+## Elinvoimainen ja asukkaidensa näköinen kunta ja kaupunki
 
 ### Lasten kunta ja kaupunki
 
@@ -60,7 +60,7 @@ Kaupunkien vaikutus ulottuu paljon niiden rajojen ulkopuolelle. Huomiota kannatt
 
 Omat vaikutuksensa tulevat olemaan tulevilla sote-maakunnilla, jotka toteutuessaan vievät kuntien tehtäviä maakuntien laajemmille hartioille. Tämä vähentää kuntien tehtäviä, ja antaa mahdollisuuksia järjestää toimintoja uudelleen – etenkin monessa pienemmässä kunnassa tämä voi antaa mahdollisuuksia profiloitumiseen, vaikka samalla myös resurssit pienenevät. Nämä profiloitumisen paikat tulee ottaa huomioon myös yhteisiä suunnitelmia tehdessä – kuten päätettäessä maakuntakaavoista.
 
-## 3. Kestävä kunta ja kaupunki
+## Kestävä kunta ja kaupunki
 
 ### Saavutettava ja kompakti yhdyskuntarakenne
 
@@ -156,7 +156,7 @@ Vihreässä kunnassa uusien rakennusten suunnittelussa on minimoitu kaikki ympä
 
 Vihreässä kunnassa vähennetään fossiilisten rakennusmateriaalien käyttöä sekä edistetään puurakentamista ja siihen liittyvää epätarkoituksenmukaista sääntelyä on purettu. Puu on ekologinen ja kestävä rakennusmateriaali, joka toimii hiilivarastona koko rakennuksen elinkaaren ajan.
 
-## 4. Epilogi
+## Epilogi
 
 Tämä visio hahmottelee eri näkökulmista, millainen suomalainen kunta voisi olla tulevaisuudessa. Jos kaiken tiivistää ja kuvailee kuntaa yhdellä sanalla, se sana olisi välittävä.
 

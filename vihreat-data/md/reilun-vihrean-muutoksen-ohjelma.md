@@ -30,7 +30,7 @@ Puhtaat ratkaisut tuovat uusia työpaikkoja ja vientiä. Globaalit puhtaan tekno
 
 **Tämä ohjelma linjaa vihreiden reilun muutoksen suuntaviivoja. Se kuvaa meidän ratkaisujamme reilun muutoksen haasteeseen – siihen, miten tarvittavat muutokset tehdään sosiaalisesti oikeudenmukaisesti. Monia näistä ratkaisuista on käsitelty laajemmin ja tarkemmin Vihreiden teemakohtaisissa ohjelmissa sekä puolueen poliittisessa ohjelmassa.**
 
-## 1. Tulevaisuudenkestävä talous
+## Tulevaisuudenkestävä talous
 
 Nykyinen talousjärjestelmä ja sääntely-ympäristö kasvattavat ympäristöhaittoja ja luonnonvarojen kulutusta. Päätöksenteko ei anna arvoa kauempana tulevaisuudessa oleville hyödyille, eikä ota riittävästi huomioon kauempana tulevaisuudessa olevia kustannuksia.
 
@@ -185,7 +185,7 @@ Toimenpiteet:
 * Nostetaan Suomen kehitysyhteistyön rahoitus yhteen prosenttiin BKT:sta ja suunnataan varat erityisesti ilmastorahoitukseen sekä kaikista haavoittuvimmassa asemassa olevien ihmisten tilanteen parantamiseen.
 * Uudistetaan EU:n ja YK:n pakolaisuuskriteerejä niin, että ilmastonmuutoksen aiheuttamat vakavat kriisit huomioidaan kriteereissä.
 
-## 2. Työllisyys kestävässä yhteiskunnassa
+## Työllisyys kestävässä yhteiskunnassa
 
 Työllisyyspolitiikka on olennainen osa hiilineutraalin Suomen tavoittelua. Päästövähennykset ja luonnonvarojen käytön vähentäminen muuttavat tuotantoa ja työmarkkinoita, kun uusia ammatteja ja elinkeinoaloja syntyy ja toisilla toiminta vähenee tai loppuu. Muutoksessa pitää varmistaa, ettei kukaan jää ilmastotoimien vuoksi tyhjän päälle.
 
@@ -246,7 +246,7 @@ Toimenpiteet:
 * Parannetaan itsensätyöllistäjien, muiden epätyypillisissä työsuhteissa olevien ja yrittäjien sosiaaliturvaa. Helpotetaan ensimmäisen työntekijän palkkausta.
 * Luodaan reilut säännöt alustatalouden työlle ja pätkätyöläisten lomapankki. Tämä tekee mahdollisemmaksi valita itse huokoisemman työelämän malleja. Edistetään ryhmäkanneoikeutta.
 
-## 3. Reilu muutos mahdollistaa hyvän arjen kaikkialla Suomessa
+## Reilu muutos mahdollistaa hyvän arjen kaikkialla Suomessa
 
 Ratkaisut ilmastonmuutokseen ja ympäristön tilan parantamiseen ovat erilaiset eri puolilla Suomea. Reilu muutos edellyttää alueellisten erojen tunnistamista ja niiden huomioimista ilmasto- ja ympäristöpolitiikassa. Esimerkiksi liikenteen päästöjen vähentämiseksi voidaan kasvukeskuksissa edistää joukkoliikenteen käyttöä, harvemmin asutuilla alueilla vähäpäästöisempää autoilua.
 
@@ -324,7 +324,7 @@ Toimenpiteet:
 * Tuetaan maanviljelyn siirtymää kohti kasvispainotteisempaa tuotantoa esimerkiksi verottamalla eläintuotteiden päästöjä. Veron tulee kohdella neutraalisti kotimaisia ja ulkomaisia tuottajia ja huomioida eläinten hyvinvointi.
 * Edistetään kansainvälisesti oikeudenmukaisempaa ja ympäristöystävällisempää ruoantuotantoa, jotta tuottajahinnat, työolosuhteet ja maatalouden ympäristökuorma saadaan kohtuulliselle tasolle kansainvälisesti.
 
-## 4. Aktiivinen kansalaisuus reilussa ja ekologisessa yhteiskunnassa
+## Aktiivinen kansalaisuus reilussa ja ekologisessa yhteiskunnassa
 
 Hyvinvointi rinnastetaan liian usein vain mahdollisuuteen kuluttaa. Hyvinvointiin tarvitaan kuitenkin kohtuullista elintasoa, merkityksellisiä ihmissuhteita, mielekästä toimintaa ja henkistä hyvinvointia. Oleellista on tukea kokonaisvaltaista hyvinvointia.
 

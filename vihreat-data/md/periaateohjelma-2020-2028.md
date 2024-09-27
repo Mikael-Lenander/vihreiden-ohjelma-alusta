@@ -1,14 +1,14 @@
 Vihreiden periaateohjelman tavoitteena on kuvata, millaista maailmaa haluamme rakentaa ja miten sen haluamme tehdä. Tämä ohjelma kertoo keskeisistä arvoista ja periaatteista, jotka ohjaavat Vihreiden poliittista ajattelua ja toimintaa kaikilla päätöksenteon tasoilla. Poliittinen tavoiteohjelma ja muut puolueen ohjelmat sisältävät tässä esitettyjä periaatteita yksityiskohtaisempia linjauksia.
 
-## 1. Vihreät muuttavat maailmaa, jotta elämä maapallolla voi kukoistaa
+## Vihreät muuttavat maailmaa, jotta elämä maapallolla voi kukoistaa
 
 Teemme työtä ilmastonmuutoksen ja kuudennen sukupuuttoaallon pysäyttämiseksi, jotta tuleville sukupolville jää elinvoimainen maapallo. Taistelemme tasa-arvoisen, turvallisen ja oikeudenmukaisen tulevaisuuden puolesta. Puolustamme luontoa ja ihmisiä ahneutta ja lyhytnäköisyyttä vastaan. Teemme politiikkaa periaatteidemme ja tutkitun tiedon pohjalta emmekä eturyhmien lähtökohdista. Annamme äänen niille, joiden ääni ei muuten kuulu – luonnolle, eläimille ja tuleville sukupolville – ja varmistamme, että haavoittuvassa asemassa olevat saavat äänensä kuuluviin.
 
 Vihreät on tulevaisuuspuolue ja yhteiskunnallinen liike, joka kokoaa erilaisista taustoista tulevat ihmiset muuttamaan yhdessä maailmaa. Rakennamme parempaa arkea ja parempaa huomista jokaiselle. Teemme työtä sellaisen maailman puolesta, joka säilyttää toimintakykynsä kaikissa tilanteissa ja kykenee kohtaamaan yllättäviäkin vastoinkäymisiä rajat ylittävällä yhteistyöllä.
 
-## 2. Kestävä maailma
+## Kestävä maailma
 
-### 2.1 Ratkaisemme ilmastokriisin ja puolustamme luontoa ja eläimiä
+### Ratkaisemme ilmastokriisin ja puolustamme luontoa ja eläimiä
 
 *Ihminen on osa luontoa ja siten täysin luonnosta riippuvainen. Luonto on suomalaisille rakas, ja siitä on voitava nauttia sekä maalla että kaupungeissa. Luonnolla on ihmisen tarpeista riippumaton itseisarvo. Saimaannorpalla, tunturikoivulla ja miljoonilla muilla lajeilla on luovuttamaton oikeus elää tällä planeetalla. Vanha lehto jykevine tammineen, tupasvillan täplittämä aapasuo, kukkiva luonnonniitty ja vapaana virtaava koski ovat arvokkaita paitsi meille ihmisille, myös itsessään. On ryhdyttävä toimiin valjastettujen jokien, hakattujen metsien, ojitettujen soiden ja sinileväkukinnoista kärsivien vesistöjen tilan parantamiseksi. Ympäristö asettaa toiminnallemme rajat, eikä planeetan kantokykyä voi kestävästi ylittää. Olemme kuitenkin eläneet vuosikymmenet yli luonnon uusiutumiskyvyn. Meillä on kiire korjata toimintamme, jotta monimuotoinen elämä maapallolla voi jatkua. Vihreiden tavoitteena on etsiä keinoja ihmisen ja koko elonkirjon kestävään yhteiseloon.*
 
@@ -26,7 +26,7 @@ Eläinperäisten tuotteiden käyttöä tulee pikaisesti vähentää. Räikeä el
 
 Ympäristöongelmat eivät tunne rajoja, joten maailma tarvitsee yhteisiä pelisääntöjä ja sopimuksia niiden torjumiseksi. Ilmasto-oikeudenmukaisuuden periaatteen mukaisesti rikkailla mailla on vaurautensa ja historiallisen päästökertymänsä vuoksi muita suurempi vastuu ilmastokriisin ratkaisemisesta. Kehittyviä maita on tarvittaessa tuettava siirtymässä kohti hiilinegatiivista yhteiskuntaa. Suomella on osaamisemme ja kehittyneen teknologiamme ansiosta paitsi velvollisuus myös mahdollisuus toimia ilmastonmuutoksen torjunnan ja ympäristönsuojelun edelläkävijänä.
 
-### 2.2 Teemme taloudesta reilun ja kestävän
+### Teemme taloudesta reilun ja kestävän
 
 *Vihreät tavoittelevat kestävää globaalia taloutta, jossa ihmisten hyvinvointi, työolot, ihmisoikeudet ja yhteiskuntien vakaus turvataan ja köyhyys poistetaan. Meitä velvoittaa vastuu tuleville sukupolville. Haluamme, että päästöt ja ympäristön tilan heikentäminen saadaan kuriin ja että saastuttaja maksaa aina laskun. Haluamme luoda entistä paremmat edellytykset ympäristön- ja ilmastonsuojelua edistävälle ja ihmisoikeuksia kunnioittavalle liiketoiminnalle. Haluamme lopun luonnonvarojen ylikulutukselle. Talouskasvun tulee jatkossa tapahtua sosiaalisesti oikeudenmukaisella ja ympäristön kannalta kestävällä tavalla.*
 
@@ -36,7 +36,7 @@ Talousjärjestelmän päivitys mahdollistaa myös historiallisten epäkohtien ko
 
 Talouden tulee toimia ihmisten hyvinvoinnin, sosiaalisen oikeudenmukaisuuden sekä luonnon ja ympäristön kantokyvyn turvaamiseksi. Vihreille talouskasvu ei ole itseisarvo. Markkinatalous ja julkinen talous ovat vihreille työkaluja, joilla näitä päämääriä voidaan tehokkaasti edistää. Se edellyttää demokraattisesti asetettuja puitteita markkinoiden toiminnalle. Vihreällä talouspolitiikalla verotetaan saastuttavaa kulutusta ja tuotantoa. Negatiivisten ympäristövaikutusten hinta on sisällytettävä kokonaisuudessaan tuotteiden ja palveluiden hintoihin, mutta kuitenkin siten, että ne jakautuvat oikeudenmukaisesti ihmisten kesken.
 
-### 2.3 Ihmiset ovat yhteisen maailman kansalaisia
+### Ihmiset ovat yhteisen maailman kansalaisia
 
 *Vihreille ihmiset ovat ensisijaisesti yhteisen maailman kansalaisia. Välittäminen ei saa pysähtyä valtioiden rajoihin. Ihmisillä on oikeus elää vapaana puutteesta ja kurjuudesta kaikkialla maailmassa. Suomen kaltaisilla vaurailla mailla on velvollisuus edistää tämän oikeuden toteutumista. Suomen on edistettävä globaalia oikeudenmukaisuutta sekä tehtävä yhteistyötä kehittyvien maiden kanssa rauhan ja vakauden saavuttamisessa, tasa-arvon edistämisessä, ilmastonmuutoksen torjunnassa ja siihen sopeutumisessa sekä talousjärjestelmän rakenteellisessa muutoksessa.*
 
@@ -52,9 +52,9 @@ Erilaiset jakolinjat, vastakkainasettelu ja voimapolitiikan paluu tekevät sää
 
 Kansainvälisen yhteistyön syventäminen, demokraattisten rakenteiden vahvistaminen ja yhteisten pelisääntöjen kirkastaminen ovat tarpeen, jotta esimerkiksi lasten oikeuksien sopimuksen, vammaisten henkilöiden oikeuksien sopimuksen, muiden ihmis-oikeussopimusten, YK:n kestävän kehityksen ja Pariisin ilmastosopimuksen tavoitteet voidaan saavuttaa.
 
-## 3. Jokaiselle hyvä elämä
+## Jokaiselle hyvä elämä
 
-### 3.1 Perus- ja ihmisoikeudet ovat ihmiskäsityksemme perusta
+### Perus- ja ihmisoikeudet ovat ihmiskäsityksemme perusta
 
 *Ihmisoikeudet kuuluvat kaikille ja ne ovat yleismaailmallisia, luovuttamattomia sekä perustavanlaatuisia. Kaiken yhteiskunnallisen toiminnan on perustuttava ihmisoikeuksien kunnioittamiseen. Vihreille yhdenvertaisuus ja syrjimättömyys ovat tärkeitä arvoja. Mikään yksittäinen ominaisuus ei saa määrittää yhteiskunnan silmissä yksilön arvoa tai ihmisyyttä.*
 
@@ -76,7 +76,7 @@ Meidän on kohdeltava oikeudenmukaisesti niitä, jotka hakevat täältä turvaa.
 
 Vihreät kunnioittaa uskonnonvapautta ja haluaa, että kaikkia maailmankatsomuksia kohdellaan tasa-arvoisesti. Uskontojen välistä yhteistyötä tulee tukea ja edistää rauhantyönä. Erilaisilla maailmankatsomuksellisilla yhteisöillä ja yhteisöihin kuulumattomilla tulee olla yhdenvertainen asema suhteessa valtioon.
 
-### 3.2 Koulutus ja sivistys ovat yhteiskunnan järki ja sydän
+### Koulutus ja sivistys ovat yhteiskunnan järki ja sydän
 
 *Vihreille sivistys on mittaamattoman arvokasta. Se on niin yksilöiden kuin yhteiskunnankin vapauden tae. Sivistys on paljon muutakin kuin osaamisen, tiedon ja taitojen kartuttamista. Sivistyksessä on kyse maailmankuvan muovautumisesta, ihmisenä kasvamisesta, uuden luomisesta ja ajattelun itsenäistymisestä. Sivistys antaa näkökulmia ja ehkä vastauksiakin olemisen suuriin kysymyksiin ja luo kykyä esittää uusia kysymyksiä. Siksi puolustamme tinkimättömästi tasa-arvoista koulutusta, vapaata tiedettä ja monipuolista kulttuuria.*
 
@@ -92,7 +92,7 @@ Laadukas koulutus ja tutkimus edellyttävät vakaata, riittävää ja ennustetta
 
 Haluamme, että Suomessa sivistys, tiede, taide ja kulttuuri kukoistavat. Puolustamme taiteen vapautta ja itseisarvoa sekä kulttuuripalveluiden monimuotoisuutta ja saavutettavuutta. Kynnyksen astua kirjastoon, teatteriin, konserttiin, museoon tai galleriaan on oltava matala ihan jokaiselle. Erityisesti lapsilla on oltava mahdollisuus kulttuurin harrastamiseen taustasta, asuinpaikasta tai varallisuudesta riippumatta. Kulttuurin riittävä tukeminen tarkoittaa yhä useammalle mahdollisuuksia sekä itsensä toteuttamiseen että taiteesta nauttimiseen. Taiteilijoiden ja tutkijoiden on pystyttävä pelotta omistautumaan uuden etsimiselle.
 
-### 3.3 Me emme päästä ketään putoamaan
+### Me emme päästä ketään putoamaan
 
 *Vihreät haluaa edistää jokaisen ihmisen oikeutta ja mahdollisuuksia hyvään elämään ja onnellisuuteen. Hyvinvointi on perusoikeus, joka kuuluu varallisuudesta, taustasta ja yksilöllisistä ominaisuuksista riippumatta kaiken ikäisille, kaikille sukupuolille, täällä syntyneille ja muualta muuttaneille. Hyvinvointivaltiomme onnistumisesta kertoo se, kuinka tasaisesti hyvinvointi jakautuu ja kuinka kaikkein haavoittuvimmassa asemassa olevia kohdellaan. Köyhyys ei synny itsestään. Se on seurausta tehdystä tai tekemättä jääneestä politiikasta. Vihreille köyhyyden torjunta on yksi politiikan tärkeimmistä tehtävistä.*
 
@@ -110,7 +110,7 @@ Hyvinvointivaltion kestävyyden ja rahoittamisen kannalta on tärkeää, että m
 
 Nykyaikainen teknologia mahdollistaa monien hyvinvointivaltion tärkeiden palveluiden tarjoamisen suurelle joukolle kätevästi myös digitaalisesti. Digitalisaation nopea kehitys voi kuitenkin syrjäyttää ihmisiä ja ihmisryhmiä. Tämä on estettävä tarjoamalla neuvontaa, ohjausta, rinnalla kulkemista ja puolesta asiointiapua.
 
-### 3.4 Jokaiselle vapaus elää haluamallaan tavalla, kunhan ei rajoita toisten oikeutta samaan
+### Jokaiselle vapaus elää haluamallaan tavalla, kunhan ei rajoita toisten oikeutta samaan
 
 *Ihmisten vapauden kunnioittaminen ja edistäminen on keskeinen osa vihreää ajattelua. Jokaisella on oikeus elää haluamallaan tavalla, kunhan ei rajoita toisten oikeutta samaan. Vapauden kanssa käsi kädessä kulkee vastuu. Jokaisella tulee olla oikeus ja vapaus määritellä oma itsensä ja elämänsä. Samalla meillä on ihmisinä ja yhteiskuntana kollektiivinen vastuu toisistamme ja ympäristöstämme nyt ja tulevaisuudessa. Hyvinvointimme perustuu toistemme tukemiseen ja yhteiseen vastuunkantoon.*
 
@@ -130,9 +130,9 @@ Globaalia taloudellista eriarvoisuutta on vähennettävä niin kauppapolitiikan 
 
 Teknologinen kehitys ja tiedon lisääntyminen muuttavat maailmaamme kiihtyvässä tahdissa. Samalla kehittyvä informaatioteknologia vapauttaa ihmisiä rakentamaan yksilöllisesti oman elämänsä suuntaa. Vihreät haluaa tukea sellaisen teknologian kehitystä, joka auttaa rakentamaan kestävämpää maailmaa. Teknologian nopea kehitys voi kuitenkin tuoda eteen uusia eettisiä kysymyksiä, joissa yksilön ja yhteisön vapaudet ja oikeudet ovat eri tavoin ristiriidassa keskenään. Sääntelyn on seurattava teknologista kehitystä ripeästi ja sillä on varmistettava esimerkiksi kestävän kehityksen, yritysvastuun ja ihmisten perusoikeuksien toteutuminen.
 
-## 4. Demokratia kaiken perustana
+## Demokratia kaiken perustana
 
-### 4.1 Vahvistamme vapaata, avointa ja demokraattista yhteiskuntaa
+### Vahvistamme vapaata, avointa ja demokraattista yhteiskuntaa
 
 *Demokratia on kestävin tuntemamme tapa päättää yhteisistä asioista. Vapaassa, avoimessa ja demokraattisessa yhteiskunnassa jokaisella on aito mahdollisuus vaikuttaa itseään koskeviin asioihin ja saada äänensä kuuluviin. Oikeusvaltiossa jokainen saa ihmisarvoisen ja yhdenvertaisen kohtelun taustastaan tai tilanteestaan riippumatta. Haluamme valtion, joka luottaa yksilöön ja joka on yksilön luottamuksen arvoinen. Kansanvaltaisuuden on oltava läpileikkaava periaate kaikilla päätöksenteon tasoilla ja päätökset on tehtävä mahdollisimman lähellä ihmisiä, joiden elämään ne vaikuttavat.*
 
@@ -152,7 +152,7 @@ Vapaus ja demokratia eivät ole itsestäänselvyyksiä, eivätkä vakiintuneetka
 
 Vapaan ja demokraattisen yhteiskunnan puolesta on kamppailtava sen vahvuuksiin nojaten: torjumalla eriarvoisuutta ja ennakkoluuloja, vahvistamalla sivistystä ja tasa-arvoa ja ennen kaikkea pitämällä tinkimättömästi kiinni ihmisoikeuksista ja totuudesta. Oikeusvaltio tarvitsee riippumattoman ja ripeän oikeusjärjestelmän, jossa jokaisella on aito mahdollisuus hakea ja saada oikeutta. Vapaan, journalistisin perustein toimivan median toimintaedellytykset on turvattava, jotta totuus on jatkossakin yhteiskunnallisen keskustelun perusta.
 
-### 4.2 Vihreät on avoimuuteen ja yhdenvertaisuuteen perustuva yhteiskunnallinen liike
+### Vihreät on avoimuuteen ja yhdenvertaisuuteen perustuva yhteiskunnallinen liike
 
 *Vihreiden toimintaan kaikki ovat tervetulleita sellaisina kuin ovat. Olemme avoin ja matalan hierarkian puolue: pyrimme päätöksentekoon, jossa kaikki otetaan mukaan. Meillä viimeisinä mukaan tulleet saattavat olla ensimmäisinä vuorossa, jos vain intoa ja osaamista riittää. Emme usko korvaamattomiin johtajiin, joten jaamme valtaa ja kierrätämme vastuuta. Toimintaamme pääse mukaan myös ilman virallista jäsenyyttä.*
 
@@ -168,7 +168,7 @@ Vihreät sitoutuu ehdottomaan väkivallattomuuteen kaikessa toiminnassa. Olemme 
 
 Vihreät ei rakenna tulevaisuutta yksin, vaan aktiivisessa yhteistyössä muiden kanssa niin kotimaassa kuin maailmanlaajuisesti. Pyrimme päätöksissä tasapainoon ja oikeudenmukaisuuteen välttääksemme politiikkaa, joka ohjaa hyvää vain tietyille ryhmille. Kannatamme toimivia ratkaisuja riippumatta siitä, keneltä ne ovat lähtöisin tai kuka niistä lopulta kerää kunnian. Meille tärkeintä on, että maailma muuttuu paremmaksi.
 
-### 5. Huominen rakennetaan yhdessä
+### Huominen rakennetaan yhdessä
 
 *Globaalissa maailmassa ja muutosten keskellä kukaan meistä ei ole yksin. Jokainen tarvitsee läheisyyttä, henkistä kontaktia, vertaisuutta ja mukaan kuulumista. Yli satavuotisen itsenäisyytemme aikana me suomalaiset olemme luoneet monella mittarilla menestyvän maan, jossa on mahdollisuus katsoa luottavaisin mielin eteenpäin. Olemme rakentaneet, puolustaneet, uudistaneet ja rakastaneet. Tämän ohjelman periaatteita vaalien rakennamme huomisenkin yhdessä.*
 

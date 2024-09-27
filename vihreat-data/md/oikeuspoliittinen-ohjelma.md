@@ -1,4 +1,4 @@
-## 1. Demokraattisen oikeusvaltion puolustus
+## Demokraattisen oikeusvaltion puolustus
 
 Vihreä oikeuspolitiikka perustuu oikeusvaltioperiaatteen edistämiseen. Oikeusvaltiossa kaikki ovat yhdenvertaisia lain edessä, julkisen vallan käyttö perustuu lakiin ja oikeus on yhtäläisesti kaikkien saavutettavissa. Vihreät tulkitsee oikeusvaltioperiaatetta ihmisoikeuksien ja demokratian muodostamassa kokonaisuudessa, jossa tunnistetaan, että säädettävien lakien tulee aina kunnioittaa ihmisoikeuksia, pohjautua demokraattisiin prosesseihin ja turvata asianmukaiset oikeussuojakeinot.
 
@@ -8,7 +8,7 @@ Suomi on yksi maailman vakaimpia oikeusvaltioita[1]. Silti emme voi tuudittautua
 
 Oikeuspolitiikkaan liittyy myös ylivelkaantumisen ehkäisy, josta Vihreillä on erillinen ohjelma ”Ei enää toivottomia velkavuoria – Vihreät ratkaisut yksityishenkilöiden ylivelkaantumiseen”.
 
-## 2. Turvataan oikeusvaltion perusta
+## Turvataan oikeusvaltion perusta
 
 ### Perus- ja ihmisoikeudet oikeusjärjestyksen perustana
 
@@ -86,7 +86,7 @@ Reilu vallanjako edellyttää myös, ettei valtaa keskitetä liikaa yksittäisil
 * Siirretään tuomareiden nimittäminen tasavallan presidentiltä kokonaan tuomarinvalintalautakunnalle, ja arvioidaan nimittämisprosessin riippumattomuutta.
 * Selvitetään maallikotuomareiden (lautamiesten) valintamenettelyn ja nimitysoikeuden siirtämistä Tuomioistuinvirastolle.
 
-## 3. Edistetään demokratiaa
+## Edistetään demokratiaa
 
 Demokratia on toimivan oikeusvaltion kulmakivi. Ilman kansan suorilla vaaleilla määräajoin valitsemia päättäjiä taikka mahdollisuutta osallistua päätöksentekoon vaalien välillä ei voi olla demokraattisesti legitiimiä hallintoa tai lainsäädäntöä. Demokraattisessa oikeusvaltiossa vallan käyttö edellyttää vallankäytön oikeutusta ja vallankäyttäjän legitimiteettiä.
 
@@ -140,7 +140,7 @@ Demokratiaa vahvistetaan lujittamalla sen perustaa. Tämä tapahtuu aktivoimalla
 * Vahvistetaan kansalaisten oikeuksia tehdä esityksiä Euroopan parlamentille, vahvistamalla vetoomuksia käsittelevän valiokunnan valtuuksia.
 * Edistetään yhdistymisvapautta säätämällä laki eurooppalaisista, monikansallisista järjestöistä ja säätiöistä.
 
-## 4. Kohti avoimempaa yhteiskuntaa
+## Kohti avoimempaa yhteiskuntaa
 
 ### Edistetään päätöksenteon avoimuutta ja julkisuutta
 
@@ -213,7 +213,7 @@ Korruption kitkeminen ja harmaan talouden torjuminen edellyttää vahvaa lainsä
 * Kielletään jäsenvaltiota tekemästä sponsorisopimuksia EU-puheenjohtajuuskauden toimintaan liittyen.
 * Kriminalisoidaan vaikutusvallan väärinkäyttö.
 
-## 5. Parannetaan oikeuden saavutettavuutta
+## Parannetaan oikeuden saavutettavuutta
 
 Oikeus saada asiansa käsitellyksi toimivaltaisessa tuomioistuimessa tai muussa viranomaisessa asianmukaisesti ja ilman aiheetonta viivytystä on Suomen perustuslain edellyttämä perusoikeus. Oikeutta oikeudenmukaiseen oikeudenkäyntiin riippumattomassa ja puolueettomassa tuomioistuimessa edellytetään kansainvälisissä ihmisoikeussopimuksissa, joihin Suomi on valtiona sitoutunut.
 
@@ -264,7 +264,7 @@ Oikeusjärjestelmämme kohtaa haasteita syrjintätapausten käsittelyssä, mikä
 * Parannetaan rikosuhrin asemaa korottamalla ansionmenetyskorvauksia ja lisäämällä rikosuhripäivystyksen resursseja.
 * Laajennetaan asianomistajan oikeutta oikeudenkäynnistä rikosasioissa annetun lain mukaiseen oikeudenkäyntiavustajaan myös syrjintärikoksiin.
 
-## 6. Kriminaalipolitiikkaa hyvinvointivaltiossa
+## Kriminaalipolitiikkaa hyvinvointivaltiossa
 
 Demokraattisessa ja ihmisoikeuksia kunnioittavassa valtiossa jokaisella on velvollisuus noudattaa lakia tai hyväksyä lain rikkomisesta seuraava rangaistus. Rikosseuraamuksen tarkoitus on vähentää ja ehkäistä rikollisuutta sekä auttaa rikoksentekijöitä saamaan uusi ote elämästään. Ketään ei kuitenkaan saa rangaista, ellei siitä ole laissa säädetty. Oikeusvaltio rakentuu sen varaan, että ihminen on syytön, kunnes toisin todistetaan.
 

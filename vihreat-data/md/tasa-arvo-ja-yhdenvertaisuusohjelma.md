@@ -14,7 +14,7 @@ Emme saa tasavertaisuuteen pyrkivänä kansakuntana tuudittautua siihen, että k
 
 Tasa-arvo- ja yhdenvertaisuuspolitiikka on läsnä kaikkialla ihmisten elämässä ja tästä syystä ohjelmaan on valittu sekä tavoitteita että ratkaisuja laajalla kirjolla eri politiikan osa-alueilta. Kaikkea on kuitenkin mahdotonta käsitellä yhdessä ohjelmassa. Muun muassa ulkopolitiikan, maahanmuuttopolitiikan ja koulutuspolitiikan tasa-arvoa ja yhdenvertaisuutta käsitellään pääosin muissa Vihreiden ohjelmissa.
 
-## 1. Jokaiselle oikeus itsemäärittelyyn
+## Jokaiselle oikeus itsemäärittelyyn
 
 Ihmisten itsemääräämis-, itsemäärittely- ja itseilmaisuoikeudet ovat oikeusvaltion peruspilareita – niiden on toteuduttava yhteiskunnassa täysimääräisinä. Jokaisen tulee voida määrätä omaan elämäänsä liittyvistä asioista, kuten kehostaan, taloudellisista valinnoistaan, sosiaalisesta ympäristöstään ja maailmankatsomuksestaan. Vihreiden mielestä jokainen yksilö on ensisijaisesti oman elämänsä toimija. Itsemäärittely on ihmisen vapauden ydintä, eikä sen olemassaolo riipu toisten hyväksynnästä.
 
@@ -117,7 +117,7 @@ Vahvistetaan ihmisten oikeutta päätöksiin elämänsä loppuvaiheessa.
 * Kehitetään saattohoidon laatua ja lisätään alueellista yhdenvertaisuutta.
 * Vahvistetaan ihmisten itsemääräämisoikeutta elämänsä loppuvaiheen hoidosta ja säädetään eutanasian salliva laki.
 
-## 2. Jokaiselle elämä ilman väkivaltaa
+## Jokaiselle elämä ilman väkivaltaa
 
 Sukupuolittunut väkivalta on Suomessa merkittävä ihmisoikeusongelma. Tilastokeskuksen mukaan 57 prosenttia naisista ja tytöistä on joskus elämässään kokenut uhkailua, fyysistä väkivaltaa tai seksuaaliväkivaltaa. Lähisuhdeväkivaltaa kokee joka kolmas nainen, ja kouluterveyskyselyn mukaan häirintää on kokenut puolet toisella asteella opiskelevista tytöistä. Kaikista naisista häirintää on kokenut 90 prosenttia. Kuka tahansa voi kokea väkivaltaa, mutta moninkertaisessa väkivaltariskissä ovat vammaiset kaikissa sukupuolissa ja näkyviin vähemmistöihin kuuluvat naiset sekä sukupuoli- ja seksuaalivähemmistöt.
 
@@ -183,7 +183,7 @@ Puututaan tehokkaammin rasismiin, vihapuheeseen, verkkoväkivaltaan ja muihin ih
 * Edellytetään suurilta sosiaalisen median alustoilta vihapuhetta torjuvien algoritmien ja moderointikäytäntöjen avoimuutta ja läpinäkyvyyttä. Testataan alustojen moderointikäytäntöjä ja puututaan epäkohtiin sekä kansallisella tasolla että EU:ssa.
 * Säädetään vihapuhe rangaistavaksi EU:n tasolla.
 
-## 3. Jokaiselle yhdenvertainen yhteiskunta
+## Jokaiselle yhdenvertainen yhteiskunta
 
 Yhteiskuntaa on rakennettava kaikkien ehdoilla. Julkinen tila bussipysäkeistä markettien tuulikaappeihin tulee suunnitella helposti käytettäväksi riippumatta liikkumistavasta tai siitä, mitä aisteja on käytössä. Hyvä esteettömyyssuunnittelu huomioi myös esteettömyyden eri muodot – kaikki paikat eivät välttämättä ole saavutettavia esimerkiksi rahattoman tai sosiaalisia tilanteita karttavan henkilön näkökulmasta. Yhteiskuntasuunnittelun keinoin voidaan lisätä turvallisuutta ja torjua ihmisten ja alueiden eriytymistä.
 
@@ -284,7 +284,7 @@ Uudistetaan Suomen maanpuolustus yhdenvertaisuutta ja tasa-arvoa kunnioittavaksi
 * Varmistetaan, että Puolustusvoimien henkilöstöä koulutetaan riittävästi raskausajan erityisjärjestelyihin, kuten varotoimiin ja työn keventämiseen.
 * Pidetään huolta, että sekä varuspalvelusta suorittaville naisille että erikokoisille miehille ja muille on yhdenvertaisesti tarjolla oman kehon mittoihin sopivia varusteita. Tämä on myös palvelusturvallisuuskysymys, josta ei voi tinkiä.
 
-## 4. Jokaiselle tasavertainen työelämä
+## Jokaiselle tasavertainen työelämä
 
 Vihreiden tavoitteena on rakentaa tasa-arvoista ja yhdenvertaista työelämää, jossa kaikkien yksilöllinen osaaminen tunnistetaan ja jokaisen oikeudet toteutuvat.
 
@@ -370,7 +370,7 @@ Turvataan seksipalveluja myyvien ihmisten oikeudet ja tunnustetaan seksipalvelua
 * Kumotaan ulkomaalaislain 148 pykälän kuudes momentti, jonka mukaan seksipalvelujen myynnistä epäilty henkilö voidaan käännyttää maasta. Tämä edistää vakavien rikosten selvittämistä ja vahvistaa rikosten uhrien oikeusturvaa.
 * Turvataan seksipalveluja myyvien henkilöiden täysimääräiset ammatilliset järjestäytymisoikeudet.
 
-## 5. Jokaiselle riittävä hyvinvointi
+## Jokaiselle riittävä hyvinvointi
 
 Yhteiskuntaan on syntynyt eriarvoistumiskehitys, jossa hyvinvointi kasaantuu hyvin pärjääville, samalla jättäen sivuun jo valmiiksi haavoittuvassa asemassa olevat. Tämä näkyy syventyvänä, usein periytyvänä pahoinvointina ja alueellisina ja väestöllisinä hyvinvointieroina niin köyhyydessä, sairastavuudessa kuin eliniässäkin. Samaan aikaan uupumuksesta on tulossa sukupolvikokemus. Mielenterveyden ongelmista kärsivät etenkin nuoret, opiskelijat ja työuransa alussa olevat aikuiset. Mielenterveyskriisi on yksilötasolla inhimillinen tragedia, mutta myös laajemmasta näkökulmasta uhka koko yhteiskunnan kestävyydelle. Suomessa kuolee keskimäärin kaksi ihmistä itsemurhaan joka päivä. Haluamme painaa sen lukeman nollaan.
 
@@ -456,7 +456,7 @@ Lisätään tietoutta kuukautisista ja vähennetään kuukautisköyhyyttä.
 * Lasketaan edelleen kuukautis- ja inkontinenssisuojien arvonlisäveroa.
 * Tarjotaan ilmaisia kuukautissuojia kunta- ja aluetasolla esimerkiksi oppilaitoksissa.
 
-## 6. Jokaiselle yhteisö johon kuulua
+## Jokaiselle yhteisö johon kuulua
 
 Jokaisen elämää määrittää ja muokkaa vuorovaikutus toisten ihmisten kanssa. Vertaistensa joukossa ihminen voi löytää merkityksellisyyttä ja ymmärtää paikkaansa maailmassa. Yhteisöjä on yhteiskunnan sisällä monenlaisia – osa tulee perittynä ja osan ihmiset rakentavat elämänsä aikana itse.
 

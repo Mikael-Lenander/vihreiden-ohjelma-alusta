@@ -22,7 +22,7 @@ Kaupungeissa voimme torjua ilmastokriisiä ja luontokatoa, parantaa ihmisten ark
 
  **Puheenjohtajat: Elina Rantanen ja Sameli Sivonen, työryhmän jäsenet: Mikko Airikkala, Ilona Helle, Paula Himanen, Julianna Kentala, Otso Kivekäs, Minna Kuusela, Hannu Oskala, Riina Puusaari, Saana Rossi, Anton Silvo, Jaakko Stenhäll & Emilia Syväjärvi**
 
-## 1. Kaupungit ilmastokriisin ratkaisijoina
+## Kaupungit ilmastokriisin ratkaisijoina
 
 *Vihreissä kaupungeissa torjutaan ilmastokriisiä kunnianhimoisesti vähentämällä ilmastopäästöjä sekä rakentamalla kestävää, toimivaa ja vähäpäästöistä liikkumista tukevaa kaupunkiympäristöä.*
 
@@ -122,7 +122,7 @@ Korjausrakentaminen, konversiot ja tilojen joustava yhteiskäyttö mahdollistava
 * Suunnitellaan rakennukset ja rakennusosat korjattaviksi ja uudelleenkäytettäviksi sekä talotekniikka vaihdettavaksi. Edellytetään rakennusosilta ja uusilta rakennuksilta nykyistä pidempää elinkaarta.
 * Edistetään rakennusosien ja materiaalien uudelleenkäyttöä helpottamalla kierrätettävien osien standardisointia ja käyttöä.
 
-## 2. Kaupungit luonnon puolustajina
+## Kaupungit luonnon puolustajina
 
 *Kaupungeilla on tärkeä rooli luontokadon pysäyttämisessä. Kaupungeissa tulee turvata kaupunkiluonnon monimuotoisuus, erityisesti uhanalaisten mutta myös muiden lajien tarpeet ja yhtenäiset ja kytkeytyneet viheralueet. Ilmastokriisiin sopeutuminen edellyttää rakennetun ympäristön viherryttämistä, mikä tukee myös luonnon monimuotoisuutta ja luo viihtyisämpää elinympäristöä kaupunkilaisille. Kasvavissa kaupungeissa kaikkea luonnolle aiheutuvaa haittaa ei voida kokonaan välttää, mutta se tulee minimoida aina kun mahdollista.*
 
@@ -171,7 +171,7 @@ Hyödynnetään nurmialueita paremmin muuttamalla niitä monimuotoisiksi kaupunk
 * Lisätään systemaattisesti katupuita ja kasvillisuutta sekä vettä läpäisevää vihreää pinta-alaa ja luontopohjaisia hulevesiratkaisuja, kuten kosteikkoja, painanteita ja biosuodattimia.
 * Estetään luontoalueiden kulumista hyvällä suunnittelulla ja pitämällä huolta niiden riittävyydestä virkistyskäyttöön.
 
-## 3. Kaupungit, joissa on hyvä elää
+## Kaupungit, joissa on hyvä elää
 
 *Vihreä kaupunki on asukkailleen hyvä paikka elää niin arkea kuin juhlaa. Kaupunkisuunnittelun tavoitteena on luoda saavutettavaa, turvallista sekä terveyttä ja hyvinvointia edistävää kaupunkitilaa, jonka voi kokea omakseen. Luonto on lähellä ja rakennettu ympäristö koetaan viihtyisäksi. Asuinalueiden eriytymiseen puututaan vihreässä kaupungissa aktiivisesti. Jokainen kaupunkilainen voi kokea osallisuutta omassa kaupungissaan.*
 
@@ -257,7 +257,7 @@ Kaupunkien tulee kehittää tapoja säilyttää ja jakaa kerättyä osallisuusti
 * Huolehditaan vaikuttajaryhmien selkeästä roolista.Huolehditaan aliedustetuille vaikuttajaryhmille tosialliset ja yhdenvertaiset vaikuttamismahdollisuudet tarkoituksenmukaisissa päätöksentekoelimissä.
 * Pilotoidaan kaupunkilaisfoorumeja ja edistetään osallistavaa demokratiaa 21
 
-## 4. Kaupungit, joihin jokainen on tervetullut
+## Kaupungit, joihin jokainen on tervetullut
 
 *Jokainen ihminen on tervetullut vihreään kaupunkiin ja se suunnitellaan asukkaidensa erilaiset tarpeet huomioiden. Asuntotuotanto on riittävää, monipuolista ja kestävää. Tervetulleiksi toivotetaan sekä kaupungissa syntyvät että sinne muualta muuttavat uudet asukkaat. Kaupunkia suunnitellaan myös tulevia sukupolvia varten.*
 
@@ -329,7 +329,7 @@ Lue lisää Vihreiden [maahanmuuttopoliittisesta ohjelmasta](https://www.vihreat
 * Viritetään kaupungin työllisyys- ja elinkeinopalvelut huomioimaan kansainvälisten työntekijöiden ja yritysten tarpeet it-alasta lounasravintolaan ja kaikkeen siltä väliltä.
 * Muokataan kaupungin palvelu- ja kulttuurikenttää ottamaan huomioon kansainväliset asukkaat ja heidän kiinnittymisensä kaupunkiin.
 
-## 5. Kaupungit, joissa syntyy elinvoimaa
+## Kaupungit, joissa syntyy elinvoimaa
 
 *Suuret kaupungit ovat keskeisessä roolissa koko Suomen elinvoiman luomisessa. Niiden kestävän kasvun edellytyksistä on huolehdittava. Korkeakoulut ja yritykset ovat kaupungeille tärkeitä kumppaneita osaamisen, työn ja elinvoiman synnyttämisessä. Tulevaisuudessa menestyvät kansainväliset, kestävät ja kiinnostavat kaupungit.*
 

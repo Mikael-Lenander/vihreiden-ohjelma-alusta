@@ -18,7 +18,7 @@ Vihreiden työllisyyspoliittinen ohjelma rakentuu yleistavoitteelle, jonka mukaa
 
 Vihreät tavoittelee 100 000 työllisen lisäystä vuoden 2019 tasoon verrattuna vuoteen 2030 mennessä. Lisäksi on työllistettävä ne 80 000 ihmistä, jotka ovat jääneet työttömiksi tai tulleet lomautetuiksi koronapandemian johdosta. Tavoitteenamme on saada nostettua 15–64-vuotiaiden työllisyysaste 76 %:iin vuoteen 2030 ja 80 %:iin vuoteen 2040 mennessä. Tähän pääsemällä voidaan turvata hyvinvointi ja palvelujen nykytaso kestävällä veroasteella ja velkatasolla.
 
-## 1. Reilu muutos luomaan uutta työtä
+## Reilu muutos luomaan uutta työtä
 
 Uusi talous korvaa vanhaa. Vanhan tekohengittämisen ja olemassa olevien yritysten ja toimialojen tukemisen sijaan meidän on uskallettava mahdollistaa markkinat, joilla uudet ja pienemmätkin yritykset voivat kilpailla tasavertaisesti isompien kanssa. Yritystukien kokonaismäärää on vähennettävä ja niitä on kehitettävä tutkimustiedon perusteella. Erityisesti ilmasto- ja ympäristövaikutuksiltaan merkittävien yritystukien tarkastelun tulee  
 
@@ -68,7 +68,7 @@ Toteutetaan työmarkkinajärjestöjen ryhmäkanneoikeus. Säädetään paikallis
 
 työehtosopimuksia koskevasta työntekijöiden tulkintaetuoikeudesta.
 
-## 2. Koulutuksesta avain työmarkkinoille
+## Koulutuksesta avain työmarkkinoille
 
 Väestön työllisyysaste vaihtelee merkittävästi koulutustason mukaan. Korkeasti koulutettujen työllisyysaste (15–64-vuotiaat) on selvästi korkea (n. 86,2 %), keskiasteen koulutettujen myös (74,4 %) mutta ainoastaan perusasteen koulutettujen työllisyysaste on erittäin matala (n. 39,0 %). [**2**](#2)  
 
@@ -114,7 +114,7 @@ kannustetaan jatkuvaan oppimiseen ja ammattiosaamisen kehittämiseen muun muassa
 
 Edistetään oppisopimuskoulutusta niin nuorille kuin alanvaihtajille.
 
-## 3. Uutta työvoimaa ulkomailta
+## Uutta työvoimaa ulkomailta
 
 Työvoiman määrän kasvu on vuodesta 2009 alkaen ollut riippuvainen maahanmuutosta. Vuodesta 2018 alkaen työikäisen väestön määrä on kääntynyt laskuun, eikä tilannetta tulevaisuudessa myöskään helpota merkittävästi alentunut syntyvyys. Jotta työvoimaa olisi jatkossa riittävästi, tulee työ- ja osaamisperusteista maahanmuuttoa lisätä merkittävästi.  
 
@@ -164,7 +164,7 @@ Lisätään mahdollisuuksia opiskella kieltä työnteon rinnalla.
 
 Poistetaan toimeentuloa koskevat edellytykset perheen yhdistämisessä.
 
-## 4. Parannetaan työnteon ja yrittämisen kannustimia
+## Parannetaan työnteon ja yrittämisen kannustimia
 
 Suomalainen vero- ja sosiaaliturvajärjestelmä on sirpaleinen ja monitahoinen, minkä vuoksi yksilöllä voi ajoittain olla taloudellisesti edullisempaa olla tekemättä töitä kuin työllistyä. Erityisesti näitä tuloloukkuja on perheellisillä, osa-aikatyötä tekevillä pienituloisilla, joiden efektiivinen marginaaliveroaste on jopa 80–100 %, kun kokoaikatyöhön siirryttäessä sekä veroprosentti ja päivähoitomaksut nousevat että sosiaaliturva, kuten työttömyysetuus ja  
 
@@ -226,7 +226,7 @@ Korotetaan ulosoton suojaosa pysyvästi 1 200 euroon kuukaudessa velallisen osal
 
 Kohdistetaan ulosoton tilitys ensisijaisesti pääomaan ja vasta toissijaisesti korkoihin ja perintäkuluihin. Otetaan käyttöön velkaperinnän jäädytys, jonka avulla hallitsematon velkakierre voidaan pysäyttää. Selvitetään velkavastuusta vapauttavan henkilökohtaisen konkurssin mahdollisuutta.
 
-## 5. Työelämä yhdenvertaiseksi ja saavutettavaksi
+## Työelämä yhdenvertaiseksi ja saavutettavaksi
 
 Yhdenvertaisuuden saavuttaminen vaatii poliittista tahtoa ja kulttuurista muutosta. Moni joutuu syrjinnän kohteeksi esimerkiksi ikänsä, sukupuolensa, etnisen alkuperänsä tai vammaisuutensa perusteella. Koulutuksen ja työmarkkinoiden segregaation purkaminen vaatii määrätietoisia politiikkatoimia sekä asennevaikuttamista kaikilla koulutusasteilla, aina  
 
@@ -292,7 +292,7 @@ Puretaan työkyvyttömyyseläkkeellä olevien työntekoa haittaavia kannustinlou
 
 Selvitetään etätyön ja digitalisaation tuomia mahdollisuuksia työllisyyden edistäjänä. Velvoitetaan työnantajat sallimaan paikkariippumaton työskentely aina kun se on mahdollista. Kiinnitetään huomiota muun muassa työturvallisuuteen ja työnantajan vastuisiin paikkariippumattomassa työssä.
 
-## 6. Pidennetään työuria
+## Pidennetään työuria
 
 Yli 55-vuotiaiden työllisyysaste on matalampi kuin muilla ikäryhmillä. Hallitus on tehnyt toimenpiteitä yli 55-vuotiaiden työllisyysasteen nostamiseksi. Työn vastaanottamatta jättämiseen kannustavat työttömyysturvan lisäpäivät (ns. eläkeputki) poistetaan ja muun ohessa mahdollisuuksia palkkatukeen on lisätty.
 
@@ -352,7 +352,7 @@ veroastetta. Nostetaan vanhuuseläkeiän alarajaa muissa kuin erityisen
 
 kuormittavissa ammateissa.
 
-## 7. Uudistetaan työllisyyspalvelut
+## Uudistetaan työllisyyspalvelut
 
 Pohjoismaiden vertailussa Suomen työ- ja elinkeinopalvelut ovat olleet pitkään  
 
