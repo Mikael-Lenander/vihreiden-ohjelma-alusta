@@ -42,7 +42,15 @@ function SearchBar({ value, setValue }: SearchBarProps): JSX.Element {
 }
 
 function SearchHint(): JSX.Element {
-  return <p className='vo-search-hint'>Hae ohjelmateksteistä:</p>;
+  return (
+    <div id='vo-search-instructions'>
+      <h2>Tekstihaku</h2>
+      <p>
+        Tässä voit hakea tekstisisältöä voimassa olevista ohjelmista.<br />
+        Haku alkaa heti, kun kenttään kirjoitetaan.
+      </p>
+    </div>
+  );
 }
 
 function Idle(): JSX.Element {

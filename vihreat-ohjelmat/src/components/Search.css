@@ -17,10 +17,15 @@
   margin: auto;
 }
 
-.vo-search-hint {
-  margin-bottom: 0.2em;
+#vo-search-instructions h2 {
   text-align: center;
   font-weight: 500;
+  font-size: x-large;
+}
+
+#vo-search-instructions p {
+  color: #333;
+  /* text-wrap: balance; */
 }
 
 .vo-search-loading-msg {
