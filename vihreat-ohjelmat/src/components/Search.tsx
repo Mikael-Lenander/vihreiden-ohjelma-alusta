@@ -1,10 +1,14 @@
+import Markdown from 'react-markdown';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ontology } from '../ontologies/ontology';
 import { useSearch } from '../hooks/useSearch';
-import Markdown from 'react-markdown';
 import './Search.css';
-import type { SearchHitsInProgram, SearchHit } from '../model/SearchResults';
+import type {
+  SearchHitsInProgram,
+  SearchHit,
+  SearchHitLocation,
+} from '../model/SearchResults';
 import type { ProgramInfo } from '../model/ProgramInfo';
 
 export function Search(): JSX.Element {
@@ -46,9 +50,9 @@ function SearchHint(): JSX.Element {
     <div id='vo-search-instructions'>
       <h2>Tekstihaku</h2>
       <p>
-        Tässä voit hakea tekstisisältöä voimassa olevista ohjelmista.
-        <br />
-        Haku alkaa heti, kun kenttään kirjoitetaan.
+        Tässä voit hakea tekstisisältöä voimassa olevista ohjelmista. Haku alkaa
+        heti, kun kenttään kirjoitetaan. Haku etsii tarkkaa osumaa (ei ole sumea
+        haku).
       </p>
     </div>
   );
@@ -175,11 +179,7 @@ export function FoundElement({ program, hit }: FoundElementProps) {
   return (
     <>
       <div className='vo-search-results-element'>
-        <SearchResultElementBody
-          text={hit.element.description}
-          name={hit.element.name}
-          elementClass={hit.element.elementClass}
-        />
+        <SearchResultElementBody hit={hit} />
         <SearchResultElementHead
           programId={program.index}
           elementId={hit.element.index}
@@ -211,27 +211,25 @@ export function SearchResultElementHead({
 }
 
 interface SearchResultsElementBodyProps {
-  text?: string;
-  name?: string;
-  elementClass?: string;
+  hit: SearchHit;
 }
 
 export function SearchResultElementBody({
-  text,
-  name,
-  elementClass,
+  hit,
 }: SearchResultsElementBodyProps): JSX.Element {
-  switch (elementClass) {
+  switch (hit.element.elementClass) {
     case ontology.classes.paragraph:
       return (
         <div className='vo-search-results-element-body'>
-          <Markdown>{text}</Markdown>
+          <SearchHitWithHighlights hit={hit} field='description' />
         </div>
       );
     case ontology.classes.heading:
       return (
         <div className='vo-search-results-element-body'>
-          <h3>{name}</h3>
+          <h3>
+            <SearchHitWithHighlights hit={hit} field='name' />
+          </h3>
         </div>
       );
     case ontology.classes.actionitem:
@@ -239,7 +237,9 @@ export function SearchResultElementBody({
         <div className='vo-search-results-element-body'>
           <p>
             <ul>
-              <li>{name}</li>
+              <li>
+                <SearchHitWithHighlights hit={hit} field='name' />
+              </li>
             </ul>
           </p>
         </div>
@@ -248,10 +248,83 @@ export function SearchResultElementBody({
       return (
         <div className='vo-search-results-element-body'>
           <p>
-            {name}
-            {text}
+            <SearchHitWithHighlights hit={hit} field='name' />
+            <SearchHitWithHighlights hit={hit} field='description' />
           </p>
         </div>
       );
   }
+}
+
+interface SearchHitWithHighlightsProps {
+  hit: SearchHit;
+  field: string;
+}
+
+export function SearchHitWithHighlights({
+  hit,
+  field,
+}: SearchHitWithHighlightsProps): JSX.Element {
+  let text = '';
+
+  if (field === 'name') {
+    text = hit.element.name;
+  } else if (field === 'description') {
+    text = hit.element.description;
+  }
+
+  const locations = hit.locations?.filter(loc => loc.field === field);
+
+  if (locations) {
+    return <Markdown>{highlight(text, locations)}</Markdown>;
+  } else {
+    return <Markdown>{text}</Markdown>;
+  }
+}
+
+function highlight(text: string, locations: SearchHitLocation[]): string {
+  let s = '';
+
+  for (const snip of split(text, locations)) {
+    if (snip.isHit) {
+      s += '**' + snip.text + '**';
+    } else {
+      s += snip.text;
+    }
+  }
+
+  return s;
+}
+
+class Snip {
+  public text: string;
+  public isHit: boolean;
+
+  public constructor(text: string, isHit: boolean) {
+    this.text = text;
+    this.isHit = isHit;
+  }
+}
+
+function split(text: string, locations: SearchHitLocation[]): Snip[] {
+  const snips: Snip[] = [];
+  let i = 0;
+
+  for (const loc of locations) {
+    if (loc.index > i) {
+      snips.push(new Snip(text.substring(i, loc.index), false));
+      i = loc.index;
+    }
+
+    snips.push(
+      new Snip(text.substring(loc.index, loc.index + loc.length), true),
+    );
+    i = loc.index + loc.length;
+  }
+
+  if (i < text.length) {
+    snips.push(new Snip(text.substring(i), false));
+  }
+
+  return snips;
 }

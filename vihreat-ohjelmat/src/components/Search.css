@@ -106,6 +106,10 @@
   cursor: pointer;
 }
 
+.vo-search-highlight {
+  background-color: red;
+}
+
 .vo-search-results-element {
   padding-bottom: 1.0em;
   margin-left: 0.5em;
