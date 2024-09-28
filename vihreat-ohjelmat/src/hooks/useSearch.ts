@@ -20,10 +20,12 @@ export function useSearch(q: string): SearchResults | undefined {
 
   useEffect(() => {
     const thisQueryId = ++currentQueryIndexRef.current;
+    setResult(undefined);
     store.search(q, searchOpts).then(elements => {
       if (thisQueryId === currentQueryIndexRef.current) {
         const results = new SearchResults();
         results.load(store, elements!, () => {
+          results.restrictToExact(q);
           setResult(results);
         });
       }

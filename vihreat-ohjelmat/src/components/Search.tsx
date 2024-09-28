@@ -46,7 +46,8 @@ function SearchHint(): JSX.Element {
     <div id='vo-search-instructions'>
       <h2>Tekstihaku</h2>
       <p>
-        Tässä voit hakea tekstisisältöä voimassa olevista ohjelmista.<br />
+        Tässä voit hakea tekstisisältöä voimassa olevista ohjelmista.
+        <br />
         Haku alkaa heti, kun kenttään kirjoitetaan.
       </p>
     </div>

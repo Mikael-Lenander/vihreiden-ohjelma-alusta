@@ -26,6 +26,20 @@ export class SearchResults {
     });
   }
 
+  public restrictToExact(q: string) {
+    this.active = this.restrictHitsToExact(this.active, q);
+    this.retired = this.restrictHitsToExact(this.retired, q);
+  }
+
+  private restrictHitsToExact(
+    src: SearchHitsInProgram[],
+    q: string,
+  ): SearchHitsInProgram[] {
+    return src
+      .map(hits => hits.restrictToExact(q))
+      .filter(hits => hits !== undefined);
+  }
+
   private checkReady(onReady: () => void) {
     if (this.loaders.every(ldr => ldr.isReady)) {
       this.loaders.forEach(ldr => {
@@ -141,9 +155,9 @@ export class SearchHitsInProgram {
   public program: ProgramInfo;
   public hits: SearchHit[];
 
-  public constructor(info: ProgramInfo) {
+  public constructor(info: ProgramInfo, hits: SearchHit[] = []) {
     this.program = info;
-    this.hits = [];
+    this.hits = hits;
   }
 
   public addHit(info: ElementInfo) {
@@ -155,12 +169,63 @@ export class SearchHitsInProgram {
       return a.element.index - b.element.index;
     });
   }
+
+  public restrictToExact(q: string): SearchHitsInProgram | undefined {
+    const hits = this.hits
+      .map(hit => hit.findExact(q))
+      .filter(hit => hit !== undefined);
+
+    if (hits.length === this.hits.length) {
+      return this;
+    } else if (hits.length > 0) {
+      return new SearchHitsInProgram(this.program, hits);
+    } else {
+      return undefined;
+    }
+  }
 }
 
 export class SearchHit {
   public element: ElementInfo;
+  public locations?: SearchHitLocation[];
 
   public constructor(info: ElementInfo) {
     this.element = info;
+    this.locations = undefined;
+  }
+
+  public findExact(q: string): SearchHit | undefined {
+    // g: search everywhere ("global")
+    // i: case insensitive
+    const re = new RegExp(q, 'gi');
+    const inName = this.element.name ? [...this.element.name.matchAll(re)] : [];
+    const inDesc = this.element.description
+      ? [...this.element.description.matchAll(re)]
+      : [];
+
+    if (inName.length + inDesc.length > 0) {
+      this.locations = [
+        ...inName.map(m => new SearchHitLocation('name', m.index, q.length)),
+        ...inDesc.map(
+          m => new SearchHitLocation('description', m.index, q.length),
+        ),
+      ];
+
+      return this;
+    } else {
+      return undefined;
+    }
+  }
+}
+
+export class SearchHitLocation {
+  public field: string;
+  public index: number;
+  public length: number;
+
+  public constructor(field: string, index: number, length: number) {
+    this.field = field;
+    this.index = index;
+    this.length = length;
   }
 }
