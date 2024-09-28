@@ -29,6 +29,7 @@ h1#vo-frontpage-title {
   padding: 0 0.5em;
   color: #006845;
   font-size: large;
+  z-index: 100;
 }
 
 @media (max-width: 120ch) {
