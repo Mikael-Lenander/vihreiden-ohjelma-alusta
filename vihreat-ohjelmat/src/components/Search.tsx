@@ -1,4 +1,5 @@
-import Markdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ontology } from '../ontologies/ontology';
@@ -276,9 +277,13 @@ export function SearchHitWithHighlights({
   const locations = hit.locations?.filter(loc => loc.field === field);
 
   if (locations) {
-    return <Markdown>{highlight(text, locations)}</Markdown>;
+    return (
+      <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+        {highlight(text, locations)}
+      </ReactMarkdown>
+    );
   } else {
-    return <Markdown>{text}</Markdown>;
+    return <ReactMarkdown>{text}</ReactMarkdown>;
   }
 }
 
@@ -287,7 +292,7 @@ function highlight(text: string, locations: SearchHitLocation[]): string {
 
   for (const snip of split(text, locations)) {
     if (snip.isHit) {
-      s += '**' + snip.text + '**';
+      s += '<span class="vo-search-highlight">' + snip.text + '</span>';
     } else {
       s += snip.text;
     }
