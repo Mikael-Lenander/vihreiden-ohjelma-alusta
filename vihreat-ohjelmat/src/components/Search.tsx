@@ -53,7 +53,7 @@ function SearchHint(): JSX.Element {
       <p>
         Tässä voit hakea tekstisisältöä voimassa olevista ohjelmista. Haku alkaa
         heti, kun kenttään kirjoitetaan. Haku etsii tarkkaa osumaa (ei ole sumea
-        haku).
+        haku). Ole kärsivällinen, haku ei ole optimoitu ja saattaa siksi kestää tovin!
       </p>
     </div>
   );
