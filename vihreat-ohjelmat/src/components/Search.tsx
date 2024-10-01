@@ -53,7 +53,8 @@ function SearchHint(): JSX.Element {
       <p>
         Tässä voit hakea tekstisisältöä voimassa olevista ohjelmista. Haku alkaa
         heti, kun kenttään kirjoitetaan. Haku etsii tarkkaa osumaa (ei ole sumea
-        haku). Ole kärsivällinen, haku ei ole optimoitu ja saattaa siksi kestää tovin!
+        haku). Ole kärsivällinen, haku ei ole optimoitu ja saattaa siksi kestää
+        tovin!
       </p>
     </div>
   );
@@ -104,7 +105,7 @@ function FoundProgram({ hits }: FoundProgramProps): JSX.Element {
     <>
       <div className='vo-search-results-program'>
         <Title
-          programId={`p${hits.program.id}`}
+          programId={`${hits.program.id}`}
           title={hits.program.title}
           subtitle={hits.program.species}
           hits={hits.hits.length}
