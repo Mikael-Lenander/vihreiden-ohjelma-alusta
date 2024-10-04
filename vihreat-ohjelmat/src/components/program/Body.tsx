@@ -62,6 +62,9 @@ function InteractiveElement({ element }: ElementProps): JSX.Element {
   const focusUrl = `${window.location.origin}${location.pathname}?h=${element.index}`;
   const ref = useRef<HTMLDivElement | null>(null);
   const isHighlighted = highlightState.index === element.index;
+  if (isHighlighted) {
+    console.log(`Highlighted ${element.index}`)
+  }
 
   const focusState = useContext(FocusContext);
   const [isFocused, setIsFocused] = useState(false);
@@ -97,7 +100,7 @@ function InteractiveElement({ element }: ElementProps): JSX.Element {
     if (isHighlighted) {
       scrollTo(ref.current || undefined);
     }
-  }, []);
+  }, [isHighlighted]);
 
   return (
     <div ref={ref} className={className} onMouseEnter={focusThis}>
