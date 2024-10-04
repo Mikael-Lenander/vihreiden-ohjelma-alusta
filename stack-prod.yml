@@ -8,6 +8,11 @@ services:
       dockerfile: "./vihreat-ohjelmat/prod.Dockerfile"
     ports:
       - "80:80"
+    volumes:
+      - "./vihreat-ohjelmat:/vihreat-ohjelmat"
+    depends_on:
+      - atomic
+    env_file: "prod.env"
 
   atomic:
     image: "joepmeneer/atomic-server:master"
