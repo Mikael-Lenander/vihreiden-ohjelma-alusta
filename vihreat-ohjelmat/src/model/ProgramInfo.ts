@@ -56,4 +56,8 @@ export class ProgramInfo {
   public get isOpener(): boolean {
     return this.category === 'avaus';
   }
+
+  public get isElection(): boolean {
+    return this.category === 'vaaliohjelma';
+  }
 }

@@ -20,6 +20,10 @@ export class ProgramCatalog {
     return this.all.filter(p => p.isActive && p.isThematic);
   }
 
+  public get electionPrograms(): ProgramInfo[] {
+    return this.all.filter(p => p.isActive && p.isElection);
+  }
+
   public get openers(): ProgramInfo[] {
     return this.all.filter(p => p.isActive && p.isOpener);
   }

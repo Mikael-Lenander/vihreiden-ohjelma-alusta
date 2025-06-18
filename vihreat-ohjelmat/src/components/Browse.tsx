@@ -18,6 +18,12 @@ export function Browse(): JSX.Element {
             <Card key={p.subject} program={p} />
           ))}
         </div>
+        <ElectionProgramsHead />
+        <div className='vo-browse'>
+          {programs.electionPrograms.map(p => (
+            <Card key={p.subject} program={p} />
+          ))}
+        </div>
         <ThematicProgramsHead />
         <div className='vo-browse'>
           {programs.thematicPrograms.map(p => (
@@ -55,6 +61,10 @@ function HeadlineProgramsHead(): JSX.Element {
 
 function ThematicProgramsHead(): JSX.Element {
   return <p className='vo-browse-sector-hint'>Teemaohjelmat</p>;
+}
+
+function ElectionProgramsHead(): JSX.Element {
+  return <p className='vo-browse-sector-hint'>Vaaliohjelmat</p>;
 }
 
 function OpenersHead(): JSX.Element {
